@@ -1,0 +1,22 @@
+.pages > div > h1 {
+    font-weight: 700;
+    font-size: medium;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Add transition for smooth opacity change */
+  }
+  
+  .pages > div > h1:hover {
+    opacity: 1; /* Remove opacity on hover */
+  }
+
+  .right-text-div > h1 {
+   font-weight: 500;
+   font-size: x-large;
+  }
+  
+  .right-text-div > h1 > span {
+    font-weight: 300;
+    font-size: large;
+  }
+  
