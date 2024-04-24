@@ -2,12 +2,12 @@ import Button from "../Components/Button";
 import headerImage from "../assets/Screenshot 2024-04-24 151322.png";
 import bannerImage from "../assets/Screenshot (128).png";
 import videoSource from "../assets/132778853_778113649719337_6473248478797310844_n.mp4";
-import img1 from "../assets/DERMA.jpg";
-import img2 from "../assets/PEDIATRICIAN.jpg";
-import img3 from "../assets/RADIOLOGIST.jpg";
-import img4 from "../assets/SURGERY (2).jpg";
-import img5 from "../assets/UROLOGY (1).jpg";
-import img6 from "../assets/ORTHOPEDICS.jpg";
+// import img1 from "../assets/DERMA.jpg";
+// import img2 from "../assets/PEDIATRICIAN.jpg";
+// import img3 from "../assets/RADIOLOGIST.jpg";
+// import img4 from "../assets/SURGERY (2).jpg";
+// import img5 from "../assets/UROLOGY (1).jpg";
+// import img6 from "../assets/ORTHOPEDICS.jpg";
 
 import { FaLocationDot } from "react-icons/fa6";
 import { MdKeyboardArrowLeft } from "react-icons/md";
@@ -113,7 +113,7 @@ function Home() {
             "Your health is our priority. Hiba Asia Hospital ensures you and
             your family receive the best possible medical care and assistance.
             We strive to create a warm and safe healing environment for you and
-            your family. Over the past decade, Amrita has been unflinchingly
+            your family. Over the past decade, Hiba Asia has been unflinchingly
             devoted to improving healthcare and treatment. Medical specialists
             have been working diligently to conduct research and educate future
             generations of doctors and healthcare workers. As our entire team
