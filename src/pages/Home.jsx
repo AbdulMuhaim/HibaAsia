@@ -1,19 +1,13 @@
 import Button from "../Components/Button";
+import Curoussel from "../Components/Curoussel";
 import headerImage from "../assets/Screenshot 2024-04-24 151322.png";
-import bannerImage from "../assets/Screenshot (128).png";
 import videoSource from "../assets/132778853_778113649719337_6473248478797310844_n.mp4";
-// import img1 from "../assets/DERMA.jpg";
-// import img2 from "../assets/PEDIATRICIAN.jpg";
-// import img3 from "../assets/RADIOLOGIST.jpg";
-// import img4 from "../assets/SURGERY (2).jpg";
-// import img5 from "../assets/UROLOGY (1).jpg";
-// import img6 from "../assets/ORTHOPEDICS.jpg";
-
 import { FaLocationDot } from "react-icons/fa6";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
+
 
 function Home() {
+
+
   const handleButtonClick = () => {
     alert("Button clicked!");
   };
@@ -23,6 +17,8 @@ function Home() {
     transform: "scale(1.05)", // Scale up by 5% on hover
     color: "white",
   };
+
+
 
   return (
     <div>
@@ -37,6 +33,20 @@ function Home() {
           </p>
           <h1 className="font-semibold">Jeddah, Saudi Arabia</h1>
         </div>
+
+        <center>
+          <div className="switch">
+            <input
+              id="language-toggle"
+              className="check-toggle check-toggle-round-flat"
+              type="checkbox"
+            />
+            <label htmlFor="language-toggle"></label>
+            <span className="on">AR</span>
+            <span className="off">EN</span>
+          </div>
+        </center>
+
         <div>
           <Button
             onClick={handleButtonClick}
@@ -81,23 +91,8 @@ function Home() {
       </div>
 
       {/* banner */}
-      <div className="flex justify-between w-full h-full items-center relative mt-5 px-1">
-        <p className="cursor-pointer absolute z-10 left-5">
-          <MdKeyboardArrowLeft className="text-6xl " />
-        </p>
 
-        <div className="bg-red-400 w-full mt">
-          <img
-            src={bannerImage}
-            alt=""
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-        </div>
-
-        <p className="cursor-pointer absolute z-10 right-5">
-          <MdKeyboardArrowRight className="text-6xl" />
-        </p>
-      </div>
+      <Curoussel />
 
       {/* video */}
       <div className="flex mt-5">
@@ -149,8 +144,6 @@ function Home() {
       </div>
 
       {/* images */}
-
-    
     </div>
   );
 }
