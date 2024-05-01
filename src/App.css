@@ -32,7 +32,7 @@
   
   .switch > span {
     position: absolute;
-    top: 12px;
+    top: 10px;
     pointer-events: none;
     font-family: 'Helvetica', Arial, sans-serif;
     font-weight: bold;
@@ -127,6 +127,30 @@
   
   input.check-toggle-round-flat:checked + label:after {
     margin-left: 44px;
+  }
+  
+
+  .child-div {
+    height: 200px;
+    background-color: #d8d6f7; /* default background color */
+    transition: all 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .child-div:hover {
+    height: 230px; /* expand height on hover */
+    background-color: #396ba3; /* change background color on hover */
+  }
+
+  .child-div > img {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .department-name {
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: medium;
   }
   
 
