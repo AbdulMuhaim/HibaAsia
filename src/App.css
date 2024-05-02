@@ -132,19 +132,19 @@
 
   .child-div {
     height: 200px;
-    background-color: #d8d6f7; /* default background color */
     transition: all 0.3s ease;
     border-radius: 10px;
   }
   
   .child-div:hover {
     height: 230px; /* expand height on hover */
-    background-color: #396ba3; /* change background color on hover */
   }
 
   .child-div > img {
     height: 100%;
+    width: 100%;
     border-radius: 10px;
+    object-fit: cover;
   }
 
   .department-name {

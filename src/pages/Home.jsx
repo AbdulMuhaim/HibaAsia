@@ -162,8 +162,8 @@ function Home() {
       <Curoussel />
 
       {/* video */}
-      <div className="flex border-4  border-indigo-900 rounded-xl shadow-md mx-10 mt-16">
-        <div className=" w-1/3 h-72 mt-16 px-3">
+      <div className="flex border-4 md:flex-row flex-col justify-center items-center border-indigo-900 rounded-xl shadow-md mx-10 mt-16 pb-5">
+        <div className=" h-72  px-3  w-full flex justify-center items-center">
           <video autoPlay loop muted>
             <source src={videoSource} type="video/mp4" />
             Your browser does not support the video tag.
@@ -171,7 +171,7 @@ function Home() {
         </div>
 
         <div className="w-2/3 px-7 font-semibold flex justify-center items-center text-lg ">
-          <h1 style={{ wordSpacing: "7px" }}>
+          <h1 style={{ wordSpacing: "6px" }}>
             "Your health is our priority. Hiba Asia Hospital ensures you and
             your family receive the best possible medical care and assistance.
             We strive to create a warm and safe healing environment for you and
@@ -187,9 +187,8 @@ function Home() {
 
       {/* departments */}
       <div className="mt-16 border-y-4 py-14 px-3 ">
-        <h1 className=" text-3xl font-bold">Departments</h1>
-        {/* <p className="pt-8 text-lg font-semibold opacity-50">Pediatric</p> */}
-        <div className="grid grid-cols-4 gap-4 pt-8">
+        <h1 className=" text-3xl xl:text-4xl font-bold">Departments</h1>
+        <div className="grid md:grid-cols-4 grid-cols-1 gap-4 pt-8">
           {/* Child div 1 */}
           <div>
             <p className="department-name">Pediatric</p>
@@ -277,7 +276,7 @@ function Home() {
       <div className="mt-3 border-b-4 py-14 px-3 ">
         <h1 className=" text-3xl font-bold">Our Doctors</h1>
 
-        <div className="grid grid-cols-4 gap-4 pt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
           <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
             {/* Profile Image */}
             <img

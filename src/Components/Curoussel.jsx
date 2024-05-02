@@ -35,7 +35,7 @@ const App = () => {
       >
         {images.map((image, index) => (
           <div key={index} className="relative">
-            <img src={image} className="h-[90vh] w-full" alt="" />
+            <img src={image} className="h-[80vh] w-full" alt="" />
             <div className="absolute bottom-16 flex justify-center items-center left-0 right-0">
             <p className="text-black text-2xl font-bold bg-opacity-50 backdrop-filter backdrop-blur-md px-4 py-2">{texts[index]}</p>
             </div>
