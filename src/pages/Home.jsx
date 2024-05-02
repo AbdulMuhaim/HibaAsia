@@ -162,7 +162,7 @@ function Home() {
       <Curoussel />
 
       {/* video */}
-      <div className="flex border-4 md:flex-row flex-col justify-center items-center border-indigo-900 rounded-xl shadow-md mx-10 mt-16 pb-5">
+      <div className="flex border-4 md:flex-row flex-col justify-center items-center border-indigo-900 rounded-xl shadow-md my-10 mx-10 py-5">
         <div className=" h-72  px-3  w-full flex justify-center items-center">
           <video autoPlay loop muted>
             <source src={videoSource} type="video/mp4" />
