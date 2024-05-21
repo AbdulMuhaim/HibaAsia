@@ -83,7 +83,7 @@ function Home() {
             <img
               src={headerImage}
               alt=""
-              className="w-[60vw]  h-[13vh] md:w-[35vw] md:h-[11vh] xl:w-[30vw] xl:h-[14vh] p-2 md:p-0 md:my-2 mx-auto md:mx-0"
+              className="w-[60vw] h-[13vh] md:w-[35vw] md:h-[11vh] xl:w-[30vw] xl:h-[14vh] p-2 md:p-0 md:my-2 mx-auto md:mx-0"
             />
           </div>
           <p

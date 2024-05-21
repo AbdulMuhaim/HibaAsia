@@ -58,7 +58,7 @@ function Curousel2() {
               >
                 <img
                   src={image}
-                  className="w-full h-auto md:h-[66vh] object-cover opacity-70"
+                  className="w-full h-auto md:h-[66vh] object-cover opacity-70 px-20"
                   alt=""
                 />
                 <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
