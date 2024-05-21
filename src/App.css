@@ -1,14 +1,4 @@
-.pages > div > h1 {
-    font-weight: 700;
-    font-size: medium;
-    opacity: 0.4;
-    cursor: pointer;
-    transition: opacity 0.3s ease; /* Add transition for smooth opacity change */
-  }
-  
-  .pages > div > h1:hover {
-    opacity: 1; /* Remove opacity on hover */
-  }
+
 
   .right-text-div > h1 {
    font-weight: 500;
@@ -19,10 +9,6 @@
     font-weight: 300;
     font-size: large;
   }
-
-
-  
-
 
   .switch {
     position: relative;
@@ -44,7 +30,7 @@
   }
   
   input.check-toggle-round-flat:checked ~ .off {
-    color: #0901ff;
+    color: black;
   }
   
   input.check-toggle-round-flat:checked ~ .on {
@@ -54,7 +40,7 @@
   .switch > span.on {
     left: 0;
     padding-left: 2px;
-    color: #0901ff;
+    color: black;
   }
   
   .switch > span.off {
@@ -83,7 +69,7 @@
     padding: 2px;
     width: 97px;
     height: 35px;
-    background-color: #15a9a4;
+    background-color: #00918d;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
@@ -101,7 +87,7 @@
     left: 2px;
     bottom: 2px;
     right: 2px;
-    background-color: #15a9a4;    
+    background-color:#00918d;    
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
     -o-border-radius: 60px;

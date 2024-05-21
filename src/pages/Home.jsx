@@ -1,15 +1,39 @@
 import Button from "../Components/Button";
-import Curoussel from "../Components/Curoussel";
-import headerImage from "../assets/Screenshot 2024-04-24 151322.png";
+import Curoussel from "../Components/Curousel2";
+import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import videoSource from "../assets/132778853_778113649719337_6473248478797310844_n.mp4";
 import { FaLocationDot } from "react-icons/fa6";
-import { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState, useEffect } from "react";
 
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
   const [showDepartmentsDropdown, setShowDepartmentsDropdown] = useState(false);
   const [showOffersDropdown, setShowOffersDropdown] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  useEffect(() => {
+    // Function to check screen size and update mobileMenu state
+    const checkScreenSize = () => {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        setMobileMenu(true);
+      } else {
+        setMobileMenu(false);
+      }
+    };
+
+    // Initial check
+    checkScreenSize();
+
+    // Add event listener
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
 
   const handleButtonClick = () => {
     alert("Button clicked!");
@@ -24,60 +48,77 @@ function Home() {
   return (
     <div>
       {/* header */}
-      <div className="w-full h-24 bg-white border-b-2 flex justify-between items-center px-5">
-        <div className="h-[10vh] w-[19vw] ">
-          <img src={headerImage} alt="" />
+      <div className="w-full h-auto bg-white border-b-2 flex flex-col md:flex-row justify-between items-center px-5">
+        <div className="w-full md:w-auto flex-col justify-center items-center px-5 py-2 mt-2">
+          <div className="flex items-center justify-center">
+            <img
+              src={headerImage}
+              alt=""
+              className="w-[60vw] h-[13vh] md:w-[35vw] md:h-[11vh] xl:w-[30vw] xl:h-[14vh]  p-2 md:p-0 md:my-2 mx-auto md:mx-0"
+            />
+          </div>
+          <p
+            className="text-center opacity-50 font-medium tracking-mega-wide pt-0 mt-0 pb-2"
+            style={{ wordSpacing: "0.1em" }}
+          >
+            INSPIRING BETTER HEALTH
+          </p>
         </div>
-        <div className="flex">
-          <p className="mt-1 mr-1">
+
+        <div className="flex items-center mt-4 md:mt-0 md:block hidden">
+          <p className="mt-1 mr-1 inline-block">
             <FaLocationDot />
           </p>
-          <h1 className="font-semibold">Jeddah, Saudi Arabia</h1>
+          <h1 className="font-semibold inline-block text-sm lg:text-base xl:text-lg 2xl:text-xl">Jeddah, Saudi Arabia</h1>
         </div>
 
-        <center>
-          <div className="switch">
-            <input
-              id="language-toggle"
-              className="check-toggle check-toggle-round-flat"
-              type="checkbox"
-            />
-            <label htmlFor="language-toggle"></label>
-            <span className="on">EN</span>
-            <span className="off">AR</span>
+        <div className="flex justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
+          <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
+            <div className="switch">
+              <input
+                id="language-toggle"
+                className="check-toggle check-toggle-round-flat"
+                type="checkbox"
+              />
+      <label htmlFor="language-toggle" className="!h-10"></label>
+              <span className="on">EN</span>
+              <span className="off">AR</span>
+            </div>
           </div>
-        </center>
 
-        <div>
-          <Button
-            onClick={handleButtonClick}
-            text="Book an Appointment"
-            hoverStyle={hoverStyle}
-            style={{
-              backgroundColor: "white",
-              color: "black",
-              border: "2px solid #000",
-              padding: "15px 25px",
-              borderRadius: "20px",
-              fontWeight: "bold",
-              transition: "background-color 0.3s, transform 0.3s", // Add transition for smooth color and size change
-            }}
-          />{" "}
+          <div className="flex justify-between w-full md:w-auto ml-4">
+            <button
+              onClick={handleButtonClick}
+              className="bg-white text-black border-2 border-black lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-300 transform hover:bg-blue-100 hover:scale-105"
+            >
+              Book an Appointment
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* pages list */}
-      <div className="bg-white shadow-md w-full h-14 flex justify-between items-center px-5 pages">
-        <div>
-          <h1>Home</h1>
+      {mobileMenu ? (
+        <div className="p-2">
+          <RxHamburgerMenu size={22} className="border-2 border-black cursor-pointer" />
         </div>
-
+      ) : (
+        // pages list
+        <div className="bg-white shadow-md w-full h-14 flex justify-between items-center px-5">
         <div>
-          <h1>About Us</h1>
+          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+            Home
+          </h1>
         </div>
-
+    
+        <div>
+          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+            About Us
+          </h1>
+        </div>
+    
         <div className="relative">
           <h1
+            className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100"
             onMouseEnter={() => setShowDepartmentsDropdown(true)}
             onMouseLeave={() => setShowDepartmentsDropdown(false)}
           >
@@ -88,7 +129,6 @@ function Home() {
               showDepartmentsDropdown ? "block" : "hidden"
             }`}
           >
-            {/* Dropdown content */}
             <ul>
               <li className="mb-2">Option 1</li>
               <li className="mb-2">Option 2</li>
@@ -99,13 +139,16 @@ function Home() {
             </ul>
           </div>
         </div>
-
+    
         <div className="relative">
-          <h1>Blog</h1>
+          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+            Blog
+          </h1>
         </div>
-
+    
         <div className="relative">
           <h1
+            className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100"
             onMouseEnter={() => setShowServicesDropdown(true)}
             onMouseLeave={() => setShowServicesDropdown(false)}
           >
@@ -116,7 +159,6 @@ function Home() {
               showServicesDropdown ? "block" : "hidden"
             }`}
           >
-            {/* Dropdown content */}
             <ul>
               <li className="mb-2">Option 1</li>
               <li className="mb-2">Option 2</li>
@@ -127,9 +169,10 @@ function Home() {
             </ul>
           </div>
         </div>
-
+    
         <div className="relative">
           <h1
+            className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100"
             onMouseEnter={() => setShowOffersDropdown(true)}
             onMouseLeave={() => setShowOffersDropdown(false)}
           >
@@ -140,7 +183,6 @@ function Home() {
               showOffersDropdown ? "block" : "hidden"
             }`}
           >
-            {/* Dropdown content */}
             <ul>
               <li className="mb-2">Option 1</li>
               <li className="mb-2">Option 2</li>
@@ -151,18 +193,21 @@ function Home() {
             </ul>
           </div>
         </div>
-
-        <div className="relative">
-          <h1>Contact Us</h1>
+    
+        <div>
+          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+            Contact Us
+          </h1>
         </div>
       </div>
+      )}
 
       {/* banner */}
 
       <Curoussel />
 
       {/* video */}
-      <div className="flex border-4 md:flex-row flex-col justify-center items-center border-indigo-900 rounded-xl shadow-md my-10 mx-10 py-5">
+      <div className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md my-10 mx-1 md:mx-10 py-5">
         <div className=" h-72  px-3  w-full flex justify-center items-center">
           <video autoPlay loop muted>
             <source src={videoSource} type="video/mp4" />
@@ -170,7 +215,7 @@ function Home() {
           </video>
         </div>
 
-        <div className="w-2/3 px-7 font-semibold flex justify-center items-center text-lg ">
+        <div className="w-2/3 md:px-7 font-semibold flex justify-center items-center text-lg ">
           <h1 style={{ wordSpacing: "6px" }}>
             "Your health is our priority. Hiba Asia Hospital ensures you and
             your family receive the best possible medical care and assistance.

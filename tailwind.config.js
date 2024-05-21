@@ -5,7 +5,32 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      letterSpacing: {
+        'extra-wide': '0.2em',
+        'super-wide': '0.3em',
+        'mega-wide': '0.4em',
+      },
+      keyframes: {
+        'reverse-rotate': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
+        'bounce': {
+          '0%, 100%': { transform: 'translateY(-50%)', 'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)' },
+          '50%': { transform: 'translateY(0)', 'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)' },
+        },
+        'pulse-border': {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(0, 149, 66, 0.7)' },
+          '50%': { boxShadow: '0 0 0 20px rgba(0, 149, 66, 0)' },
+        },
+      },
+      animation: {
+        'reverse-rotate': 'reverse-rotate 1s ease-in-out',
+        'bounce': 'bounce 1s infinite',
+        'pulse-border': 'pulse-border 2s infinite',
+      },
+    },
   },
   plugins: [],
 }
