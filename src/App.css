@@ -69,7 +69,7 @@
     padding: 2px;
     width: 97px;
     height: 35px;
-    background-color: #00918d;
+    background-color: #289b78;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
@@ -87,7 +87,7 @@
     left: 2px;
     bottom: 2px;
     right: 2px;
-    background-color:#00918d;    
+    background-color:#289b78;    
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
     -o-border-radius: 60px;
@@ -115,7 +115,6 @@
     margin-left: 44px;
   }
   
-
   .child-div {
     height: 200px;
     transition: all 0.3s ease;
@@ -140,4 +139,20 @@
   }
   
 
+  .hexagon-container {
+    position: relative;
+    clip-path: polygon(33.3% 0%, 66.7% 0%, 100% 50%, 66.7% 100%, 33.3% 100%, 0% 50%);
+    overflow: hidden;
+  }
+  
+  .image-in-hexagon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(33.3% 0%, 66.7% 0%, 100% 50%, 66.7% 100%, 33.3% 100%, 0% 50%);
+  }
+  
   

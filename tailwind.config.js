@@ -24,11 +24,29 @@ export default {
           '0%, 100%': { boxShadow: '0 0 0 0 rgba(0, 149, 66, 0.7)' },
           '50%': { boxShadow: '0 0 0 20px rgba(0, 149, 66, 0)' },
         },
+        'gradientBackground': {
+          '0%': {
+            background: 'linear-gradient(to bottom right, #1e3a8a, #289b78)',
+          },
+          '25%': {
+            background: 'linear-gradient(to bottom right, #289b78, #1e3a8a)',
+          },
+          '50%': {
+            background: 'linear-gradient(to bottom right, #1e3a8a, #289b78)',
+          },
+          '75%': {
+            background: 'linear-gradient(to bottom right, #289b78, #1e3a8a)',
+          },
+          '100%': {
+            background: 'linear-gradient(to bottom right, #1e3a8a, #289b78)',
+          },
+        }
       },
       animation: {
         'reverse-rotate': 'reverse-rotate 1s ease-in-out',
         'bounce': 'bounce 1s infinite',
         'pulse-border': 'pulse-border 2s infinite',
+        'gradient-bg': 'gradientBackground 10s ease infinite',
       },
     },
   },

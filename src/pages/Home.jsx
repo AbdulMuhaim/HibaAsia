@@ -5,6 +5,12 @@ import videoSource from "../assets/132778853_778113649719337_6473248478797310844
 import { FaLocationDot } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState, useEffect } from "react";
+import serviceImg1 from "../assets/Walkin.jpg";
+import serviceImg2 from "../assets/patient-portal.png";
+import serviceImg3 from "../assets/Virtual.jpg";
+import serviceImg4 from "../assets/home-care.jpg";
+import bannerImg from "../assets/young-handsome-physician-medical-robe-with-stethoscope.jpg"
+import bannerImg2 from "../assets/covid-coronavirus-disease-healthcare-workers-concept-closeup-confident-female-asian-physician-doc (1).jpg"
 
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -45,6 +51,29 @@ function Home() {
     color: "white",
   };
 
+  const serviceImages = [
+    {
+      image: serviceImg1,
+      title: "Online Appointments",
+      description: "Visit Our Center For Consultation",
+    },
+    {
+      image: serviceImg4,
+      title: "Hiba Home Care",
+      description: "A Complete Medical Care at Your Home",
+    },
+    {
+      image: serviceImg3,
+      title: "Tele Consultation",
+      description: "Consultation through Video Conference",
+    },
+    {
+      image: serviceImg2,
+      title: "Service & Packages",
+      description: "View and purchase services & packages",
+    },
+  ];
+
   return (
     <div>
       {/* header */}
@@ -54,7 +83,7 @@ function Home() {
             <img
               src={headerImage}
               alt=""
-              className="w-[60vw] h-[13vh] md:w-[35vw] md:h-[11vh] xl:w-[30vw] xl:h-[14vh]  p-2 md:p-0 md:my-2 mx-auto md:mx-0"
+              className="w-[60vw]  h-[13vh] md:w-[35vw] md:h-[11vh] xl:w-[30vw] xl:h-[14vh] p-2 md:p-0 md:my-2 mx-auto md:mx-0"
             />
           </div>
           <p
@@ -69,7 +98,9 @@ function Home() {
           <p className="mt-1 mr-1 inline-block">
             <FaLocationDot />
           </p>
-          <h1 className="font-semibold inline-block text-sm lg:text-base xl:text-lg 2xl:text-xl">Jeddah, Saudi Arabia</h1>
+          <h1 className="font-semibold inline-block text-sm lg:text-base xl:text-lg 2xl:text-xl">
+            Jeddah, Saudi Arabia
+          </h1>
         </div>
 
         <div className="flex justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
@@ -80,7 +111,7 @@ function Home() {
                 className="check-toggle check-toggle-round-flat"
                 type="checkbox"
               />
-      <label htmlFor="language-toggle" className="!h-10"></label>
+              <label htmlFor="language-toggle" className="!h-10"></label>
               <span className="on">EN</span>
               <span className="off">AR</span>
             </div>
@@ -89,7 +120,7 @@ function Home() {
           <div className="flex justify-between w-full md:w-auto ml-4">
             <button
               onClick={handleButtonClick}
-              className="bg-white text-black border-2 border-black lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-300 transform hover:bg-blue-100 hover:scale-105"
+              className="bg-white text-black xl:text-lg border-2 border-black lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-300 transform hover:bg-blue-100 hover:scale-105"
             >
               Book an Appointment
             </button>
@@ -99,120 +130,163 @@ function Home() {
 
       {mobileMenu ? (
         <div className="p-2">
-          <RxHamburgerMenu size={22} className="border-2 border-black cursor-pointer" />
+          <RxHamburgerMenu
+            size={22}
+            className="border-2 border-black cursor-pointer"
+          />
         </div>
       ) : (
         // pages list
-        <div className="bg-white shadow-md w-full h-14 flex justify-between items-center px-5">
-        <div>
-          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-            Home
-          </h1>
-        </div>
-    
-        <div>
-          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-            About Us
-          </h1>
-        </div>
-    
-        <div className="relative">
-          <h1
-            className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100"
-            onMouseEnter={() => setShowDepartmentsDropdown(true)}
-            onMouseLeave={() => setShowDepartmentsDropdown(false)}
-          >
-            Departments
-          </h1>
-          <div
-            className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
-              showDepartmentsDropdown ? "block" : "hidden"
-            }`}
-          >
-            <ul>
-              <li className="mb-2">Option 1</li>
-              <li className="mb-2">Option 2</li>
-              <li className="mb-2">Option 3</li>
-              <li className="mb-2">Option 4</li>
-              <li className="mb-2">Option 5</li>
-              <li className="mb-2">Option 6</li>
-            </ul>
+        <div className="bg-gray-200 shadow-md w-full h-16 flex justify-between items-center px-5">
+          <div>
+            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              Home
+            </h1>
+          </div>
+
+          <div>
+            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              About Us
+            </h1>
+          </div>
+
+          <div className="relative">
+            <h1
+              className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+              onMouseEnter={() => setShowDepartmentsDropdown(true)}
+              onMouseLeave={() => setShowDepartmentsDropdown(false)}
+            >
+              Departments
+            </h1>
+            <div
+              className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
+                showDepartmentsDropdown ? "block" : "hidden"
+              }`}
+            >
+              <ul>
+                <li className="mb-2">Option 1</li>
+                <li className="mb-2">Option 2</li>
+                <li className="mb-2">Option 3</li>
+                <li className="mb-2">Option 4</li>
+                <li className="mb-2">Option 5</li>
+                <li className="mb-2">Option 6</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="relative">
+            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              Blog
+            </h1>
+          </div>
+
+          <div className="relative">
+            <h1
+              className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+              onMouseEnter={() => setShowServicesDropdown(true)}
+              onMouseLeave={() => setShowServicesDropdown(false)}
+            >
+              Services
+            </h1>
+            <div
+              className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
+                showServicesDropdown ? "block" : "hidden"
+              }`}
+            >
+              <ul>
+                <li className="mb-2">Option 1</li>
+                <li className="mb-2">Option 2</li>
+                <li className="mb-2">Option 3</li>
+                <li className="mb-2">Option 4</li>
+                <li className="mb-2">Option 5</li>
+                <li className="mb-2">Option 6</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="relative">
+            <h1
+              className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+              onMouseEnter={() => setShowOffersDropdown(true)}
+              onMouseLeave={() => setShowOffersDropdown(false)}
+            >
+              Special Offers
+            </h1>
+            <div
+              className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
+                showOffersDropdown ? "block" : "hidden"
+              }`}
+            >
+              <ul>
+                <li className="mb-2">Option 1</li>
+                <li className="mb-2">Option 2</li>
+                <li className="mb-2">Option 3</li>
+                <li className="mb-2">Option 4</li>
+                <li className="mb-2">Option 5</li>
+                <li className="mb-2">Option 6</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              News
+            </h1>
+          </div>
+
+          <div>
+            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              Careers
+            </h1>
+          </div>
+
+          <div>
+            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              Contact Us
+            </h1>
           </div>
         </div>
-    
-        <div className="relative">
-          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-            Blog
-          </h1>
-        </div>
-    
-        <div className="relative">
-          <h1
-            className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100"
-            onMouseEnter={() => setShowServicesDropdown(true)}
-            onMouseLeave={() => setShowServicesDropdown(false)}
-          >
-            Services
-          </h1>
-          <div
-            className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
-              showServicesDropdown ? "block" : "hidden"
-            }`}
-          >
-            <ul>
-              <li className="mb-2">Option 1</li>
-              <li className="mb-2">Option 2</li>
-              <li className="mb-2">Option 3</li>
-              <li className="mb-2">Option 4</li>
-              <li className="mb-2">Option 5</li>
-              <li className="mb-2">Option 6</li>
-            </ul>
-          </div>
-        </div>
-    
-        <div className="relative">
-          <h1
-            className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100"
-            onMouseEnter={() => setShowOffersDropdown(true)}
-            onMouseLeave={() => setShowOffersDropdown(false)}
-          >
-            Special Offers
-          </h1>
-          <div
-            className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
-              showOffersDropdown ? "block" : "hidden"
-            }`}
-          >
-            <ul>
-              <li className="mb-2">Option 1</li>
-              <li className="mb-2">Option 2</li>
-              <li className="mb-2">Option 3</li>
-              <li className="mb-2">Option 4</li>
-              <li className="mb-2">Option 5</li>
-              <li className="mb-2">Option 6</li>
-            </ul>
-          </div>
-        </div>
-    
-        <div>
-          <h1 className="font-bold text-medium xl:text-lg opacity-40 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-            Contact Us
-          </h1>
-        </div>
-      </div>
       )}
 
       {/* banner */}
 
       <Curoussel />
 
+      <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-2 justify-between px-10 my-10">
+        {serviceImages.map((services, index) => (
+          <div
+            key={index}
+            className="flex items-center gap-3 bg-gradient-to-br from-blue-900 to-teal-600 rounded-3xl justify-evenly px-2 h-[20vh] border-b-2 border-white cursor-pointer group"
+          >
+            <div className="hexagon-container bg-black h-full border-t-2 w-40 xl:w-52 border-blue-800 border-b-2">
+              <img
+                src={services.image}
+                className="image-in-hexagon transition-transform duration-300 group-hover:scale-110"
+                alt=""
+              />
+            </div>
+
+            <div>
+              <h1 className="text-lg text-white font-bold transition-colors duration-300 group-hover:text-teal-100">
+                {services.title}
+              </h1>
+              <p className="text-base text-white">{services.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
       {/* video */}
       <div className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md my-10 mx-1 md:mx-10 py-5">
-        <div className=" h-72  px-3  w-full flex justify-center items-center">
-          <video autoPlay loop muted>
+        <div className=" h-72 px-1 w-full flex justify-center items-center">
+        <div className="flex">
+            <img src={bannerImg} className="h-[47vh] w-1/2 rounded-tl-lg rounded-bl-lg" alt="" />
+            <img src={bannerImg2} className="h-[47vh] w-1/2" alt="" />
+          </div>
+          {/* <video autoPlay loop muted>
             <source src={videoSource} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </div>
 
         <div className="w-2/3 md:px-7 font-semibold flex justify-center items-center text-lg ">
@@ -232,8 +306,8 @@ function Home() {
 
       {/* departments */}
       <div className="mt-16 border-y-4 py-14 px-3 ">
-        <h1 className=" text-3xl xl:text-4xl font-bold">Departments</h1>
-        <div className="grid md:grid-cols-4 grid-cols-1 gap-4 pt-8">
+        <h1 className="text-3xl xl:text-4xl font-bold">Departments</h1>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 pt-8">
           {/* Child div 1 */}
           <div>
             <p className="department-name">Pediatric</p>
@@ -321,7 +395,7 @@ function Home() {
       <div className="mt-3 border-b-4 py-14 px-3 ">
         <h1 className=" text-3xl font-bold">Our Doctors</h1>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
           <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
             {/* Profile Image */}
             <img
@@ -508,8 +582,8 @@ function Home() {
         <h1 className=" text-3xl font-bold">News & Events</h1>
 
         {/* YouTube Video 1 */}
-        <div className="grid grid-cols-2 gap-4 pt-8">
-          <div className="mb-6">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+          <div className="mb-6 flex items-center justify-center">
             <iframe
               width="560"
               height="315"
@@ -520,7 +594,7 @@ function Home() {
             ></iframe>
           </div>
           {/* YouTube Video 2 */}
-          <div>
+          <div className="flex items-center justify-center">
             <iframe
               width="560"
               height="315"
@@ -534,27 +608,33 @@ function Home() {
       </div>
 
       {/* text area*/}
-      <div className="flex justify-between items-center p-10 bg-slate-100 h-screen">
-        <div className="w-1/2 ">
-          <h1 className="text-5xl font-medium font-serif text-center">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center p-10 bg-slate-100 gap-14 md:gap-0 md:h-screen">
+        <div className="w-full md:w-1/2">
+          <h1 className="text-5xl font-medium font-serif text-center md:text-left">
             Our team of experts provides top-notch medical treatment with
             empathy using the most advanced technology.
           </h1>
         </div>
 
-        <div className="w-1/2 flex gap-5 justify-center items-center right-text-div">
-          <h1>
-            1300+ <br />
-            <span>Bed Capacity</span>
-          </h1>
-          <h1>
-            10M <br />
-            <span>Current Customers</span>
-          </h1>
-          <h1>
-            128+ <br />
-            <span>Medical Apparatus</span>
-          </h1>
+        <div className="w-full md:w-1/2 flex gap-5 justify-center items-center mb-5 md:mb-0 order-1 md:order-2">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold">
+              1300+ <br />
+              <span className="text-base font-normal">Bed Capacity</span>
+            </h1>
+          </div>
+          <div className="text-center">
+            <h1 className="text-3xl font-bold">
+              10M <br />
+              <span className="text-base font-normal">Current Customers</span>
+            </h1>
+          </div>
+          <div className="text-center">
+            <h1 className="text-3xl font-bold">
+              128+ <br />
+              <span className="text-base font-normal">Medical Apparatus</span>
+            </h1>
+          </div>
         </div>
       </div>
 
