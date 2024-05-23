@@ -7,9 +7,13 @@ export default {
   theme: {
     extend: {
       letterSpacing: {
-        'extra-wide': '0.2em',
-        'super-wide': '0.3em',
+        'extra-wide': '0.06em',
+        'super-wide': '0.1em',
         'mega-wide': '0.4em',
+      },
+      fontFamily: {
+        Avenir: ['Avenir Next or Sofia Pro'],
+        Arial: ['Arial', 'Helvetica', 'sans-serif'],
       },
       keyframes: {
         'reverse-rotate': {

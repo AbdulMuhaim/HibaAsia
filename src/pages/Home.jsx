@@ -9,8 +9,17 @@ import serviceImg1 from "../assets/Walkin.jpg";
 import serviceImg2 from "../assets/patient-portal.png";
 import serviceImg3 from "../assets/Virtual.jpg";
 import serviceImg4 from "../assets/home-care.jpg";
-import bannerImg from "../assets/young-handsome-physician-medical-robe-with-stethoscope.jpg"
-import bannerImg2 from "../assets/covid-coronavirus-disease-healthcare-workers-concept-closeup-confident-female-asian-physician-doc (1).jpg"
+import bannerImg from "../assets/young-handsome-physician-medical-robe-with-stethoscope.jpg";
+import bannerImg2 from "../assets/covid-coronavirus-disease-healthcare-workers-concept-closeup-confident-female-asian-physician-doc (1).jpg";
+import blob from "../assets/blob.svg";
+import { MdEmail } from "react-icons/md";
+import { IoIosCall } from "react-icons/io";
+import smilingDoctor from "../assets/file.png";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaMapLocationDot } from "react-icons/fa6";
+import bgImage from "../assets/abstract-blue-wave-background-transparent-blue-lines_206325-785 (1).jpg";
+import whatsappLogo from "../assets/WhatsApp.svg.png";
 
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -74,191 +83,297 @@ function Home() {
     },
   ];
 
+  const socialMediaItems = [
+    { icon: FaFacebook, label: "Facebook", top: "top-48" },
+    { icon: RiInstagramFill, label: "Instagram", top: "top-60" },
+    { icon: FaTwitter, label: "Twitter", top: "top-72" },
+  ];
+
   return (
     <div>
       {/* header */}
-      <div className="w-full h-auto bg-white border-b-2 flex flex-col md:flex-row justify-between items-center px-5">
-        <div className="w-full md:w-auto flex-col justify-center items-center px-5 py-2 mt-2">
-          <div className="flex items-center justify-center">
-            <img
-              src={headerImage}
-              alt=""
-              className="w-[60vw] h-[13vh] md:w-[35vw] md:h-[11vh] xl:w-[30vw] xl:h-[14vh] p-2 md:p-0 md:my-2 mx-auto md:mx-0"
-            />
-          </div>
-          <p
-            className="text-center opacity-50 font-medium tracking-mega-wide pt-0 mt-0 pb-2"
-            style={{ wordSpacing: "0.1em" }}
-          >
-            INSPIRING BETTER HEALTH
-          </p>
-        </div>
-
-        <div className="flex items-center mt-4 md:mt-0 md:block hidden">
-          <p className="mt-1 mr-1 inline-block">
-            <FaLocationDot />
-          </p>
-          <h1 className="font-semibold inline-block text-sm lg:text-base xl:text-lg 2xl:text-xl">
-            Jeddah, Saudi Arabia
-          </h1>
-        </div>
-
-        <div className="flex justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
-          <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
-            <div className="switch">
-              <input
-                id="language-toggle"
-                className="check-toggle check-toggle-round-flat"
-                type="checkbox"
+      <div className="bg-gradient-to-b from-white to-teal-300">
+        <div className="w-full h-auto flex flex-col md:flex-row justify-between items-center px-5">
+          <div className="w-1/5 md:w-auto flex-col justify-center items-center px-5 py-1 mt-2">
+            <div className="flex items-center justify-center">
+              <img
+                src={headerImage}
+                alt=""
+                className="md:p-0 md:my-2 mx-auto md:mx-0 h-14"
               />
-              <label htmlFor="language-toggle" className="!h-10"></label>
-              <span className="on">EN</span>
-              <span className="off">AR</span>
+            </div>
+            <p className="text-center opacity-60 tracking-extra-wide pt-0 mt-0 pb-2">
+              INSPIRING BETTER HEALTH
+            </p>
+          </div>
+
+          {/* options bar under header */}
+          {mobileMenu ? (
+            <div className="p-2">
+              <RxHamburgerMenu
+                size={22}
+                className="border-2 border-black cursor-pointer"
+              />
+            </div>
+          ) : (
+            // pages list
+            <div
+              className="w-4/5 h-16 flex justify-between items-center px-5"
+              style={{ fontFamily: "Avenir Next or Sofia Pro" }}
+            >
+              <div>
+                <h1 className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+                  Home
+                </h1>
+              </div>
+
+              <div>
+                <h1 className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+                  About Us
+                </h1>
+              </div>
+
+              <div className="relative">
+                <h1
+                  className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+                  onMouseEnter={() => setShowDepartmentsDropdown(true)}
+                  onMouseLeave={() => setShowDepartmentsDropdown(false)}
+                >
+                  Departments
+                </h1>
+                <div
+                  className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
+                    showDepartmentsDropdown ? "block" : "hidden"
+                  }`}
+                >
+                  <ul>
+                    <li className="mb-2">Option 1</li>
+                    <li className="mb-2">Option 2</li>
+                    <li className="mb-2">Option 3</li>
+                    <li className="mb-2">Option 4</li>
+                    <li className="mb-2">Option 5</li>
+                    <li className="mb-2">Option 6</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* <div className="relative">
+            <h1 className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              Blog
+            </h1>
+          </div> */}
+
+              <div className="relative">
+                <h1
+                  className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+                  onMouseEnter={() => setShowServicesDropdown(true)}
+                  onMouseLeave={() => setShowServicesDropdown(false)}
+                >
+                  Services
+                </h1>
+                <div
+                  className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
+                    showServicesDropdown ? "block" : "hidden"
+                  }`}
+                >
+                  <ul>
+                    <li className="mb-2">Option 1</li>
+                    <li className="mb-2">Option 2</li>
+                    <li className="mb-2">Option 3</li>
+                    <li className="mb-2">Option 4</li>
+                    <li className="mb-2">Option 5</li>
+                    <li className="mb-2">Option 6</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="relative">
+                <h1
+                  className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+                  onMouseEnter={() => setShowOffersDropdown(true)}
+                  onMouseLeave={() => setShowOffersDropdown(false)}
+                >
+                  Special Offers
+                </h1>
+                <div
+                  className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
+                    showOffersDropdown ? "block" : "hidden"
+                  }`}
+                >
+                  <ul>
+                    <li className="mb-2">Option 1</li>
+                    <li className="mb-2">Option 2</li>
+                    <li className="mb-2">Option 3</li>
+                    <li className="mb-2">Option 4</li>
+                    <li className="mb-2">Option 5</li>
+                    <li className="mb-2">Option 6</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* <div>
+            <h1 className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+              News
+            </h1>
+          </div> */}
+
+              <div>
+                <h1 className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+                  Careers
+                </h1>
+              </div>
+
+              <div>
+                <h1 className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+                  Contact Us
+                </h1>
+              </div>
+            </div>
+          )}
+          {/* options bar under header closed*/}
+
+          {/* <div className="flex items-center justify-center gap-20">
+          <a className="flex items-center gap-2" href="tel:+966539365643">
+            <button className="bg-blue-900 text-white p-2 xl:text-lg rounded-full transition duration-300 transform">
+              <IoIosCall size={30} />
+            </button>
+            <div>
+              <p className="font-medium opacity-60">Talk to Us</p>
+              <p className="font-Avenir opacity-90">1234567890</p>
+            </div>
+          </a>
+
+          <a
+            className="flex items-center gap-2"
+            href="mailto:muhaim25@gmail.com"
+          >
+            <button className="bg-teal-600 text-white border-teal-600 border-2 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
+              <MdEmail size={30} />{" "}
+            </button>
+            <div>
+              <p className="font-medium opacity-60 ">Write to Us</p>
+              <p className="font-Avenir opacity-90">www.hibaasia@gmail.com</p>
+            </div>
+          </a>
+        </div> */}
+
+          <div className="flex absolute right-7 top-28 justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
+            <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
+              <div className="switch">
+                <input
+                  id="language-toggle"
+                  className="check-toggle check-toggle-round-flat"
+                  type="checkbox"
+                />
+                <label htmlFor="language-toggle" className="!h-10"></label>
+                <span className="on">EN</span>
+                <span className="off">AR</span>
+              </div>
             </div>
           </div>
+        </div>
+        {/* header closed */}
 
-          <div className="flex justify-between w-full md:w-auto ml-4">
-            <button
-              onClick={handleButtonClick}
-              className="bg-white text-black xl:text-lg border-2 border-black lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-300 transform hover:bg-blue-100 hover:scale-105"
-            >
-              Book an Appointment
-            </button>
+        {/* banner */}
+        <div className="flex">
+          <div className="w-1/2 flex justify-center items-center">
+            <div className="px-10 h-full">
+              <div className="flex flex-col items-center justify-center text-center h-4/5">
+                <h1 className="font-Avenir text-6xl font-bold mb-2">
+                  Elevating Healthcare Standards
+                </h1>
+                <p className="text-lg font-medium opacity-75 font-serif">
+                  Discover a new standard of healthcare excellence at Hiba Asia.
+                  We combine advanced medical technology with compassionate care
+                  to ensure the best possible outcomes for our patients.
+                </p>
+                <div className="flex justify-center items-center">
+                  <button
+                    onClick={handleButtonClick}
+                    className="bg-teal-700 mt-10  text-white xl:text-lg lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-500 transform hover:bg-teal-800 hover:scale-105"
+                  >
+                    Book an Appointment
+                  </button>
+                </div>
+              </div>
+
+              <div className="h-1/5 flex items-center">
+                <div className="flex gap-7 ">
+                  <h1 className="font-semibold text-xl font-sans opacity-70 ">
+                    <FaMapLocationDot color="black" size={40} />
+                  </h1>
+                  <button className="rounded-full  border-teal-700 h-9 border-x-8 bg-white px-5">
+                    KSA
+                  </button>
+                  <button className="rounded-full  border-teal-700 h-9 border-x-8 bg-white px-5">
+                    UAE
+                  </button>
+                  <button className="rounded-full  border-teal-700 h-9 border-x-8 bg-white px-5">
+                    OMAN
+                  </button>
+                  <button className="rounded-full  border-teal-700 h-9 border-x-8 bg-white px-5">
+                    BAHRAIN
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+          <div className="w-1/2">
+            <img src={smilingDoctor} alt="" />
+          </div>
+          {/* banner closed*/}
+
+          {/* whatsapp */}
+          <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 bottom-24 sm:left-10 sm:bottom-52 bg-[#2C9542] animate-pulse-border">
+            <a
+              href="https://api.whatsapp.com/send?phone=966539365643"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={whatsappLogo}
+                className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 2xl:h-16 2xl:w-16"
+                alt="WhatsApp Logo"
+              />
+            </a>
+          </div>
+          {/* whatsapp closed*/}
+
+          {/* social medias */}
+          <ul>
+            {socialMediaItems.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <li
+                  key={index}
+                  className={`group w-32 sm:w-40 lg:w-48 bg-blue-100 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-24 sm:-right-28 lg:-right-36  ${item.top} z-50 transition-all duration-1000 hover:w-40 sm:hover:w-48 lg:hover:w-56 hover:-right-16`}
+                  style={{ top: `${index * 62 + 300}px` }} // Adjust the spacing and initial top position as needed
+                >
+                  <div className="bg-white group-hover:bg-[#00918d] rounded-full h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 flex items-center justify-center transform transition-transform duration-100 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
+                    <IconComponent
+                      size={27}
+                      className="text-[#00918d] group-hover:text-white sm:size-25 lg:size-30"
+                    />
+                  </div>
+                  <p className="text-xs sm:text-sm lg:text-base font-medium">
+                    {item.label}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+          {/* social medias closed*/}
         </div>
       </div>
 
-      {mobileMenu ? (
-        <div className="p-2">
-          <RxHamburgerMenu
-            size={22}
-            className="border-2 border-black cursor-pointer"
-          />
-        </div>
-      ) : (
-        // pages list
-        <div className="bg-gray-200 shadow-md w-full h-16 flex justify-between items-center px-5">
-          <div>
-            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-              Home
-            </h1>
-          </div>
-
-          <div>
-            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-              About Us
-            </h1>
-          </div>
-
-          <div className="relative">
-            <h1
-              className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100"
-              onMouseEnter={() => setShowDepartmentsDropdown(true)}
-              onMouseLeave={() => setShowDepartmentsDropdown(false)}
-            >
-              Departments
-            </h1>
-            <div
-              className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
-                showDepartmentsDropdown ? "block" : "hidden"
-              }`}
-            >
-              <ul>
-                <li className="mb-2">Option 1</li>
-                <li className="mb-2">Option 2</li>
-                <li className="mb-2">Option 3</li>
-                <li className="mb-2">Option 4</li>
-                <li className="mb-2">Option 5</li>
-                <li className="mb-2">Option 6</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="relative">
-            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-              Blog
-            </h1>
-          </div>
-
-          <div className="relative">
-            <h1
-              className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100"
-              onMouseEnter={() => setShowServicesDropdown(true)}
-              onMouseLeave={() => setShowServicesDropdown(false)}
-            >
-              Services
-            </h1>
-            <div
-              className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
-                showServicesDropdown ? "block" : "hidden"
-              }`}
-            >
-              <ul>
-                <li className="mb-2">Option 1</li>
-                <li className="mb-2">Option 2</li>
-                <li className="mb-2">Option 3</li>
-                <li className="mb-2">Option 4</li>
-                <li className="mb-2">Option 5</li>
-                <li className="mb-2">Option 6</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="relative">
-            <h1
-              className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100"
-              onMouseEnter={() => setShowOffersDropdown(true)}
-              onMouseLeave={() => setShowOffersDropdown(false)}
-            >
-              Special Offers
-            </h1>
-            <div
-              className={`absolute z-10 bg-white rounded-lg text-center py-4 border-2 w-36 ${
-                showOffersDropdown ? "block" : "hidden"
-              }`}
-            >
-              <ul>
-                <li className="mb-2">Option 1</li>
-                <li className="mb-2">Option 2</li>
-                <li className="mb-2">Option 3</li>
-                <li className="mb-2">Option 4</li>
-                <li className="mb-2">Option 5</li>
-                <li className="mb-2">Option 6</li>
-              </ul>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-              News
-            </h1>
-          </div>
-
-          <div>
-            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-              Careers
-            </h1>
-          </div>
-
-          <div>
-            <h1 className="font-bold text-medium xl:text-lg opacity-50 cursor-pointer transition-opacity duration-300 hover:opacity-100">
-              Contact Us
-            </h1>
-          </div>
-        </div>
-      )}
-
-      {/* banner */}
-
-      <Curoussel />
-
-      <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-2 justify-between px-10 my-10">
+      {/* Services */}
+      <div className="grid md:grid-cols-2  lg:grid-cols-4 grid-cols-1 gap-2 justify-between mt-7 mx-10">
         {serviceImages.map((services, index) => (
           <div
             key={index}
-            className="flex items-center gap-3 bg-gradient-to-br from-blue-900 to-teal-600 rounded-3xl justify-evenly px-2 h-[20vh] border-b-2 border-white cursor-pointer group"
+            className="flex items-center gap-3 bg-gradient-to-br from-blue-900 to-teal-600 rounded-xl justify-evenly px-7 h-[12vh] border-b-2 border-white cursor-pointer group"
           >
-            <div className="hexagon-container bg-black h-full border-t-2 w-40 xl:w-52 border-blue-800 border-b-2">
+            <div className="hexagon-container bg-black h-full border-t-2 w-32 border-blue-800 border-b-2">
               <img
                 src={services.image}
                 className="image-in-hexagon transition-transform duration-300 group-hover:scale-110"
@@ -267,20 +382,27 @@ function Home() {
             </div>
 
             <div>
-              <h1 className="text-lg text-white font-bold transition-colors duration-300 group-hover:text-teal-100">
+              <h1 className="text-white font-bold transition-colors duration-300 group-hover:text-teal-100">
                 {services.title}
               </h1>
-              <p className="text-base text-white">{services.description}</p>
+              <p className="text-sm text-white">{services.description}</p>
             </div>
           </div>
         ))}
       </div>
+      {/* Services closed*/}
 
-      {/* video */}
-      <div className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md my-10 mx-1 md:mx-10 py-5">
+      <div
+        className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md mt-7 mx-1 md:mx-10 py-5 "
+        style={{ backgroundImage: blob }}
+      >
         <div className=" h-72 px-1 w-full flex justify-center items-center">
-        <div className="flex">
-            <img src={bannerImg} className="h-[47vh] w-1/2 rounded-tl-lg rounded-bl-lg" alt="" />
+          <div className="flex">
+            <img
+              src={bannerImg}
+              className="h-[47vh] w-1/2 rounded-tl-lg rounded-bl-lg"
+              alt=""
+            />
             <img src={bannerImg2} className="h-[47vh] w-1/2" alt="" />
           </div>
           {/* <video autoPlay loop muted>

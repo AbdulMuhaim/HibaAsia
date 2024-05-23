@@ -1,5 +1,8 @@
-
-
+  .body{
+    margin: 0;
+    padding: 0;
+    font-family:"Avenir Next or Sofia Pro";
+  }
   .right-text-div > h1 {
    font-weight: 500;
    font-size: x-large;
@@ -87,7 +90,7 @@
     left: 2px;
     bottom: 2px;
     right: 2px;
-    background-color:#289b78;    
+    background-color: rgb(6, 138, 138);    
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
     -o-border-radius: 60px;
