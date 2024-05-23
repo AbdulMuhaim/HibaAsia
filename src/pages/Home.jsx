@@ -232,30 +232,7 @@ function Home() {
           )}
           {/* options bar under header closed*/}
 
-          {/* <div className="flex items-center justify-center gap-20">
-          <a className="flex items-center gap-2" href="tel:+966539365643">
-            <button className="bg-blue-900 text-white p-2 xl:text-lg rounded-full transition duration-300 transform">
-              <IoIosCall size={30} />
-            </button>
-            <div>
-              <p className="font-medium opacity-60">Talk to Us</p>
-              <p className="font-Avenir opacity-90">1234567890</p>
-            </div>
-          </a>
 
-          <a
-            className="flex items-center gap-2"
-            href="mailto:muhaim25@gmail.com"
-          >
-            <button className="bg-teal-600 text-white border-teal-600 border-2 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
-              <MdEmail size={30} />{" "}
-            </button>
-            <div>
-              <p className="font-medium opacity-60 ">Write to Us</p>
-              <p className="font-Avenir opacity-90">www.hibaasia@gmail.com</p>
-            </div>
-          </a>
-        </div> */}
 
           <div className="flex absolute right-7 top-28 justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
             <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
@@ -297,7 +274,7 @@ function Home() {
                 </div>
               </div>
 
-              <div className="h-1/5 flex items-center">
+              {/* <div className="h-1/5 flex items-center">
                 <div className="flex gap-7 ">
                   <h1 className="font-semibold text-xl font-sans opacity-70 ">
                     <FaMapLocationDot color="black" size={40} />
@@ -315,7 +292,34 @@ function Home() {
                     BAHRAIN
                   </button>
                 </div>
-              </div>
+              </div> */}
+
+<div className="flex items-center gap-20">
+          <a className="flex items-center gap-2" href="tel:+966539365643">
+            <button className="bg-white text-black p-2  border-teal-600 border-4 xl:text-lg rounded-full transition duration-300 transform">
+              <IoIosCall size={30} />
+            </button>
+            <div>
+              <p className="font-medium text-lg opacity-70">Talk to Us</p>
+              <p className="font-Avenir opacity-90">1234567890</p>
+            </div>
+          </a>
+
+          <a
+            className="flex items-center gap-2"
+            href="mailto:muhaim25@gmail.com"
+          >
+            <button className="bg-white text-black border-teal-600 border-4 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
+              <MdEmail size={30} />{" "}
+            </button>
+            <div>
+              <p className="font-medium opacity-70 text-lg ">Write to Us</p>
+              <p className="font-Avenir opacity-90">www.hibaasia@gmail.com</p>
+            </div>
+          </a>
+        </div>
+
+
             </div>
           </div>
           <div className="w-1/2">
@@ -324,7 +328,7 @@ function Home() {
           {/* banner closed*/}
 
           {/* whatsapp */}
-          <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 bottom-24 sm:left-10 sm:bottom-52 bg-[#2C9542] animate-pulse-border">
+          <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 xl:bottom-[25vh] lg:bottom-[20vh] 2xl:bottom-[30vh] bg-[#2C9542] animate-pulse-border">
             <a
               href="https://api.whatsapp.com/send?phone=966539365643"
               target="_blank"
@@ -393,23 +397,23 @@ function Home() {
       {/* Services closed*/}
 
       <div
-        className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md mt-7 mx-1 md:mx-10 py-5 "
-        style={{ backgroundImage: blob }}
+        className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md mt-7 mx-1 md:mx-10 "
       >
-        <div className=" h-72 px-1 w-full flex justify-center items-center">
-          <div className="flex">
-            <img
-              src={bannerImg}
-              className="h-[47vh] w-1/2 rounded-tl-lg rounded-bl-lg"
-              alt=""
-            />
-            <img src={bannerImg2} className="h-[47vh] w-1/2" alt="" />
-          </div>
-          {/* <video autoPlay loop muted>
-            <source src={videoSource} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
-        </div>
+<div className="w-full flex justify-center items-center overflow-hidden">
+  <div className="flex">
+    <img
+      src={bannerImg}
+      className="w-1/2 rounded-tl-lg rounded-bl-lg object-cover object-center"
+      alt=""
+    />
+    <img
+      src={bannerImg2}
+      className="w-1/2 object-cover object-center"
+      alt=""
+    />
+  </div>
+</div>
+
 
         <div className="w-2/3 md:px-7 font-semibold flex justify-center items-center text-lg ">
           <h1 style={{ wordSpacing: "6px" }}>
