@@ -15,11 +15,19 @@ import blob from "../assets/blob.svg";
 import { MdEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
 import smilingDoctor from "../assets/file.png";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaTiktok, FaSnapchatGhost, FaLinkedinIn} from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaMapLocationDot } from "react-icons/fa6";
+import { FaMapLocationDot, FaXTwitter  } from "react-icons/fa6";
 import bgImage from "../assets/abstract-blue-wave-background-transparent-blue-lines_206325-785 (1).jpg";
 import whatsappLogo from "../assets/WhatsApp.svg.png";
+import aboutImage from "../assets/file (1).png";
+import aboutImage2 from "../assets/file (2).png";
+import aboutImage3 from "../assets/file (3).png";
+import aboutImage4 from "../assets/file (4).png";
+import aboutImage5 from "../assets/file (5).png";
+import aboutImage6 from "../assets/file (6).png";
+import aboutImage7 from "../assets/file (7).png";
+import aboutImage8 from "../assets/file (8).png";
 
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -84,9 +92,10 @@ function Home() {
   ];
 
   const socialMediaItems = [
-    { icon: FaFacebook, label: "Facebook", top: "top-48" },
-    { icon: RiInstagramFill, label: "Instagram", top: "top-60" },
-    { icon: FaTwitter, label: "Twitter", top: "top-72" },
+    { icon: FaLinkedinIn , label: "LinkedinIn"},
+    { icon: FaTiktok, label: "Tiktok"},
+    { icon: FaSnapchatGhost, label: "Snapchat"},
+    { icon: FaXTwitter, label: "XTwitter"}
   ];
 
   return (
@@ -99,10 +108,10 @@ function Home() {
               <img
                 src={headerImage}
                 alt=""
-                className="md:p-0 md:my-2 mx-auto md:mx-0 h-14"
+                className="md:p-0 md:my-2 mx-auto md:mx-0 sm:h-14"
               />
             </div>
-            <p className="text-center opacity-60 tracking-extra-wide pt-0 mt-0 pb-2">
+            <p className="text-center opacity-60 text-xs sm:text-base sm:tracking-extra-wide pt-0 mt-0 pb-2">
               INSPIRING BETTER HEALTH
             </p>
           </div>
@@ -232,8 +241,6 @@ function Home() {
           )}
           {/* options bar under header closed*/}
 
-
-
           <div className="flex absolute right-7 top-28 justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
             <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
               <div className="switch">
@@ -264,14 +271,12 @@ function Home() {
                   We combine advanced medical technology with compassionate care
                   to ensure the best possible outcomes for our patients.
                 </p>
-                <div className="flex justify-center items-center">
                   <button
                     onClick={handleButtonClick}
                     className="bg-teal-700 mt-10  text-white xl:text-lg lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-500 transform hover:bg-teal-800 hover:scale-105"
                   >
                     Book an Appointment
                   </button>
-                </div>
               </div>
 
               {/* <div className="h-1/5 flex items-center">
@@ -294,32 +299,34 @@ function Home() {
                 </div>
               </div> */}
 
-<div className="flex items-center gap-20">
-          <a className="flex items-center gap-2" href="tel:+966539365643">
-            <button className="bg-white text-black p-2  border-teal-600 border-4 xl:text-lg rounded-full transition duration-300 transform">
-              <IoIosCall size={30} />
-            </button>
-            <div>
-              <p className="font-medium text-lg opacity-70">Talk to Us</p>
-              <p className="font-Avenir opacity-90">1234567890</p>
-            </div>
-          </a>
+              <div className="flex items-center gap-20 ">
+                <a className="flex items-center gap-2" href="tel:+966539365643">
+                  <button className="bg-white text-black p-2  border-teal-600 border-4 xl:text-lg rounded-full transition duration-300 transform">
+                    <IoIosCall size={30} />
+                  </button>
+                  <div>
+                    <p className="font-medium text-lg opacity-70">Talk to Us</p>
+                    <p className="font-Avenir opacity-90">1234567890</p>
+                  </div>
+                </a>
 
-          <a
-            className="flex items-center gap-2"
-            href="mailto:muhaim25@gmail.com"
-          >
-            <button className="bg-white text-black border-teal-600 border-4 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
-              <MdEmail size={30} />{" "}
-            </button>
-            <div>
-              <p className="font-medium opacity-70 text-lg ">Write to Us</p>
-              <p className="font-Avenir opacity-90">www.hibaasia@gmail.com</p>
-            </div>
-          </a>
-        </div>
-
-
+                <a
+                  className="flex items-center gap-2"
+                  href="mailto:muhaim25@gmail.com"
+                >
+                  <button className="bg-white text-black border-teal-600 border-4 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
+                    <MdEmail size={30} />{" "}
+                  </button>
+                  <div>
+                    <p className="font-medium opacity-70 text-lg ">
+                      Write to Us
+                    </p>
+                    <p className="font-Avenir opacity-90">
+                      www.hibaasia@gmail.com
+                    </p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
           <div className="w-1/2">
@@ -328,7 +335,7 @@ function Home() {
           {/* banner closed*/}
 
           {/* whatsapp */}
-          <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 xl:bottom-[25vh] lg:bottom-[20vh] 2xl:bottom-[30vh] bg-[#2C9542] animate-pulse-border">
+          {/* <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 xl:bottom-[25vh] lg:bottom-[20vh] 2xl:bottom-[30vh] bg-[#2C9542] animate-pulse-border">
             <a
               href="https://api.whatsapp.com/send?phone=966539365643"
               target="_blank"
@@ -340,7 +347,7 @@ function Home() {
                 alt="WhatsApp Logo"
               />
             </a>
-          </div>
+          </div> */}
           {/* whatsapp closed*/}
 
           {/* social medias */}
@@ -350,10 +357,10 @@ function Home() {
               return (
                 <li
                   key={index}
-                  className={`group w-32 sm:w-40 lg:w-48 bg-blue-100 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-24 sm:-right-28 lg:-right-36  ${item.top} z-50 transition-all duration-1000 hover:w-40 sm:hover:w-48 lg:hover:w-56 hover:-right-16`}
+                  className={`group w-32 sm:w-40 lg:w-48 bg-blue-100 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-20 sm:-right-28 lg:-right-36 z-50 transition-all duration-1000 hover:w-40 sm:hover:w-48 lg:hover:w-56 hover:-right-16`}
                   style={{ top: `${index * 62 + 300}px` }} // Adjust the spacing and initial top position as needed
                 >
-                  <div className="bg-white group-hover:bg-[#00918d] rounded-full h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 flex items-center justify-center transform transition-transform duration-100 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
+                  <div className="bg-white group-hover:bg-[#00918d] rounded-full h-9 w-9 sm:h-8 sm:w-8 lg:h-10 lg:w-10 flex items-center justify-center transform transition-transform duration-100 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
                     <IconComponent
                       size={27}
                       className="text-[#00918d] group-hover:text-white sm:size-25 lg:size-30"
@@ -370,50 +377,80 @@ function Home() {
         </div>
       </div>
 
-      {/* Services */}
-      <div className="grid md:grid-cols-2  lg:grid-cols-4 grid-cols-1 gap-2 justify-between mt-7 mx-10">
-        {serviceImages.map((services, index) => (
-          <div
-            key={index}
-            className="flex items-center gap-3 bg-gradient-to-br from-blue-900 to-teal-600 rounded-xl justify-evenly px-7 h-[12vh] border-b-2 border-white cursor-pointer group"
-          >
-            <div className="hexagon-container bg-black h-full border-t-2 w-32 border-blue-800 border-b-2">
-              <img
-                src={services.image}
-                className="image-in-hexagon transition-transform duration-300 group-hover:scale-110"
-                alt=""
-              />
-            </div>
-
-            <div>
-              <h1 className="text-white font-bold transition-colors duration-300 group-hover:text-teal-100">
-                {services.title}
-              </h1>
-              <p className="text-sm text-white">{services.description}</p>
-            </div>
-          </div>
-        ))}
+{/* Services */}
+<div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-2 justify-between mt-8 mx-4">
+  {serviceImages.map((services, index) => (
+    <div
+      key={index}
+      className="flex items-center gap-3 z-10 bg-gradient-to-br from-blue-900 to-teal-600 rounded-xl justify-evenly px-6 h-[14vh] cursor-pointer group"
+    >
+      <div className="hexagon-container bg-black h-full w-32 border-t-2 border-blue-800 border-b-2 flex items-center justify-center overflow-hidden">
+        <img
+          src={services.image}
+          className="image-in-hexagon transition-transform duration-300 group-hover:scale-110"
+          alt=""
+        />
       </div>
-      {/* Services closed*/}
 
-      <div
-        className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md mt-7 mx-1 md:mx-10 "
-      >
-<div className="w-full flex justify-center items-center overflow-hidden">
-  <div className="flex">
-    <img
-      src={bannerImg}
-      className="w-1/2 rounded-tl-lg rounded-bl-lg object-cover object-center"
-      alt=""
-    />
-    <img
-      src={bannerImg2}
-      className="w-1/2 object-cover object-center"
-      alt=""
-    />
-  </div>
+      <div>
+        <h1 className="text-white font-bold transition-colors duration-300 group-hover:text-teal-100">
+          {services.title}
+        </h1>
+        <p className="text-sm text-white">{services.description}</p>
+      </div>
+    </div>
+  ))}
 </div>
+{/* Services closed */}
 
+
+      <div className="relative h-[400px] w-full flex items-center justify-center">
+        <div className="absolute h-[50vh] 2xl:-top-20 top-0 -left-14 w-1/2 hidden sm:block">
+          <img src={blob} className=" opacity-40 w-[90vw] h-[90vh] -z-50" alt="" />
+        </div>
+
+
+
+        <div className="absolute right-0 top-24 hidden sm:block">
+          <img className="w-full h-[65vh] " src={aboutImage2} alt="" />
+        </div>
+  
+
+
+
+        <div className="text-center">
+          <h1 className="font-Avenir font-bold text-2xl">About Us</h1>
+          <div className="text-lg max-w-2xl mx-auto">
+            <h1 className="text-lg font-medium opacity-70 font-serif mt-5 tracking-extra-wide">
+              Your health is our priority. Hiba Asia Hospital ensures you and
+              your family receive the best possible medical care and assistance.
+              We strive to create a warm and safe healing environment for you
+              and your family. Over the past decade, Hiba Asia has been
+              unflinchingly devoted to improving healthcare and treatment.
+              Medical specialists have been working diligently to conduct
+              research and educate future generations of doctors and healthcare
+              workers. As our entire team works toward your speedy recovery, we
+              utilize highly-trained doctors and cutting-edge technology in the
+              field of medical sciences
+            </h1>
+          </div>
+        </div>
+
+        {/* <div className="flex border-4 md:flex-row flex-col justify-center items-center md:border-indigo-900 rounded-xl md:shadow-md mt-7 mx-1 md:mx-10 ">
+        <div className="w-full flex justify-center items-center overflow-hidden">
+          <div className="flex">
+            <img
+              src={bannerImg}
+              className="w-1/2 rounded-tl-lg rounded-bl-lg object-cover object-center"
+              alt=""
+            />
+            <img
+              src={bannerImg2}
+              className="w-1/2 object-cover object-center"
+              alt=""
+            />
+          </div>
+        </div>
 
         <div className="w-2/3 md:px-7 font-semibold flex justify-center items-center text-lg ">
           <h1 style={{ wordSpacing: "6px" }}>
@@ -428,10 +465,11 @@ function Home() {
             and cutting-edge technology in the field of medical sciences"
           </h1>
         </div>
+      </div> */}
       </div>
 
       {/* departments */}
-      <div className="mt-16 border-y-4 py-14 px-3 ">
+      <div className="sm:mt-16 border-b-4 py-14 px-3 ">
         <h1 className="text-3xl xl:text-4xl font-bold">Departments</h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 pt-8">
           {/* Child div 1 */}
