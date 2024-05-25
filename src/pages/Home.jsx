@@ -15,7 +15,8 @@ import blob from "../assets/blob.svg";
 import { MdEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
 import smilingDoctor from "../assets/file.png";
-import { FaTiktok, FaSnapchatGhost, FaLinkedinIn } from "react-icons/fa";
+import { FaTiktok, FaSnapchatGhost, FaLinkedinIn, FaYoutube  } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaMapLocationDot, FaXTwitter } from "react-icons/fa6";
@@ -98,10 +99,13 @@ function Home() {
   ];
 
   const socialMediaItems = [
-    { icon: FaLinkedinIn, label: "LinkedinIn" },
+    { icon: RiInstagramFill , label: "Instagram" },
     { icon: FaTiktok, label: "Tiktok" },
     { icon: FaSnapchatGhost, label: "Snapchat" },
+    { icon: FaFacebookF , label: "Facebook" },
+    { icon: FaLinkedinIn, label: "LinkedinIn" },
     { icon: FaXTwitter, label: "XTwitter" },
+    { icon: FaYoutube , label: "Youtube" },
   ];
 
   const cardData = [
@@ -329,19 +333,19 @@ function Home() {
               </div> */}
 
               <div className="flex items-center gap-10 ">
-                <a className="flex items-center gap-2" href="tel:+966539365643">
+                <a className="flex items-center gap-2" href="tel:+9660545961777">
                   <button className="bg-white text-black p-2  border-teal-600 border-4 xl:text-lg rounded-full transition duration-300 transform">
                     <IoIosCall size={30} />
                   </button>
                   <div>
                     <p className="font-medium text-lg opacity-70">Talk to Us</p>
-                    <p className="font-Avenir opacity-90">1234567890</p>
+                    <p className="font-Avenir opacity-90">0545961777</p>
                   </div>
                 </a>
 
                 <a
                   className="flex items-center gap-2"
-                  href="mailto:muhaim25@gmail.com"
+                  href="mailto:info@hibaasia.care"
                 >
                   <button className="bg-white text-black border-teal-600 border-4 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
                     <MdEmail size={30} />{" "}
@@ -351,7 +355,7 @@ function Home() {
                       Write to Us
                     </p>
                     <p className="font-Avenir opacity-90">
-                      www.hibaasia@gmail.com
+                    info@hibaasia.care
                     </p>
                   </div>
                 </a>
@@ -380,9 +384,9 @@ function Home() {
           {/* banner closed*/}
 
           {/* whatsapp */}
-          {/* <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 xl:bottom-[25vh] lg:bottom-[20vh] 2xl:bottom-[30vh] bg-[#2C9542] animate-pulse-border">
+          <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 xl:bottom-[25vh] lg:bottom-[20vh] 2xl:bottom-[35vh] bg-[#2C9542] animate-pulse-border">
             <a
-              href="https://api.whatsapp.com/send?phone=966539365643"
+              href="https://api.whatsapp.com/send?phone=9660545961777"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -392,7 +396,7 @@ function Home() {
                 alt="WhatsApp Logo"
               />
             </a>
-          </div> */}
+          </div>
           {/* whatsapp closed*/}
 
           {/* social medias */}
@@ -403,7 +407,7 @@ function Home() {
                 <li
                   key={index}
                   className={`group w-32 sm:w-40 lg:w-48 bg-blue-100 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-20 sm:-right-28 lg:-right-36 z-50 transition-all duration-1000 hover:w-40 sm:hover:w-48 lg:hover:w-56 hover:-right-16`}
-                  style={{ top: `${index * 62 + 300}px` }} // Adjust the spacing and initial top position as needed
+                  style={{ top: `${index * 62 + 200}px` }} // Adjust the spacing and initial top position as needed
                 >
                   <div className="bg-white group-hover:bg-[#00918d] rounded-full h-9 w-9 sm:h-8 sm:w-8 lg:h-10 lg:w-10 flex items-center justify-center transform transition-transform duration-100 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
                     <IconComponent
@@ -531,7 +535,7 @@ function Home() {
 
       <div className="app mt-10">
         <h1 className="text-4xl opacity-90 font-bold mb-10">What We Do</h1>
-        <div className="card-container">
+        <div className="card-container flex flex-wrap justify-evenly  gap-5 w-full">
           {cardData.map((card, index) => (
             <Cards
               key={index}
