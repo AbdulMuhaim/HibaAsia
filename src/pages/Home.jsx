@@ -15,9 +15,10 @@ import blob from "../assets/blob.svg";
 import { MdEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
 import smilingDoctor from "../assets/file.png";
-import { FaTiktok, FaSnapchatGhost, FaLinkedinIn} from "react-icons/fa";
+import { FaTiktok, FaSnapchatGhost, FaLinkedinIn } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaMapLocationDot, FaXTwitter  } from "react-icons/fa6";
+import { FaMapLocationDot, FaXTwitter } from "react-icons/fa6";
 import bgImage from "../assets/abstract-blue-wave-background-transparent-blue-lines_206325-785 (1).jpg";
 import whatsappLogo from "../assets/WhatsApp.svg.png";
 import aboutImage from "../assets/file (1).png";
@@ -28,6 +29,11 @@ import aboutImage5 from "../assets/file (5).png";
 import aboutImage6 from "../assets/file (6).png";
 import aboutImage7 from "../assets/file (7).png";
 import aboutImage8 from "../assets/file (8).png";
+import Cards from "../Components/Cards";
+import srvs1 from "../assets/10976_prev_ui.png";
+import srvs2 from "../assets/elderly-care-home-6052789-4998284.webp";
+import srvs3 from "../assets/3959915_prev_ui.png";
+import srvs4 from "../assets/5183184_prev_ui.png";
 
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -92,16 +98,39 @@ function Home() {
   ];
 
   const socialMediaItems = [
-    { icon: FaLinkedinIn , label: "LinkedinIn"},
-    { icon: FaTiktok, label: "Tiktok"},
-    { icon: FaSnapchatGhost, label: "Snapchat"},
-    { icon: FaXTwitter, label: "XTwitter"}
+    { icon: FaLinkedinIn, label: "LinkedinIn" },
+    { icon: FaTiktok, label: "Tiktok" },
+    { icon: FaSnapchatGhost, label: "Snapchat" },
+    { icon: FaXTwitter, label: "XTwitter" },
+  ];
+
+  const cardData = [
+    {
+      image:srvs3,
+      title: "Online Appointments",
+      description: "Visit Our Center For Consultation",
+    },
+    {
+      image:srvs2,
+      title: "Hiba Home Care",
+      description: "A Complete Medical Care at Your Home",
+    },
+    {
+      image:srvs4,
+      title: "Tele Consultation",
+      description: "Consultation through Video Conference",
+    },
+    {
+      image:srvs1,
+      title: "Service & Packages",
+      description: "View and purchase services & packages",
+    },
   ];
 
   return (
     <div>
       {/* header */}
-      <div className="bg-gradient-to-b from-white to-teal-300">
+      <div className="bg-gradient-to-b from-white to-teal-300 h-screen">
         <div className="w-full h-auto flex flex-col md:flex-row justify-between items-center px-5">
           <div className="w-1/5 md:w-auto flex-col justify-center items-center px-5 py-1 mt-2">
             <div className="flex items-center justify-center">
@@ -271,12 +300,12 @@ function Home() {
                   We combine advanced medical technology with compassionate care
                   to ensure the best possible outcomes for our patients.
                 </p>
-                  <button
-                    onClick={handleButtonClick}
-                    className="bg-teal-700 mt-10  text-white xl:text-lg lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-500 transform hover:bg-teal-800 hover:scale-105"
-                  >
-                    Book an Appointment
-                  </button>
+                <button
+                  onClick={handleButtonClick}
+                  className="bg-teal-700 mt-10  text-white xl:text-lg lg:px-6 lg:py-5 md:px-3 md:py-4 py-2 px-3 rounded-3xl font-bold transition duration-500 transform hover:bg-teal-800 hover:scale-105"
+                >
+                  Book an Appointment
+                </button>
               </div>
 
               {/* <div className="h-1/5 flex items-center">
@@ -299,7 +328,7 @@ function Home() {
                 </div>
               </div> */}
 
-              <div className="flex items-center gap-20 ">
+              <div className="flex items-center gap-10 ">
                 <a className="flex items-center gap-2" href="tel:+966539365643">
                   <button className="bg-white text-black p-2  border-teal-600 border-4 xl:text-lg rounded-full transition duration-300 transform">
                     <IoIosCall size={30} />
@@ -326,12 +355,28 @@ function Home() {
                     </p>
                   </div>
                 </a>
+                <div className="flex gap-2">
+                  <h1 className="font-semibold text-xl opacity-70 mr-1">
+                    <FaMapLocationDot color="black" size={40} />
+                  </h1>
+                  <button className="rounded-full font-Avenir font-semibold border-y-2 border-teal-700 h-auto border-x-8 bg-white px-5 whitespace-nowrap">
+                    Al Zahra
+                  </button>
+                  <button className="rounded-full font-Avenir font-semibold border-y-2 border-teal-700 h-auto border-x-8 bg-white px-5 whitespace-nowrap">
+                    Al Wazeriyah
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div className="w-1/2">
-            <img src={smilingDoctor} alt="" />
+          <div className="w-1/2 overflow-hidden">
+            <img
+              src={smilingDoctor}
+              className="w-full h-full object-cover overflow-hidden"
+              alt="Smiling Doctor"
+            />
           </div>
+
           {/* banner closed*/}
 
           {/* whatsapp */}
@@ -375,10 +420,25 @@ function Home() {
           </ul>
           {/* social medias closed*/}
         </div>
+        <div className="h-1 bg-gradient-to-br from-blue-900 to-teal-600 font-Avenir font-semibold text-white flex items-center justify-between px-5 gap-10">
+          <h1 className="bg-gradient-to-br from-blue-900 to-teal-600  rounded-full py-5 px-5">
+            Online Appointments
+          </h1>
+          <h1 className="bg-gradient-to-br from-blue-900 to-teal-600 rounded-full py-5 px-5">
+            Hiba Home Care
+          </h1>
+          <h1 className="bg-gradient-to-br from-blue-900 to-teal-600 rounded-full py-5 px-5">
+            Tele Consultation
+          </h1>
+          <h1 className="bg-gradient-to-br from-blue-900 to-teal-600 rounded-full py-5 px-5">
+            Service & Packages
+          </h1>
+        </div>
       </div>
 
-{/* Services */}
-<div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-2 justify-between mt-8 mx-4">
+      {/* Services */}
+
+      {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-2 justify-between mt-8 mx-4">
   {serviceImages.map((services, index) => (
     <div
       key={index}
@@ -400,28 +460,29 @@ function Home() {
       </div>
     </div>
   ))}
-</div>
-{/* Services closed */}
+</div> */}
+      {/* Services closed */}
 
-
-      <div className="relative h-[400px] w-full flex items-center justify-center">
+      <div className="relative h-[400px] w-full mt-10 flex items-center justify-center">
         <div className="absolute h-[50vh] 2xl:-top-20 top-0 -left-14 w-1/2 hidden sm:block">
-          <img src={blob} className=" opacity-40 w-[90vw] h-[90vh] -z-50" alt="" />
+          <img
+            src={blob}
+            className=" opacity-40 w-[90vw] h-[90vh] -z-50"
+            alt=""
+          />
         </div>
-
-
 
         <div className="absolute right-0 top-24 hidden sm:block">
           <img className="w-full h-[65vh] " src={aboutImage2} alt="" />
         </div>
-  
-
-
 
         <div className="text-center">
-          <h1 className="font-Avenir font-bold text-2xl">About Us</h1>
+          <h1 className="text-4xl opacity-90 font-bold mb-10">Who We Are</h1>
           <div className="text-lg max-w-2xl mx-auto">
-            <h1 className="text-lg font-medium opacity-70 font-serif mt-5 tracking-extra-wide">
+            <h1
+              className="text-lg font-medium opacity-70 font-serif mt-5 tracking-extra-wide"
+              style={{ wordSpacing: "0.3rem" }}
+            >
               Your health is our priority. Hiba Asia Hospital ensures you and
               your family receive the best possible medical care and assistance.
               We strive to create a warm and safe healing environment for you
@@ -431,7 +492,7 @@ function Home() {
               research and educate future generations of doctors and healthcare
               workers. As our entire team works toward your speedy recovery, we
               utilize highly-trained doctors and cutting-edge technology in the
-              field of medical sciences
+              field of medical sciences.
             </h1>
           </div>
         </div>
@@ -466,6 +527,20 @@ function Home() {
           </h1>
         </div>
       </div> */}
+      </div>
+
+      <div className="app mt-10">
+        <h1 className="text-4xl opacity-90 font-bold mb-10">What We Do</h1>
+        <div className="card-container">
+          {cardData.map((card, index) => (
+            <Cards
+              key={index}
+              image={card.image}
+              title={card.title}
+              description={card.description}
+            />
+          ))}
+        </div>
       </div>
 
       {/* departments */}

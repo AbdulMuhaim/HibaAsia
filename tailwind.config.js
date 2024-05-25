@@ -14,6 +14,9 @@ export default {
       fontFamily: {
         Avenir: ['Avenir Next or Sofia Pro'],
         Arial: ['Arial', 'Helvetica', 'sans-serif'],
+        Tahoma: ['Tahoma', 'sans-serif'],
+        Georgia : ['Georgia ', 'sans-serif'],
+        Roman : ['Times New Roman ', 'sans-serif'],
       },
       keyframes: {
         'reverse-rotate': {

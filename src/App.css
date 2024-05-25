@@ -1,8 +1,10 @@
-  .body{
-    margin: 0;
-    padding: 0;
-    font-family:"Avenir Next or Sofia Pro";
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
   .right-text-div > h1 {
    font-weight: 500;
    font-size: x-large;
@@ -157,5 +159,62 @@
     left: 0;
     clip-path: polygon(33.3% 0%, 66.7% 0%, 100% 50%, 66.7% 100%, 33.3% 100%, 0% 50%);
   }
-  
-  
+
+
+
+  /* cards */
+  .card {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card img {
+      width: 100%;
+      height: auto;
+  }
+
+  .card-content {
+      padding: 20px;
+      text-align: center;
+  }
+
+  .card-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+
+  .card-description {
+      font-size: 16px;
+      color: #555;
+  }
+
+  @media (max-width: 768px) {
+      .card {
+          width: 100%;
+      }
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+  /* cards closed*/
