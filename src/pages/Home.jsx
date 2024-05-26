@@ -15,7 +15,12 @@ import blob from "../assets/blob.svg";
 import { MdEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
 import smilingDoctor from "../assets/file.png";
-import { FaTiktok, FaSnapchatGhost, FaLinkedinIn, FaYoutube  } from "react-icons/fa";
+import {
+  FaTiktok,
+  FaSnapchatGhost,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
@@ -35,6 +40,10 @@ import srvs1 from "../assets/10976_prev_ui.png";
 import srvs2 from "../assets/elderly-care-home-6052789-4998284.webp";
 import srvs3 from "../assets/3959915_prev_ui.png";
 import srvs4 from "../assets/5183184_prev_ui.png";
+import blobImage from "../assets/smiling-little-boy-in-medical-uniform-and-eyeglass-2023-11-27-05-22-22-utc-Photoroom.png-Photoroom.png";
+import visionImage from "../assets/Vision-Icon-Photoroom.png-Photoroom.png";
+import missionImage from "../assets/Mission-Icon-Photoroom.png-Photoroom.png";
+import valuesImage from "../assets/reputation-building-icon-line-illustration-vector-Photoroom.png-Photoroom.png";
 
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -99,33 +108,33 @@ function Home() {
   ];
 
   const socialMediaItems = [
-    { icon: RiInstagramFill , label: "Instagram" },
+    { icon: RiInstagramFill, label: "Instagram" },
     { icon: FaTiktok, label: "Tiktok" },
     { icon: FaSnapchatGhost, label: "Snapchat" },
-    { icon: FaFacebookF , label: "Facebook" },
+    { icon: FaFacebookF, label: "Facebook" },
     { icon: FaLinkedinIn, label: "LinkedinIn" },
     { icon: FaXTwitter, label: "XTwitter" },
-    { icon: FaYoutube , label: "Youtube" },
+    { icon: FaYoutube, label: "Youtube" },
   ];
 
   const cardData = [
     {
-      image:srvs3,
+      image: srvs3,
       title: "Online Appointments",
       description: "Visit Our Center For Consultation",
     },
     {
-      image:srvs2,
+      image: srvs2,
       title: "Hiba Home Care",
       description: "A Complete Medical Care at Your Home",
     },
     {
-      image:srvs4,
+      image: srvs4,
       title: "Tele Consultation",
       description: "Consultation through Video Conference",
     },
     {
-      image:srvs1,
+      image: srvs1,
       title: "Service & Packages",
       description: "View and purchase services & packages",
     },
@@ -144,7 +153,7 @@ function Home() {
                 className="md:p-0 md:my-2 mx-auto md:mx-0 sm:h-14"
               />
             </div>
-            <p className="text-center opacity-60 text-xs sm:text-base sm:tracking-extra-wide pt-0 mt-0 pb-2">
+            <p className="text-center opacity-60 text-xs sm:tracking-extra-wide pt-0 mt-0 pb-2">
               INSPIRING BETTER HEALTH
             </p>
           </div>
@@ -333,7 +342,10 @@ function Home() {
               </div> */}
 
               <div className="flex items-center gap-10 ">
-                <a className="flex items-center gap-2" href="tel:+9660545961777">
+                <a
+                  className="flex items-center gap-2"
+                  href="tel:+9660545961777"
+                >
                   <button className="bg-white text-black p-2  border-teal-600 border-4 xl:text-lg rounded-full transition duration-300 transform">
                     <IoIosCall size={30} />
                   </button>
@@ -354,9 +366,7 @@ function Home() {
                     <p className="font-medium opacity-70 text-lg ">
                       Write to Us
                     </p>
-                    <p className="font-Avenir opacity-90">
-                    info@hibaasia.care
-                    </p>
+                    <p className="font-Avenir opacity-90">info@hibaasia.care</p>
                   </div>
                 </a>
                 <div className="flex gap-2">
@@ -470,8 +480,13 @@ function Home() {
       <div className="relative h-[400px] w-full mt-10 flex items-center justify-center">
         <div className="absolute h-[50vh] 2xl:-top-20 top-0 -left-14 w-1/2 hidden sm:block">
           <img
+            className="z-10 absolute h-96 left-64 top-52"
+            src={blobImage}
+            alt=""
+          />
+          <img
             src={blob}
-            className=" opacity-40 w-[90vw] h-[90vh] -z-50"
+            className="opacity-40 w-full h-auto max-w-[42rem] mx-auto -z-50"
             alt=""
           />
         </div>
@@ -531,6 +546,108 @@ function Home() {
           </h1>
         </div>
       </div> */}
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 mt-52 border-2 border-cyan-900 mx-2 rounded-md">
+        <div className="col-span-1">
+          <img
+            src={missionImage}
+            alt="Mission"
+            className="w-full h-auto max-w-[10rem] mx-auto"
+          />
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="font-Avenir font-bold text-xl mb-5">OUR MISSION</h1>
+            <p className="max-w-xs">
+              Our mission is to continually improve the health of the
+              communities by discovering and delivering compassionate and
+              quality healthcare services through a team of dedicated and highly
+              qualified professionals
+            </p>
+          </div>
+        </div>
+        <div className="col-span-1">
+          <img
+            src={visionImage}
+            alt="Vision"
+            className="w-full h-auto max-w-[10rem] mx-auto"
+          />
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="font-Avenir font-bold text-xl mb-5">OUR MISSION</h1>
+            <p className="max-w-xs">
+              Our mission is to continually improve the health of the
+              communities by discovering and delivering compassionate and
+              quality healthcare services through a team of dedicated and highly
+              qualified professionals
+            </p>
+          </div>
+        </div>
+        <div className="col-span-2 flex-col justify-center">
+          <img
+            src={valuesImage}
+            alt="Values"
+            className="w-full h-auto max-w-[10rem] mx-auto"
+          />
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="font-Avenir font-bold text-xl mb-5">OUR VALUES</h1>
+            <div className="grid grid-cols-2  gap-10 sm:grid-cols-3">
+                <ul className="list-disc list-inside p-4 rounded">
+                  <li className="text-lg font-semibold">Compassion</li>
+                  <p className="h-auto max-w-sm mx-auto">
+                    We believe that a large part of our patients treatment lies
+                    in our personal participation throughout their medical
+                    journey from the beginning to the point of full recovery. We
+                    are empathetic and believe that compassion is half the
+                    healing.
+                  </p>
+                  <li className="text-lg font-semibold">Patient-Centricity</li>{" "}
+                  <p className="h-auto max-w-sm mx-auto">
+                    We consider our patients to be the decision-makers in their
+                    treatment journey, and our role is to guide them and give
+                    them all the treatment options that are appropriate for
+                    every condition. Our patients are at the core f the entire
+                    health and care process.
+                  </p>
+                </ul>
+                <ul className="list-disc list-inside p-4 rounded">
+                <li className="text-lg font-semibold">Collaboration</li>{" "}
+                  <p className="h-auto max-w-sm mx-auto">
+                    We define collaboration as the ongoing process of working
+                    and learning with everyone involved in our patient medical
+                    journey in HIBA ASIA as ONE TEAM. The efforts of the medical
+                    and administrative teams are combined with our patients
+                    family and social environment, which represents an important
+                    element in their lives, in order to achieve complete
+                    recovery while ensuring that world-class standards are
+                    preserved throughout all our services.
+                  </p>
+                  <li className="text-lg font-semibold">Innovation</li>
+                  <p className="h-auto max-w-sm mx-auto">
+                    Our constant commitment to developing our services is what
+                    allows us to care for our patients and ease their suffering
+                    in their integrated treatment journey in a professional and
+                    efficient way. We constantly evaluate our services and we
+                    believe that to remain at the top of our field, we preach
+                    innovation at all levels.
+                  </p>
+                </ul>
+                <ul className="list-disc list-inside p-4 rounded">
+                <li className="text-lg font-semibold">Integrity</li>
+                  <p className="h-auto max-w-sm mx-auto">
+                    We are honest, ethical and trustworthy. We shall always be
+                    transparent and act morally upright, in our patients’ best
+                    interest.
+                  </p>
+                  <li className="text-lg font-semibold">Quality</li>
+                  <p className="h-auto max-w-sm mx-auto">
+                    We believe that everyone has the right to have the best
+                    chance to live a healthy and active life. Thus, we at HIBA
+                    ASIA are dedicated to offer our patients the highest global
+                    standards and quality of medical services in healthcare.
+                  </p>
+                </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="app mt-10">
@@ -816,6 +933,36 @@ function Home() {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-3 border-b-4 py-14 px-3 ">
+        <h1 className=" text-3xl font-bold mb-10">
+          See what people are saying about Hiba Asia
+        </h1>
+
+        <div
+          className="flex justify-evenly items-center gap-32 px-5"
+          style={{ lineHeight: "27px" }}
+        >
+          <h1>
+            "It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, "
+          </h1>
+          <h1>
+            "It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, "
+          </h1>
+          <h1>
+            "It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, "
+          </h1>
         </div>
       </div>
 
