@@ -7,12 +7,15 @@ import serviceImg1 from "../assets/Walkin.jpg";
 import serviceImg2 from "../assets/patient-portal.png";
 import serviceImg3 from "../assets/Virtual.jpg";
 import serviceImg4 from "../assets/home-care.jpg";
-import bannerImg from "../assets/young-handsome-physician-medical-robe-with-stethoscope.jpg";
-import bannerImg2 from "../assets/covid-coronavirus-disease-healthcare-workers-concept-closeup-confident-female-asian-physician-doc (1).jpg";
+// import bannerImg from "../assets/young-handsome-physician-medical-robe-with-stethoscope.jpg";
+// import bannerImg2 from "../assets/covid-coronavirus-disease-healthcare-workers-concept-closeup-confident-female-asian-physician-doc (1).jpg";
 import blob from "../assets/blob.svg";
 import { MdEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
 import smilingDoctor from "../assets/file.png";
+import backgroundImage from '../assets/rm209-ning-19.jpg';
+import visionBgImage from '../assets/Vision&Mission.jpg'
+
 import {
   FaTiktok,
   FaSnapchatGhost,
@@ -69,6 +72,8 @@ function Home() {
   const [showDepartmentsDropdown, setShowDepartmentsDropdown] = useState(false);
   const [showOffersDropdown, setShowOffersDropdown] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const bgImage = `url(${visionBgImage}), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))`;
+
 
   useEffect(() => {
     // Function to check screen size and update mobileMenu state
@@ -251,7 +256,7 @@ function Home() {
       <div
         className="bg-gradient-to-b from-white to-sky-200 h-screen"
         style={{
-          backgroundImage: 'url("../src/assets/rm209-ning-19.jpg")',
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover", // ensures the image covers the entire div
           backgroundRepeat: "no-repeat", // prevents the image from repeating
           backgroundBlendMode: "overlay", // blend the gradient and image
@@ -415,7 +420,7 @@ function Home() {
           <div className="w-1/2 flex justify-center items-center">
             <div className="px-10 h-full">
               <div className="flex flex-col items-center justify-center text-center pl-20 h-4/5">
-                <h1 className="font-Avenir 2xl:text-6xl xl:text-4xl font-bold mb-2">
+                <h1 className="font-Avenir 2xl:text-6xl xl:text-4xl min-w-[20rem] font-bold mb-2 whitespace-nowrap">
                   INSPIRING BETTER HEALTH
                 </h1>
                 <p className="2xl:text-lg font-medium opacity-75 font-serif">
@@ -451,7 +456,7 @@ function Home() {
                 </div>
               </div> */}
 
-              <div className="flex items-center gap-10 ">
+              <div className="flex items-center gap-3 2xl:gap-10 pl-14">
                 <a
                   className="flex items-center gap-2"
                   href="tel:+9660545961777"
@@ -660,7 +665,7 @@ function Home() {
       <div
         className="grid grid-cols-2 mt-52 border-4  border-sky-700 mx-2 rounded-md"
         style={{
-          backgroundImage: 'url("../src/assets/covid-coronavirus-disease-healthcare-workers-concept-closeup-confident-female-asian-physician-doc (1).jpg"), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))',
+          backgroundImage: bgImage,
           backgroundSize: "cover", // ensures the image covers the entire div
           backgroundRepeat: "no-repeat", // prevents the image from repeating
           backgroundBlendMode: "overlay", // blend the gradient and image
@@ -674,7 +679,10 @@ function Home() {
           />
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-Avenir font-bold text-xl mb-5">OUR MISSION</h1>
-            <p className="max-w-xs opacity-90 font-serif tracking-extra-wide"style={{ wordSpacing: "0.2rem" }}>
+            <p
+              className="max-w-xs opacity-90 font-serif tracking-extra-wide"
+              style={{ wordSpacing: "0.2rem" }}
+            >
               Our mission is to continually improve the health of the
               communities by discovering and delivering compassionate and
               quality healthcare services through a team of dedicated and highly
@@ -690,7 +698,10 @@ function Home() {
           />
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-Avenir font-bold text-xl mb-5">OUR VISION</h1>
-            <p className="max-w-xs opacity-90 font-serif tracking-extra-wide"style={{ wordSpacing: "0.2rem" }}>
+            <p
+              className="max-w-xs opacity-90 font-serif tracking-extra-wide"
+              style={{ wordSpacing: "0.2rem" }}
+            >
               Our mission is to continually improve the health of the
               communities by discovering and delivering compassionate and
               quality healthcare services through a team of dedicated and highly
@@ -892,7 +903,7 @@ function Home() {
               <img
                 src={doctor.image}
                 alt=""
-                className="w-48 h-48 object-cover rounded-full mx-auto"
+                className="object-cover max-w-[7rem] rounded-full mx-auto"
               />
               {/* Name and Specialty */}
               <h2 className="text-xl font-semibold mt-2 text-center">
