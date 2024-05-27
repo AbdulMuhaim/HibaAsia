@@ -674,7 +674,7 @@ function Home() {
           />
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-Avenir font-bold text-xl mb-5">OUR MISSION</h1>
-            <p className="max-w-xs">
+            <p className="max-w-xs opacity-90 font-serif tracking-extra-wide"style={{ wordSpacing: "0.2rem" }}>
               Our mission is to continually improve the health of the
               communities by discovering and delivering compassionate and
               quality healthcare services through a team of dedicated and highly
@@ -690,7 +690,7 @@ function Home() {
           />
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-Avenir font-bold text-xl mb-5">OUR VISION</h1>
-            <p className="max-w-xs">
+            <p className="max-w-xs opacity-90 font-serif tracking-extra-wide"style={{ wordSpacing: "0.2rem" }}>
               Our mission is to continually improve the health of the
               communities by discovering and delivering compassionate and
               quality healthcare services through a team of dedicated and highly
@@ -711,7 +711,7 @@ function Home() {
                 <li className="text-xl font-semibold font-Avenir">
                   Compassion
                 </li>
-                <p className="h-auto max-w-sm mx-auto">
+                <p className="h-auto max-w-sm mx-auto opacity-90 font-serif tracking-extra-wide">
                   We believe that a large part of our patients treatment lies in
                   our personal participation throughout their medical journey
                   from the beginning to the point of full recovery. We are
@@ -721,7 +721,7 @@ function Home() {
                 <li className="text-xl font-Avenir font-semibold">
                   Patient-Centricity
                 </li>{" "}
-                <p className="h-auto max-w-sm mx-auto">
+                <p className="h-auto max-w-sm mx-auto opacity-90 font-serif tracking-extra-wide">
                   We consider our patients to be the decision-makers in their
                   treatment journey, and our role is to guide them and give them
                   all the treatment options that are appropriate for every
@@ -733,7 +733,7 @@ function Home() {
                 <li className="text-xl font-Avenir font-semibold">
                   Collaboration
                 </li>{" "}
-                <p className="h-auto max-w-sm mx-auto">
+                <p className="h-auto max-w-sm mx-auto opacity-90 font-serif tracking-extra-wide">
                   We define collaboration as the ongoing process of working and
                   learning with everyone involved in our patient medical journey
                   in HIBA ASIA as ONE TEAM. The efforts of the medical and
@@ -747,7 +747,7 @@ function Home() {
                 <li className="text-xl font-Avenir font-semibold">
                   Innovation
                 </li>
-                <p className="h-auto max-w-sm mx-auto">
+                <p className="h-auto max-w-sm mx-auto opacity-90 font-serif tracking-extra-wide">
                   Our constant commitment to developing our services is what
                   allows us to care for our patients and ease their suffering in
                   their integrated treatment journey in a professional and
@@ -758,14 +758,14 @@ function Home() {
               </ul>
               <ul className="list-disc list-inside p-4 rounded">
                 <li className="text-xl font-Avenir font-semibold">Integrity</li>
-                <p className="h-auto max-w-sm mx-auto">
+                <p className="h-auto max-w-sm mx-auto opacity-90 font-serif tracking-extra-wide">
                   We are honest, ethical and trustworthy. We shall always be
                   transparent and act morally upright, in our patients’ best
                   interest.
                 </p>
                 <br />
                 <li className="text-xl font-Avenir font-semibold">Quality</li>
-                <p className="h-auto max-w-sm mx-auto">
+                <p className="h-auto max-w-sm mx-auto opacity-90 font-serif tracking-extra-wide">
                   We believe that everyone has the right to have the best chance
                   to live a healthy and active life. Thus, we at HIBA ASIA are
                   dedicated to offer our patients the highest global standards
