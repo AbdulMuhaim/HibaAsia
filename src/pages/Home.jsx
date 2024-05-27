@@ -590,7 +590,7 @@ function Home() {
       <div className="relative h-[400px] w-full mt-10 flex items-center justify-center">
         <div className="absolute h-[50vh] 2xl:-top-20 top-0 -left-14 w-1/2 hidden sm:block">
           <img
-            className="z-10 absolute h-96 left-64 top-52"
+            className="z-10 absolute max-h-[30rem] left-20 2xl:left-64 top-10 2xl:top-52"
             src={blobImage}
             alt=""
           />
