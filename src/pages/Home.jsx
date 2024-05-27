@@ -118,24 +118,29 @@ function Home() {
       image: DrAzza,
       department: "Obstetrics & Gynecology",
     },
-    { name: "Mohammed Ramadan Ahmad", image: DrRamadan, department: "Urology" },
-    { name: "Hussam Alagha", image: DrHussam, department: "Internist" },
-    { name: "Mahmoud Shahin", image: DrShahin, department: "ENT Specialist" },
-    { name: "Samad Moideen", image: DrSamad, department: "Orthopedics" },
-    { name: "Majed Mouris", image: DrMajedMouris, department: "Surgeon" },
-    {
-      name: "Muhammed Anwar",
-      image: DrMohammedAnwar,
-      department: "Pediatrician",
-    },
     {
       name: "Mohamad Sherif Helmy",
       image: DrSherifHelmy,
       department: "Cardiologist",
     },
+    {
+      name: "Muhammed Anwar",
+      image: DrMohammedAnwar,
+      department: "Pediatrician",
+    },
+    { name: "Majed Mouris", image: DrMajedMouris, department: "Surgeon" },
+    { name: "Samad Moideen", image: DrSamad, department: "Orthopedics" },
+    {
+      name: "Abdullah Bayazeed",
+      image: DrAbdullahBayazeed,
+      department: "Orthodontist",
+    },
+    { name: "Mohammed Ramadan Ahmad", image: DrRamadan, department: "Urology" },
     { name: "Taha Abouelenin", image: DrTaha, department: "Ophthalmology" },
+    { name: "Mahmoud Shahin", image: DrShahin, department: "ENT Specialist" },
     { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
     { name: "Shukoor", image: DrShukoor, department: "Radiologist" },
+    { name: "Hussam Alagha", image: DrHussam, department: "Internist" },
     {
       name: "Murtaza Bakhsh",
       image: DrMurtaza,
@@ -173,11 +178,6 @@ function Home() {
       department: "General Physician",
     },
     {
-      name: "Abdullah Bayazeed",
-      image: DrAbdullahBayazeed,
-      department: "Orthodontist",
-    },
-    {
       name: "Abdul Aziz AlZahrani",
       image: DrAbdulAzeezalZahrani,
       department: "Dentist",
@@ -191,7 +191,7 @@ function Home() {
     { name: "Jenson John", image: DrJensonJohn, department: "Dentist" },
     { name: "Lintu Mol", image: DrLintuMol, department: "Dentist" },
     { name: "Maryam Ahmed", image: DrMaryamAhmed, department: "Dentist" },
-    { name: "Samah Obaid", image: DrSamahObaid, department: "Dentist" },
+    // { name: "Samah Obaid", image: DrSamahObaid, department: "Dentist" },
   ];
 
   const serviceImages = [
