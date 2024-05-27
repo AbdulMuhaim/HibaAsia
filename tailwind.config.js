@@ -1,3 +1,5 @@
+import bgImage from "../client/src/assets/9957940.jpg"
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -10,6 +12,9 @@ export default {
         'extra-wide': '0.06em',
         'super-wide': '0.1em',
         'mega-wide': '0.4em',
+      },
+      backgroundImage: {
+        'custom-image': "url('../src/assets/9957940.jpg')",
       },
       fontFamily: {
         Avenir: ['Avenir Next or Sofia Pro'],

@@ -1,8 +1,6 @@
 import Button from "../Components/Button";
 import Curoussel from "../Components/Curousel2";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
-import videoSource from "../assets/132778853_778113649719337_6473248478797310844_n.mp4";
-import { FaLocationDot } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState, useEffect } from "react";
 import serviceImg1 from "../assets/Walkin.jpg";
@@ -22,19 +20,10 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaMapLocationDot, FaXTwitter } from "react-icons/fa6";
-import bgImage from "../assets/abstract-blue-wave-background-transparent-blue-lines_206325-785 (1).jpg";
 import whatsappLogo from "../assets/WhatsApp.svg.png";
-import aboutImage from "../assets/file (1).png";
 import aboutImage2 from "../assets/file (2).png";
-import aboutImage3 from "../assets/file (3).png";
-import aboutImage4 from "../assets/file (4).png";
-import aboutImage5 from "../assets/file (5).png";
-import aboutImage6 from "../assets/file (6).png";
-import aboutImage7 from "../assets/file (7).png";
-import aboutImage8 from "../assets/file (8).png";
 import Cards from "../Components/Cards";
 import srvs1 from "../assets/10976_prev_ui.png";
 import srvs2 from "../assets/elderly-care-home-6052789-4998284.webp";
@@ -44,6 +33,35 @@ import blobImage from "../assets/smiling-little-boy-in-medical-uniform-and-eyegl
 import visionImage from "../assets/Vision-Icon-Photoroom.png-Photoroom.png";
 import missionImage from "../assets/Mission-Icon-Photoroom.png-Photoroom.png";
 import valuesImage from "../assets/reputation-building-icon-line-illustration-vector-Photoroom.png-Photoroom.png";
+import DrAswaq from "../assets/HibaDoctors/01. Dr. Aswaq.jpg";
+import DrAzza from "../assets/HibaDoctors/02. Dr. Azza.jpg";
+import DrRamadan from "../assets/HibaDoctors/03. Dr. Ramadan.jpg";
+import DrHussam from "../assets/HibaDoctors/04. Dr. Hussam.jpg";
+import DrShahin from "../assets/HibaDoctors/05. Dr. Shahin.jpg";
+import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
+import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
+import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
+import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
+import DrTaha from "../assets/HibaDoctors/10. Dr. Taha.jpg";
+import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
+import DrShukoor from "../assets/HibaDoctors/12. Dr. Shukoor.jpg";
+import DrMurtaza from "../assets/HibaDoctors/13. Dr. Murtaza.jpg";
+import DrJavedIqbal from "../assets/HibaDoctors/14. Dr. Javed Iqbal.jpg";
+import DrBahaIbrahim from "../assets/HibaDoctors/15. Dr. Baha Ibrahim.jpg";
+import DrFathimathuZuhra from "../assets/HibaDoctors/16. Dr. Fathimathu Zuhra.jpg";
+import DrAminaKhan from "../assets/HibaDoctors/17. Dr. Amina Khan.jpg";
+import DrKhaleel from "../assets/HibaDoctors/18. Dr. Khaleel.jpg";
+import DrIramQadirReshi from "../assets/HibaDoctors/19. Dr. Iram Qadir Reshi.jpg";
+import DrAbdirizak from "../assets/HibaDoctors/20. Dr. Abdirizak.jpg";
+import DrKatherIbrahim from "../assets/HibaDoctors/21. dr. Kather Ibrahim.jpg";
+import DrAbdullahBayazeed from "../assets/HibaDoctors/22. Dr. Abdullah Bayazeed.jpg";
+import DrAbdulAzeezalZahrani from "../assets/HibaDoctors/23. Dr. Abdul Azeez al Zahrani.jpg";
+import DrShahadBinMahfouz from "../assets/HibaDoctors/24. Dr. Shahad Bin Mahfouz.jpg";
+import DrNoufQasem from "../assets/HibaDoctors/25. Dr. Nouf Qasem.jpg";
+import DrJensonJohn from "../assets/HibaDoctors/26. Dr. Jenson John.jpg";
+import DrLintuMol from "../assets/HibaDoctors/27. Dr. Lintu Mol.jpg";
+import DrMaryamAhmed from "../assets/HibaDoctors/28. Dr. Maryam Ahmed.jpg";
+import DrSamahObaid from "../assets/HibaDoctors/29. Dr. Samah Obaid.jpg";
 
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -83,6 +101,93 @@ function Home() {
     transform: "scale(1.05)", // Scale up by 5% on hover
     color: "white",
   };
+
+  const doctors = [
+    {
+      name: "Aswaq Ahmed",
+      image: DrAswaq,
+      department: "Obstetrics & Gynecology",
+    },
+    {
+      name: "Azza Hussein Ahmed",
+      image: DrAzza,
+      department: "Obstetrics & Gynecology",
+    },
+    { name: "Mohammed Ramadan Ahmad", image: DrRamadan, department: "Urology" },
+    { name: "Hussam Alagha", image: DrHussam, department: "Internist" },
+    { name: "Mahmoud Shahin", image: DrShahin, department: "ENT Specialist" },
+    { name: "Samad Moideen", image: DrSamad, department: "Orthopedics" },
+    { name: "Majed Mouris", image: DrMajedMouris, department: "Surgeon" },
+    {
+      name: "Muhammed Anwar",
+      image: DrMohammedAnwar,
+      department: "Pediatrician",
+    },
+    {
+      name: "Mohamad Sherif Helmy",
+      image: DrSherifHelmy,
+      department: "Cardiologist",
+    },
+    { name: "Taha Abouelenin", image: DrTaha, department: "Ophthalmology" },
+    { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
+    { name: "Shukoor", image: DrShukoor, department: "Radiologist" },
+    {
+      name: "Murtaza Bakhsh",
+      image: DrMurtaza,
+      department: "General Physician",
+    },
+    {
+      name: "Javed Iqbal",
+      image: DrJavedIqbal,
+      department: "General Physician",
+    },
+    {
+      name: "Baha Ibrahim",
+      image: DrBahaIbrahim,
+      department: "General Physician",
+    },
+    {
+      name: "Fathimathu Zuhra",
+      image: DrFathimathuZuhra,
+      department: "General Physician",
+    },
+    {
+      name: "Amina Khan Shafi",
+      image: DrAminaKhan,
+      department: "General Physician",
+    },
+    { name: "Khaleel", image: DrKhaleel, department: "General Physician" },
+    {
+      name: "Iram Qadir Reshi",
+      image: DrIramQadirReshi,
+      department: "General Physician",
+    },
+    {
+      name: "Kather Ibrahim",
+      image: DrKatherIbrahim,
+      department: "General Physician",
+    },
+    {
+      name: "Abdullah Bayazeed",
+      image: DrAbdullahBayazeed,
+      department: "Orthodontist",
+    },
+    {
+      name: "Abdul Aziz AlZahrani",
+      image: DrAbdulAzeezalZahrani,
+      department: "Dentist",
+    },
+    {
+      name: "Shahad Bin Mehfouz",
+      image: DrShahadBinMahfouz,
+      department: "Dentist",
+    },
+    { name: "Nouf Qasem Mohammed", image: DrNoufQasem, department: "Dentist" },
+    { name: "Jenson John", image: DrJensonJohn, department: "Dentist" },
+    { name: "Lintu Mol", image: DrLintuMol, department: "Dentist" },
+    { name: "Maryam Ahmed", image: DrMaryamAhmed, department: "Dentist" },
+    { name: "Samah Obaid", image: DrSamahObaid, department: "Dentist" },
+  ];
 
   const serviceImages = [
     {
@@ -143,19 +248,25 @@ function Home() {
   return (
     <div>
       {/* header */}
-      <div className="bg-gradient-to-b from-white to-teal-300 h-screen">
+      <div
+        className="bg-gradient-to-b from-white to-sky-200 h-screen"
+        style={{
+          backgroundImage: 'url("../src/assets/rm209-ning-19.jpg")',
+          backgroundSize: "cover", // ensures the image covers the entire div
+          backgroundRepeat: "no-repeat", // prevents the image from repeating
+          backgroundBlendMode: "overlay", // blend the gradient and image
+        }}
+      >
+        {" "}
         <div className="w-full h-auto flex flex-col md:flex-row justify-between items-center px-5">
           <div className="w-1/5 md:w-auto flex-col justify-center items-center px-5 py-1 mt-2">
             <div className="flex items-center justify-center">
               <img
                 src={headerImage}
                 alt=""
-                className="md:p-0 md:my-2 mx-auto md:mx-0 sm:h-14"
+                className="md:p-0 md:my-2 min-h-[4rem] max-h-[5rem] mx-auto md:mx-0 "
               />
             </div>
-            <p className="text-center opacity-60 text-xs sm:tracking-extra-wide pt-0 mt-0 pb-2">
-              INSPIRING BETTER HEALTH
-            </p>
           </div>
 
           {/* options bar under header */}
@@ -299,16 +410,15 @@ function Home() {
           </div>
         </div>
         {/* header closed */}
-
         {/* banner */}
         <div className="flex">
           <div className="w-1/2 flex justify-center items-center">
             <div className="px-10 h-full">
-              <div className="flex flex-col items-center justify-center text-center h-4/5">
-                <h1 className="font-Avenir text-6xl font-bold mb-2">
-                  Elevating Healthcare Standards
+              <div className="flex flex-col items-center justify-center text-center pl-20 h-4/5">
+                <h1 className="font-Avenir 2xl:text-6xl xl:text-4xl font-bold mb-2">
+                  INSPIRING BETTER HEALTH
                 </h1>
-                <p className="text-lg font-medium opacity-75 font-serif">
+                <p className="2xl:text-lg font-medium opacity-75 font-serif">
                   Discover a new standard of healthcare excellence at Hiba Asia.
                   We combine advanced medical technology with compassionate care
                   to ensure the best possible outcomes for our patients.
@@ -394,7 +504,7 @@ function Home() {
           {/* banner closed*/}
 
           {/* whatsapp */}
-          <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 xl:bottom-[25vh] lg:bottom-[20vh] 2xl:bottom-[35vh] bg-[#2C9542] animate-pulse-border">
+          <div className="fixed z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 xl:bottom-[25vh] lg:bottom-[20vh] 2xl:bottom-[35vh] bg-[#2C9542] animate-pulse-border">
             <a
               href="https://api.whatsapp.com/send?phone=9660545961777"
               target="_blank"
@@ -547,8 +657,15 @@ function Home() {
         </div>
       </div> */}
       </div>
-
-      <div className="grid grid-cols-2 gap-4 mt-52 border-2 border-cyan-900 mx-2 rounded-md">
+      <div
+        className="grid grid-cols-2 mt-52 border-4  border-sky-700 mx-2 rounded-md"
+        style={{
+          backgroundImage: 'url("../src/assets/covid-coronavirus-disease-healthcare-workers-concept-closeup-confident-female-asian-physician-doc (1).jpg"), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))',
+          backgroundSize: "cover", // ensures the image covers the entire div
+          backgroundRepeat: "no-repeat", // prevents the image from repeating
+          backgroundBlendMode: "overlay", // blend the gradient and image
+        }}
+      >
         <div className="col-span-1">
           <img
             src={missionImage}
@@ -572,7 +689,7 @@ function Home() {
             className="w-full h-auto max-w-[10rem] mx-auto"
           />
           <div className="flex flex-col items-center justify-center">
-            <h1 className="font-Avenir font-bold text-xl mb-5">OUR MISSION</h1>
+            <h1 className="font-Avenir font-bold text-xl mb-5">OUR VISION</h1>
             <p className="max-w-xs">
               Our mission is to continually improve the health of the
               communities by discovering and delivering compassionate and
@@ -589,62 +706,72 @@ function Home() {
           />
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-Avenir font-bold text-xl mb-5">OUR VALUES</h1>
-            <div className="grid grid-cols-2  gap-10 sm:grid-cols-3">
-                <ul className="list-disc list-inside p-4 rounded">
-                  <li className="text-lg font-semibold">Compassion</li>
-                  <p className="h-auto max-w-sm mx-auto">
-                    We believe that a large part of our patients treatment lies
-                    in our personal participation throughout their medical
-                    journey from the beginning to the point of full recovery. We
-                    are empathetic and believe that compassion is half the
-                    healing.
-                  </p>
-                  <li className="text-lg font-semibold">Patient-Centricity</li>{" "}
-                  <p className="h-auto max-w-sm mx-auto">
-                    We consider our patients to be the decision-makers in their
-                    treatment journey, and our role is to guide them and give
-                    them all the treatment options that are appropriate for
-                    every condition. Our patients are at the core f the entire
-                    health and care process.
-                  </p>
-                </ul>
-                <ul className="list-disc list-inside p-4 rounded">
-                <li className="text-lg font-semibold">Collaboration</li>{" "}
-                  <p className="h-auto max-w-sm mx-auto">
-                    We define collaboration as the ongoing process of working
-                    and learning with everyone involved in our patient medical
-                    journey in HIBA ASIA as ONE TEAM. The efforts of the medical
-                    and administrative teams are combined with our patients
-                    family and social environment, which represents an important
-                    element in their lives, in order to achieve complete
-                    recovery while ensuring that world-class standards are
-                    preserved throughout all our services.
-                  </p>
-                  <li className="text-lg font-semibold">Innovation</li>
-                  <p className="h-auto max-w-sm mx-auto">
-                    Our constant commitment to developing our services is what
-                    allows us to care for our patients and ease their suffering
-                    in their integrated treatment journey in a professional and
-                    efficient way. We constantly evaluate our services and we
-                    believe that to remain at the top of our field, we preach
-                    innovation at all levels.
-                  </p>
-                </ul>
-                <ul className="list-disc list-inside p-4 rounded">
-                <li className="text-lg font-semibold">Integrity</li>
-                  <p className="h-auto max-w-sm mx-auto">
-                    We are honest, ethical and trustworthy. We shall always be
-                    transparent and act morally upright, in our patients’ best
-                    interest.
-                  </p>
-                  <li className="text-lg font-semibold">Quality</li>
-                  <p className="h-auto max-w-sm mx-auto">
-                    We believe that everyone has the right to have the best
-                    chance to live a healthy and active life. Thus, we at HIBA
-                    ASIA are dedicated to offer our patients the highest global
-                    standards and quality of medical services in healthcare.
-                  </p>
-                </ul>
+            <div className="grid grid-cols-2 gap-24 sm:grid-cols-3">
+              <ul className="list-disc list-inside p-4 rounded">
+                <li className="text-xl font-semibold font-Avenir">
+                  Compassion
+                </li>
+                <p className="h-auto max-w-sm mx-auto">
+                  We believe that a large part of our patients treatment lies in
+                  our personal participation throughout their medical journey
+                  from the beginning to the point of full recovery. We are
+                  empathetic and believe that compassion is half the healing.
+                </p>
+                <br />
+                <li className="text-xl font-Avenir font-semibold">
+                  Patient-Centricity
+                </li>{" "}
+                <p className="h-auto max-w-sm mx-auto">
+                  We consider our patients to be the decision-makers in their
+                  treatment journey, and our role is to guide them and give them
+                  all the treatment options that are appropriate for every
+                  condition. Our patients are at the core f the entire health
+                  and care process.
+                </p>
+              </ul>
+              <ul className="list-disc list-inside p-4 rounded">
+                <li className="text-xl font-Avenir font-semibold">
+                  Collaboration
+                </li>{" "}
+                <p className="h-auto max-w-sm mx-auto">
+                  We define collaboration as the ongoing process of working and
+                  learning with everyone involved in our patient medical journey
+                  in HIBA ASIA as ONE TEAM. The efforts of the medical and
+                  administrative teams are combined with our patients family and
+                  social environment, which represents an important element in
+                  their lives, in order to achieve complete recovery while
+                  ensuring that world-class standards are preserved throughout
+                  all our services.
+                </p>
+                <br />
+                <li className="text-xl font-Avenir font-semibold">
+                  Innovation
+                </li>
+                <p className="h-auto max-w-sm mx-auto">
+                  Our constant commitment to developing our services is what
+                  allows us to care for our patients and ease their suffering in
+                  their integrated treatment journey in a professional and
+                  efficient way. We constantly evaluate our services and we
+                  believe that to remain at the top of our field, we preach
+                  innovation at all levels.
+                </p>
+              </ul>
+              <ul className="list-disc list-inside p-4 rounded">
+                <li className="text-xl font-Avenir font-semibold">Integrity</li>
+                <p className="h-auto max-w-sm mx-auto">
+                  We are honest, ethical and trustworthy. We shall always be
+                  transparent and act morally upright, in our patients’ best
+                  interest.
+                </p>
+                <br />
+                <li className="text-xl font-Avenir font-semibold">Quality</li>
+                <p className="h-auto max-w-sm mx-auto">
+                  We believe that everyone has the right to have the best chance
+                  to live a healthy and active life. Thus, we at HIBA ASIA are
+                  dedicated to offer our patients the highest global standards
+                  and quality of medical services in healthcare.
+                </p>
+              </ul>
             </div>
           </div>
         </div>
@@ -755,184 +882,35 @@ function Home() {
       <div className="mt-3 border-b-4 py-14 px-3 ">
         <h1 className=" text-3xl font-bold">Our Doctors</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. John Doe
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">
-              Surgical Gastroenterology
-            </p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pt-8">
+          {doctors.map((doctor, index) => (
+            <div
+              key={index}
+              className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000"
+            >
+              {/* Profile Image */}
+              <img
+                src={doctor.image}
+                alt=""
+                className="w-48 h-48 object-cover rounded-full mx-auto"
+              />
+              {/* Name and Specialty */}
+              <h2 className="text-xl font-semibold mt-2 text-center">
+                Dr. {doctor.name}
+              </h2>
+              <p className="text-gray-600 mt-1 text-center">
+                {doctor.department}
+              </p>
+              {/* Additional Information */}
+              {/* Contact Details */}
+              {/* Add any other relevant information */}
+              <div className="flex items-center justify-center">
+                <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
+                  + Connect
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://www.shutterstock.com/image-photo/healthcare-medical-staff-concept-portrait-600nw-2281024823.jpg"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. Ibrahim
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">Urology Specialist</p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
-            </div>
-          </div>
-
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://www.citizenshospitals.com/static/uploads/130789a4-764e-4ee3-88fe-68f9278452d6-1692966652977.png"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. Shukoor
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">Radiologist</p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
-            </div>
-          </div>
-
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://graduate.northeastern.edu/resources/wp-content/uploads/sites/4/2023/01/DMSc-vs-DMHc-Whats-the-Difference-Hero.jpg"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. Farha
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">Dermatologist</p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
-            </div>
-          </div>
-
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://t3.ftcdn.net/jpg/02/60/04/08/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. Wilson
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">Pediatrition</p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
-            </div>
-          </div>
-
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://www.embark.ca/wp-content/uploads/2023/12/How-to-become-a-doctor-1300x1065-1.png"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. Haniya
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">Dentist</p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
-            </div>
-          </div>
-
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://t4.ftcdn.net/jpg/03/20/52/31/360_F_320523164_tx7Rdd7I2XDTvvKfz2oRuRpKOPE5z0ni.jpg"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. Abdullah
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">Cardiologist</p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
-            </div>
-          </div>
-
-          <div className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform duration-1000">
-            {/* Profile Image */}
-            <img
-              src="https://www.liveabout.com/thmb/zNzhc9WxUE_lf6r3P0yuAfBaoV0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doctor-with-stethoscope-in-hospital-642394515-5aa9a0b8a9d4f90037431454.jpg"
-              alt=""
-              className="w-48 h-48 object-cover rounded-full mx-auto"
-            />
-            {/* Name and Specialty */}
-            <h2 className="text-xl font-semibold mt-2 text-center">
-              Dr. Yoonus
-            </h2>
-            <p className="text-gray-600 mt-1 text-center">Orthopedist</p>
-            {/* Additional Information */}
-            {/* Contact Details */}
-            {/* Add any other relevant information */}
-            <div className="flex items-center justify-center">
-              <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                + Connect
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
