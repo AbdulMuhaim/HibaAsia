@@ -53,7 +53,7 @@ function Home() {
                   We combine advanced medical technology with compassionate care
                   to ensure the best possible outcomes for our patients.
                 </p>
-                <button className="bg-sky-800 mt-10 mb-10 text-white xl:text-2xl lg:px-7 lg:py-7 md:px-3 md:py-4 py-2 px-3 rounded-full border-4 hover:text-black border-sky-800 font-bold transition duration-500 transform hover:bg-white hover:scale-105">
+                <button className="bg-sky-800 mt-10 mb-10 text-white xl:text-2xl lg:px-6 lg:py-6 md:px-3 md:py-4 py-2 px-3 rounded-full border-4 hover:text-black border-sky-800 font-bold transition duration-500 transform hover:bg-white hover:scale-105">
                   Book an Appointment
                 </button>
                 <div className="flex gap-10">
@@ -61,7 +61,7 @@ function Home() {
                   className="flex items-center gap-2"
                   href="tel:+9660545961777"
                 >
-                  <button className="bg-white text-black p-2  border-teal-600 border-4 xl:text-lg rounded-full transition duration-300 transform">
+                  <button className="bg-white text-black p-2  border-sky-800 border-4 xl:text-lg rounded-full transition duration-300 transform">
                     <IoIosCall size={30} />
                   </button>
                   <div>
@@ -73,7 +73,7 @@ function Home() {
                   className="flex items-center gap-2"
                   href="mailto:info@hibaasia.care"
                 >
-                  <button className="bg-white text-black border-teal-600 border-4 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
+                  <button className="bg-white text-black border-sky-800 border-4 p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
                     <MdEmail size={30} />{" "}
                   </button>
                   <div>
