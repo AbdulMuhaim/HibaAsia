@@ -31,7 +31,7 @@ const Cards = () => {
 
 <div className="app mt-10">
   <h1 className="text-4xl opacity-90 font-bold mb-10">What We Do</h1>
-  <div className="card-container flex flex-wrap justify-evenly  gap-5 w-full">
+  <div className="card-container flex flex-wrap justify-evenly gap-5 w-full">
     {cardData.map((card, index) => (
       <div key={index} className="card mx-3 md:mx-0">
         <img src={card.image} alt={card.itle} />

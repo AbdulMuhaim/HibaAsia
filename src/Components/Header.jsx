@@ -1,10 +1,14 @@
 import {useEffect, useState} from 'react'
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
+
 
 function Header() {
 
     const [mobileMenu, setMobileMenu] = useState(false);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         // Function to check screen size and update mobileMenu state
@@ -32,15 +36,15 @@ function Header() {
     const headerMenuOptions = [
         {
           name: "Home",
-          url: "",
+          url: "/",
         },
         {
           name: "About",
-          url: "",
+          url: "/about",
         },
         {
           name: "Doctors",
-          url: "",
+          url: "/doctors",
         },
         {
           name: "Services",
@@ -85,7 +89,7 @@ function Header() {
             >
               {headerMenuOptions.map((option, index) => (
                 <div key={index}>
-                  <h1 className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
+                  <h1 onClick={()=>navigate(option.url)} className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100">
                     {option.name}
                   </h1>
                 </div>
@@ -94,7 +98,7 @@ function Header() {
           )}
           {/* options bar under header closed*/}
 
-          <div className="flex absolute right-7 top-28 justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
+          <div className="flex absolute right-7 top-32 justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
             <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
               <div className="switch">
                 <input

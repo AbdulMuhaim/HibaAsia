@@ -8,6 +8,9 @@ import visionHeaderImage from "../assets/hospital-teamwork-and-hands-of-doctors-
 function Vision() {
   const bgImage = `url(${visionBgImage}), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))`;
 
+  const headerBgImage = `url(${visionHeaderImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+
+
   return (
     <div>
         <div>
@@ -16,16 +19,16 @@ function Vision() {
 
       <div className="flex items-center justify-center h-96"
               style={{
-                backgroundImage: `url(${visionHeaderImage})`,
+                backgroundImage: headerBgImage,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundBlendMode: "overlay",
               }}>
-        <h1 className="text-4xl font-Avenir p-5 font-bold backdrop-filter backdrop-blur-md">MISSION & VISION</h1>
+        <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white">MISSION & VISION</h1>
       </div>
 
       <div
-        className="grid grid-cols-2 my-20 border-4  border-sky-700 mx-2 rounded-md"
+        className="grid md:grid-cols-2 grid-cols-1 my-20 border-4  border-sky-700 mx-2 rounded-md"
         style={{
           backgroundImage: bgImage,
           backgroundSize: "cover",
@@ -70,7 +73,7 @@ function Vision() {
             </p>
           </div>
         </div>
-        <div className="col-span-2 flex-col justify-center">
+        <div className="md:col-span-2 col-span-1 flex-col justify-center">
           <img
             src={valuesImage}
             alt="Values"

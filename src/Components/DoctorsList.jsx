@@ -28,7 +28,7 @@ import DrLintuMol from "../assets/HibaDoctors/27. Dr. Lintu Mol.jpg";
 import DrMaryamAhmed from "../assets/HibaDoctors/28. Dr. Maryam Ahmed.jpg";
 
 
-function Doctors() {
+function DoctorsList() {
 
     const doctors = [
         {
@@ -156,4 +156,4 @@ function Doctors() {
       )
 }
 
-export default Doctors
+export default DoctorsList

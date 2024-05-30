@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+  background-color: #e5f2f7;
 }
   .right-text-div > h1 {
    font-weight: 500;
@@ -195,6 +195,8 @@ body {
     align-items: center;
     min-height: 90vh;
 }
+
+
 
 
 
