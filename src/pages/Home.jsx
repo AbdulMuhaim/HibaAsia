@@ -343,7 +343,6 @@ function Home() {
                     </div>
                   </div>
 
-                  {/* <div className="bg-black w-full h-5"></div> */}
                 </div>
               </div>
             </div>

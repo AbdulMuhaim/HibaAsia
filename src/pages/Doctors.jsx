@@ -2,13 +2,21 @@ import React from "react";
 import Header from "../Components/Header";
 import doctorsHeaderImage from "../assets/group-of-doctors-standing-in-hospital-on-medical-c-2023-11-27-05-18-43-utc.jpg";
 import DoctorsList from "../Components/DoctorsList";
+import SocialMedias from "../Components/SocialMedias";
+import Whatsapp from "../Components/Whatsapp";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 function Doctors() {
   const headerBgImage = `url(${doctorsHeaderImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const navigate = useNavigate()
 
   return (
     <div>
       <Header />
+
+      <SocialMedias />
+      <Whatsapp />
 
       <div
         className="flex items-center justify-center h-96"
@@ -19,6 +27,8 @@ function Doctors() {
           backgroundBlendMode: "overlay",
         }}
       >
+          <IoArrowBackCircleSharp onClick={()=>navigate(-1)} size={50} className="absolute transition-transform hover:scale-105 text-white top-32 left-4 cursor-pointer"/>
+
         <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white">
           OUR DOCTORS
         </h1>

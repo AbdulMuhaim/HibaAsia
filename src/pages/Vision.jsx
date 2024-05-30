@@ -3,29 +3,45 @@ import visionImage from "../assets/Vision-Icon-Photoroom.png-Photoroom.png";
 import missionImage from "../assets/Mission-Icon-Photoroom.png-Photoroom.png";
 import valuesImage from "../assets/reputation-building-icon-line-illustration-vector-Photoroom.png-Photoroom.png";
 import Header from "../Components/Header";
-import visionHeaderImage from "../assets/hospital-teamwork-and-hands-of-doctors-in-support-2023-11-27-05-21-38-utc.jpg"
+import visionHeaderImage from "../assets/hospital-teamwork-and-hands-of-doctors-in-support-2023-11-27-05-21-38-utc.jpg";
+import SocialMedias from "../Components/SocialMedias";
+import Whatsapp from "../Components/Whatsapp";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 function Vision() {
   const bgImage = `url(${visionBgImage}), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))`;
-
   const headerBgImage = `url(${visionHeaderImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
-
+  const navigate = useNavigate();
 
   return (
     <div>
-        <div>
-       <Header/>
-        </div>
-
-      <div className="flex items-center justify-center h-96"
-              style={{
-                backgroundImage: headerBgImage,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundBlendMode: "overlay",
-              }}>
-        <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white">MISSION & VISION</h1>
+      <div>
+        <Header />
       </div>
+
+      <div
+        className="flex items-center justify-center h-96"
+        style={{
+          backgroundImage: headerBgImage,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <IoArrowBackCircleSharp
+          onClick={() => navigate(-1)}
+          size={50}
+          className="absolute transition-transform hover:scale-105 text-white top-32 left-4 cursor-pointer"
+        />
+
+        <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white">
+          MISSION & VISION
+        </h1>
+      </div>
+
+      <SocialMedias />
+      <Whatsapp />
 
       <div
         className="grid md:grid-cols-2 grid-cols-1 my-20 border-4  border-sky-700 mx-2 rounded-md"
