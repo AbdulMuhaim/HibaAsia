@@ -42,7 +42,7 @@ function Vision() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 border-b-2 py-2 px-1 sm:py-20 sm:px-28">
+      <div className="grid md:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
         <div className="w-full">
           <img src={missionImage} alt="" />
         </div>
@@ -60,7 +60,7 @@ function Vision() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 border-b-2 py-20 px-28">
+      <div className="grid md:grid-cols-2 gap-10 border-b-2 sm:py-20 p-3 sm:px-28">
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <h1 className="text-center text-4xl  text-sky-800 font-bold font-Roman mb-6">
             OUR VISION
@@ -77,7 +77,7 @@ function Vision() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 border-b-2 py-20 px-28">
+      <div className="grid md:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
         <div className="w-full">
           <img src={valuesImage} alt="" />
         </div>
