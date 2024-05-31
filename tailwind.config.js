@@ -34,6 +34,7 @@ export default {
         Tahoma: ['Tahoma', 'sans-serif'],
         Georgia : ['Georgia ', 'sans-serif'],
         Roman : ['Times New Roman ', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
       keyframes: {
         'reverse-rotate': {

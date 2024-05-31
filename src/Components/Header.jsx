@@ -2,10 +2,16 @@ import { useEffect, useState } from "react";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 
 function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const navigate = useNavigate();
+  const [language, setLanguage] = useState('en');
+
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'ar' : 'en'));
+  };
 
   useEffect(() => {
     // Function to check screen size and update mobileMenu state
@@ -98,23 +104,30 @@ function Header() {
 
         {/* options bar under header closed*/}
 
+    <div className="flex absolute sm:top-28 right-16 text-sm sm:text-base font-Avenir sm:right-5 items-center justify-center">
+      <button
+        onClick={toggleLanguage}
+        className={`sm:px-3 sm:py-2 px-1 py-1 rounded-l-full ${
+          language === 'en' ? 'bg-white text-black' : 'text-white bg-sky-800'
+        }`}
+      >
+        English
+      </button>
+      <button
+        onClick={toggleLanguage}
+        className={`sm:px-3 sm:py-2 px-1 py-1 rounded-r-full ${
+          language === 'ar' ? 'bg-white text-black' : 'text-white bg-sky-800'
+        }`}
+      >
+        العربية
+      </button>
+    </div>
 
+    <IoArrowBackCircleSharp
+          onClick={() => navigate(-1)}
+          className="absolute xl:text-5xl text-4xl  transition-transform hover:scale-105 text-white top-32 left-4 cursor-pointer"
+        />
 
-
-      <div className="flex absolute right-7 top-32 justify-between items-center w-full md:w-auto mt-4 md:mt-0 mb-4 md:mb-0">
-        <div className="flex items-center justify-between w-full md:w-auto md:mb-0">
-          <div className="switch">
-            <input
-              id="language-toggle"
-              className="check-toggle check-toggle-round-flat"
-              type="checkbox"
-            />
-            <label htmlFor="language-toggle" className="!h-10"></label>
-            <span className="on">EN</span>
-            <span className="off">AR</span>
-          </div>
-        </div>
-      </div>
     </div>
 
 {/* <div className="border-t-2 border-gray-300 bg-sky-800">

@@ -14,7 +14,6 @@ function Doctors() {
   return (
     <div>
       <Header />
-
       <SocialMedias />
       <Whatsapp />
 
@@ -27,11 +26,18 @@ function Doctors() {
           backgroundBlendMode: "overlay",
         }}
       >
-          <IoArrowBackCircleSharp onClick={()=>navigate(-1)} size={50} className="absolute transition-transform hover:scale-105 text-white top-32 left-4 cursor-pointer"/>
 
-        <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white">
+        <div className="flex flex-col">
+        <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md textu text-white">
           OUR DOCTORS
         </h1>
+        <div className="flex items-center space-x-4 text-white justify-center">
+        <p className="cursor-pointer" onClick={()=>navigate('/')}>Home </p>
+        <p className="text-xl">/</p>
+        <p className="cursor-pointer">Doctors</p>
+        </div>
+        </div>
+
       </div>
       <DoctorsList />
     </div>

@@ -23,9 +23,11 @@ import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
 import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
 import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
 import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
+import { useState } from "react";
 
 function Home() {
   const navigate = useNavigate();
+
 
   const doctors = [
     {
@@ -197,6 +199,9 @@ function Home() {
           />
         </div>
 
+
+
+
         <div className="text-center">
           <h1 className="text-4xl opacity-90 font-bold mb-10">Who We Are</h1>
           <div className="text-lg max-w-2xl mx-auto">
@@ -218,6 +223,9 @@ function Home() {
           </div>
         </div>
       </div>
+
+
+
 
       <div className="mt-60 flex flex-col md:flex-row justify-center md:justify-evenly py-40 items-center bg-[url('https://img.freepik.com/free-vector/medical-healthcare-blue-color_1017-26807.jpg?t=st=1716905726~exp=1716909326~hmac=e3522a94835f46159dd5e1fc0a3be928be5c0bc04e50a7e6e1941ef5c488a2b5&w=1060')] bg-cover bg-center">
         <div
