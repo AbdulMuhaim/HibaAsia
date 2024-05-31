@@ -42,7 +42,7 @@ function Vision() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 border-b-2 py-20 px-28">
+      <div className="grid md:grid-cols-2 gap-10 border-b-2 py-2 px-1 sm:py-20 sm:px-28">
         <div className="w-full">
           <img src={missionImage} alt="" />
         </div>
