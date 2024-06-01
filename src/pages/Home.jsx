@@ -24,10 +24,11 @@ import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
 import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
 import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
 import { useState } from "react";
+import Testimonials from "../Components/Testimonials";
+import newBgImage from "../assets/medical-physician-doctor-man.jpg";
 
 function Home() {
   const navigate = useNavigate();
-
 
   const doctors = [
     {
@@ -70,23 +71,57 @@ function Home() {
     <div>
       {/* header */}
       <div
-        className="bg-gradient-to-b from-white to-sky-200 h-screen"
+        className="h-screen bg-cover bg-no-repeat bg-blend-overlay"
         style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundBlendMode: "overlay",
+          backgroundImage: `url(${newBgImage})`,
         }}
       >
-        {" "}
         <Header />
+
+        <div className="flex flex-col h-full items-center justify-center gap-8 md:gap-16">
+          <h1 className="font-Noto font-bold text-3xl md:text-5xl bg-opacity-50 backdrop-filter backdrop-blur-md text-center">
+            INSPIRING BETTER HEALTH
+          </h1>
+          <p className="bg-opacity-50 backdrop-filter backdrop-blur-md text-base md:text-lg max-w-[30rem] md:max-w-[48rem] break-words text-center">
+            Discover a new standard of healthcare excellence at Hiba Asia. We
+            combine advanced medical technology with compassionate care to
+            ensure the best possible outcomes for our patients.
+          </p>
+          <button className="rounded-full bg-sky-800 px-5 py-3 md:text-lg  md:px-8 md:py-5 hover:bg-sky-700 text-white">
+            Book an Appointment
+          </button>
+          <div className="flex gap-20">
+            <a className="flex items-center gap-2" href="tel:+9660545961777">
+              <button className="bg-white text-black p-1 sm:p-2  border-sky-800 border-4 xl:text-lg rounded-full transition duration-300 transform">
+                <IoIosCall size={30} />
+              </button>
+              <div>
+                <p className="font-medium md:text-lg opacity-85">Talk to Us</p>
+                <p className="font-Avenir opacity-90">0545961777</p>
+              </div>
+            </a>
+            <a
+              className="flex items-center gap-2"
+              href="mailto:info@hibaasia.care"
+            >
+              <button className="bg-white text-black border-sky-800 border-4 p-1 sm:p-2 xl:text-lg rounded-full font-bold transition duration-300 transform">
+                <MdEmail size={30} />{" "}
+              </button>
+              <div>
+                <p className="font-medium opacity-85 md:text-lg ">Write to Us</p>
+                <p className="font-Avenir opacity-90">info@hibaasia.care</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
         {/* header closed */}
         {/* banner */}
-        <div className="flex flex-col sm:flex-row">
-          <div className="sm:w-1/2 w-full flex justify-center items-center">
+        {/* <div className="flex flex-col sm:flex-row"> */}
+        {/* <div className="sm:w-1/2 w-full flex justify-center items-center">
             <div className="px-10 h-full">
-              <div className="flex flex-col items-center justify-center text-center pl-20 h-4/5">
-                <h1 className="font-Avenir 2xl:text-6xl xl:text-4xl min-w-[20rem] font-bold mb-2 whitespace-nowrap">
+              <div className="flex flex-col items-center justify-center text-center sm:pl-20 h-4/5">
+                <h1 className="font-Avenir mt-20 2xl:text-6xl xl:text-4xl min-w-[20rem] font-bold mb-2 whitespace-nowrap">
                   INSPIRING BETTER HEALTH
                 </h1>
                 <p className="2xl:text-lg font-medium opacity-75 font-serif">
@@ -94,7 +129,7 @@ function Home() {
                   We combine advanced medical technology with compassionate care
                   to ensure the best possible outcomes for our patients.
                 </p>
-                <button className="bg-sky-800 mt-10 2xl:mt-20 mb-10 text-white xl:text-2xl lg:px-6 lg:py-6 md:px-3 md:py-4 py-2 px-3 rounded-full border-4 hover:text-black border-sky-800 font-bold transition duration-500 transform hover:bg-white hover:scale-105">
+                <button className="bg-sky-800 mt-10 2xl:mt-20 mb-20 text-white xl:text-2xl lg:px-6 lg:py-6 md:px-3 md:py-4 py-2 px-3 rounded-full border-4 hover:text-black border-sky-800 font-bold transition duration-500 transform hover:bg-white hover:scale-105">
                   Book an Appointment
                 </button>
                 <div className="flex gap-10 mt-40 md:mt-0">
@@ -131,37 +166,12 @@ function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center bg-slate-600 gap-3 2xl:gap-10 pl-14">
-                {/* <div className="flex gap-2">
-                  <h1 className="font-semibold text-xl opacity-70 mr-1">
-                    <FaMapLocationDot color="black" size={40} />
-                  </h1>
-                  <button className="rounded-full font-Avenir font-semibold border-y-2 border-teal-700 h-auto border-x-8 bg-white px-5 whitespace-nowrap">
-                    Al Zahra
-                  </button>
-                  <button className="rounded-full font-Avenir font-semibold border-y-2 border-teal-700 h-auto border-x-8 bg-white px-5 whitespace-nowrap">
-                    Al Wazeriyah
-                  </button>
-                </div> */}
-              </div>
+              <div className="flex items-center justify-center bg-slate-600 gap-3 2xl:gap-10 pl-14"></div>
             </div>
-          </div>
-          <div className="sm:w-1/2 w-full overflow-hidden">
-            <img
-              src={smilingDoctor}
-              className="w-full  h-full -z-10"
-              alt="Smiling Doctor"
-            />
-          </div>
-          {/* banner closed*/}
-
-          {/* whatsapp */}
-          <Whatsapp />
-
-          {/* social medias */}
-          <SocialMedias />
-        </div>
-        <div className="h-1 sm:mt-0 mt-6 bg-gradient-to-br from-blue-900 to-teal-600 font-Avenir font-semibold text-white flex items-center justify-between px-5 gap-10">
+          </div> */}
+        {/* banner closed*/}
+        {/* </div> */}
+        {/* <div className="h-1 sm:mt-0 mt-6 bg-gradient-to-br from-blue-900 to-teal-600 font-Avenir font-semibold text-white flex items-center justify-between px-5 gap-10">
           <h1 className="bg-gradient-to-br from-blue-900 to-teal-600 text-center rounded-full md:py-5 md:px-5 px-1 py-1">
             Online Appointments
           </h1>
@@ -174,7 +184,7 @@ function Home() {
           <h1 className="bg-gradient-to-br from-blue-900 to-teal-600 text-center rounded-full md:py-5 md:px-5 px-1 py-1">
             Service & Packages
           </h1>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative h-[400px] w-full mt-10 flex items-center justify-center">
@@ -199,9 +209,6 @@ function Home() {
           />
         </div>
 
-
-
-
         <div className="text-center">
           <h1 className="text-4xl opacity-90 font-bold mb-10">Who We Are</h1>
           <div className="text-lg max-w-2xl mx-auto">
@@ -224,13 +231,10 @@ function Home() {
         </div>
       </div>
 
-
-
-
-      <div className="mt-60 flex flex-col md:flex-row justify-center md:justify-evenly py-40 items-center bg-[url('https://img.freepik.com/free-vector/medical-healthcare-blue-color_1017-26807.jpg?t=st=1716905726~exp=1716909326~hmac=e3522a94835f46159dd5e1fc0a3be928be5c0bc04e50a7e6e1941ef5c488a2b5&w=1060')] bg-cover bg-center">
+      <div className="mt-60 flex flex-col md:flex-row justify-center md:justify-evenly py-40 items-center bg-[url('https://www.hibaasia.care/wp-content/uploads/2023/06/Clinic-2.jpg')] bg-cover bg-center">
         <div
           onClick={() => navigate("/vision")}
-          className="bg-slate-50 h-96 w-96 cursor-pointer border-8 border-b-slate-400 shadow-2xl rounded-full p-6 flex flex-col items-center justify-center transform transition-transform duration-500 hover:translate-y-[-10px] custom-shadow"
+          className="bg-slate-50 h-96 w-96 cursor-pointer border-2 border-sky-800 shadow-2xl rounded-full p-6 flex flex-col items-center justify-center transform transition-transform duration-500 hover:translate-y-[-10px] custom-shadow"
         >
           <img
             src={missionImage}
@@ -350,13 +354,15 @@ function Home() {
                       </button>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
           ))}
           <div className="h-[30rem] flex items-center justify-center bg-slate-50 rounded-lg ">
-            <button onClick={()=>navigate('/doctors')} className="rounded-full bg-white px-5 text-lg font-semibold  transition-transform hover:scale-105 py-2 border-4 border-sky-800">
+            <button
+              onClick={() => navigate("/doctors")}
+              className="rounded-full bg-white px-5 text-lg font-semibold  transition-transform hover:scale-105 py-2 border-4 border-sky-800"
+            >
               View All
             </button>
           </div>
@@ -366,40 +372,12 @@ function Home() {
       {/* doctors */}
       {/* <Doctors /> */}
 
-      <div className="mt-3 border-b-4 py-14 px-3 ">
-        <h1 className=" text-3xl font-bold mb-10">
-          See what people are saying about Hiba Asia
-        </h1>
-
-        <div
-          className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 px-5"
-          style={{ lineHeight: "27px" }}
-        >
-          <h1 className="p-5">
-            "It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, "
-          </h1>
-          <h1 className="p-5">
-            "It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, "
-          </h1>
-          <h1 className="p-5">
-            "It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, "
-          </h1>
-        </div>
-      </div>
+      <Testimonials />
 
       {/* News&Events */}
 
       <div className="mt-3 border-b-4 py-14 px-3 ">
-        <h1 className=" text-3xl font-bold">News & Events</h1>
+        <h1 className=" text-3xl font-bold">News, Events and Blogs</h1>
 
         {/* YouTube Video 1 */}
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4 pt-8">

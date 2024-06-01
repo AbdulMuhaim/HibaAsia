@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
+import Whatsapp from "./Whatsapp";
+import SocialMedias from "./SocialMedias";
 
 function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const navigate = useNavigate();
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState("en");
+  const location = useLocation();
 
   const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'ar' : 'en'));
+    setLanguage((prevLanguage) => (prevLanguage === "en" ? "ar" : "en"));
   };
+
+  console.log(location);
 
   useEffect(() => {
     // Function to check screen size and update mobileMenu state
@@ -64,23 +69,14 @@ function Header() {
 
   return (
     <>
-    <div className="w-full h-auto flex justify-between items-center">
-        <div className="w-1/2 md:w-auto flex-col justify-center items-center pl-5 py-2">
-          <div className="flex items-center justify-center">
-            <img
-              src={headerImage}
-              alt=""
-              className="md:p-0 md:my-2 min-h-[4rem] max-h-[5rem] max-w-[12rem] min-w-[5rem] mx-auto md:mx-0 "
-            />
-          </div>
-        </div>
-
+      <div className="w-full h-auto flex sm:justify-center justify-evenly items-center">
         {/* options bar under header */}
         {mobileMenu ? (
-          <div className="p-2 w-1/2 flex justify-end">
+          <div className="p-2 w-1/2">
             <RxHamburgerMenu
-              size={22}
-              className="border-2  border-black cursor-pointer"
+              size={25}
+              color="white"
+              className="cursor-pointer hover:border-2"
             />
           </div>
         ) : (
@@ -102,35 +98,55 @@ function Header() {
           </div>
         )}
 
+        <div className="w-1/2 md:w-auto flex-col justify-center items-center pl-5 py-2">
+          <div className="flex items-center justify-center">
+            <img
+              src={headerImage}
+              alt=""
+              className="md:p-0 md:my-2 min-h-[4rem]  max-h-[5rem] max-w-[12rem] min-w-[5rem] mx-auto md:mx-0 "
+            />
+          </div>
+        </div>
+
         {/* options bar under header closed*/}
 
-    <div className="flex absolute sm:top-28 right-16 text-sm sm:text-base font-Avenir sm:right-5 items-center justify-center">
-      <button
-        onClick={toggleLanguage}
-        className={`sm:px-3 sm:py-2 px-1 py-1 rounded-l-full ${
-          language === 'en' ? 'bg-white text-black' : 'text-white bg-sky-800'
-        }`}
-      >
-        English
-      </button>
-      <button
-        onClick={toggleLanguage}
-        className={`sm:px-3 sm:py-2 px-1 py-1 rounded-r-full ${
-          language === 'ar' ? 'bg-white text-black' : 'text-white bg-sky-800'
-        }`}
-      >
-        العربية
-      </button>
-    </div>
+        <div className={`flex absolute top-32 right-10 text-sm sm:text-base font-Avenir  items-center justify-center`}>
+          <button
+            onClick={toggleLanguage}
+            className={`sm:px-3 sm:py-2 px-1 py-1 rounded-l-full ${
+              language === "en"
+                ? "bg-white text-black"
+                : "text-white bg-sky-800"
+            }`}
+          >
+            English
+          </button>
+          <button
+            onClick={toggleLanguage}
+            className={`sm:px-3 sm:py-2 px-1 py-1 rounded-r-full ${
+              language === "ar"
+                ? "bg-white text-black"
+                : "text-white bg-sky-800"
+            }`}
+          >
+            العربية
+          </button>
+        </div>
 
-    <IoArrowBackCircleSharp
-          onClick={() => navigate(-1)}
-          className="absolute xl:text-5xl text-4xl  transition-transform hover:scale-105 text-white top-32 left-4 cursor-pointer"
-        />
+        <Whatsapp />
+        <SocialMedias />
 
-    </div>
+        {location.pathname === "/" ? (
+          ""
+        ) : (
+          <IoArrowBackCircleSharp
+            onClick={() => navigate(-1)}
+            className="absolute xl:text-5xl text-4xl  transition-transform hover:scale-105 text-white top-32 left-4 cursor-pointer"
+          />
+        )}
+      </div>
 
-{/* <div className="border-t-2 border-gray-300 bg-sky-800">
+      {/* <div className="border-t-2 border-gray-300 bg-sky-800">
 <h1 className="border text-white p-3">Home</h1>
 <h1 className="border text-white p-3">About</h1>
 <h1 className="border text-white p-3">Doctors</h1>

@@ -1,4 +1,3 @@
-import bgImage from "../client/src/assets/9957940.jpg"
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -34,7 +33,8 @@ export default {
         Tahoma: ['Tahoma', 'sans-serif'],
         Georgia : ['Georgia ', 'sans-serif'],
         Roman : ['Times New Roman ', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
+        Roboto: ['Roboto', 'sans-serif'],
+        Noto: ['Noto Sans', 'sans-serif'],
       },
       keyframes: {
         'reverse-rotate': {

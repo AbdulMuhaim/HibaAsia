@@ -4,8 +4,6 @@ import missionImage from "../assets/3d-rendering-arrow-hitting-target (2).jpg";
 import valuesImage from "../assets/colleagues-working-together-project.jpg";
 import Header from "../Components/Header";
 import visionHeaderImage from "../assets/physician-consulting-his-patient-clinic.jpg";
-import SocialMedias from "../Components/SocialMedias";
-import Whatsapp from "../Components/Whatsapp";
 import { useNavigate } from "react-router-dom";
 
 function Vision() {
@@ -16,8 +14,6 @@ function Vision() {
   return (
     <div>
       <Header />
-      <SocialMedias />
-      <Whatsapp />
 
       <div
         className="flex items-center justify-center h-96"
@@ -42,9 +38,9 @@ function Vision() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
+      <div className="grid lg:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
         <div className="w-full">
-          <img src={missionImage} alt="" />
+          <img src={missionImage} className="rounded-xl" alt="" />
         </div>
 
         <div className="w-full flex flex-col items-center justify-center mx-auto">
@@ -60,7 +56,7 @@ function Vision() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 border-b-2 sm:py-20 p-3 sm:px-28">
+      <div className="grid lg:grid-cols-2 gap-10 border-b-2 sm:py-20 p-3 sm:px-28">
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <h1 className="text-center text-4xl  text-sky-800 font-bold font-Roman mb-6">
             OUR VISION
@@ -73,13 +69,13 @@ function Vision() {
         </div>
 
         <div className="w-full">
-          <img  src={visionImage} alt="" />
+          <img  src={visionImage} className="rounded-xl" alt="" />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
+      <div className="grid lg:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
         <div className="w-full">
-          <img src={valuesImage} alt="" />
+          <img src={valuesImage} className="rounded-xl" alt="" />
         </div>
 
         <div className="w-full flex flex-col items-center justify-center mx-auto">

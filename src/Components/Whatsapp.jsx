@@ -10,7 +10,7 @@ function Whatsapp() {
       >
         <img
           src={whatsappLogo}
-          className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 2xl:h-16 2xl:w-16"
+          className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 2xl:h-16 2xl:w-16"
           alt="WhatsApp Logo"
         />
       </a>

@@ -40,8 +40,6 @@ function Contact() {
     <div>
       {" "}
       <Header />
-      <SocialMedias />
-      <Whatsapp />
       <div
         className="flex items-center justify-center h-96"
         style={{
