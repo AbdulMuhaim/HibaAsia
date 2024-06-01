@@ -98,12 +98,12 @@ function Header() {
           </div>
         )}
 
-        <div className="w-1/2 md:w-auto flex-col justify-center items-center pl-5 py-2">
+        <div className="w-1/2 md:w-auto flex-col justify-center items-center py-2">
           <div className="flex items-center justify-center">
             <img
               src={headerImage}
               alt=""
-              className="md:p-0 md:my-2 min-h-[4rem]  max-h-[5rem] max-w-[12rem] min-w-[5rem] mx-auto md:mx-0 "
+              className="md:p-0 md:my-2 min-h-[3rem] max-w-[8rem]  md:max-h-[5rem] md:max-w-[12rem] min-w-[5rem] mx-auto md:mx-0 "
             />
           </div>
         </div>

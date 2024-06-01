@@ -82,15 +82,15 @@ function Home() {
           <h1 className="font-Noto font-bold text-3xl md:text-5xl bg-opacity-50 backdrop-filter backdrop-blur-md text-center">
             INSPIRING BETTER HEALTH
           </h1>
-          <p className="bg-opacity-50 backdrop-filter backdrop-blur-md text-base md:text-lg max-w-[30rem] md:max-w-[48rem] break-words text-center">
+          <p className="bg-opacity-50 backdrop-filter backdrop-blur-md text-base md:text-lg max-w-[20rem] md:max-w-[48rem]  break-words text-center">
             Discover a new standard of healthcare excellence at Hiba Asia. We
             combine advanced medical technology with compassionate care to
             ensure the best possible outcomes for our patients.
           </p>
-          <button className="rounded-full bg-sky-800 px-5 py-3 md:text-lg  md:px-8 md:py-5 hover:bg-sky-700 text-white">
+          <button className="rounded-full bg-sky-800 px-5 py-3 md:text-lg  md:px-8 md:py-5 border-2 text-white transition duration-500 transform hover:bg-white  hover:text-black border-sky-800">
             Book an Appointment
           </button>
-          <div className="flex gap-20">
+          <div className="flex sm:gap-20 gap-2">
             <a className="flex items-center gap-2" href="tel:+9660545961777">
               <button className="bg-white text-black p-1 sm:p-2  border-sky-800 border-4 xl:text-lg rounded-full transition duration-300 transform">
                 <IoIosCall size={30} />
@@ -187,7 +187,7 @@ function Home() {
         </div> */}
       </div>
 
-      <div className="relative h-[400px] w-full mt-10 flex items-center justify-center">
+      {/* <div className="relative h-[400px] w-full mt-10 flex items-center justify-center">
         <div className="absolute h-[50vh] 2xl:-top-20 top-0 -left-14 w-1/2 hidden sm:block">
           <img
             className="z-10 absolute max-h-[30rem] hidden md:block left-20 2xl:left-64 top-10 2xl:top-52"
@@ -229,9 +229,9 @@ function Home() {
             </h1>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="mt-60 flex flex-col md:flex-row justify-center md:justify-evenly py-40 items-center bg-[url('https://www.hibaasia.care/wp-content/uploads/2023/06/Clinic-2.jpg')] bg-cover bg-center">
+      {/* <div className="mt-60 flex flex-col md:flex-row justify-center md:justify-evenly py-40 items-center bg-[url('https://www.hibaasia.care/wp-content/uploads/2023/06/Clinic-2.jpg')] bg-cover bg-center">
         <div
           onClick={() => navigate("/vision")}
           className="bg-slate-50 h-96 w-96 cursor-pointer border-2 border-sky-800 shadow-2xl rounded-full p-6 flex flex-col items-center justify-center transform transition-transform duration-500 hover:translate-y-[-10px] custom-shadow"
@@ -303,7 +303,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* cards */}
       <Cards />
