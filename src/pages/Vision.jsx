@@ -29,11 +29,11 @@ function Vision() {
             MISSION & VISION
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
-            <p className="cursor-pointer" onClick={() => navigate("/")}>
+            <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Mision&Vision</p>
+            <p className="cursor-pointer text-lg">Mision&Vision</p>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ function Vision() {
           <h1 className="text-center text-4xl text-sky-800 font-bold font-Roman mb-6">
             OUR MISSION
           </h1>
-          <p className="font-Avenir text-xl">
+          <p className=" text-xl opacity-70">
             Our mission is to continually improve the health of the communities
             by discovering and delivering compassionate and quality healthcare
             services through a team of dedicated and highly
@@ -61,7 +61,7 @@ function Vision() {
           <h1 className="text-center text-4xl  text-sky-800 font-bold font-Roman mb-6">
             OUR VISION
           </h1>
-          <p className="font-Avenir text-xl">
+          <p className=" text-xl opacity-70">
             By following the standards of Vision 2030, we aspire to be one of
             the best providers of medical services in the Kingdom
             of Saudi Arabia.
@@ -83,8 +83,8 @@ function Vision() {
             OUR VALUES
           </h1>
           <div>
-            <h2 className="font-Avenir text-2xl mb-2">Compassion</h2>
-            <p className="font-Avenir text-xl opacity-70 mb-2">
+            <h2 className=" text-2xl mb-3">Compassion</h2>
+            <p className=" text-xl opacity-70 mb-5">
               We believe that a large part of our patients treatment lies in our
               personal participation throughout their medical journey from the
               beginning to the point of full recovery. We are empathetic and
@@ -93,8 +93,8 @@ function Vision() {
           </div>
 
           <div>
-            <h2 className="font-Avenir text-2xl mb-2">Patient-Centricity</h2>
-            <p className="font-Avenir text-xl opacity-70 mb-2">
+            <h2 className=" text-2xl mb-3">Patient-Centricity</h2>
+            <p className=" text-xl opacity-70 mb-5">
               We consider our patients to be the decision-makers in their
               treatment journey, and our role is to guide them and give them all
               the treatment options that are appropriate for every condition.
@@ -103,8 +103,8 @@ function Vision() {
           </div>
 
           <div>
-            <h2 className="font-Avenir text-2xl mb-2">Collaboration</h2>
-            <p className="font-Avenir text-xl opacity-70 mb-2">
+            <h2 className=" text-2xl mb-3">Collaboration</h2>
+            <p className=" text-xl opacity-70 mb-5">
               We define collaboration as the ongoing process of working and
               learning with everyone involved in our patient medical journey in
               HIBA ASIA as ONE TEAM. The efforts of the medical and
@@ -116,8 +116,8 @@ function Vision() {
           </div>
 
           <div>
-            <h2 className="font-Avenir text-2xl mb-2">Innovation</h2>
-            <p className="font-Avenir text-xl opacity-70 mb-2">
+            <h2 className=" text-2xl mb-3">Innovation</h2>
+            <p className=" text-xl opacity-70 mb-5">
               Our constant commitment to developing our services is what allows
               us to care for our patients and ease their suffering in their
               integrated treatment journey in a professional and efficient way.
@@ -127,8 +127,8 @@ function Vision() {
           </div>
 
           <div>
-            <h2 className="font-Avenir text-2xl mb-2">Integrity</h2>
-            <p className="font-Avenir text-xl opacity-70 mb-2">
+            <h2 className=" text-2xl mb-3">Integrity</h2>
+            <p className=" text-xl opacity-70 mb-5">
               We are honest, ethical and trustworthy. We shall always be
               transparent and act morally upright, in our patients’ best
               interest.
@@ -136,8 +136,8 @@ function Vision() {
           </div>
 
           <div>
-            <h2 className="font-Avenir text-2xl mb-2">Quality</h2>
-            <p className="font-Avenir text-xl opacity-70">
+            <h2 className="text-2xl mb-3">Quality</h2>
+            <p className=" text-xl opacity-70">
               We believe that everyone has the right to have the best chance to
               live a healthy and active life. Thus, we at HIBA ASIA are
               dedicated to offer our patients the highest global standards and

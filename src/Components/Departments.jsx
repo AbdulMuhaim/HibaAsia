@@ -39,7 +39,7 @@ function Departments() {
 
   return (
     <div className="sm:mt-16 border-b-4 py-14 px-3 ">
-    <h1 className="text-3xl xl:text-4xl font-bold">Departments</h1>
+    <h1 className="text-3xl xl:text-4xl font-bold text-center text-sky-800">Departments</h1>
     <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 pt-8">
       {/* Child div 1 */}
       {departments.map((department, index) => (

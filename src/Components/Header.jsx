@@ -5,6 +5,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Whatsapp from "./Whatsapp";
 import SocialMedias from "./SocialMedias";
+import { IoIosCall } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -75,8 +77,8 @@ function Header() {
           <div className="p-2 w-1/2">
             <RxHamburgerMenu
               size={25}
-              color="white"
-              className="cursor-pointer hover:border-2"
+              color="black"
+              className="cursor-pointer border-black hover:border-2"
             />
           </div>
         ) : (
@@ -89,7 +91,7 @@ function Header() {
               <div key={index}>
                 <h1
                   onClick={() => navigate(option.url)}
-                  className="font-bold text-medium xl:text-lg opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+                  className="font-bold text-medium xl:text-lg 2xl:text-2xl opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100"
                 >
                   {option.name}
                 </h1>
@@ -103,7 +105,7 @@ function Header() {
             <img
               src={headerImage}
               alt=""
-              className="md:p-0 md:my-2 min-h-[3rem] max-w-[8rem]  md:max-h-[5rem] md:max-w-[12rem] min-w-[5rem] mx-auto md:mx-0 "
+              className="md:p-0 md:my-2 min-h-[4rem] max-w-[12rem]  md:max-h-[5rem] md:max-w-[12rem] min-w-[6rem] mx-auto md:mx-0 "
             />
           </div>
         </div>
@@ -132,6 +134,8 @@ function Header() {
             العربية
           </button>
         </div>
+
+
 
         <Whatsapp />
         <SocialMedias />

@@ -29,9 +29,9 @@ function Doctors() {
           OUR DOCTORS
         </h1>
         <div className="flex items-center space-x-4 text-white justify-center">
-        <p className="cursor-pointer" onClick={()=>navigate('/')}>Home </p>
+        <p className="cursor-pointer text-lg" onClick={()=>navigate('/')}>Home </p>
         <p className="text-xl">/</p>
-        <p className="cursor-pointer">Doctors</p>
+        <p className="cursor-pointer text-lg">Doctors</p>
         </div>
         </div>
 

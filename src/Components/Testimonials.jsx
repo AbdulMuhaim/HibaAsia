@@ -6,40 +6,40 @@ import { FaStar } from "react-icons/fa";
 
 const testimonialsData = [
   {
-    text: "I've been working with these guys for a long time and I can say that my house is in the perfect hands.",
+    text: "Outstanding care at Hiba Asia Hospital. Compassionate staff ensured a swift recovery. Highly recommended!",
     image:
-      "https://img.businessoffashion.com/resizer/v2/https%3A%2F%2Fprod-bof-media.s3.eu-west-1.amazonaws.com%2Fimport%2Fprofiles%2Fasset%2F1715%2Fa1f88b4a3c5c5b6761438553fe38ab872d9f59cc.jpeg?auth=7b03563a00ad77e3cd71c6cf0492ac463b993d18a585b2f94fc08539c3f031a2&height=350",
-    name: "Allan Collins",
+      "https://wp.en.aleteia.org/wp-content/uploads/sites/2/2017/04/web3-muslim-man-face-young-beard-head-shutterstock_122151928-shutterstock.jpg?w=620&h=348&crop=1",
+    name: "Jawad Ali",
   },
   {
-    text: "Working with Sentry Oak is just great, every problem in my house is solved in a matter of days.",
+    text: "Great surgery experience at Hiba Asia Hospital. Modern facility and top-notch medical team.",
     image:
-      "https://i.pinimg.com/736x/39/34/1a/39341ac32898c0a5d0d3fc189cda0f79.jpg",
-    name: "Clay Washington",
+      "https://img.freepik.com/free-photo/muslim-woman-portrait-hijab-smiling-face-close-up_53876-144187.jpg",
+    name: "Aysha Mariyam",
   },
   {
-    text: "Once a pipe burst in my kitchen and an hour later it was already repaired, thanks to Sentry Oak.",
+    text: "Quick, efficient care after an accident. Exceptional emergency and follow-up treatment.",
     image:
       "https://asamnews.com/wp-content/uploads/2019/02/thispersondoesnotexist.com_.jpg",
     name: "Tanya Grant",
   },
   {
-    text: "I've been working with these guys for a long time and I can say that my house is in the perfect hands.",
+    text: "Hiba Asia Hospital improved my life with holistic care for my chronic illness.",
     image:
-      "https://miro.medium.com/v2/resize:fit:1024/1*Athwa3eGmq9wajY6Zu4zCg.jpeg",
-    name: "Muhaim",
-  },
-  {
-    text: "Working with Sentry Oak is just great, every problem in my house is solved in a matter of days.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ5S4UPcD6bRrimRECmAkJdiZ50Gt0UZWWzPni7CHycVkZzOHaA9ApZdkStZqhAdOQWgE&usqp=CAU",
+      "https://bookamuslim.com/wp-content/uploads/2022/01/unnamed.jpeg",
     name: "Farha",
   },
   {
-    text: "Once a pipe burst in my kitchen and an hour later it was already repaired, thanks to Sentry Oak.",
+    text: "Best hospital for check-ups and treatments. Friendly, professional staff. Very satisfied!",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ5S4UPcD6bRrimRECmAkJdiZ50Gt0UZWWzPni7CHycVkZzOHaA9ApZdkStZqhAdOQWgE&usqp=CAU",
+    name: "Abdul Muhaim",
+  },
+  {
+    text: "Exceptional maternity care at Hiba Asia Hospital. Supportive doctors and nurses made it wonderful.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQmtH3ATnD7ZUAccAYl0OR0By8nTAQYoghyZM3i-9_iLLi7s-ZkhFRmcH2Xz9KsC4ezKs&usqp=CAU",
-    name: "Tara",
+    name: "Abid",
   },
 ];
 
@@ -63,7 +63,7 @@ const Testimonials = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center p-5">
       <div className="w-full max-w-6xl mx-auto relative">
-        <h1 className="text-3xl font-bold mb-20 text-center">See what our patience say about Hiba Asia</h1>
+        <h1 className="text-3xl font-bold mb-20 text-center text-sky-800zzzzzzzzzzzzzz">See what our patience say about Hiba Asia</h1>
         <div className="flex flex-col lg:flex-row transition-transform duration-500 gap-20">
           {displayedTestimonials.map((testimonial, index) => (
             <div
