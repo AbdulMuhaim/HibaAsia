@@ -1,8 +1,5 @@
-import blob from "../assets/blob.svg";
 import { MdEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
-import smilingDoctor from "../assets/file.png";
-import backgroundImage from "../assets/rm209-ning-19.jpg";
 import Departments from "../Components/Departments";
 import Cards from "../Components/Cards";
 import visionImage from "../assets/Vision-Icon-Photoroom.png-Photoroom.png";
@@ -17,15 +14,14 @@ import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
 import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
 import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
 import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
-import { useState } from "react";
 import Testimonials from "../Components/Testimonials";
 import newBgImage from "../assets/internal medicine.jpg";
-// import newBgImage from "../assets/medical-physician-doctor-man.jpg";
 import { FaNotesMedical } from "react-icons/fa";
 import { GiMedicinePills } from "react-icons/gi";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { MdOutlineBloodtype } from "react-icons/md";
 import hospitalImage from "../assets/Screenshot (128).png";
+
 
 function Home() {
   const navigate = useNavigate();
@@ -217,7 +213,7 @@ function Home() {
 
       <Departments />
 
-      <div className="mt-3 border-b-4 py-14 px-3">
+      <div className="mt-3 py-14 px-3">
         <h1 className="text-3xl font-bold text-center text-sky-800">
           Our Doctors
         </h1>
@@ -276,7 +272,7 @@ function Home() {
 
       <Testimonials />
 
-      <div className="mt-3 border-b-4 py-14 px-3 ">
+      <div className="mt-3 py-14 px-3 ">
         <h1 className=" text-3xl font-bold text-center text-sky-800">
           News, Events and Blogs
         </h1>

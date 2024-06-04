@@ -121,38 +121,98 @@ function DoctorsList() {
         { name: "Maryam Ahmed", image: DrMaryamAhmed, department: "Dentist" },
       ];
 
-  return (
-      <>
-      <div className="mt-3 border-b-4 py-14 px-10">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 pt-8">
-          {doctors.map((doctor, index) => (
-            <div
-              key={index}
-              className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform hover:bg-sky-50 duration-1000"
-            >
-              <img
-                src={doctor.image}
-                alt=""
-                className="object-cover max-w-[7rem] rounded-full mx-auto"
-              />
-              <h2 className="text-xl font-semibold mt-2 text-center">
-                Dr. {doctor.name}
-              </h2>
-              <p className="text-gray-600 mt-1 text-center">
-                {doctor.department}
-              </p>
-              <div className="flex items-center justify-center">
-                <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7 ">
-                  + Connect
-                </button>
+
+      const doctorsByDepartment = {
+        "Obstetrics & Gynecology": [
+          { name: "Aswaq Ahmed", image: DrAswaq },
+          { name: "Azza Hussein Ahmed", image: DrAzza },
+        ],
+        Cardiologist: [
+          { name: "Mohamad Sherif Helmy", image: DrSherifHelmy },
+        ],
+        Pediatrician: [
+          { name: "Muhammed Anwar", image: DrMohammedAnwar },
+        ],
+        Surgeon: [
+          { name: "Majed Mouris", image: DrMajedMouris },
+        ],
+        Orthopedics: [
+          { name: "Samad Moideen", image: DrSamad },
+        ],
+        Orthodontist: [
+          { name: "Abdullah Bayazeed", image: DrAbdullahBayazeed },
+        ],
+        Urology: [
+          { name: "Mohammed Ramadan Ahmad", image: DrRamadan },
+        ],
+        Ophthalmology: [
+          { name: "Taha Abouelenin", image: DrTaha },
+        ],
+        "ENT Specialist": [
+          { name: "Mahmoud Shahin", image: DrShahin },
+        ],
+        Dermatology: [
+          { name: "Rasha Mohamed", image: DrRashaMohamed },
+        ],
+        Radiologist: [
+          { name: "Shukoor", image: DrShukoor },
+        ],
+        Internist: [
+          { name: "Hussam Alagha", image: DrHussam },
+        ],
+        "General Physician": [
+          { name: "Murtaza Bakhsh", image: DrMurtaza },
+          { name: "Abdirizak", image: DrAbdirizak },
+          { name: "Javed Iqbal", image: DrJavedIqbal },
+          { name: "Baha Ibrahim", image: DrBahaIbrahim },
+          { name: "Fathimathu Zuhra", image: DrFathimathuZuhra },
+          { name: "Amina Khan Shafi", image: DrAminaKhan },
+          { name: "Khaleel", image: DrKhaleel },
+          { name: "Iram Qadir Reshi", image: DrIramQadirReshi },
+          { name: "Kather Ibrahim", image: DrKatherIbrahim },
+        ],
+        Dentist: [
+          { name: "Abdul Aziz AlZahrani", image: DrAbdulAzeezalZahrani },
+          { name: "Shahad Bin Mehfouz", image: DrShahadBinMahfouz },
+          { name: "Nouf Qasem Mohammed", image: DrNoufQasem },
+          { name: "Jenson John", image: DrJensonJohn },
+          { name: "Lintu Mol", image: DrLintuMol },
+          { name: "Maryam Ahmed", image: DrMaryamAhmed },
+        ]
+      }
+
+      return (
+        <>
+          {Object.entries(doctorsByDepartment).map(([department, doctors], index) => (
+            <div key={index} className="mt-3 py-14 px-10">
+              <p className="uppercase font-bold opacity-70 text-2xl">{department}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 pt-8">
+                {doctors.map((doctor) => (
+                  <div
+                    key={doctor.name}
+                    className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform hover:bg-sky-50 duration-1000"
+                  >
+                    <img
+                      src={doctor.image}
+                      alt=""
+                      className="object-cover max-w-[7rem] rounded-full mx-auto"
+                    />
+                    <h2 className="text-xl font-semibold mt-2 text-center">
+                      Dr. {doctor.name}
+                    </h2>
+                    <div className="flex items-center justify-center">
+                      <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7">
+                        + Connect
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
-        </div>
-      </div>
-      </>
-      )
-}
+        </>
+      );
+    };
 
 export default DoctorsList
