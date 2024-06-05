@@ -82,10 +82,10 @@ function Home() {
         <Header />
 
         <div className="flex flex-col h-full items-center justify-center gap-8 md:gap-14">
-          <h1 className="font-bold text-3xl md:text-5xl 2xl:text-7xl bg-opacity-50 backdrop-filter backdrop-blur-md text-center">
+          <h1 className="font-bold text-3xl md:text-5xl 2xl:text-7xl text-sky-950 text-center">
             INSPIRING BETTER HEALTH
           </h1>
-          <p className="bg-opacity-50 backdrop-filter backdrop-blur-md opacity-80 text-base md:text-lg 2xl:text-2xl max-w-[20rem] md:max-w-[48rem]  break-words text-center">
+          <p className="text-base font-medium md:text-lg 2xl:text-2xl max-w-[22rem] md:max-w-[48rem] break-words text-center">
             Discover a new standard of healthcare excellence at Hiba Asia. We
             combine advanced medical technology with compassionate care to
             ensure the best possible outcomes for our patients.
@@ -94,40 +94,40 @@ function Home() {
             Book an Appointment
           </button>
 
-          <div className="flex flex-wrap gap-8 md:gap-16 lg:gap-24 xl:gap-32 justify-center">
-            <div>
-              <div className="rounded-full h-14 w-14 text-3xl sm:h-28 sm:w-28 md:h-32 md:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-4 sm:outline-6 md:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-                <FaNotesMedical />
-              </div>
-              <p className="text-center opacity-80 font-bold mt-2 text-sm sm:text-base md:text-lg">
-                Examination
-              </p>
-            </div>
-            <div>
-              <div className="rounded-full h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-4 sm:outline-6 md:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-                <GiMedicinePills size={50} />
-              </div>
-              <p className="text-center opacity-80 font-bold mt-2 text-sm sm:text-base md:text-lg">
-                Prescription
-              </p>
-            </div>
-            <div>
-              <div className="rounded-full h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-4 sm:outline-6 md:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-                <FaHandHoldingHeart size={50} />
-              </div>
-              <p className="text-center opacity-80 font-bold mt-2 text-sm sm:text-base md:text-lg">
-                Cardiogram
-              </p>
-            </div>
-            <div>
-              <div className="rounded-full h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-4 sm:outline-6 md:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-                <MdOutlineBloodtype size={50} />
-              </div>
-              <p className="text-center opacity-80 font-bold mt-2 text-sm sm:text-base md:text-lg">
-                Blood Pressure
-              </p>
-            </div>
-          </div>
+          <div className="flex flex-wrap gap-4 items-center sm:gap-8 md:gap-16 lg:gap-24 xl:gap-32 justify-center">
+      <div>
+        <div className="rounded-full h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-32 xl:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
+          <FaNotesMedical className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
+        </div>
+        <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+          Examination
+        </p>
+      </div>
+      <div>
+        <div className="rounded-full h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-32 xl:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
+          <GiMedicinePills className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
+        </div>
+        <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+          Prescription
+        </p>
+      </div>
+      <div>
+        <div className="rounded-full h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-32 xl:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
+          <FaHandHoldingHeart className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
+        </div>
+        <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+          Cardiogram
+        </p>
+      </div>
+      <div>
+        <div className="rounded-full h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-32 xl:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
+          <MdOutlineBloodtype className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
+        </div>
+        <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+          Blood Pressure
+        </p>
+      </div>
+    </div>
         </div>
       </div>
 

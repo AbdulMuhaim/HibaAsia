@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 // client/src/assets/dermatology.png
 
@@ -34,6 +35,7 @@ function Departments() {
     {
       name: "Cardiology",
       img: cardiologyImg,
+      link: "cardiology"
     },
     {
       name: "Urology",
@@ -50,6 +52,7 @@ function Departments() {
     {
       name: "Obstetric & Gynecology",
       img: obstetricImg,
+      link: "gynecology"
     },
     {
       name: "Pediatrics",
@@ -89,19 +92,20 @@ function Departments() {
     },
   ];
 
-
-
+  const navigate = useNavigate()
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [departmentsToShow, setDepartmentsToShow] = useState(getDepartmentsToShow());
+  const [departmentsToShow, setDepartmentsToShow] = useState(
+    getDepartmentsToShow()
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setDepartmentsToShow(getDepartmentsToShow());
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -130,18 +134,23 @@ function Departments() {
   );
 
   return (
-    <div className="mt-16 py-14 px-3 h-[50vh]">
+    <div className="mt-16 py-14 px-3 h-[60vh]">
       <h1 className="text-3xl xl:text-4xl font-bold text-center text-sky-800">
         Departments
       </h1>
       <div className="relative grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 gap-4 pt-8">
         {currentDepartments.map((department, index) => (
-          <div key={index} className="text-center">
+          <div
+            key={index}
+            className="relative text-center rounded p-5 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:left-1/2 hover:before:h-1 hover:before:w-0 hover:before:bg-sky-800 hover:before:animate-growBorder hover:before:transform hover:before:-translate-x-1/2"
+          >
+            {" "}
             <div className="animate-fade-in">
               <img
                 src={department.img}
                 alt={department.name}
-                className="w-full h-auto max-h-[13rem] max-w-[10rem] mx-auto"
+                className="w-full h-auto max-h-[13rem] max-w-[10rem] mx-auto cursor-pointer transition-all hover:scale-110 duration-500"
+                onClick={()=>navigate(department.link)}
               />
             </div>
             <p className="opacity-70 font-bold text-xl mt-5 uppercase">
@@ -149,17 +158,18 @@ function Departments() {
             </p>
           </div>
         ))}
+
         <button
-          className="absolute left-10 top-1/2 text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-4 hover:bg-slate-100"
+          className="absolute left-4 sm:left-10 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showPreviousDepartment}
         >
-          <IoIosArrowBack size={35} />
+          <IoIosArrowBack className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />
         </button>
         <button
-          className="absolute right-10 top-1/2 text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-4 hover:bg-slate-100"
+          className="absolute right-4 sm:right-10 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showNextDepartment}
         >
-          <IoIosArrowForward size={35} />
+          <IoIosArrowForward className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />
         </button>
       </div>
     </div>

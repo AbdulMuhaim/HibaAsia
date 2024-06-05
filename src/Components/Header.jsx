@@ -104,8 +104,8 @@ function Header() {
           <div className="flex items-center justify-center">
             <img
               src={headerImage}
-              alt=""
-              className="md:p-0 md:my-2 min-h-[4rem] max-w-[12rem]  md:max-h-[5rem] md:max-w-[12rem] min-w-[6rem] mx-auto md:mx-0 "
+              alt="hh"
+              className="md:p-0 md:my-2 min-h-[2rem] max-w-[8rem] sm:max-w-[12rem]  md:max-h-[4rem] md:max-w-[16rem] min-w-[4rem] mx-auto md:mx-0 "
             />
           </div>
         </div>

@@ -184,9 +184,9 @@ function DoctorsList() {
 
       return (
         <>
-          {Object.entries(doctorsByDepartment).map(([department, doctors], index) => (
-            <div key={index} className="mt-3 py-14 px-10">
-              <p className="uppercase font-bold opacity-70 text-2xl">{department}</p>
+          {/* {Object.entries(doctorsByDepartment).map(([department, doctors], index) => ( */}
+            <div className="mt-3 py-14 px-10">
+              {/* <p className="uppercase font-bold opacity-70 text-2xl">{department}</p> */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 pt-8">
                 {doctors.map((doctor) => (
                   <div
@@ -210,7 +210,7 @@ function DoctorsList() {
                 ))}
               </div>
             </div>
-          ))}
+          {/* ))} */}
         </>
       );
     };

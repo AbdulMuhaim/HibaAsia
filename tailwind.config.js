@@ -65,13 +65,18 @@ export default {
           '100%': {
             background: 'linear-gradient(to bottom right, #1e3a8a, #289b78)',
           },
-        }
+        },
+        growBorder: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
       },
       animation: {
         'reverse-rotate': 'reverse-rotate 1s ease-in-out',
         'bounce': 'bounce 1s infinite',
         'pulse-border': 'pulse-border 2s infinite',
         'gradient-bg': 'gradientBackground 10s ease infinite',
+        'growBorder': 'growBorder 0.7s ease-out forwards',
       },
     },
   },
