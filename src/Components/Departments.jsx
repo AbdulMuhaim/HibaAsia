@@ -15,18 +15,17 @@ import xrayImg from "../assets/xray.png";
 import ultrasoundImg from "../assets/ultrasound.png";
 import pharmacyImg from "../assets/pharmacy.png";
 import { useEffect, useState } from "react";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
-// client/src/assets/dermatology.png
 
 function Departments() {
   const departments = [
     {
       name: "General Medicine",
       img: generalImg,
+      link: "general"
     },
     {
       name: "Internal Medicine",
@@ -40,14 +39,17 @@ function Departments() {
     {
       name: "Urology",
       img: urologyImg,
+      link: "urology"
     },
     {
       name: "E N T",
       img: entImg,
+      link: "ent"
     },
     {
       name: "Orthopedic",
       img: orthopedicImg,
+      link: "orthopedics"
     },
     {
       name: "Obstetric & Gynecology",
@@ -57,10 +59,12 @@ function Departments() {
     {
       name: "Pediatrics",
       img: pediatricImg,
+      link: "pediatrics"
     },
     {
       name: "Dental",
       img: dentalImg,
+      link: "dental"
     },
     {
       name: "Ophthalmology",
@@ -69,6 +73,7 @@ function Departments() {
     {
       name: "Dermatology",
       img: dermatologyImg,
+      link: "dermatology"
     },
     {
       name: "General Surgery",
@@ -81,6 +86,7 @@ function Departments() {
     {
       name: "X Ray",
       img: xrayImg,
+      link: "xray"
     },
     {
       name: "Ultrasound",

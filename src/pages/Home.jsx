@@ -79,13 +79,12 @@ function Home() {
           backgroundImage: `url(${newBgImage})`,
         }}
       >
-        <Header />
 
         <div className="flex flex-col h-full items-center justify-center gap-8 md:gap-14">
           <h1 className="font-bold text-3xl md:text-5xl 2xl:text-7xl text-sky-950 text-center">
             INSPIRING BETTER HEALTH
           </h1>
-          <p className="text-base font-medium md:text-lg 2xl:text-2xl max-w-[22rem] md:max-w-[48rem] break-words text-center">
+          <p className="text-base font-medium md:text-lg 2xl:text-2xl max-w-[22rem] md:max-w-[48rem] backdrop-blur-sm break-words text-center">
             Discover a new standard of healthcare excellence at Hiba Asia. We
             combine advanced medical technology with compassionate care to
             ensure the best possible outcomes for our patients.
@@ -201,10 +200,6 @@ function Home() {
       Read More
       <button className="absolute top-0 left-0 w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">Read More</button>
     </button>
-        {/* <button className="custom-button">
-      Read More
-      <div className="curtain"></div>
-    </button> */}
         </div>
       ))}
     </div>
@@ -304,7 +299,7 @@ function Home() {
       </div>
 
       {/* text area*/}
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center p-10 bg-slate-100 gap-14 md:gap-0 md:h-screen">
+      {/* <div className="flex flex-col-reverse md:flex-row justify-between items-center p-10 bg-slate-100 gap-14 md:gap-0 md:h-screen">
         <div className="w-full md:w-1/2">
           <h1 className="text-5xl font-medium font-serif text-center md:text-left">
             Our team of experts provides top-notch medical treatment with
@@ -332,7 +327,7 @@ function Home() {
             </h1>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

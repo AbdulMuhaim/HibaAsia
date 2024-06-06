@@ -1,11 +1,17 @@
-import img from "../assets/close-up-doctor-holding-red-heart.jpg";
+import img from "../assets/male-student-practicing-medicine.jpg";
 import headerBgImage from "../assets/doctor-examination-young-man-with-stethoscope-hospital.jpg";
 import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
+import { useEffect } from "react";
 
 
 function Cardiology() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
 
@@ -19,7 +25,6 @@ function Cardiology() {
 
   return (
     <div>
-      <Header />
 
       <div
         className="flex items-center justify-center h-96"
@@ -64,21 +69,6 @@ function Cardiology() {
             a team of the best cardiologists in Saudi Arabia, leveraging
             advanced facilities and both preventative and therapeutic treatment
             modalities.
-          </p>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
-            Appointments are typically available within 24 hours at our centers.
-            Our team has particular expertise in evaluating patients with chest
-            pain, heart failure, and suspected arrhythmias, as well as in
-            screening for cardiovascular disease, making us a leader in cardiac
-            care.
-          </p>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
-            In addition to our team of cardiologists at Abeer Medical Centers,
-            we also offer specialized cardiac care at Mashfa Abeer’s Dr. Hassan
-            Gazzawi Hospital and Saudi National Hospital. These facilities
-            provide high-quality outpatient and inpatient treatments,
-            consultations, and diagnostics for patients with known or suspected
-            heart disease.
           </p>
           <h2 className="text-4xl text-sky-800 font-bold font-Roman my-7">
             Our Services Include:

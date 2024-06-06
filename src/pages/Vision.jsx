@@ -13,7 +13,6 @@ function Vision() {
 
   return (
     <div>
-      <Header />
       <div
         className="flex items-center justify-center h-96"
         style={{

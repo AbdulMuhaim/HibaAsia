@@ -4,8 +4,14 @@ import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import DrAswaq from "../assets/HibaDoctors/01. Dr. Aswaq.jpg";
 import DrAzza from "../assets/HibaDoctors/02. Dr. Azza.jpg";
+import { useEffect } from "react";
 
 function Gynecology() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
 
@@ -24,7 +30,6 @@ function Gynecology() {
 
   return (
     <div>
-      <Header />
 
       <div
         className="flex items-center justify-center h-96"
