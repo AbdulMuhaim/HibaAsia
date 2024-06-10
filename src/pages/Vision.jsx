@@ -4,11 +4,16 @@ import missionImage from "../assets/3d-rendering-arrow-hitting-target (2).jpg";
 import valuesImage from "../assets/colleagues-working-together-project.jpg";
 import visionHeaderImage from "../assets/physician-consulting-his-patient-clinic.jpg";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Vision() {
   const bgImage = `url(${visionBgImage}), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))`;
   const headerBgImage = `url(${visionHeaderImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
