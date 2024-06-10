@@ -1,10 +1,11 @@
 import img from "../assets/cute-woman-lying-procedure-rejuvenation-skin.jpg";
 import headerBgImage from "../assets/girl-receiving-facial-treatment-beauty-salon.jpg";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
-import Footer from "../Components/Footer";
+import DrAbdullahBayazeed from "../assets/HibaDoctors/22. Dr. Abdullah Bayazeed.jpg";
+
+
 
 function Dermatology() {
   useEffect(() => {
@@ -16,6 +17,11 @@ function Dermatology() {
 
   const doctors = [
     { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
+    {
+      name: "Abdullah Bayazeed",
+      image: DrAbdullahBayazeed,
+      department: "Orthodontist",
+    },
   ];
 
   return (

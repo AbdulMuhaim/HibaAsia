@@ -1,6 +1,5 @@
-import img from "../assets/smiley-pregnant-woman-home-with-mug-coffee.jpg";
-import headerBgImage from "../assets/doctor-performing-ultrasound-scanning-her-pregnant-patient.jpg";
-import Header from "../Components/Header";
+import img from "../assets/physician-doing-medical-consultation-with-pregnant-woman-wearing-face-masks-woman-expecting-child-receiving-medical-advice-from-doctor-office-desk-covid-19-pandemic.jpg";
+import headerBgImage from "../assets/gynecologist-offering-couple-ultrasound-pictures.jpg";
 import { useNavigate } from "react-router-dom";
 import DrAswaq from "../assets/HibaDoctors/01. Dr. Aswaq.jpg";
 import DrAzza from "../assets/HibaDoctors/02. Dr. Azza.jpg";

@@ -30,6 +30,7 @@ function Departments() {
     {
       name: "Internal Medicine",
       img: internalImg,
+      link: "internal"
     },
     {
       name: "Cardiology",
@@ -69,6 +70,7 @@ function Departments() {
     {
       name: "Ophthalmology",
       img: ophthalmologyImg,
+      link: "ophtalmology"
     },
     {
       name: "Dermatology",
@@ -78,10 +80,12 @@ function Departments() {
     {
       name: "General Surgery",
       img: generalSurgeryImg,
+      link: "surgery"
     },
     {
       name: "Laboratory",
       img: laboratoryImg,
+      link: "laboratory"
     },
     {
       name: "X Ray",
@@ -91,10 +95,12 @@ function Departments() {
     {
       name: "Ultrasound",
       img: ultrasoundImg,
+      link: "ultrasound"
     },
     {
       name: "Pharmacy",
       img: pharmacyImg,
+      link: "pharmacy"
     },
   ];
 

@@ -1,6 +1,5 @@
 import contactImage from "../assets/vecteezy_black-letter-telephone-location-and-address-icons-print_6859994.jpg";
 import { useNavigate } from "react-router-dom";
-import Header from "../Components/Header";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Map from "../Components/MapBox"
 import { CiLocationOn } from "react-icons/ci";
@@ -45,11 +44,7 @@ function Contact() {
           backgroundBlendMode: "overlay",
         }}
       >
-        <IoArrowBackCircleSharp
-          onClick={() => navigate(-1)}
-          size={50}
-          className="absolute transition-transform hover:scale-105 text-white top-32 left-4 cursor-pointer"
-        />
+
         <div className="flex flex-col">
         <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white">
           CONTACT US

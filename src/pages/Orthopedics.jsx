@@ -1,6 +1,5 @@
 import img from "../assets/woman-doing-leg-exercises-hospital.jpg";
 import headerBgImage from "../assets/doctor-helping-patient-with-fractured-leg.jpg";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";

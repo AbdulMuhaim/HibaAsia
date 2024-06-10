@@ -1,6 +1,5 @@
 import img from "../assets/front-view-woman-having-ache.jpg";
 import headerBgImage from "../assets/female-doctor-holding-human-kidney-model-her-hands-closeup-view.jpg";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrRamadan from "../assets/HibaDoctors/03. Dr. Ramadan.jpg";

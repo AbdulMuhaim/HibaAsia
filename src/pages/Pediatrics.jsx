@@ -1,6 +1,5 @@
 import img from "../assets/front-view-doctor-holding-baby.jpg";
 import headerBgImage from "../assets/side-view-of-doctor-examining-cute-little-baby-boy-2023-11-27-05-27-26-utc.jpg";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";

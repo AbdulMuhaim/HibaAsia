@@ -201,6 +201,7 @@ function DoctorsList() {
                     <h2 className="text-xl font-semibold mt-2 text-center">
                       Dr. {doctor.name}
                     </h2>
+                    <p className="text-center">{doctor.department}</p>
                     <div className="flex items-center justify-center">
                       <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7">
                         + Connect

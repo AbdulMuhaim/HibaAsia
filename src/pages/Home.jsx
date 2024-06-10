@@ -6,7 +6,6 @@ import visionImage from "../assets/Vision-Icon-Photoroom.png-Photoroom.png";
 import missionImage from "../assets/Mission-Icon-Photoroom.png-Photoroom.png";
 import valuesImage from "../assets/reputation-building-icon-line-illustration-vector-Photoroom.png-Photoroom.png";
 import { useNavigate } from "react-router-dom";
-import Header from "../Components/Header";
 import DrAswaq from "../assets/HibaDoctors/01. Dr. Aswaq.jpg";
 import DrAzza from "../assets/HibaDoctors/02. Dr. Azza.jpg";
 import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
@@ -96,7 +95,7 @@ function Home() {
           <div className="flex flex-wrap gap-4 items-center sm:gap-8 md:gap-16 lg:gap-24 xl:gap-32 justify-center">
       <div>
         <div className="rounded-full h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-32 xl:w-32 bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-          <FaNotesMedical className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
+          <FaNotesMedical className="text-2xl sm:text-3xl md:text-4xl" />
         </div>
         <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
           Examination

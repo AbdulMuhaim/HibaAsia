@@ -1,6 +1,5 @@
-import img from "../assets/dentist-examining-female-patient-teeth.jpg";
-import headerBgImage from "../assets/image22.jpg";
-import Header from "../Components/Header";
+import img from "../assets/smiling-female-patient-sitting-chair-showing-thumb-up-dental-clinic.jpg";
+import headerBgImage from "../assets/dentist-examining-patient-s-teeth.jpg";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrAbdulAzeezalZahrani from "../assets/HibaDoctors/23. Dr. Abdul Azeez al Zahrani.jpg";

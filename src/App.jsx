@@ -15,6 +15,12 @@ import Pediatrics from './pages/Pediatrics';
 import Dental from './pages/Dental';
 import Xray from './pages/Xray';
 import Layout from './Components/Layout';
+import Internal from './pages/Internal';
+import Ophtalmology from './pages/Ophtalmology';
+import Laboratory from './pages/Laboratory';
+import Ultrasound from './pages/Ultrasound';
+import Pharmacy from './pages/Pharmacy';
+import Surgery from './pages/Surgery';
 
 function App() {
   return (
@@ -35,6 +41,12 @@ function App() {
           <Route path="/pediatrics" element={<Pediatrics />} />
           <Route path="/dental" element={<Dental />} />
           <Route path="/xray" element={<Xray />} />
+          <Route path="/internal" element={<Internal />} />
+          <Route path="/ophtalmology" element={<Ophtalmology />} />
+          <Route path="/laboratory" element={<Laboratory />} />
+          <Route path="/ultrasound" element={<Ultrasound />} />
+          <Route path="/pharmacy" element={<Pharmacy />} />
+          <Route path="/surgery" element={<Surgery />} />
         </Route>
       </Routes>
     </BrowserRouter>

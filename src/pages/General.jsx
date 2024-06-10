@@ -1,6 +1,5 @@
-import img from "../assets/woman-doing-leg-exercises-hospital.jpg";
-import headerBgImage from "../assets/doctor-helping-patient-with-fractured-leg.jpg";
-import Header from "../Components/Header";
+import img from "../assets/stethoscope-pills-with-medicine-blister-white-background.jpg";
+import headerBgImage from "../assets/medium-shot-doctor-talking-patient.jpg";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrMurtaza from "../assets/HibaDoctors/13. Dr. Murtaza.jpg";
@@ -79,14 +78,14 @@ function General() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
-            General
+            General Medicine
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer text-lg">General </p>
+            <p className="cursor-pointer text-lg">General Medicine</p>
           </div>
         </div>
       </div>
@@ -98,7 +97,7 @@ function General() {
 
         <div className="w-full flex flex-col items-center justify-center mx-auto p-6 sm:p-8 lg:p-12">
           <h1 className="text-center text-4xl text-sky-800 font-bold font-Roman mb-6 uppercase">
-            General{" "}
+            General Medicine{" "}
           </h1>
           <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
             At Hiba Asia, our General Medicine Department is dedicated to
@@ -178,7 +177,7 @@ function General() {
               </div>
             ))}
           </div>
-        </div>{" "}
+        </div>
       </div>
     </div>
   );

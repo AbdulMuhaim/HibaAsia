@@ -1,6 +1,5 @@
 import img from "../assets/physician-holding-otoscope-ear-consultation-patient-checkup-visit-woman-doctor-using-otology-instrument-examine-infection-give-medical-advice-senior-man.jpg";
 import headerBgImage from "../assets/woman-patient-medical-office-doctor-medical-mask-lor-checks-woman-ears.jpg";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrShahin from "../assets/HibaDoctors/05. Dr. Shahin.jpg";

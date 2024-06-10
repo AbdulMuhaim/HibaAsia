@@ -2,7 +2,6 @@ import visionBgImage from "../assets/Vision&Mission.jpg";
 import visionImage from "../assets/front-view-human-eye.jpg";
 import missionImage from "../assets/3d-rendering-arrow-hitting-target (2).jpg";
 import valuesImage from "../assets/colleagues-working-together-project.jpg";
-import Header from "../Components/Header";
 import visionHeaderImage from "../assets/physician-consulting-his-patient-clinic.jpg";
 import { useNavigate } from "react-router-dom";
 

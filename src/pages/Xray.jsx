@@ -1,6 +1,5 @@
-import img from "../assets/dentist-examining-female-patient-teeth.jpg";
-import headerBgImage from "../assets/image22.jpg";
-import Header from "../Components/Header";
+import img from "../assets/male-doctor-with-x-ray-clinic.jpg";
+import headerBgImage from "../assets/full-shot-patient-getting-ct-scan.jpg";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -27,7 +26,7 @@ function Xray() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
-            X Ray
+            X Ray Department
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
@@ -39,7 +38,7 @@ function Xray() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
+      <div className="grid lg:grid-cols-2 gap-10 p-3 sm:py-20 sm:px-28">
         <div className="w-full">
           <img src={img} className="rounded-xl" alt="" />
         </div>
@@ -67,7 +66,7 @@ function Xray() {
           <h2 className="text-4xl text-sky-800 font-bold font-Roman my-7">
             Specialized Imaging:
           </h2>
-          <ul className="list-disc list-inside text-xl  opacity-70 mb-4 max-w-4xl">
+          <ul className="list-disc list-inside text-xl  opacity-70 mb-4 max-w-4xl mr-8">
             <li className="mb-2">Mammography</li>
             <li className="mb-2">Fluoroscopy</li>
             <li className="mb-2">CT Scans</li>

@@ -28,7 +28,7 @@ const Footer = () => {
             <ul>
               <li><a href="#" className="hover:underline">Home</a></li>
               <li><a href="#" className="hover:underline">About Us</a></li>
-              <li><a href="#" className="hover:underline">Abeer Hiba Asia</a></li>
+              <li><a href="#" className="hover:underline">Hiba Asia</a></li>
               <li><a href="#" className="hover:underline">President's Message</a></li>
             </ul>
           </div>

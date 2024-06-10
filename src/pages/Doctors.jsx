@@ -1,10 +1,7 @@
-import React from "react";
-import Header from "../Components/Header";
+
 import doctorsHeaderImage from "../assets/group-of-doctors-standing-in-hospital-on-medical-c-2023-11-27-05-18-43-utc.jpg";
 import DoctorsList from "../Components/DoctorsList";
-import SocialMedias from "../Components/SocialMedias";
-import Whatsapp from "../Components/Whatsapp";
-import { IoArrowBackCircleSharp } from "react-icons/io5";
+
 import { useNavigate } from "react-router-dom";
 
 function Doctors() {

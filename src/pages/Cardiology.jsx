@@ -1,6 +1,5 @@
-import img from "../assets/male-student-practicing-medicine.jpg";
+import img from "../assets/person-holding-anatomic-heart-model-educational-purpose.jpg";
 import headerBgImage from "../assets/doctor-examination-young-man-with-stethoscope-hospital.jpg";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
 import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
 import { useEffect } from "react";
