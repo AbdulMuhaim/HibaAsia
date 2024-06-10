@@ -146,7 +146,7 @@ function Departments() {
   );
 
   return (
-    <div className="mt-16 py-14 px-3 h-[60vh]">
+    <div className="mt-16 py-14 px-3 h-[70vh]">
       <h1 className="text-3xl xl:text-4xl font-bold text-center text-sky-800">
         Departments
       </h1>
@@ -156,13 +156,12 @@ function Departments() {
             key={index}
             className="relative text-center rounded p-5 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:left-1/2 hover:before:h-1 hover:before:w-0 hover:before:bg-sky-800 hover:before:animate-growBorder hover:before:transform hover:before:-translate-x-1/2"
           >
-            {" "}
             <div className="animate-fade-in">
               <img
                 src={department.img}
                 alt={department.name}
-                className="w-full h-auto max-h-[13rem] max-w-[10rem] mx-auto cursor-pointer transition-all hover:scale-110 duration-500"
-                onClick={()=>navigate(department.link)}
+                className="h-[240px] object-cover mx-auto cursor-pointer transition-all hover:scale-110 duration-500"
+                onClick={() => navigate(department.link)}
               />
             </div>
             <p className="opacity-70 font-bold text-xl mt-5 uppercase">
