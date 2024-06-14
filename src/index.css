@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body.rtl {
+    direction: rtl;
+  }
+
+
+body.ltr {
+  direction: ltr;
+}
+
+.static-button {
+  direction: ltr !important;
+  text-align: left !important;
+}

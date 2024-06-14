@@ -1,6 +1,5 @@
 import contactImage from "../assets/vecteezy_black-letter-telephone-location-and-address-icons-print_6859994.jpg";
 import { useNavigate } from "react-router-dom";
-import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Map from "../Components/MapBox"
 import { CiLocationOn } from "react-icons/ci";
 import { PiPhoneCallLight } from "react-icons/pi";

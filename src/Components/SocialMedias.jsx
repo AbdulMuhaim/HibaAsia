@@ -16,6 +16,9 @@ function SocialMedias() {
         { icon: FaYoutube, label: "Youtube" },
       ];
 
+
+
+
   return (
 <ul>
   {socialMediaItems.map((item, index) => {
@@ -23,16 +26,16 @@ function SocialMedias() {
     return (
       <li
         key={index}
-        className={`group w-24 sm:w-32 lg:w-40 bg-slate-300 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-16 sm:-right-24 lg:-right-28 z-50 transition-all duration-1000 hover:w-32 sm:hover:w-40 lg:hover:w-48 hover:-right-8`}
-        style={{ top: `${index * 52 + 170}px` }} // Adjust the spacing and initial top position as needed
+        className={`group  static-button bg-black bg-opacity-30 hover:bg-slate-300 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-16 sm:-right-24 lg:-right-32 z-50 transition-all duration-700  w-[103px] sm:w-[136px] lg:w-[169px] hover:-right-10`}
+        style={{ top: `${index * 48 + 155}px` }} 
+
       >
-        <div className="bg-white group-hover:bg-[#00918d] rounded-full h-7 w-7 sm:h-8 sm:w-8 lg:h-10 lg:w-10 flex items-center justify-center transform transition-transform duration-100 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
+        <div className="bg-white group-hover:bg-[#00918d] rounded-full p-2 flex items-center justify-center transform transition-transform duration-200 group-hover:animate-reverse-rotate mr-1 sm:mr-3">
           <IconComponent
-            size={20}
             className="text-[#00918d] group-hover:text-white sm:size-25 lg:size-30"
           />
         </div>
-        <p className="text-xs sm:text-sm lg:text-base font-medium">
+        <p className="text-xs sm:text-sm lg:text-base font-medium ">
           {item.label}
         </p>
       </li>
