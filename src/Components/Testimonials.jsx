@@ -64,16 +64,16 @@ const Testimonials = () => {
     <div className="bg-gray-100 min-h-screen flex items-center justify-center p-5">
       <div className="w-full max-w-6xl mx-auto relative">
         <h1 className="text-3xl font-bold mb-20 text-center text-sky-800">See what our patience say about Hiba Asia</h1>
-        <div className="flex flex-col lg:flex-row transition-transform duration-500 gap-20">
+        <div className="flex flex-col justify-center items-center lg:flex-row transition-transform duration-500 gap-20">
           {displayedTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="min-w-1/3 p-16 bg-white border border-sky-800 hover:border-2 rounded-md text-center transform transition-transform hover:scale-105 duration-500"
+              className="min-w-1/3 py-14 px-6 bg-white border border-sky-800 hover:border-2 rounded-md text-center transform transition-transform hover:scale-105 duration-500"
             >
               <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-5xl text-sky-700">
                 <IoLogoWechat />
               </div>
-              <p className="text-gray-600 mb-4 font-sans font-semibold border-b-2 pb-3">
+              <p className="text-gray-600 max-w-[15rem] mb-4 font-sans font-semibold border-b-2 pb-3">
                 "{testimonial.text}"
               </p>
               <img

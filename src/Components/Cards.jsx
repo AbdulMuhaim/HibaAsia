@@ -33,7 +33,7 @@ const Cards = () => {
   <h1 className="text-4xl opacity-90 font-bold mb-10 text-sky-800">What We Do</h1>
   <div className="card-container flex flex-wrap justify-evenly gap-5 w-full">
     {cardData.map((card, index) => (
-      <div key={index} className="card mx-3 md:mx-0">
+      <div key={index} className="card mx-3 md:mx-0 ">
         <img src={card.image} alt={card.itle} />
         <div className="card-content justify-between">
           <div className="card-title">{card.title}</div>

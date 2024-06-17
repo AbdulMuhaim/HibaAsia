@@ -24,7 +24,7 @@ body {
     border-radius: 7px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
+    width: 280px;
     transition: transform 0.3s, box-shadow 0.3s;
   }
 
@@ -44,19 +44,19 @@ body {
   }
 
   .card-title {
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 10px;
   }
 
   .card-description {
-      font-size: 16px;
+      font-size: 14px;
       color: #555;
   }
 
 
   @media (max-width: 768px) {
       .card {
-          width: 100%;
+          width: 60%;
       }
   }
 

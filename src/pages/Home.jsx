@@ -19,13 +19,12 @@ import { FaHandHoldingHeart } from "react-icons/fa6";
 import { MdOutlineBloodtype } from "react-icons/md";
 import hospitalImage from "../assets/Screenshot (128).png";
 import { useTranslation } from "react-i18next";
-
+import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 
 function Home() {
   const navigate = useNavigate();
-  const { t,i18n  } = useTranslation();
-  const isArabic = i18n.language === 'ar';
-
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
 
   const doctors = [
     {
@@ -53,20 +52,33 @@ function Home() {
     { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
   ];
 
-
   const visionData = [
-    { src: visionImage, title: 'Our Vision', description: 'By following the standards of Vision 2030, we aspire to be one of the best' },
-    { src: missionImage, title: 'Our Mission', description: 'We believe that a large part of our patients treatment lies in our personal' },
-    { src: valuesImage, title: 'Our Values', description: 'Patient-Centricity, Collaboration, Innovation, Integrity, Quality' },
-  ]
+    {
+      src: visionImage,
+      title: "Our Vision",
+      description:
+        "By following the standards of Vision 2030, we aspire to be one of the best",
+    },
+    {
+      src: missionImage,
+      title: "Our Mission",
+      description:
+        "We believe that a large part of our patients treatment lies in our personal",
+    },
+    {
+      src: valuesImage,
+      title: "Our Values",
+      description:
+        "Patient-Centricity, Collaboration, Innovation, Integrity, Quality",
+    },
+  ];
 
   const services = [
-    { text:"service1", icon: FaNotesMedical},
-    { text:"service2", icon: GiMedicinePills },
-    { text:"service3", icon: FaHandHoldingHeart },
-    { text:"service4", icon: MdOutlineBloodtype },
-
-  ]
+    { text: "service1", icon: FaNotesMedical },
+    { text: "service2", icon: GiMedicinePills },
+    { text: "service3", icon: FaHandHoldingHeart },
+    { text: "service4", icon: MdOutlineBloodtype },
+  ];
 
   return (
     <div>
@@ -77,36 +89,29 @@ function Home() {
           backgroundImage: `url(${newBgImage})`,
         }}
       >
-
         <div className="flex flex-col h-full items-center justify-center gap-8 md:gap-14">
           <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl text-sky-950 text-center">
-            {t('welcome')}
+            {t("welcome")}
           </h1>
           <p className="text-base font-medium md:text-lg 2xl:text-2xl px-3 sm:px-0 max-w-[27rem] sm:max-w-[30rem] md:max-w-[48rem] backdrop-blur-sm break-words text-center">
-           {t('welcomeDescription')}
+            {t("welcomeDescription")}
           </p>
           <button className="rounded-full bg-sky-800 px-5 py-3 md:text-base font-semibold 2xl:text-xl md:px-4 md:py-3 2xl:px-6 2xl:py-5  border-4 text-white transition duration-500 transform hover:bg-white  hover:text-black border-sky-800">
-            {t('bookAppointment')}
+            {t("bookAppointment")}
           </button>
 
-
-
-    <div  className="flex flex-wrap w-full justify-evenly">
-    {services.map((service,index)=>(
-      <div key={index}>
-        <div className="rounded-full h-14 w-14 sm:h-20 sm:w-20 lg:h-24 lg:w-24 2xl:h-32 2xl:w-32  bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-          <service.icon className="text-2xl sm:text-3xl md:text-4xl" />
-        </div>
-        <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm xl:text-base 2xl:text-xl">
-          {t(service.text)}
-        </p>
-      </div>
-    ))}
-  </div>
-
-
-
-
+          <div className="flex flex-wrap w-full justify-evenly">
+            {services.map((service, index) => (
+              <div key={index}>
+                <div className="rounded-full h-14 w-14 sm:h-20 sm:w-20 lg:h-24 lg:w-24 2xl:h-32 2xl:w-32  bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
+                  <service.icon className="text-2xl sm:text-3xl md:text-4xl" />
+                </div>
+                <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm xl:text-base 2xl:text-xl">
+                  {t(service.text)}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -114,20 +119,21 @@ function Home() {
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch text-center lg:min-h-[80vh]">
           <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between">
             <h1 className="2xl:text-5xl md:text-4xl text-3xl font-thin text-left text-sky-800">
-              {t('hospitalImageTitle')}
+              {t("hospitalImageTitle")}
             </h1>
             <p
               className="text-base font-medium md:text-lg 2xl:text-2xl opacity-70 max-w-[45rem] text-left leading-relaxed my-6"
               style={{ letterSpacing: "1px", wordSpacing: "3px" }}
             >
-{t('hospitalImageDescription')}
+              {t("hospitalImageDescription")}
             </p>
-
           </div>
           <div className="w-full lg:w-1/2">
             <img
-className={`w-full h-full object-cover ${isArabic ? 'md:rounded-r-3xl' : 'md:rounded-l-3xl'}`}       
-       src={hospitalImage}
+              className={`w-full h-full object-cover ${
+                isArabic ? "md:rounded-r-3xl" : "md:rounded-l-3xl"
+              }`}
+              src={hospitalImage}
               alt="Hospital Image"
             />
           </div>
@@ -135,20 +141,32 @@ className={`w-full h-full object-cover ${isArabic ? 'md:rounded-r-3xl' : 'md:rou
       </div>
 
       <div className="bg-slate-100 py-10 flex flex-col md:flex-row justify-evenly items-center mt-20">
-      {visionData.map((item, index) => (
-        <div key={index} className="flex flex-col items-center p-4 m-4 max-w-xs">
-          <img className="w-48 h-48 object-cover mb-4 rounded" src={item.src} alt={item.title} />
-          <h1 className="text-2xl font-bold mb-2">{item.title}</h1>
-          <p className="text-base text-gray-600 opacity-75 mb-4 text-center">
-            {item.description}...
-          </p>
-          <button onClick={()=>navigate('/vision')} className="relative bg-white text-sky-800 px-6 py-5 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
-      Read More
-      <button className="absolute top-0 left-0 w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">Read More</button>
-    </button>
-        </div>
-      ))}
-    </div>
+        {visionData.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center p-4 m-4 max-w-xs"
+          >
+            <img
+              className="w-36 h-36 object-cover mb-4 rounded"
+              src={item.src}
+              alt={item.title}
+            />
+            <h1 className="text-xl font-bold mb-2">{item.title}</h1>
+            <p className="text-base text-gray-600 opacity-75 mb-4 text-center">
+              {item.description}...
+            </p>
+            <button
+              onClick={() => navigate("/vision")}
+              className="relative bg-white text-sky-800 px-4 py-3 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
+            >
+              Read More
+              <button className="absolute top-0 left-0 w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">
+                Read More
+              </button>
+            </button>
+          </div>
+        ))}
+      </div>
 
       <Cards />
 
@@ -158,52 +176,60 @@ className={`w-full h-full object-cover ${isArabic ? 'md:rounded-r-3xl' : 'md:rou
         <h1 className="text-3xl font-bold text-center text-sky-800">
           Our Doctors
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 mt-10">
           {doctors.map((doctor, index) => (
             <div key={index} className="perspective-1000">
-              <div className="relative h-[30rem] text-center transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
-                <div className="absolute w-full h-full shadow-xl rounded-lg py-3 bg-slate-50 backface-hidden flex flex-col items-center justify-center">
-                  <div className="w-full h-40 flex justify-center flex-1 items-center">
+              <div className="relative h-[20rem] text-center transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+                {/* card front side */}
+                <div className="absolute w-full h-full shadow-xl rounded-lg py-3 border bg-slate-50 backface-hidden  flex flex-col items-center justify-center">
+                  <div className="flex justify-center items-center">
                     <img
                       src={doctor.image}
                       alt=""
-                      className="h-full object-cover rounded-3xl"
+                      className="w-full h-full max-w-[11rem] object-contain rounded-3xl"
                     />
                   </div>
-                  <div className="flex-2">
-                    <h2 className="text-xl font-semibold mt-4">
-                      Dr. {doctor.name}
-                    </h2>
-                    <p className="text-gray-600 mt-2">{doctor.department}</p>
+                  <div className="mt-2">
+                    <h2 className="font-semibold mt-2">Dr. {doctor.name}</h2>
+                    <p className="text-gray-600 text-sm mt-2">
+                      {doctor.department}
+                    </p>
                   </div>
                 </div>
-                <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-sky-200 to-white  rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white">
-                  <div className="flex items-center justify-center ">
-                    <div className="w-full h-60 flex justify-center flex-1 items-center">
+
+                {/* card backside */}
+                <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-sky-200 to-white border rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white">
+                  <div className="flex items-center justify-center">
+                    <div className="w-full h-[90%] flex justify-center items-center">
                       <img
                         src={doctor.image}
                         alt=""
-                        className="h-full object-cover rounded-3xl mr-2"
+                        className="w-full h-full max-w-[15rem] object-contain rounded-3xl mr-2"
                       />
                     </div>
-                    <div className="flex-2">
-                      <h2 className="text-xl font-semibold mt-4 max-w-40 text-black">
+                    <div className="mt-2">
+                      <h2 className="font-semibold mt-2 text-black">
                         Dr. {doctor.name}
                       </h2>
-                      <p className="text-gray-600 mt-2">{doctor.department}</p>
-                      <button className="bg-sky-800 text-white rounded-full px-4 py-2 mt-4">
-                        + Connect
+                      <p className="text-gray-600 mt-2 text-sm">
+                        {doctor.department}
+                      </p>
+                      <button className="bg-sky-800 text-white rounded-full px-3 py-2 mt-4">
+                        Connect+
                       </button>
+                      <div className="text-black mt-5">
+                    <img src={headerImage} alt="" className="max-w-[6rem]"/>
+                  </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-          <div className="h-[30rem] flex items-center justify-center bg-slate-50 rounded-lg ">
+          <div className="h-[20rem] flex items-center justify-center bg-slate-50 rounded-lg">
             <button
               onClick={() => navigate("/doctors")}
-              className="rounded-full bg-white px-5 text-lg font-semibold  transition-transform hover:scale-105 py-2 border-4 border-sky-800"
+              className="rounded-full bg-white px-5 font-semibold transition-transform hover:scale-105 py-2 border-4 border-sky-800"
             >
               View All
             </button>
@@ -219,8 +245,8 @@ className={`w-full h-full object-cover ${isArabic ? 'md:rounded-r-3xl' : 'md:rou
         </h1>
 
         {/* YouTube Video 1 */}
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 pt-8">
-          <div className="mb-6 flex items-center justify-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-8 pt-8">
+          <div className="flex items-center justify-center">
             <iframe
               width="560"
               height="315"

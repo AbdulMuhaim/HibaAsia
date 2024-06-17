@@ -146,7 +146,7 @@ function Departments() {
   );
 
   return (
-    <div className="mt-16 py-14 px-3 h-[70vh]">
+    <div className="mt-16 py-14 px-3 h-[80vh]">
       <h1 className="text-3xl xl:text-4xl font-bold text-center text-sky-800">
         Departments
       </h1>
@@ -160,11 +160,11 @@ function Departments() {
               <img
                 src={department.img}
                 alt={department.name}
-                className="h-[240px] object-cover mx-auto cursor-pointer transition-all hover:scale-110 duration-500"
+                className="h-[190px] object-cover mx-auto cursor-pointer transition-all hover:scale-110 duration-500"
                 onClick={() => navigate(department.link)}
               />
             </div>
-            <p className="opacity-70 font-bold text-xl mt-5 uppercase">
+            <p className="opacity-70 font-bold text-lg mt-5 uppercase">
               {department.name}
             </p>
           </div>

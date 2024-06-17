@@ -135,7 +135,6 @@ function Header() {
           </a>
         </div>
 
-        {/* Logo for larger screens */}
         <div className=" w-1/2 md:w-auto flex-col justify-center items-center">
           <div className="flex items-center justify-center">
             <img
