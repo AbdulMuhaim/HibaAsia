@@ -24,7 +24,14 @@ const resources = {
       "mail": "Write to Us",
       "mobile": "Talk to Us",
       "hospitalImageTitle":"Your Trusted Healthcare Partner",
-      "hospitalImageDescription": "At Hiba Asia Polyclinics, we are committed to working with our patients to continually improve care and thus play an integral role in empowering patients, their families and communities to take charge of their health and wellness by delivering seamless, person-centered and preventive healthcare. Hiba Asia Healthcare is a group of polyclinics that provide comprehensive healthcare services to the community. The mission of Hiba Asia Healthcare is to provide high-quality, affordable, and accessible healthcare to all."
+      "hospitalImageDescription": "At Hiba Asia Polyclinics, we are committed to working with our patients to continually improve care and thus play an integral role in empowering patients, their families and communities to take charge of their health and wellness by delivering seamless, person-centered and preventive healthcare. Hiba Asia Healthcare is a group of polyclinics that provide comprehensive healthcare services to the community. The mission of Hiba Asia Healthcare is to provide high-quality, affordable, and accessible healthcare to all.",
+      "homeVisionText": "By following the standards of Vision 2030, we aspire to be one of the best",
+      "homeMissionText": "We believe that a large part of our patients treatment lies in our personal",
+      "homeValuesText": "Patient-Centricity, Collaboration, Innovation, Integrity, Quality",
+      "homeVisionTitle": "Our Vision",
+      "homeMissionTitle": "Our Mission",
+      "homeValuesTitle": "Our Values",
+      "visionButtonText": "Read More"
 
     }
   },
@@ -49,7 +56,14 @@ const resources = {
       "mail": "اكتب لنا",
       "mobile": "تكلم معنا",
       "hospitalImageTitle": "شريكك الموثوق في الرعاية الصحية",
-      "hospitalImageDescription": "في عيادات هبة آسيا، نحن ملتزمون بالعمل مع مرضانا لتحسين الرعاية بشكل مستمر وبالتالي لعب دور أساسي في تمكين المرضى وأسرهم ومجتمعاتهم من تولي مسؤولية صحتهم وعافيتهم من خلال تقديم رعاية صحية وقائية سلسة تتمحور حول الشخص. هبة آسيا للرعاية الصحية هي مجموعة من العيادات الشاملة التي تقدم خدمات رعاية صحية شاملة للمجتمع. تتمثل مهمة Hiba Asia Healthcare في توفير رعاية صحية عالية الجودة وبأسعار معقولة ويمكن الوصول إليها للجميع."
+      "hospitalImageDescription": "في عيادات هبة آسيا، نحن ملتزمون بالعمل مع مرضانا لتحسين الرعاية بشكل مستمر وبالتالي لعب دور أساسي في تمكين المرضى وأسرهم ومجتمعاتهم من تولي مسؤولية صحتهم وعافيتهم من خلال تقديم رعاية صحية وقائية سلسة تتمحور حول الشخص. هبة آسيا للرعاية الصحية هي مجموعة من العيادات الشاملة التي تقدم خدمات رعاية صحية شاملة للمجتمع. تتمثل مهمة Hiba Asia Healthcare في توفير رعاية صحية عالية الجودة وبأسعار معقولة ويمكن الوصول إليها للجميع.",
+      "homeVisionText": "وباتباعنا لمعايير رؤية 2030، نطمح أن نكون من الأفضل",
+      "homeMissionText": "نحن نؤمن بأن جزءًا كبيرًا من علاج مرضانا يكمن في علاجنا الشخصي",
+      "homeValuesText": "التركيز على المريض والتعاون والابتكار والنزاهة والجودة",
+      "homeVisionTitle": "رؤيتنا",
+      "homeMissionTitle": " مهمتن",
+      "homeValuesTitle": "قيمنا",
+      "visionButtonText": "اقرأ أكثر"
 
     }
   }

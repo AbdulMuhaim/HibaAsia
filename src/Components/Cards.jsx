@@ -31,7 +31,7 @@ const Cards = () => {
 
 <div className="flex flex-col justify-center items-center min-h-[80vh] mt-10">
   <h1 className="text-4xl opacity-90 font-bold mb-10 text-sky-800">What We Do</h1>
-  <div className="card-container flex flex-wrap justify-evenly gap-5 w-full">
+  <div className="card-container flex flex-wrap justify-evenly gap-10 md:gap-3 w-full">
     {cardData.map((card, index) => (
       <div key={index} className="card mx-3 md:mx-0 ">
         <img src={card.image} alt={card.itle} />

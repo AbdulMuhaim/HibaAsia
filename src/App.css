@@ -52,6 +52,24 @@ body {
       font-size: 14px;
       color: #555;
   }
+  /* cards */
+
+
+/* animation */
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-gallery img {
+    transition: transform 0.3s;
+  }
+  
+  .image-gallery img:hover {
+    transform: rotate(0deg);
+  }
+  /* animation */
 
 
   @media (max-width: 768px) {

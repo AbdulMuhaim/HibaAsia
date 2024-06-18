@@ -20,6 +20,7 @@ import { MdOutlineBloodtype } from "react-icons/md";
 import hospitalImage from "../assets/Screenshot (128).png";
 import { useTranslation } from "react-i18next";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
+import AnimatedSection from "../Components/Animation";
 
 function Home() {
   const navigate = useNavigate();
@@ -55,21 +56,21 @@ function Home() {
   const visionData = [
     {
       src: visionImage,
-      title: "Our Vision",
+      title: "homeVisionTitle",
       description:
-        "By following the standards of Vision 2030, we aspire to be one of the best",
+        "homeVisionText",
     },
     {
       src: missionImage,
-      title: "Our Mission",
+      title: "homeMissionTitle",
       description:
-        "We believe that a large part of our patients treatment lies in our personal",
+        "homeMissionText",
     },
     {
       src: valuesImage,
-      title: "Our Values",
+      title: "homeValuesTitle",
       description:
-        "Patient-Centricity, Collaboration, Innovation, Integrity, Quality",
+        "homeValuesText",
     },
   ];
 
@@ -140,6 +141,10 @@ function Home() {
         </div>
       </div>
 
+
+
+
+
       <div className="bg-slate-100 py-10 flex flex-col md:flex-row justify-evenly items-center mt-20">
         {visionData.map((item, index) => (
           <div
@@ -149,19 +154,19 @@ function Home() {
             <img
               className="w-36 h-36 object-cover mb-4 rounded"
               src={item.src}
-              alt={item.title}
+              alt={t(item.title)}
             />
-            <h1 className="text-xl font-bold mb-2">{item.title}</h1>
+            <h1 className="text-xl font-bold mb-2">{t(item.title)}</h1>
             <p className="text-base text-gray-600 opacity-75 mb-4 text-center">
-              {item.description}...
+              {t(item.description)}...
             </p>
             <button
               onClick={() => navigate("/vision")}
               className="relative bg-white text-sky-800 px-4 py-3 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
             >
-              Read More
+              {t('visionButtonText')}
               <button className="absolute top-0 left-0 w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">
-                Read More
+                {t('visionButtonText')}
               </button>
             </button>
           </div>
@@ -214,7 +219,7 @@ function Home() {
                       <p className="text-gray-600 mt-2 text-sm">
                         {doctor.department}
                       </p>
-                      <button className="bg-sky-800 text-white rounded-full px-3 py-2 mt-4">
+                      <button className="bg-sky-800 text-white text-sm rounded-full px-3 py-2 mt-4">
                         Connect+
                       </button>
                       <div className="text-black mt-5">
@@ -237,7 +242,11 @@ function Home() {
         </div>
       </div>
 
+
       <Testimonials />
+
+      <AnimatedSection/>
+
 
       <div className="mt-3 py-14 px-3">
         <h1 className=" text-3xl font-bold text-center text-sky-800">
