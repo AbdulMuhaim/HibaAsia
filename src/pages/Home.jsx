@@ -31,25 +31,25 @@ function Home() {
     {
       name: "Aswaq Ahmed",
       image: DrAswaq,
-      department: "Obstetrics & Gynecology",
+      department: "Obstetric & Gynecology",
     },
     {
       name: "Azza Hussein Ahmed",
       image: DrAzza,
-      department: "Obstetrics & Gynecology",
+      department: "Obstetric & Gynecology",
     },
     {
       name: "Mohamad Sherif Helmy",
       image: DrSherifHelmy,
-      department: "Cardiologist",
+      department: "Cardiology",
     },
     {
       name: "Muhammed Anwar",
       image: DrMohammedAnwar,
-      department: "Pediatrician",
+      department: "Pediatrics",
     },
-    { name: "Majed Mouris", image: DrMajedMouris, department: "Surgeon" },
-    { name: "Samad Moideen", image: DrSamad, department: "Orthopedics" },
+    { name: "Majed Mouris", image: DrMajedMouris, department: "General Surgery" },
+    { name: "Samad Moideen", image: DrSamad, department: "Orthopedic" },
     { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
   ];
 
@@ -195,9 +195,9 @@ function Home() {
                     />
                   </div>
                   <div className="mt-2">
-                    <h2 className="font-semibold mt-2">Dr. {doctor.name}</h2>
+                    <h2 className="font-semibold mt-2">{t('Dr')} {t(doctor.name)}</h2>
                     <p className="text-gray-600 text-sm mt-2">
-                      {doctor.department}
+                      {t(doctor.department)}
                     </p>
                   </div>
                 </div>
@@ -214,15 +214,14 @@ function Home() {
                     </div>
                     <div className="mt-2">
                       <h2 className="font-semibold mt-2 text-black">
-                        Dr. {doctor.name}
-                      </h2>
+                      {t('Dr')} {t(doctor.name)}                      </h2>
                       <p className="text-gray-600 mt-2 text-sm">
-                        {doctor.department}
+                      {t(doctor.department)}
                       </p>
                       <button className="bg-sky-800 text-white text-sm rounded-full px-3 py-2 mt-4">
-                        Connect+
+                        {t('Connect')}
                       </button>
-                      <div className="text-black mt-5">
+                      <div className="text-black flex justify-center items-center mr-1 mt-5 w-full">
                     <img src={headerImage} alt="" className="max-w-[6rem]"/>
                   </div>
                     </div>
@@ -236,7 +235,7 @@ function Home() {
               onClick={() => navigate("/doctors")}
               className="rounded-full bg-white px-5 font-semibold transition-transform hover:scale-105 py-2 border-4 border-sky-800"
             >
-              View All
+              {t('View All')}
             </button>
           </div>
         </div>
@@ -250,7 +249,7 @@ function Home() {
 
       <div className="mt-3 py-14 px-3">
         <h1 className=" text-3xl font-bold text-center text-sky-800">
-          News, Events and Blogs
+          {t('newseventsTitle')}
         </h1>
 
         {/* YouTube Video 1 */}

@@ -18,9 +18,13 @@ import { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 function Departments() {
+
+  const { t } = useTranslation();
+
   const departments = [
     {
       name: "General Medicine",
@@ -165,7 +169,7 @@ function Departments() {
               />
             </div>
             <p className="opacity-70 font-bold text-lg mt-5 uppercase">
-              {department.name}
+              {t(department.name)}
             </p>
           </div>
         ))}

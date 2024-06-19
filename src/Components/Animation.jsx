@@ -1,16 +1,21 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import centerImage from "../assets/female-nurse-with-stethoscope-holding-heart.jpg"
+import firstImage from "../assets/team-doctors-meeting.jpg"
+import secondImage from "../assets/medium-shot-scientists-posing-together (1).jpg"
+import fourthImage from "../assets/medical-team-discussing-digital-tablet.jpg"
+import fifthImage from "../assets/close-up-team-health-workers.jpg"
 
 const AnimatedSection = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const images = [
-    "https://st3.depositphotos.com/1001030/18123/i/450/depositphotos_181236738-stock-photo-business-consultants-working-in-a.jpg",
-    "https://www.empoweradventures.com/wp-content/uploads/2018/03/shutterstock_737994433.jpg",
-    "https://www.pagetraffic.in/wp-content/uploads/2022/09/google-office-in-gurgaon.jpg",
-    "https://www.betterup.com/hs-fs/hubfs/Overhead-Shot-Of-Designers-Planning-Project-In-Office.jpg?width=964&name=Overhead-Shot-Of-Designers-Planning-Project-In-Office.jpg",
-    "https://t3.ftcdn.net/jpg/08/01/76/92/360_F_801769299_hNJvoveBmoHTw2HbjJYnwMC25nVrgrge.jpg",
+    firstImage,
+    secondImage,
+    centerImage,
+    fourthImage,
+    fifthImage,
   ];
 
   const imageRefs = useRef([]);
@@ -83,7 +88,7 @@ const AnimatedSection = () => {
   const getImageXPosition = (index) => {
     switch (index) {
       case 0:
-        return -150; // Top left
+        return -130; // Top left
       case 1:
         return 600; // Top right
       case 3:
@@ -112,7 +117,7 @@ const AnimatedSection = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center text-center min-h-screen gap-2 px-4 md:px-8">
+      <div className="hidden xl:flex static-button flex-col justify-center items-center text-center min-h-screen gap-2 px-4 md:px-8">
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-sky-800">We're a</h1>
         <div className="flex relative justify-center items-center gap-2">
           <div className="image-gallery absolute left-0 -right-28 inline-flex -space-x-10" ref={centerImageRef}>
