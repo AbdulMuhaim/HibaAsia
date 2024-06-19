@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import centerImage from "../assets/female-nurse-with-stethoscope-holding-heart.jpg"
-import firstImage from "../assets/team-doctors-meeting.jpg"
-import secondImage from "../assets/medium-shot-scientists-posing-together (1).jpg"
-import fourthImage from "../assets/medical-team-discussing-digital-tablet.jpg"
-import fifthImage from "../assets/close-up-team-health-workers.jpg"
+import centerImage from "../assets/jpeg-optimizer_female-nurse-with-stethoscope-holding-heart.jpg"
+import firstImage from "../assets/jpeg-optimizer_team-doctors-meeting.jpg"
+import secondImage from "../assets/jpeg-optimizer_medium-shot-scientists-posing-together (1).jpg"
+import fourthImage from "../assets/jpeg-optimizer_medical-team-discussing-digital-tablet.jpg"
+import fifthImage from "../assets/jpeg-optimizer_close-up-team-health-workers.jpg"
 
 const AnimatedSection = () => {
   gsap.registerPlugin(ScrollTrigger);

@@ -84,7 +84,6 @@ const resources = {
       "Abid": "Abid",
       "newseventsTitle": "News, Events and Blogs"
 
-
     }
   },
   ar: {
@@ -167,9 +166,6 @@ const resources = {
       "Abdul Muhaim": "عبد المهيم",
       "Abid": "عابد",
       "newseventsTitle": "الأخبار والأحداث والمدونات"
-
-
-
 
     }
   }
