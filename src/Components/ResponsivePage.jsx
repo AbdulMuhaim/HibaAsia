@@ -43,7 +43,7 @@ const ResponsivePage = () => {
       </div>
 
       <div className='w-[83%] px-8 py-8'>
-      <p className="leading-loose">Abeer Medical Group has transformed the healthcare domain in Saudi Arabia, Qatar, UAE, Oman, Kuwait & India. We own and manage 20 healthcare facilities, including the best hospital in Saudi Arabia and other high-end medical centers, becoming one of the most successful healthcare providers in the GCC. With a team of the best doctors in Saudi Arabia, world-class medical professionals, nurses, and hospital management staff, our leadership extends to all aspects of the healthcare spectrum.</p>
+      <p className="leading-loose">Hiba Asia Medical Group has transformed the healthcare domain in Saudi Arabia, Qatar, UAE, Oman, Kuwait & India. We own and manage 20 healthcare facilities, including the best hospital in Saudi Arabia and other high-end medical centers, becoming one of the most successful healthcare providers in the GCC. With a team of the best doctors in Saudi Arabia, world-class medical professionals, nurses, and hospital management staff, our leadership extends to all aspects of the healthcare spectrum.</p>
       <div style={{backgroundImage:""}}></div>
         <div className="flex justify-between mt-4 flex-wrap">
           <button className='cursor-default font-semibold'>OUR SERVICE SPAN ACROSS</button>
