@@ -21,11 +21,20 @@ import hospitalImage from "../assets/Screenshot (128).png";
 import { useTranslation } from "react-i18next";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import AnimatedSection from "../Components/Animation";
+import visionBgImage1 from "../assets/1000_F_596371844_8MVoHepLoFmuVNpBdfA3bCRfJUrYRfEF.jpg";
+import srvs1 from "../assets/10976_prev_ui.png";
+import srvs2 from "../assets/elderly-care-home-6052789-4998284.webp";
+import srvs3 from "../assets/3959915_prev_ui.png";
+import srvs4 from "../assets/5183184_prev_ui.png";
+import Curousel2 from "../Components/Curoussel";
+import ResponsivePage from "../Components/ResponsivePage";
+
 
 function Home() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
+  const visionBgImage = `url(${visionBgImage1}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))`;
 
   const doctors = [
     {
@@ -48,7 +57,11 @@ function Home() {
       image: DrMohammedAnwar,
       department: "Pediatrics",
     },
-    { name: "Majed Mouris", image: DrMajedMouris, department: "General Surgery" },
+    {
+      name: "Majed Mouris",
+      image: DrMajedMouris,
+      department: "General Surgery",
+    },
     { name: "Samad Moideen", image: DrSamad, department: "Orthopedic" },
     { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
   ];
@@ -57,20 +70,17 @@ function Home() {
     {
       src: visionImage,
       title: "homeVisionTitle",
-      description:
-        "homeVisionText",
+      description: "homeVisionText",
     },
     {
       src: missionImage,
       title: "homeMissionTitle",
-      description:
-        "homeMissionText",
+      description: "homeMissionText",
     },
     {
       src: valuesImage,
       title: "homeValuesTitle",
-      description:
-        "homeValuesText",
+      description: "homeValuesText",
     },
   ];
 
@@ -81,20 +91,83 @@ function Home() {
     { text: "service4", icon: MdOutlineBloodtype },
   ];
 
+  const cardData = [
+    {
+      image: "https://www.abeergroup.com/ksa/images/Walkin.jpg",
+      title: "card1Title",
+      description: "card1Description",
+    },
+    {
+      image: "https://www.abeergroup.com/ksa/images/home-care.jpg",
+      title: "card2Title",
+      description: "card2Description",
+    },
+    {
+      image: "https://www.abeergroup.com/ksa/images/Virtual.jpg",
+      title: "card3Title",
+      description: "card3Description",
+    },
+    {
+      image: "https://www.abeergroup.com/ksa/images/patient-portal.png",
+      title: "card4Title",
+      description: "card4Description",
+    },
+  ];
+
   return (
     <div>
       {/* header */}
+
+      <div className="bg-[#d4d4d4] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
+  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full xl:w-auto">
+    {cardData.map((card, index) => (
       <div
+        key={index}
+        className="group bg-sky-800 pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
+      >
+        <div className="w-[20%]">
+          <div className="h-[80px] w-[80px] rounded-full bg-sky-800 overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
+            <img
+              src={card.image}
+              alt="Image 1"
+              className="h-full w-full object-cover bg-white"
+            />
+          </div>
+        </div>
+
+        <div className="w-[80%] flex xl:justify-end justify-center">
+          <div className="flex-col xl:max-w-40">
+            <h2 className="text-white text-sm">{t(card.title)}</h2>
+            <p
+              className="text-white text-xs  extra-thin opacity-90 "
+              style={{ fontSize: "11px" }}
+            >
+              {t(card.description)}
+            </p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+<ResponsivePage/>
+
+  
+
+      {/* <div
         className="h-screen bg-cover bg-no-repeat bg-blend-overlay bg-image"
         style={{
           backgroundImage: `url(${newBgImage})`,
         }}
       >
         <div className="flex flex-col h-full items-center justify-center gap-8 md:gap-14">
-          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl text-sky-950 text-center">
+          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl text-sky-800 text-center">
             {t("welcome")}
           </h1>
-          <p className="text-base font-medium md:text-lg 2xl:text-2xl px-3 sm:px-0 max-w-[27rem] sm:max-w-[30rem] md:max-w-[48rem] backdrop-blur-sm break-words text-center">
+          <p className="text-base font-medium opacity-75 md:text-lg 2xl:text-2xl px-3 sm:px-0 max-w-[27rem] sm:max-w-[30rem] md:max-w-[48rem] backdrop-blur-sm break-words text-center">
             {t("welcomeDescription")}
           </p>
           <button className="rounded-full bg-sky-800 px-5 py-3 md:text-base font-semibold 2xl:text-xl md:px-4 md:py-3 2xl:px-6 2xl:py-5  border-4 text-white transition duration-500 transform hover:bg-white  hover:text-black border-sky-800">
@@ -105,25 +178,25 @@ function Home() {
             {services.map((service, index) => (
               <div key={index}>
                 <div className="rounded-full h-14 w-14 sm:h-20 sm:w-20 lg:h-24 lg:w-24 2xl:h-32 2xl:w-32  bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-                  <service.icon className="text-2xl sm:text-3xl md:text-4xl" />
+                  <service.icon className="text-2xl text-sky-800 sm:text-3xl md:text-4xl" />
                 </div>
-                <p className="text-center opacity-80 font-bold mt-2 text-xs sm:text-sm xl:text-base 2xl:text-xl">
+                <p className="text-center opacity-75 font-bold mt-2 text-xs sm:text-sm xl:text-base 2xl:text-xl">
                   {t(service.text)}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="mt-20">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch text-center lg:min-h-[80vh]">
           <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between">
-            <h1 className="2xl:text-5xl md:text-4xl text-3xl font-thin text-left text-sky-800">
+            <h1 className="2xl:text-5xl md:text-4xl text-3xl font- text-left text-sky-800">
               {t("hospitalImageTitle")}
             </h1>
             <p
-              className="text-base font-medium md:text-lg 2xl:text-2xl opacity-70 max-w-[45rem] text-left leading-relaxed my-6"
+              className="text-base md:text-lg 2xl:text-2xl opacity-75 max-w-[45rem] text-left leading-relaxed my-6"
               style={{ letterSpacing: "1px", wordSpacing: "3px" }}
             >
               {t("hospitalImageDescription")}
@@ -140,10 +213,6 @@ function Home() {
           </div>
         </div>
       </div>
-
-
-
-
 
       <div className="bg-slate-100 py-10 flex flex-col md:flex-row justify-evenly items-center mt-20">
         {visionData.map((item, index) => (
@@ -164,9 +233,9 @@ function Home() {
               onClick={() => navigate("/vision")}
               className="relative bg-white text-sky-800 px-4 py-3 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
             >
-              {t('visionButtonText')}
+              {t("visionButtonText")}
               <button className="absolute top-0 left-0 w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">
-                {t('visionButtonText')}
+                {t("visionButtonText")}
               </button>
             </button>
           </div>
@@ -195,7 +264,9 @@ function Home() {
                     />
                   </div>
                   <div className="mt-2">
-                    <h2 className="font-semibold mt-2">{t('Dr')} {t(doctor.name)}</h2>
+                    <h2 className="font-semibold mt-2">
+                      {t("Dr")} {t(doctor.name)}
+                    </h2>
                     <p className="text-gray-600 text-sm mt-2">
                       {t(doctor.department)}
                     </p>
@@ -214,16 +285,21 @@ function Home() {
                     </div>
                     <div className="mt-2">
                       <h2 className="font-semibold mt-2 text-black">
-                      {t('Dr')} {t(doctor.name)}                      </h2>
+                        {t("Dr")} {t(doctor.name)}{" "}
+                      </h2>
                       <p className="text-gray-600 mt-2 text-sm">
-                      {t(doctor.department)}
+                        {t(doctor.department)}
                       </p>
                       <button className="bg-sky-800 text-white text-sm rounded-full px-3 py-2 mt-4">
-                        {t('Connect')}
+                        {t("Connect")}
                       </button>
                       <div className="text-black flex justify-center items-center mr-1 mt-5 w-full">
-                    <img src={headerImage} alt="" className="max-w-[6rem]"/>
-                  </div>
+                        <img
+                          src={headerImage}
+                          alt=""
+                          className="max-w-[6rem]"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -235,21 +311,19 @@ function Home() {
               onClick={() => navigate("/doctors")}
               className="rounded-full bg-white px-5 font-semibold transition-transform hover:scale-105 py-2 border-4 border-sky-800"
             >
-              {t('View All')}
+              {t("View All")}
             </button>
           </div>
         </div>
       </div>
 
-
       <Testimonials />
 
-      <AnimatedSection/>
-
+      <AnimatedSection />
 
       <div className="mt-3 py-14 px-3">
         <h1 className=" text-3xl font-bold text-center text-sky-800">
-          {t('newseventsTitle')}
+          {t("newseventsTitle")}
         </h1>
 
         {/* YouTube Video 1 */}

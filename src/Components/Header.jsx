@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -8,6 +8,11 @@ import SocialMedias from "./SocialMedias";
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import { FaCaretDown } from "react-icons/fa";
+const saudiFlag =
+  "https://cdn.britannica.com/79/5779-050-46C999AF/Flag-Saudi-Arabia.jpg";
+const ukFlag =
+  "https://i.pinimg.com/originals/da/ab/37/daab37fd372ddb4949adebcd73166a20.png";
 
 function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -15,12 +20,38 @@ function Header() {
   const [language, setLanguage] = useState("en");
   const location = useLocation();
   const { i18n, t } = useTranslation();
-  const isArabic = i18n.language === 'ar';
+  const isArabic = i18n.language === "ar";
 
-  const toggleLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    setLanguage(lng);
+  // const toggleLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  //   setLanguage(lng);
+  // };
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const handleLanguageChange = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+    setLanguage(newLanguage);
+    setDropdownOpen(false);
   };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const headerMenuOptions = [
     {
@@ -51,17 +82,138 @@ function Header() {
 
   return (
     <>
-      <div className="w-full h-auto flex flex-col lg:flex-row justify-between items-center pb-3">
+      <div className="w-full h-auto flex border-t-4 border-sky-900 sm:flex-col lg:flex-row justify-center items-center py-3">
+        {/* hiba icon */}
+        <div className={` ${isArabic?"lg:pl-64 pl-3":"lg:pr-64 pr-14"}`}>
+          <div className="flex items-center">
+            <img
+              src={headerImage}
+              alt="Logo"
+              className="min-h-[2rem] max-w-[15rem] sm:max-w-[12rem] md:max-h-[4.5rem] md:max-w-[25rem]"
+            />
+          </div>
+        </div>
+
+        {/* Contact buttons */}
+        <div className="flex sm:flex-row mx-5 py-2 my-5 md:my-0 md:justify-normal ">
+          <a
+            className={`sm:flex items-center hidden gap-2 border-gray-400 href="tel:+9660545961777 ${
+              isArabic ? "border-l pl-9" : "border-r border-black pr-9"
+            }`}
+          >
+            <button
+              className={`bg-white text-black p-3 border-opacity-80 border-sky-800 border-2 xl:text-2xl rounded-full transition duration-300 transform`}
+            >
+              <IoIosCall className="text-sky-800" />
+            </button>
+
+            <div>
+              <p
+                className="opacity-60 text-xs mb-1 font-medium"
+                style={{ letterSpacing: "0.03rem", wordSpacing: "0.05rem", whiteSpace: "nowrap"}}
+              >
+                {t("mobile")}
+              </p>
+              <p className="font-Avenir text-sm opacity-90">0545961777</p>
+            </div>
+          </a>
+          <a
+            className={`sm:flex items-center hidden px-9 border-gray-400 gap-2 href="mailto:info@hibaasia.care ${
+              isArabic ? "border-l  " : "border-r border-black"
+            }`}
+          >
+            <button className="bg-white text-black border-sky-800 border-opacity-80 border-2 p-3 xl:text-2xl rounded-full font-bold transition duration-300 transform">
+              <MdEmail className="text-sky-800 opacity-" />
+            </button>
+            <div>
+              <p
+                className=" opacity-60 text-xs mb-1 font-medium"
+                style={{ letterSpacing: "0.03rem", wordSpacing: "0.05rem" }}
+              >
+                {t("mail")}
+              </p>
+              <p className="text-sm opacity-90">info@hibaasia.care</p>
+            </div>
+          </a>
+
+          <div
+            ref={dropdownRef}
+            className={`relative flex text-left justify-center items-center font-thin text-xs ${
+              isArabic ? "pr-9" : "pl-9"
+            }`}
+          >
+            <div
+              onClick={toggleDropdown}
+              className="flex items-center bg-white w-28 hover:bg-gray-100 border border-gray-400 rounded-md shadow-sm px-2 py-2 cursor-pointer"
+            >
+              <img
+                src={language === "en" ? ukFlag : saudiFlag}
+                alt="flag"
+                className="h-4 w-5"
+              />
+              <span className="mx-1">
+                {language === "en" ? "English" : "العربية"}
+              </span>
+              <FaCaretDown className="text-gray-600 pointer-events-none" />
+            </div>
+            {dropdownOpen && (
+              <div className="absolute mt-[100px] max-w-[7rem] w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
+                <div
+                  onClick={() => handleLanguageChange("en")}
+                  className="flex items-center  py-2 cursor-pointer hover:bg-gray-100"
+                >
+                  <img src={ukFlag} alt="USA Flag" className="h-4 w-5 mx-2" />
+                  <span>English</span>
+                </div>
+                <div
+                  onClick={() => handleLanguageChange("ar")}
+                  className="flex items-center  py-2 cursor-pointer hover:bg-gray-100"
+                >
+                  <img
+                    src={saudiFlag}
+                    alt="Saudi Flag"
+                    className="h-4 w-5 mx-2"
+                  />
+                  <span>العربية</span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* options bar under header closed*/}
+
+
+
+        <Whatsapp />
+        <SocialMedias />
+
+        {location.pathname === "/" ? (
+          ""
+        ) : (
+          <IoArrowBackCircleSharp
+            onClick={() => navigate(-1)}
+            className="absolute text-4xl 2xl:text-5xl transition-transform hover:scale-105 text-white top-28 left-4 cursor-pointer"
+          />
+        )}
+      </div>
+
+
+
+      <div
+        className="flex-col font-thin bg-sky-900 flex text-white h-[68px] w-full items-center text-xs justify-center"
+        style={{ letterSpacing: "1px", wordSpacing: "3px" }}
+      >
         {/* Hamburger menu for mobile */}
-        <div className="lg:hidden flex justify-between w-full py-5 px-2">
+        <div className="lg:hidden flex justify-end w-full py-4 px-2 pr-11">
           <div
             onClick={() => setMobileMenu(!mobileMenu)}
-            className="cursor-pointer"
+            className="cursor-pointer "
           >
             <RxHamburgerMenu
               size={25}
-              color="black"
-              className="border-black hover:border-2"
+              color="white"
+              className="border-white hover:border-2"
             />
           </div>
         </div>
@@ -74,9 +226,10 @@ function Header() {
                 key={index}
                 onClick={() => {
                   navigate(option.url);
+
                   setMobileMenu(false);
                 }}
-                className="font-bold bg-slate-300 w-full text-center border text-medium xl:text-lg 2xl:text-2xl opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100 py-4"
+                className="font-bold bg-slate-300 w-full text-center border text-medium xl:text-lg 2xl:text-2xl cursor-pointer transition-opacity duration-300  py-4"
               >
                 {t(option.name)}
               </h1>
@@ -85,103 +238,22 @@ function Header() {
         )}
 
         {!mobileMenu && (
-          <div
-            className="hidden lg:flex md:gap-5 xl:gap-10 h-16 justify-between items-center mx-2"
-            style={{ fontFamily: "Avenir Next, Sofia Pro" }}
-          >
+          <div className="w-[500px] hidden lg:flex justify-center items-center mx-2 h-full">
             {headerMenuOptions.map((option, index) => (
-              <div key={index}>
+              <div
+                key={index}
+                className="hover:bg-sky-950 flex justify-center w-1/4 h-full items-center"
+              >
                 <h1
                   onClick={() => navigate(option.url)}
-                  className="font-bold text-medium 2xl:text-2xl opacity-60 cursor-pointer transition-opacity duration-300 hover:opacity-100"
+                  className="text-medium cursor-pointer transition-opacity duration-300 "
                 >
-                {t(option.name)}
+                  {t(option.name)}
                 </h1>
               </div>
             ))}
           </div>
-        )}
 
-        {/* Contact buttons */}
-        <div className="flex sm:flex-row mx-5 gap-20 md:gap-8 xl:gap-14 py-2 justify-end my-3 md:my-0 md:justify-normal">
-          <a className="flex items-center gap-2" href="tel:+9660545961777">
-            <button className="bg-white text-black 2xl:p-2 p-1 border-sky-800 border-2 xl:text-xl 2xl:text-3xl rounded-full transition duration-300 transform">
-              <IoIosCall />
-            </button>
-            <div>
-              <p className="font-medium text-sm md:text-base 2xl:text-lg opacity-85">
-                {t('mobile')}
-              </p>
-              <p className="font-Avenir text-xs sm:text-sm 2xl:text-base opacity-90">
-                0545961777
-              </p>
-            </div>
-          </a>
-          <a
-            className="flex items-center gap-2"
-            href="mailto:info@hibaasia.care"
-          >
-            <button className="bg-white text-black border-sky-800 border-2 2xl:p-2 p-1 xl:text-xl 2xl:text-3xl rounded-full font-bold transition duration-300 transform">
-              <MdEmail />
-            </button>
-            <div>
-              <p className="font-medium opacity-85 text-sm 2xl:text-lg md:text-base">
-              {t('mail')}
-              </p>
-              <p className="font-Avenir text-xs sm:text-sm 2xl:text-base opacity-90">
-                info@hibaasia.care
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <div className=" w-1/2 md:w-auto flex-col justify-center items-center">
-          <div className="flex items-center justify-center">
-            <img
-              src={headerImage}
-              alt="Logo"
-              className="min-h-[2rem] max-w-[8rem] sm:max-w-[12rem] md:max-h-[3rem] md:max-w-[16rem] 2xl:max-h-[5rem] mt-2"
-            />
-          </div>
-        </div>
-
-        {/* options bar under header closed*/}
-
-        <div className={`flex absolute ${isArabic? 'lg:left-10 left-4' : 'lg:right-10 right-4'} top-4 lg:top-28 font-Avenir items-center justify-center`}>
-          <button
-            onClick={() => toggleLanguage("en")}
-            className={`sm:px-3 sm:py-2 p-1 static-button inline-block text-xs sm:text-sm 2xl:text-lg  ${
-              language === "en"
-                ? "bg-white text-black rounded-l-xl"
-                : "text-white bg-sky-800 rounded-r-xl"
-            }`}
-            // style={{ direction: "ltr", textAlign: "left" }}
-          >
-            {t("button_english")}
-          </button>
-          <button
-            onClick={() => toggleLanguage("ar")}
-            className={`sm:px-3 sm:py-2 text-xs p-1 static-button inline-block sm:text-sm 2xl:text-lg  ${
-              language === "ar"
-                ? "bg-white text-black rounded-l-xl"
-                : "text-white bg-sky-800 rounded-r-xl"
-            }`}
-            // style={{ direction: "ltr", textAlign: "left" }}
-          >
-            {t("button_arabic")}
-          </button>
-        </div>
-
-        <Whatsapp />
-        <SocialMedias />
-
-        {location.pathname === "/" ? (
-          ""
-        ) : (
-          <IoArrowBackCircleSharp
-            onClick={() => navigate(-1)}
-            className="absolute xl:text-5xl text-4xl  transition-transform hover:scale-105 text-white top-36 left-4 cursor-pointer"
-          />
         )}
       </div>
     </>

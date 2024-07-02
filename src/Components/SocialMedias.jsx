@@ -26,13 +26,13 @@ function SocialMedias() {
     return (
       <li
         key={index}
-        className={`group  static-button bg-black bg-opacity-30 hover:bg-slate-300 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-16 sm:-right-24 lg:-right-32 z-50 transition-all duration-700  w-[103px] sm:w-[136px] lg:w-[169px] hover:-right-10`}
+        className={`group  static-button bg-black bg-opacity-40 hover:bg-slate-300 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-20 sm:-right-24 lg:-right-32 z-50 transition-all duration-700  w-[120px]  sm:w-[136px] lg:w-[169px] hover:-right-5 sm:hover:-right-10`}
         style={{ top: `${index * 48 + 155}px` }} 
 
       >
-        <div className="bg-white group-hover:bg-[#00918d] rounded-full p-2 flex items-center justify-center transform transition-transform duration-200 group-hover:animate-reverse-rotate mr-1 sm:mr-3">
+        <div className="bg-white group-hover:bg-sky-800 rounded-full p-2 flex items-center justify-center transform transition-transform duration-200 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
           <IconComponent
-            className="text-[#00918d] group-hover:text-white sm:size-25 lg:size-30"
+            className="text-sky-800 group-hover:text-white sm:size-25 lg:size-30"
           />
         </div>
         <p className="text-xs sm:text-sm lg:text-base font-medium ">

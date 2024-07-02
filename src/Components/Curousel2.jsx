@@ -39,7 +39,7 @@ function Curousel2() {
   };
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap z-40">
       <div className="w-full">
         <div className="relative">
           <Carousel
@@ -83,42 +83,7 @@ function Curousel2() {
 
 
 
-          <div className="absolute z-20 p-3 flex items-center justify-center rounded-full left-4 bottom-24 sm:left-10 sm:bottom-56 bg-[#2C9542] animate-pulse-border">
-            <a
-              href="https://api.whatsapp.com/send?phone=966539365643"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={whatsappLogo}
-                className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 2xl:h-16 2xl:w-16"
-                alt="WhatsApp Logo"
-              />
-            </a>
-          </div>
 
-          <ul>
-            {socialMediaItems.map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <li
-                  key={index}
-                  className={`group w-32 sm:w-40 lg:w-48 bg-blue-100 p-1 cursor-pointer rounded-full flex items-center justify-start fixed -right-24 sm:-right-28 lg:-right-36  ${item.top} z-50 transition-all duration-1000 hover:w-40 sm:hover:w-48 lg:hover:w-56 hover:-right-16`}
-                  style={{ top: `${index * 62 + 300}px` }} // Adjust the spacing and initial top position as needed
-                >
-                  <div className="bg-white group-hover:bg-[#00918d] rounded-full h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 flex items-center justify-center transform transition-transform duration-100 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
-                    <IconComponent
-                      size={27}
-                      className="text-[#00918d] group-hover:text-white sm:size-25 lg:size-30"
-                    />
-                  </div>
-                  <p className="text-xs sm:text-sm lg:text-base font-medium">
-                    {item.label}
-                  </p>
-                </li>
-              );
-            })}
-          </ul>
         </div>
       </div>
     </div>

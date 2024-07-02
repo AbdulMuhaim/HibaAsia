@@ -67,38 +67,7 @@ const App = () => {
           </div>
         ))}
       </Carousel>
-      <div className="absolute right-0 top-0">hii</div>
-
-      <div
-        className={`absolute z-20 h-20 w-20 bg-[#2C9542] flex items-center justify-center rounded-full left-10 bottom-56 animate-pulse-border`}
-      >
-        <a
-          href="https://api.whatsapp.com/send?phone=966539365643"
-          target="_blank"
-        >
-          <img src={whatsappLogo} className="h-14  w-14 " alt="WhatsApp Logo" />
-        </a>
-      </div>
-
-      <ul>
-        {socialMediaItems.map((item, index) => {
-          const IconComponent = item.icon;
-          return (
-            <li
-              key={index}
-              className={`group w-40 bg-blue-100 p-1 cursor-pointer rounded-full flex items-center justify-start -right-28 mb-1 fixed ${item.top} z-10 transition-all duration-[1000ms] hover:w-48 hover:-right-16`}
-            >
-              <div className="bg-white group-hover:bg-[#00918d] rounded-full h-8 w-8 flex items-center justify-center transform transition-transform duration-100 group-hover:animate-reverse-rotate mr-3">
-                <IconComponent
-                  size={22}
-                  className=" text-[#00918d] group-hover:text-white"
-                />
-              </div>
-              <p className="text-sm font-medium">{item.label}</p>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="text-white">hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</div>
     </div>
   );
 };

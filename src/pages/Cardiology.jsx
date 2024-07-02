@@ -26,7 +26,7 @@ function Cardiology() {
     <div>
 
       <div
-        className="flex items-center justify-center h-96"
+        className="flex items-center justify-center h-72"
         style={{
           backgroundImage: headerImage,
           backgroundSize: "cover",
@@ -35,15 +35,15 @@ function Cardiology() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
+          <h1 className="text-4xl 2xl:text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
           Cardiology Department
           </h1>
-          <div className="flex items-center space-x-4 text-white justify-center">
-            <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
+          <div className="flex items-center space-x-4 2xl:text-lg text-white justify-center">
+            <p className="cursor-pointer" onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer text-lg">Cardiology</p>
+            <p className="cursor-pointer">Cardiology</p>
           </div>
         </div>
       </div>

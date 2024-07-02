@@ -10,6 +10,12 @@ export default {
       perspective: {
         '1000': '1000px',
       },
+      borderWidth: {
+        '6': '6px',
+      },
+      backgroundColor: {
+        'gray-300-trans': 'rgba(209, 213, 219, 0.8)', // 0.8 is 80% transparency
+      },
       transformStyle: {
         'preserve-3d': 'preserve-3d',
       },
