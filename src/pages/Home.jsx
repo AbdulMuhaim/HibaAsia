@@ -118,7 +118,7 @@ function Home() {
     <div>
       {/* header */}
 
-      <div className="bg-[#d4d4d4] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
+  <div className="bg-[#d4d4d4] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full xl:w-auto">
     {cardData.map((card, index) => (
       <div
