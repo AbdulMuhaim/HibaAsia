@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
 
 
 body.rtl {
-    direction: rtl;
-  }
-
+  direction: rtl;
+}
 
 body.ltr {
   direction: ltr;

@@ -13,7 +13,7 @@ import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
 import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
 import Testimonials from "../Components/Testimonials";
 import newBgImage from "../assets/friendly-man-doctor-s-hands-holding-male-patient-s-hand-encouragement-empathy.jpg";
-import { FaNotesMedical } from "react-icons/fa";
+import { FaHandHolding, FaNotesMedical, FaTree } from "react-icons/fa";
 import { GiMedicinePills } from "react-icons/gi";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { MdOutlineBloodtype } from "react-icons/md";
@@ -28,13 +28,18 @@ import srvs3 from "../assets/3959915_prev_ui.png";
 import srvs4 from "../assets/5183184_prev_ui.png";
 import Curousel2 from "../Components/Curoussel";
 import ResponsivePage from "../Components/ResponsivePage";
-
+import { GiPalmTree } from "react-icons/gi";
+import { PiLeafLight } from "react-icons/pi";
+import { FaHandHoldingMedical } from "react-icons/fa";
+import React from "react";
 
 function Home() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
   const visionBgImage = `url(${visionBgImage1}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))`;
+  const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/portrait-adult-male-doing-remote-work_23-2148499629.jpg?t=st=1720029479~exp=1720033079~hmac=9cb9a0a2a2b6df4a2396a82c5448eae17df68ac1b226df5e9f84e19b1587b01e&w=1060')`;
+
 
   const doctors = [
     {
@@ -68,17 +73,17 @@ function Home() {
 
   const visionData = [
     {
-      src: visionImage,
+      src: FaHandHoldingMedical,
       title: "homeVisionTitle",
       description: "homeVisionText",
     },
     {
-      src: missionImage,
+      src: PiLeafLight,
       title: "homeMissionTitle",
       description: "homeMissionText",
     },
     {
-      src: valuesImage,
+      src: GiPalmTree,
       title: "homeValuesTitle",
       description: "homeValuesText",
     },
@@ -118,44 +123,40 @@ function Home() {
     <div>
       {/* header */}
 
-  <div className="bg-[#d4d4d4] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
-  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full xl:w-auto">
-    {cardData.map((card, index) => (
-      <div
-        key={index}
-        className="group bg-sky-800 pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
-      >
-        <div className="w-[20%]">
-          <div className="h-[80px] w-[80px] rounded-full bg-sky-800 overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
-            <img
-              src={card.image}
-              alt="Image 1"
-              className="h-full w-full object-cover bg-white"
-            />
-          </div>
-        </div>
-
-        <div className="w-[80%] flex xl:justify-end justify-center">
-          <div className="flex-col xl:max-w-40">
-            <h2 className="text-white text-sm">{t(card.title)}</h2>
-            <p
-              className="text-white text-xs  extra-thin opacity-90 "
-              style={{ fontSize: "11px" }}
+      <div className="bg-[#e3e1e1] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full xl:w-auto">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="group bg-sky-800 pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
             >
-              {t(card.description)}
-            </p>
-          </div>
+              <div className="w-[20%]">
+                <div className="h-[80px] w-[80px] rounded-full bg-sky-800 overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
+                  <img
+                    src={card.image}
+                    alt="Image 1"
+                    className="h-full w-full object-cover bg-white"
+                  />
+                </div>
+              </div>
+
+              <div className="w-[80%] flex xl:justify-end justify-center">
+                <div className="flex-col xl:max-w-40">
+                  <h2 className="text-white text-sm">{t(card.title)}</h2>
+                  <p
+                    className="text-white text-xs  extra-thin opacity-90 "
+                    style={{ fontSize: "11px" }}
+                  >
+                    {t(card.description)}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-</div>
 
-
-
-<ResponsivePage/>
-
-  
+      <ResponsivePage />
 
       {/* <div
         className="h-screen bg-cover bg-no-repeat bg-blend-overlay bg-image"
@@ -189,7 +190,71 @@ function Home() {
         </div>
       </div> */}
 
-      <div className="mt-20">
+      <div className="mx-auto ">
+        <div className="flex flex-col md:flex-row ">
+          {/* Left Section */}
+          <div className="flex-1 bg-white px-16 shadow-lg py-16 flex items-end flex-col">
+            <div>
+            <h2 className="text-3xl mb-10 underline-custom">
+              The Best Medical Center for You
+            </h2>
+            <p className="mb-6 text-sm opacity-70 max-w-[30rem]"style={{lineHeight:"30px"}}>
+              Hiba Asia Medical Group is a healthcare organization well known
+              for quality and affordable healthcare. The healthcare company owns
+              and operates a chain of medical centers, hospitals, pharmacies and
+              optical outlets across the major cities in Saudi Arabia. Abeer
+              established at Sharafiyah in Jeddah in 1999 is catering to the
+              healthcare needs of nearly 4 million patients every year. The
+              healthcare company is keen on providing patient care of
+              exceptional standards through its best-in-class hospitals and
+              medical centers featuring advanced medical technology and
+              modernized care-giving methods...
+            </p>
+            <button className="bg-sky-800 text-white w-32 hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-sky-800 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+              READ MORE
+            </button>
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex-1 bg-gray-800 text-white px-16 py-16 shadow-lg flex items-start flex-col" 
+            style={{
+              backgroundImage: presidentImage,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}>
+            <div>
+            <h2 className="text-3xl font-bold mb-10 underline-custom">
+              PRESIDENT'S <span className="font-normal">MESSAGE</span>
+            </h2>
+            <p className="mb-7 text-sm opacity-90 max-w-[30rem]"style={{lineHeight:"30px"}}>
+              Thank you for visiting us. With utmost pleasure, I welcome you to
+              feel Abeer's cordial care-giving. In my view, the actual growth of
+              healthcare industry should never be understood in terms of the
+              mushrooming of healthcare institutions. It has to be rather on the
+              basis of increasing awareness on the ways to enhance...
+            </p>
+            <div className="flex items-center mb-8">
+              <img
+                src="https://img.freepik.com/free-photo/portrait-smiley-business-man_23-2148514859.jpg?t=st=1720028100~exp=1720031700~hmac=3af07f6a0ce5f7b4b7e4b9011d0f65746a7f775f190806a3ea584ea6c76f6a81&w=900"
+                alt="Alungal Mohamed"
+                className="w-24 h-20 rounded mr-4"
+              />
+              <div>
+                <h3 className="text-xl font-bold mb-3">Muhash Babu</h3>
+                <p>President of Hiba Asia Group</p>
+              </div>
+            </div>
+            <button className="bg-transparent text-white hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+              READ MORE
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="mt-20">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch text-center lg:min-h-[80vh]">
           <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between">
             <h1 className="2xl:text-5xl md:text-4xl text-3xl font- text-left text-sky-800">
@@ -212,29 +277,37 @@ function Home() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="bg-slate-100 py-10 flex flex-col md:flex-row justify-evenly items-center mt-20">
+      <div className="py-28 flex flex-col bg-[#f4f4f4] md:flex-row justify-center items-center gap-20">
         {visionData.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 m-4 max-w-xs"
+            className="flex group flex-col  items-center gap-3 max-w-xs"
           >
-            <img
-              className="w-36 h-36 object-cover mb-4 rounded"
-              src={item.src}
-              alt={t(item.title)}
-            />
-            <h1 className="text-xl font-bold mb-2">{t(item.title)}</h1>
-            <p className="text-base text-gray-600 opacity-75 mb-4 text-center">
-              {t(item.description)}...
-            </p>
+            <div className="your-element bottom-5 relative border-2 border-sky-900 text-center flex justify-center items-center"></div>
+
+            <div className="absolute">
+              {React.createElement(item.src, {
+                className: "text-4xl text-sky-800",
+              })}
+            </div>
+
+            <div className="flex flex-col justify-center items-center gap-4">
+              <h1 className="opacity-85 font-semibold uppercase">
+                {t(item.title)}
+              </h1>
+              <p className="text-base text-gray-600 opacity-75 text-center mb-5">
+                {t(item.description)}...
+              </p>
+            </div>
+
             <button
               onClick={() => navigate("/vision")}
-              className="relative bg-white text-sky-800 px-4 py-3 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
+              className="relative bg-white text-sky-800 text-xs uppercase px-6 py-4 border-2 border-sky-800 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
             >
               {t("visionButtonText")}
-              <button className="absolute top-0 left-0 w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">
+              <button className="absolute top-0 left-0 uppercase text-xs w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">
                 {t("visionButtonText")}
               </button>
             </button>

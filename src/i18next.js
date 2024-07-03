@@ -82,7 +82,8 @@ const resources = {
       "Farha": "Farha",
       "Abdul Muhaim": "Abdul Muhaim",
       "Abid": "Abid",
-      "newseventsTitle": "News, Events and Blogs"
+      "newseventsTitle": "News, Events and Blogs",
+      "cardAboveCarousel":"Hiba Asia Medical Group has transformed the healthcare domain in Saudi Arabia, Qatar, UAE, Oman, Kuwait & India. We own and manage 20 healthcare facilities, including the best hospital in Saudi Arabia and other high-end medical centers, becoming one of the most successful healthcare providers in the GCC. With a team of the best doctors in Saudi Arabia, world-class medical professionals, nurses, and hospital management staff, our leadership extends to all aspects of the healthcare spectrum."
 
     }
   },
@@ -165,7 +166,8 @@ const resources = {
       "Farha": "فرحة",
       "Abdul Muhaim": "عبد المهيم",
       "Abid": "عابد",
-      "newseventsTitle": "الأخبار والأحداث والمدونات"
+      "newseventsTitle": "الأخبار والأحداث والمدونات",
+      "cardAboveCarousel":"قامت مجموعة هبة آسيا الطبية بتحويل مجال الرعاية الصحية في المملكة العربية السعودية وقطر والإمارات العربية المتحدة وعمان والكويت والهند. نحن نمتلك وندير 20 منشأة للرعاية الصحية، بما في ذلك أفضل مستشفى في المملكة العربية السعودية وغيرها من المراكز الطبية المتطورة، لنصبح أحد أنجح مقدمي الرعاية الصحية في دول مجلس التعاون الخليجي. مع فريق من أفضل الأطباء في المملكة العربية السعودية، والمهنيين الطبيين والممرضين وموظفي إدارة المستشفيات على مستوى عالمي، تمتد قيادتنا إلى جميع جوانب طيف الرعاية الصحية."
 
     }
   }
