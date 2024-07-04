@@ -13,11 +13,6 @@ import { RiInstagramFill } from "react-icons/ri";
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const socialMediaItems = [
-    { icon: FaFacebook, label: "Facebook", top: "top-48" },
-    { icon: RiInstagramFill, label: "Instagram", top: "top-60" },
-    { icon: FaTwitter, label: "Twitter", top: "top-72" },
-  ];
 
   const images = [Image1, Image2, Image4, Image5, Image6];
   // const texts = [

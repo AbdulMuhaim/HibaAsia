@@ -21,7 +21,7 @@ const ResponsivePage = () => {
       <div className="w-full h-full relative">
         <div className="flex flex-row items-center md:items-start">
           {/* First Image */}
-          <div className="w-[67%] h-[600px]">
+          <div className="w-[68%] h-[600px]">
             <Curousel />
             {/* <img src={Image1} className="w-full h-full object-cover" alt="First"/> */}
           </div>

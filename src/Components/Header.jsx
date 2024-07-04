@@ -89,7 +89,7 @@ function Header() {
             <img
               src={headerImage}
               alt="Logo"
-              className="min-h-[2rem] max-w-[15rem] sm:max-w-[12rem] md:max-h-[4.5rem] md:max-w-[25rem]"
+              className="min-h-[2rem] max-w-[10rem] sm:max-w-[12rem] md:max-h-[4.5rem] md:max-w-[25rem]"
             />
           </div>
         </div>
@@ -139,12 +139,12 @@ function Header() {
           <div
             ref={dropdownRef}
             className={`relative flex text-left justify-center items-center font-thin text-xs ${
-              isArabic ? "pr-9" : "pl-9"
+              isArabic ? "sm:pr-9" : "sm:pl-9"
             }`}
           >
             <div
               onClick={toggleDropdown}
-              className="flex items-center bg-white w-28 hover:bg-gray-100 border border-gray-400 rounded-md shadow-sm px-2 py-2 cursor-pointer"
+              className="flex items-center bg-white w-24 hover:bg-gray-100 border border-gray-400 rounded-md shadow-sm px-2 py-2 cursor-pointer"
             >
               <img
                 src={language === "en" ? ukFlag : saudiFlag}
@@ -157,7 +157,7 @@ function Header() {
               <FaCaretDown className="text-gray-600 pointer-events-none" />
             </div>
             {dropdownOpen && (
-              <div className="absolute mt-[100px] max-w-[7rem] w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
+              <div className="absolute mt-[100px] max-w-[6rem] w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
                 <div
                   onClick={() => handleLanguageChange("en")}
                   className="flex items-center  py-2 cursor-pointer hover:bg-gray-100"
