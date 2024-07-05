@@ -36,6 +36,7 @@ import targeting from "../assets/targeting.png"
 import customer from "../assets/customer.png"
 import binoculars from "../assets/binoculars.png"
 import Services from "../Components/Services";
+import InsuranceCarousel from "../Components/InsuranceCarousel";
 
 function Home() {
   const navigate = useNavigate();
@@ -321,6 +322,8 @@ function Home() {
       </div>
 
       <Services />
+
+      <InsuranceCarousel />
 
 
       <Cards />

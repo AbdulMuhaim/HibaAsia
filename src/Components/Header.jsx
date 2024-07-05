@@ -46,6 +46,19 @@ function Header() {
     }
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -84,7 +97,7 @@ function Header() {
     <>
       <div className="w-full h-auto flex border-t-4 border-sky-900 sm:flex-col lg:flex-row justify-center items-center py-3">
         {/* hiba icon */}
-        <div className={` ${isArabic?"lg:pl-64 pl-3":"lg:pr-64 pr-14"}`}>
+        <div className={` ${isArabic ? "lg:pl-64 pl-3" : "lg:pr-64 pr-14"}`}>
           <div className="flex items-center">
             <img
               src={headerImage}
@@ -110,7 +123,11 @@ function Header() {
             <div>
               <p
                 className="opacity-60 text-xs mb-1 font-medium"
-                style={{ letterSpacing: "0.03rem", wordSpacing: "0.05rem", whiteSpace: "nowrap"}}
+                style={{
+                  letterSpacing: "0.03rem",
+                  wordSpacing: "0.05rem",
+                  whiteSpace: "nowrap",
+                }}
               >
                 {t("mobile")}
               </p>
@@ -183,8 +200,6 @@ function Header() {
 
         {/* options bar under header closed*/}
 
-
-
         <Whatsapp />
         <SocialMedias />
 
@@ -197,8 +212,6 @@ function Header() {
           />
         )}
       </div>
-
-
 
       <div
         className="flex-col font-thin bg-sky-900 flex text-white h-[68px] w-full items-center text-xs justify-center"
@@ -253,9 +266,42 @@ function Header() {
               </div>
             ))}
           </div>
-
         )}
       </div>
+
+      {isScrolled && (
+        <div
+          className={`w-full h-auto flex ${
+            isScrolled ? "scrolled" : ""
+          }  sm:flex-col lg:flex-row justify-center gap-80  border-b items-center py-3 fixed top-0 left-0 z-50 bg-white transition-all duration-300`}
+        >
+          <div className="flex items-center">
+            <img
+              src={headerImage}
+              alt="Logo"
+              className="min-h-[2rem] max-w-[10rem] sm:max-w-[12rem] md:max-h-[4.5rem] md:max-w-[25rem]"
+            />
+          </div>{" "}
+
+
+          <div className="w-[500px] hidden lg:flex justify-center items-center font-thin text-xs mx-2 h-full"
+          style={{ letterSpacing: "1px", wordSpacing: "3px" }}>
+            {headerMenuOptions.map((option, index) => (
+              <div
+                key={index}
+                className=" flex justify-center w-1/4 h-full items-center"
+              >
+                <h1
+                  onClick={() => navigate(option.url)}
+                  className="text-medium cursor-pointer hover:font-semibold transition-opacity duration-300 "
+                >
+                  {t(option.name)}
+                </h1>
+              </div>
+            ))}
+          </div>
+          </div>
+      )}
     </>
   );
 }

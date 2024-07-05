@@ -47,7 +47,7 @@ const Services = () => {
             className=" rounded-lg p-2 w-72 transform transition-transform hover:scale-105"
           >
             <img
-              className="mx-auto mb-4 w-20 h-20"
+              className="mx-auto mb-4 w-28 h-28"
               src={service.icon}
               alt={`${service.title} Icon`}
             />
