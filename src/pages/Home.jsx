@@ -32,6 +32,10 @@ import { GiPalmTree } from "react-icons/gi";
 import { PiLeafLight } from "react-icons/pi";
 import { FaHandHoldingMedical } from "react-icons/fa";
 import React from "react";
+import targeting from "../assets/targeting.png"
+import customer from "../assets/customer.png"
+import binoculars from "../assets/binoculars.png"
+import Services from "../Components/Services";
 
 function Home() {
   const navigate = useNavigate();
@@ -73,17 +77,17 @@ function Home() {
 
   const visionData = [
     {
-      src: FaHandHoldingMedical,
+      src: binoculars,
       title: "homeVisionTitle",
       description: "homeVisionText",
     },
     {
-      src: PiLeafLight,
+      src: targeting,
       title: "homeMissionTitle",
       description: "homeMissionText",
     },
     {
-      src: GiPalmTree,
+      src: customer,
       title: "homeValuesTitle",
       description: "homeValuesText",
     },
@@ -242,7 +246,7 @@ function Home() {
                 className="w-24 h-20 rounded mr-4"
               />
               <div>
-                <h3 className="text-xl font-bold mb-3">Muhash Babu</h3>
+                <h3 className="text-xl font-bold mb-3">President Name</h3>
                 <p>President of Hiba Asia Group</p>
               </div>
             </div>
@@ -288,9 +292,10 @@ function Home() {
             <div className="your-element bottom-5 relative border-2 border-sky-900 text-center flex justify-center items-center"></div>
 
             <div className="absolute">
-              {React.createElement(item.src, {
+              {/* {React.createElement(item.src, {
                 className: "text-4xl text-sky-800",
-              })}
+              })} */}
+              <img src={item.src} className="w-10 h-10" alt={item.src} />
             </div>
 
             <div className="flex flex-col justify-center items-center gap-4">
@@ -314,6 +319,9 @@ function Home() {
           </div>
         ))}
       </div>
+
+      <Services />
+
 
       <Cards />
 
