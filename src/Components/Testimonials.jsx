@@ -63,10 +63,10 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-5">
+    <div className="bg-gray-100 mt-20 flex items-center justify-center py-32">
       <div className="w-full max-w-6xl mx-auto relative">
         <h1 className="text-3xl font-bold mb-20 text-center text-sky-800">{t('testimonialTitle')}</h1>
-        <div className="flex flex-col justify-center items-center lg:flex-row transition-transform duration-500 gap-20">
+        <div className="flex flex-col justify-center items-center lg:flex-row transition-transform duration-500 gap-24">
           {displayedTestimonials.map((testimonial, index) => (
             <div
               key={index}

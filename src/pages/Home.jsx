@@ -37,6 +37,8 @@ import customer from "../assets/customer.png"
 import binoculars from "../assets/binoculars.png"
 import Services from "../Components/Services";
 import InsuranceCarousel from "../Components/InsuranceCarousel";
+import VideoPlayer from "../Components/VideoPlayer";
+import NewsEvents from "../Components/News&Events";
 
 function Home() {
   const navigate = useNavigate();
@@ -325,12 +327,13 @@ function Home() {
 
       <InsuranceCarousel />
 
+        <VideoPlayer/>
 
-      <Cards />
+      {/* <Cards />
 
-      <Departments />
+      <Departments /> */}
 
-      <div className="mt-3 py-14 px-3">
+      {/* <div className="mt-3 py-14 px-3">
         <h1 className="text-3xl font-bold text-center text-sky-800">
           Our Doctors
         </h1>
@@ -338,7 +341,7 @@ function Home() {
           {doctors.map((doctor, index) => (
             <div key={index} className="perspective-1000">
               <div className="relative h-[20rem] text-center transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
-                {/* card front side */}
+                card front side
                 <div className="absolute w-full h-full shadow-xl rounded-lg py-3 border bg-slate-50 backface-hidden  flex flex-col items-center justify-center">
                   <div className="flex justify-center items-center">
                     <img
@@ -357,7 +360,7 @@ function Home() {
                   </div>
                 </div>
 
-                {/* card backside */}
+                card backside
                 <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-sky-200 to-white border rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white">
                   <div className="flex items-center justify-center">
                     <div className="w-full h-[90%] flex justify-center items-center">
@@ -399,18 +402,22 @@ function Home() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Testimonials />
 
       <AnimatedSection />
 
-      <div className="mt-3 py-14 px-3">
+
+      <NewsEvents/>
+
+
+      {/* <div className="mt-3 py-14 px-3">
         <h1 className=" text-3xl font-bold text-center text-sky-800">
           {t("newseventsTitle")}
         </h1>
 
-        {/* YouTube Video 1 */}
+        YouTube Video 1
         <div className="grid md:grid-cols-2 grid-cols-1 gap-8 pt-8">
           <div className="flex items-center justify-center">
             <iframe
@@ -422,7 +429,7 @@ function Home() {
               allowfullscreen
             ></iframe>
           </div>
-          {/* YouTube Video 2 */}
+          YouTube Video 2
           <div className="flex items-center justify-center">
             <iframe
               width="560"
@@ -434,7 +441,7 @@ function Home() {
             ></iframe>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* text area*/}
       {/* <div className="flex flex-col-reverse md:flex-row justify-between items-center p-10 bg-slate-100 gap-14 md:gap-0 md:h-screen">

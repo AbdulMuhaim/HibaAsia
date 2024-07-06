@@ -6,7 +6,15 @@ import { IoIosCall } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#071d28] text-white py-12 mt-20 px-10">
+    <footer className="bg-[#071d28] text-white py-12 px-10"
+    style={{
+      backgroundImage: 'url("https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))', 
+      backgroundAttachment: 'fixed',
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center',
+      backgroundRepeat: "no-repeat",
+      backgroundBlendMode: "overlay",
+    }}>
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between">
         <div className="mb-8 md:mb-0 mr-7">
           <h2 className="text-lg font-semibold mb-4">CONTACT DETAILS</h2>
@@ -64,10 +72,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm">&copy; Hiba Asia Medical Group | Designed and developed by <a href="#" className="hover:underline">Fara Technologies Pvt. Ltd.</a></p>
         <div className="flex mt-4 md:mt-0">
-          <a href="#" className="mx-2 hover:underline rounded-full border p-2"><FaFacebookF /></a>
-          <a href="#" className="mx-2 hover:underline rounded-full border p-2"><FaTwitter /></a>
-          <a href="#" className="mx-2 hover:underline rounded-full border p-2"><FaInstagram /></a>
-          <a href="#" className="mx-2 hover:underline rounded-full border p-2"><FaLinkedinIn /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaFacebookF className='group-hover:text-black' /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaTwitter className='group-hover:text-black' /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaInstagram className='group-hover:text-black' /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaLinkedinIn className='group-hover:text-black' /></a>
         </div>
       </div>
     </footer>

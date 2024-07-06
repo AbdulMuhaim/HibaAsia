@@ -161,20 +161,22 @@ function Header() {
           >
             <div
               onClick={toggleDropdown}
-              className="flex items-center bg-white w-24 hover:bg-gray-100 border border-gray-400 rounded-md shadow-sm px-2 py-2 cursor-pointer"
+              className="flex items-center bg-white w-28 hover:bg-gray-100 border border-gray-400 rounded-md shadow-sm px-2 py-2 cursor-pointer"
             >
               <img
                 src={language === "en" ? ukFlag : saudiFlag}
                 alt="flag"
-                className="h-4 w-5"
+                className={`h-4 w-5 ${language === "en" ? "mr-1" : "ml-1"}`}
               />
-              <span className="mx-1">
-                {language === "en" ? "English" : "العربية"}
-              </span>
-              <FaCaretDown className="text-gray-600 pointer-events-none" />
+              <div
+                className={` flex w-full justify-between items-center overflow-hidden`}
+              >
+                <span>{language === "en" ? "English" : "العربية"}</span>
+                <FaCaretDown className="text-gray-600 pointer-events-none" />
+              </div>
             </div>
             {dropdownOpen && (
-              <div className="absolute mt-[100px] max-w-[6rem] w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
+              <div className="absolute mt-[100px] max-w-[7rem] w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
                 <div
                   onClick={() => handleLanguageChange("en")}
                   className="flex items-center  py-2 cursor-pointer hover:bg-gray-100"
@@ -271,9 +273,9 @@ function Header() {
 
       {isScrolled && (
         <div
-          className={`w-full h-auto flex ${
+          className={`w-full h-auto lg:flex hidden ${
             isScrolled ? "scrolled" : ""
-          }  sm:flex-col lg:flex-row justify-center gap-80  border-b items-center py-3 fixed top-0 left-0 z-50 bg-white transition-all duration-300`}
+          }  sm:flex-col lg:flex-row justify-center gap-80  border-b border-black items-center py-3 fixed top-0 left-0 z-50 bg-white transition-all duration-300`}
         >
           <div className="flex items-center">
             <img
@@ -282,10 +284,10 @@ function Header() {
               className="min-h-[2rem] max-w-[10rem] sm:max-w-[12rem] md:max-h-[4.5rem] md:max-w-[25rem]"
             />
           </div>{" "}
-
-
-          <div className="w-[500px] hidden lg:flex justify-center items-center font-thin text-xs mx-2 h-full"
-          style={{ letterSpacing: "1px", wordSpacing: "3px" }}>
+          <div
+            className="w-[500px] hidden lg:flex justify-center items-center font-thin text-xs mx-2 h-full"
+            style={{ letterSpacing: "1px", wordSpacing: "3px" }}
+          >
             {headerMenuOptions.map((option, index) => (
               <div
                 key={index}
@@ -300,7 +302,7 @@ function Header() {
               </div>
             ))}
           </div>
-          </div>
+        </div>
       )}
     </>
   );

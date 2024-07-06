@@ -117,7 +117,7 @@ const AnimatedSection = () => {
 
   return (
     <>
-      <div className="hidden xl:flex static-button flex-col justify-center items-center text-center min-h-screen gap-2 px-4 md:px-8">
+      <div className="hidden xl:flex static-button flex-col justify-center items-center text-center py-48 gap-2 px-4 md:px-8">
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-sky-800">We're a</h1>
         <div className="flex relative justify-center items-center gap-2">
           <div className="image-gallery absolute left-0 -right-24 inline-flex -space-x-10" ref={centerImageRef}>
