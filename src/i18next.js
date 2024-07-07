@@ -83,7 +83,7 @@ const resources = {
       "Abdul Muhaim": "Abdul Muhaim",
       "Abid": "Abid",
       "newseventsTitle": "News, Events and Blogs",
-      "cardAboveCarousel":"Hiba Asia Medical Group has transformed the healthcare domain in Saudi Arabia, Qatar, UAE, Oman, Kuwait & India. We own and manage 20 healthcare facilities, including the best hospital in Saudi Arabia and other high-end medical centers, becoming one of the most successful healthcare providers in the GCC. With a team of the best doctors in Saudi Arabia, world-class medical professionals, nurses, and hospital management staff, our leadership extends to all aspects of the healthcare spectrum."
+      "cardAboveCarousel":"Hiba Asia Healthcare Group is a multinational conglomerate headquartered in Jeddah since 2005, Saudi Arabia. Our company playing a remarkable role in the healthcare sector of Jeddah, Saudi Arabia since its establishment. Under Healthcare Group we are operating multiple healthcare units in different part of Jeddah. Our aims to expand our healthcare networks all over the Kingdom to provide cost effective, high quality healthcare to all..."
 
     }
   },

@@ -150,11 +150,11 @@ function Departments() {
   );
 
   return (
-    <div className="mt-16 py-14 px-3 h-[80vh]">
-      <h1 className="text-3xl xl:text-4xl font-bold text-center text-sky-800">
+    <div className="mt-16 px-3 py-24 flex flex-col justify-center items-center">
+      <h1 className="text-3xl font-semibold mb-4 uppercase opacity-90">
         Departments
       </h1>
-      <div className="relative grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 gap-4 pt-8">
+      <div className="relative grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 gap-14 pt-8">
         {currentDepartments.map((department, index) => (
           <div
             key={index}
@@ -164,7 +164,7 @@ function Departments() {
               <img
                 src={department.img}
                 alt={department.name}
-                className="h-[190px] object-cover mx-auto cursor-pointer transition-all hover:scale-110 duration-500"
+                className="h-[140px] object-cover mx-auto cursor-pointer transition-all hover:scale-110 duration-500"
                 onClick={() => navigate(department.link)}
               />
             </div>
@@ -175,13 +175,13 @@ function Departments() {
         ))}
 
         <button
-          className="absolute left-4 sm:left-10 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
+          className="absolute left-4 sm:-left-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showPreviousDepartment}
         >
           <IoIosArrowBack className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />
         </button>
         <button
-          className="absolute right-4 sm:right-10 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
+          className="absolute right-4 sm:-right-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showNextDepartment}
         >
           <IoIosArrowForward className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />

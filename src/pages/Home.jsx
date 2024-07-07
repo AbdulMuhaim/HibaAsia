@@ -237,7 +237,7 @@ function Home() {
             </h2>
             <p className="mb-7 text-sm opacity-90 max-w-[30rem]"style={{lineHeight:"30px"}}>
               Thank you for visiting us. With utmost pleasure, I welcome you to
-              feel Abeer's cordial care-giving. In my view, the actual growth of
+              feel Hiba Asia's cordial care-giving. In my view, the actual growth of
               healthcare industry should never be understood in terms of the
               mushrooming of healthcare institutions. It has to be rather on the
               basis of increasing awareness on the ways to enhance...
@@ -249,7 +249,7 @@ function Home() {
                 className="w-24 h-20 rounded mr-4"
               />
               <div>
-                <h3 className="text-xl font-bold mb-3">President Name</h3>
+                <h3 className="text-xl font-bold mb-3">Mr. Abdullah Mohammed Vellengara</h3>
                 <p>President of Hiba Asia Group</p>
               </div>
             </div>
@@ -325,13 +325,15 @@ function Home() {
 
       <Services />
 
+      <Departments />
+
+
       <InsuranceCarousel />
 
         <VideoPlayer/>
 
       {/* <Cards />
 
-      <Departments /> */}
 
       {/* <div className="mt-3 py-14 px-3">
         <h1 className="text-3xl font-bold text-center text-sky-800">

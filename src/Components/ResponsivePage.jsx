@@ -32,7 +32,7 @@ const ResponsivePage = () => {
           </div>
 
           {/* Static Image Section */}
-          <div className="w-[27%] h-[600px] flex justify-center items-center p-5">
+          <div className="w-[28%] h-[600px] flex justify-center items-center p-5">
             <img src={headerImage} alt="Static" className="object-cover" />
           </div>
         </div>
@@ -47,22 +47,16 @@ const ResponsivePage = () => {
             <p className="leading-loose">{t("cardAboveCarousel")}</p>
             <div className="flex justify-between mt-4 flex-wrap">
               <button className="cursor-default font-semibold">
-                OUR SERVICE SPAN ACROSS
+                OUR SERVICE SPAN ACROSS KSA
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                KSA
+                Al-Wazeeriyah
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                UAE
+                Abdullah Jaseer
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                OMAN
-              </button>
-              <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                KUWAIT
-              </button>
-              <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                INDIA
+                Abdullah Al-Sudais
               </button>
             </div>
           </div>
@@ -85,23 +79,17 @@ const ResponsivePage = () => {
               all aspects of the healthcare spectrum.
             </p>
             <button className="cursor-default font-semibold text-xl md:text-base">
-              OUR SERVICE SPAN ACROSS
+            OUR SERVICE SPAN ACROSS KSA
             </button>
             <div className="flex justify-center mt-4 gap-5 flex-wrap max-w-[35rem]">
             <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                KSA
+            Al-Wazeeriyah
+            </button>
+              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              Abdullah Jaseer
               </button>
               <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                UAE
-              </button>
-              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                OMAN
-              </button>
-              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                KUWAIT
-              </button>
-              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                INDIA
+              Abdullah Al-Sudais
               </button>
             </div>
           </div>
