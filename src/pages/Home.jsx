@@ -31,7 +31,7 @@ import ResponsivePage from "../Components/ResponsivePage";
 import { GiPalmTree } from "react-icons/gi";
 import { PiLeafLight } from "react-icons/pi";
 import { FaHandHoldingMedical } from "react-icons/fa";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import targeting from "../assets/targeting.png"
 import customer from "../assets/customer.png"
 import binoculars from "../assets/binoculars.png"
@@ -49,9 +49,37 @@ function Home() {
   const isArabic = i18n.language === "ar";
   const visionBgImage = `url(${visionBgImage1}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))`;
   const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/portrait-adult-male-doing-remote-work_23-2148499629.jpg?t=st=1720029479~exp=1720033079~hmac=9cb9a0a2a2b6df4a2396a82c5448eae17df68ac1b226df5e9f84e19b1587b01e&w=1060')`;
-  const [isPopupOpen, setIsPopupOpen] = useState(true);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  useEffect(() => {
+    // Check if the popup has been seen in this session
+    const hasSeenPopup = sessionStorage.getItem('hasSeenPopup');
+    console.log('Checking session storage:', hasSeenPopup);
+    if (!hasSeenPopup) {
+      // Show the popup
+      setIsPopupOpen(true);
+      // Set the session storage item to mark the popup as seen
+      sessionStorage.setItem('hasSeenPopup', 'true');
+    }
+
+    // Function to clear the session storage on page unload
+    const handleBeforeUnload = () => {
+      sessionStorage.removeItem('hasSeenPopup');
+      console.log('Session storage cleared on page unload');
+    };
+
+    // Add the event listener for beforeunload
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
 
   const handleClosePopup = () => {
+    console.log('Popup closed.');
     setIsPopupOpen(false);
   };
 
@@ -147,10 +175,10 @@ function Home() {
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="group bg-sky-800 pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
+              className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
             >
               <div className="w-[20%]">
-                <div className="h-[80px] w-[80px] rounded-full bg-sky-800 overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
+                <div className="h-[80px] w-[80px] rounded-full bg-[#1e478e] overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
                   <img
                     src={card.image}
                     alt="Image 1"
@@ -184,13 +212,13 @@ function Home() {
         }}
       >
         <div className="flex flex-col h-full items-center justify-center gap-8 md:gap-14">
-          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl text-sky-800 text-center">
+          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl text-[#1e478e] text-center">
             {t("welcome")}
           </h1>
           <p className="text-base font-medium opacity-75 md:text-lg 2xl:text-2xl px-3 sm:px-0 max-w-[27rem] sm:max-w-[30rem] md:max-w-[48rem] backdrop-blur-sm break-words text-center">
             {t("welcomeDescription")}
           </p>
-          <button className="rounded-full bg-sky-800 px-5 py-3 md:text-base font-semibold 2xl:text-xl md:px-4 md:py-3 2xl:px-6 2xl:py-5  border-4 text-white transition duration-500 transform hover:bg-white  hover:text-black border-sky-800">
+          <button className="rounded-full bg-[#1e478e] px-5 py-3 md:text-base font-semibold 2xl:text-xl md:px-4 md:py-3 2xl:px-6 2xl:py-5  border-4 text-white transition duration-500 transform hover:bg-white  hover:text-black border-[#1e478e]">
             {t("bookAppointment")}
           </button>
 
@@ -198,7 +226,7 @@ function Home() {
             {services.map((service, index) => (
               <div key={index}>
                 <div className="rounded-full h-14 w-14 sm:h-20 sm:w-20 lg:h-24 lg:w-24 2xl:h-32 2xl:w-32  bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-                  <service.icon className="text-2xl text-sky-800 sm:text-3xl md:text-4xl" />
+                  <service.icon className="text-2xl text-[#1e478e] sm:text-3xl md:text-4xl" />
                 </div>
                 <p className="text-center opacity-75 font-bold mt-2 text-xs sm:text-sm xl:text-base 2xl:text-xl">
                   {t(service.text)}
@@ -229,7 +257,7 @@ function Home() {
               medical centers featuring advanced medical technology and
               modernized care-giving methods...
             </p>
-            <button className="bg-sky-800 text-white w-32 hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-sky-800 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+            <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
               READ MORE
             </button>
             </div>
@@ -265,7 +293,7 @@ function Home() {
                 <p>President of Hiba Asia Group</p>
               </div>
             </div>
-            <button className="bg-transparent text-white hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+            <button className="bg-transparent text-white hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
               READ MORE
             </button>
             </div>
@@ -276,7 +304,7 @@ function Home() {
       {/* <div className="mt-20">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch text-center lg:min-h-[80vh]">
           <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between">
-            <h1 className="2xl:text-5xl md:text-4xl text-3xl font- text-left text-sky-800">
+            <h1 className="2xl:text-5xl md:text-4xl text-3xl font- text-left text-[#1e478e]">
               {t("hospitalImageTitle")}
             </h1>
             <p
@@ -308,7 +336,7 @@ function Home() {
 
             <div className="absolute">
               {/* {React.createElement(item.src, {
-                className: "text-4xl text-sky-800",
+                className: "text-4xl text-[#1e478e]",
               })} */}
               <img src={item.src} className="w-10 h-10" alt={item.src} />
             </div>
@@ -324,10 +352,10 @@ function Home() {
 
             <button
               onClick={() => navigate("/vision")}
-              className="relative bg-white text-sky-800 text-xs uppercase px-6 py-4 border-2 border-sky-800 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
+              className="relative bg-white text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
             >
               {t("visionButtonText")}
-              <button className="absolute top-0 left-0 uppercase text-xs w-full h-full text-center hover:text-sky-800 text-white bg-sky-800 transform transition-transform duration-700 hover:translate-x-full">
+              <button className="absolute top-0 left-0 uppercase text-xs w-full h-full text-center hover:text-[#1e478e] text-white bg-[#1e478e] transform transition-transform duration-700 hover:translate-x-full">
                 {t("visionButtonText")}
               </button>
             </button>
@@ -348,7 +376,7 @@ function Home() {
 
 
       {/* <div className="mt-3 py-14 px-3">
-        <h1 className="text-3xl font-bold text-center text-sky-800">
+        <h1 className="text-3xl font-bold text-center text-[#1e478e]">
           Our Doctors
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 mt-10">
@@ -391,7 +419,7 @@ function Home() {
                       <p className="text-gray-600 mt-2 text-sm">
                         {t(doctor.department)}
                       </p>
-                      <button className="bg-sky-800 text-white text-sm rounded-full px-3 py-2 mt-4">
+                      <button className="bg-[#1e478e] text-white text-sm rounded-full px-3 py-2 mt-4">
                         {t("Connect")}
                       </button>
                       <div className="text-black flex justify-center items-center mr-1 mt-5 w-full">
@@ -410,7 +438,7 @@ function Home() {
           <div className="h-[20rem] flex items-center justify-center bg-slate-50 rounded-lg">
             <button
               onClick={() => navigate("/doctors")}
-              className="rounded-full bg-white px-5 font-semibold transition-transform hover:scale-105 py-2 border-4 border-sky-800"
+              className="rounded-full bg-white px-5 font-semibold transition-transform hover:scale-105 py-2 border-4 border-[#1e478e]"
             >
               {t("View All")}
             </button>
@@ -427,7 +455,7 @@ function Home() {
 
 
       {/* <div className="mt-3 py-14 px-3">
-        <h1 className=" text-3xl font-bold text-center text-sky-800">
+        <h1 className=" text-3xl font-bold text-center text-[#1e478e]">
           {t("newseventsTitle")}
         </h1>
 

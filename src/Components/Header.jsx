@@ -95,7 +95,7 @@ function Header() {
 
   return (
     <>
-      <div className="w-full h-auto flex border-t-4 border-sky-900 sm:flex-col lg:flex-row justify-center items-center py-3">
+      <div className="w-full h-auto flex border-t-4 border-[#1e478e] sm:flex-col lg:flex-row justify-center items-center py-3">
         {/* hiba icon */}
         <div className={` ${isArabic ? "lg:pl-64 pl-3" : "lg:pr-64 pr-14"}`}>
           <div className="flex items-center">
@@ -115,9 +115,9 @@ function Header() {
             }`}
           >
             <button
-              className={`bg-white text-black p-3 border-opacity-80 border-sky-800 border-2 xl:text-2xl rounded-full transition duration-300 transform`}
+              className={`bg-white text-black p-3 border-opacity-80 border-[#1e478e] border-2 xl:text-2xl rounded-full transition duration-300 transform`}
             >
-              <IoIosCall className="text-sky-800" />
+              <IoIosCall className="text-[#1e478e]" />
             </button>
 
             <div>
@@ -139,8 +139,8 @@ function Header() {
               isArabic ? "border-l  " : "border-r border-black"
             }`}
           >
-            <button className="bg-white text-black border-sky-800 border-opacity-80 border-2 p-3 xl:text-2xl rounded-full font-bold transition duration-300 transform">
-              <MdEmail className="text-sky-800 opacity-" />
+            <button className="bg-white text-black border-[#1e478e] border-opacity-80 border-2 p-3 xl:text-2xl rounded-full font-bold transition duration-300 transform">
+              <MdEmail className="text-[#1e478e] opacity-" />
             </button>
             <div>
               <p
@@ -216,7 +216,7 @@ function Header() {
       </div>
 
       <div
-        className="flex-col font-thin bg-sky-900 flex text-white h-[68px] w-full items-center text-xs justify-center"
+        className="flex-col font-thin bg-[#1e478e] flex text-white h-[68px] w-full items-center text-xs justify-center"
         style={{ letterSpacing: "1px", wordSpacing: "3px" }}
       >
         {/* Hamburger menu for mobile */}

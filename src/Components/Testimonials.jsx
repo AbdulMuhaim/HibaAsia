@@ -65,14 +65,14 @@ const Testimonials = () => {
   return (
     <div className="bg-gray-100 mt-20 flex items-center justify-center py-32">
       <div className="w-full max-w-6xl mx-auto relative">
-        <h1 className="text-3xl font-bold mb-20 text-center text-sky-800">{t('testimonialTitle')}</h1>
+        <h1 className="text-3xl font-semibold mb-20 text-center opacity-90">{t('testimonialTitle')}</h1>
         <div className="flex flex-col justify-center items-center lg:flex-row transition-transform duration-500 gap-24">
           {displayedTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="min-w-1/3 py-14 px-6 bg-white border border-sky-800 hover:border-2 rounded-md text-center transform transition-transform hover:scale-105 duration-500"
+              className="min-w-1/3 py-14 px-6 bg-white border b hover:border-2 rounded-md text-center transform transition-transform hover:scale-105 duration-500"
             >
-              <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-5xl text-sky-700">
+              <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-5xl text-[#1e478e]">
                 <IoLogoWechat />
               </div>
               <p className="text-gray-600 max-w-[15rem] mb-4 font-sans font-semibold border-b-2 pb-3">

@@ -61,7 +61,7 @@ const Services = () => {
             >
               {service.description}
             </p>
-            <button className="bg-sky-800 text-white w-32 hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-sky-800 rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+            <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
               READ MORE
             </button>
           </div>

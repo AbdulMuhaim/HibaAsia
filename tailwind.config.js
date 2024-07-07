@@ -47,11 +47,11 @@ export default {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(-360deg)' },
         },
-        rotate360: {
+        'rotate180': {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(180deg)' },
         },
-        reverseRotate360: {
+        'reverseRotate180': {
           '0%': { transform: 'rotate(180deg)' },
           '100%': { transform: 'rotate(0deg)' },
         },
@@ -91,8 +91,8 @@ export default {
         'pulse-border': 'pulse-border 2s infinite',
         'gradient-bg': 'gradientBackground 10s ease infinite',
         'growBorder': 'growBorder 0.7s ease-out forwards',
-        'rotate360': 'rotate360 0.3s linear',
-        'reverseRotate360': 'reverseRotate360 0.3s linear',      
+        'rotate360': 'rotate180 0.2s linear',
+        'reverseRotate360': 'reverseRotate180 0.2s linear',      
       },
     },
   },

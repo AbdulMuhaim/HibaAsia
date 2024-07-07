@@ -38,7 +38,7 @@ const ResponsivePage = () => {
         </div>
 
         {/* Content Box for Medium and Larger Screens */}
-        <div className="absolute hidden md:flex left-1/2 transform -translate-x-1/2 -translate-y-56 w-[90%]  max-w-[1110px] bg-sky-800 text-white shadow-lg">
+        <div className="absolute hidden md:flex left-1/2 transform -translate-x-1/2 -translate-y-56 w-[90%]  max-w-[1110px] bg-[#1e478e] text-white shadow-2xl">
           <div className="flex w-[17%] justify-center items-center bg-white">
             <img src={headerImage} className="w-36  h-10" alt="" />
           </div>
@@ -50,13 +50,13 @@ const ResponsivePage = () => {
                 OUR SERVICE SPAN ACROSS KSA
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                Al-Wazeeriyah
+                AL WAZEERIYAH{" "}
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                Abdullah Jaseer
+                AL ZAHRA{" "}
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                Abdullah Al-Sudais
+                AL SANABEL{" "}
               </button>
             </div>
           </div>
@@ -68,34 +68,37 @@ const ResponsivePage = () => {
             <img src={headerImage} className="w-1/2  h-20" alt="" />
           </div>
           <div className="p-10 flex flex-col justify-center items-center">
-            <p className="leading-loose mb-5 text-lg md:text-base max-w-[37rem]" style={{textAlign:"center"}}>
-              Hiba Asia Medical Group has transformed the healthcare domain in Saudi
-              Arabia, Qatar, UAE, Oman, Kuwait & India. We own and manage 20
-              healthcare facilities, including the best hospital in Saudi Arabia
-              and other high-end medical centers, becoming one of the most
-              successful healthcare providers in the GCC. With a team of the
-              best doctors in Saudi Arabia, world-class medical professionals,
-              nurses, and hospital management staff, our leadership extends to
-              all aspects of the healthcare spectrum.
+            <p
+              className="leading-loose mb-5 text-lg md:text-base max-w-[37rem]"
+              style={{ textAlign: "center" }}
+            >
+              Hiba Asia Medical Group has transformed the healthcare domain in
+              Saudi Arabia, Qatar, UAE, Oman, Kuwait & India. We own and manage
+              20 healthcare facilities, including the best hospital in Saudi
+              Arabia and other high-end medical centers, becoming one of the
+              most successful healthcare providers in the GCC. With a team of
+              the best doctors in Saudi Arabia, world-class medical
+              professionals, nurses, and hospital management staff, our
+              leadership extends to all aspects of the healthcare spectrum.
             </p>
             <button className="cursor-default font-semibold text-xl md:text-base">
-            OUR SERVICE SPAN ACROSS KSA
+              OUR SERVICE SPAN ACROSS KSA
             </button>
             <div className="flex justify-center mt-4 gap-5 flex-wrap max-w-[35rem]">
-            <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-            Al-Wazeeriyah
-            </button>
               <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-              Abdullah Jaseer
+              AL WAZEERIYAH{" "}
               </button>
               <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-              Abdullah Al-Sudais
+              AL ZAHRA{" "}
+              </button>
+              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              AL SANABEL{" "}
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-sky-900 h-24 hidden md:block"></div>
+      <div className="bg-[#1e478e] h-24 hidden md:block"></div>
     </>
   );
 };

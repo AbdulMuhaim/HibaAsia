@@ -21,6 +21,7 @@ import Laboratory from './pages/Laboratory';
 import Ultrasound from './pages/Ultrasound';
 import Pharmacy from './pages/Pharmacy';
 import Surgery from './pages/Surgery';
+import About from './pages/About';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/ultrasound" element={<Ultrasound />} />
           <Route path="/pharmacy" element={<Pharmacy />} />
           <Route path="/surgery" element={<Surgery />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

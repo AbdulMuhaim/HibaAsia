@@ -30,9 +30,9 @@ function SocialMedias() {
         style={{ top: `${index * 48 + 155}px` }} 
 
       >
-        <div className="bg-white group-hover:bg-sky-800 rounded-full p-2 flex items-center justify-center transform transition-transform duration-200 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
+        <div className="bg-white group-hover:bg-[#1e478e] rounded-full p-2 flex items-center justify-center transform transition-transform duration-200 group-hover:animate-reverse-rotate mr-2 sm:mr-3">
           <IconComponent
-            className="text-sky-800 group-hover:text-white sm:size-25 lg:size-30"
+            className="text-[#1e478e] group-hover:text-white sm:size-25 lg:size-30"
           />
         </div>
         <p className="text-xs sm:text-sm lg:text-base font-medium ">
