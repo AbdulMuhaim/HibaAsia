@@ -3,12 +3,13 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
+import footerBgImage from "../assets/pexels-photo-5428267.webp"
 
 const Footer = () => {
   return (
     <footer className="bg-[#071d28] text-white py-12 px-10"
     style={{
-      backgroundImage: 'url("https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))', 
+      backgroundImage: `url(${footerBgImage}),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))`, 
       backgroundAttachment: 'fixed',
       backgroundSize: 'cover', 
       backgroundPosition: 'center',

@@ -31,7 +31,7 @@ import ResponsivePage from "../Components/ResponsivePage";
 import { GiPalmTree } from "react-icons/gi";
 import { PiLeafLight } from "react-icons/pi";
 import { FaHandHoldingMedical } from "react-icons/fa";
-import React from "react";
+import React, { useState } from "react";
 import targeting from "../assets/targeting.png"
 import customer from "../assets/customer.png"
 import binoculars from "../assets/binoculars.png"
@@ -39,6 +39,9 @@ import Services from "../Components/Services";
 import InsuranceCarousel from "../Components/InsuranceCarousel";
 import VideoPlayer from "../Components/VideoPlayer";
 import NewsEvents from "../Components/News&Events";
+import imageSrc from '../assets/RAHATKOM.png';
+import Popup from "../Components/Popup";
+
 
 function Home() {
   const navigate = useNavigate();
@@ -46,7 +49,11 @@ function Home() {
   const isArabic = i18n.language === "ar";
   const visionBgImage = `url(${visionBgImage1}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))`;
   const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/portrait-adult-male-doing-remote-work_23-2148499629.jpg?t=st=1720029479~exp=1720033079~hmac=9cb9a0a2a2b6df4a2396a82c5448eae17df68ac1b226df5e9f84e19b1587b01e&w=1060')`;
+  const [isPopupOpen, setIsPopupOpen] = useState(true);
 
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
 
   const doctors = [
     {
@@ -127,7 +134,12 @@ function Home() {
   ];
 
   return (
-    <div>
+
+    <div className="relative">
+      <Popup isOpen={isPopupOpen} onClose={handleClosePopup} imageSrc={imageSrc} />
+      <div className={`${isPopupOpen ? 'pointer-events-none' : ''}`}>
+
+      <div>
       {/* header */}
 
       <div className="bg-[#e3e1e1] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
@@ -476,6 +488,11 @@ function Home() {
         </div>
       </div> */}
     </div>
+
+      </div>
+    </div>
+
+
   );
 }
 

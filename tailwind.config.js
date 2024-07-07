@@ -47,6 +47,14 @@ export default {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(-360deg)' },
         },
+        rotate360: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(180deg)' },
+        },
+        reverseRotate360: {
+          '0%': { transform: 'rotate(180deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
         'bounce': {
           '0%, 100%': { transform: 'translateY(-50%)', 'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)' },
           '50%': { transform: 'translateY(0)', 'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)' },
@@ -83,6 +91,8 @@ export default {
         'pulse-border': 'pulse-border 2s infinite',
         'gradient-bg': 'gradientBackground 10s ease infinite',
         'growBorder': 'growBorder 0.7s ease-out forwards',
+        'rotate360': 'rotate360 0.3s linear',
+        'reverseRotate360': 'reverseRotate360 0.3s linear',      
       },
     },
   },
