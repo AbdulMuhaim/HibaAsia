@@ -22,6 +22,9 @@ import Ultrasound from './pages/Ultrasound';
 import Pharmacy from './pages/Pharmacy';
 import Surgery from './pages/Surgery';
 import About from './pages/About';
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function App() {
   return (

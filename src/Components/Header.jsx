@@ -257,7 +257,7 @@ function Header() {
             {headerMenuOptions.map((option, index) => (
               <div
                 key={index}
-                className="hover:bg-sky-950 flex justify-center w-1/4 h-full items-center"
+                className="hover:bg-[#203d6f] flex justify-center w-1/4 h-full items-center"
               >
                 <h1
                   onClick={() => navigate(option.url)}
