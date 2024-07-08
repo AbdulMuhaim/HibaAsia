@@ -32,16 +32,15 @@ import { GiPalmTree } from "react-icons/gi";
 import { PiLeafLight } from "react-icons/pi";
 import { FaHandHoldingMedical } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
-import targeting from "../assets/targeting.png"
-import customer from "../assets/customer.png"
-import binoculars from "../assets/binoculars.png"
+import targeting from "../assets/targeting.png";
+import customer from "../assets/customer.png";
+import binoculars from "../assets/binoculars.png";
 import Services from "../Components/Services";
 import InsuranceCarousel from "../Components/InsuranceCarousel";
 import VideoPlayer from "../Components/VideoPlayer";
 import NewsEvents from "../Components/News&Events";
-import imageSrc from '../assets/RAHATKOM.png';
+import imageSrc from "../assets/RAHATKOM.png";
 import Popup from "../Components/Popup";
-
 
 function Home() {
   const navigate = useNavigate();
@@ -53,33 +52,32 @@ function Home() {
 
   useEffect(() => {
     // Check if the popup has been seen in this session
-    const hasSeenPopup = sessionStorage.getItem('hasSeenPopup');
-    console.log('Checking session storage:', hasSeenPopup);
+    const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
+    console.log("Checking session storage:", hasSeenPopup);
     if (!hasSeenPopup) {
       // Show the popup
       setIsPopupOpen(true);
       // Set the session storage item to mark the popup as seen
-      sessionStorage.setItem('hasSeenPopup', 'true');
+      sessionStorage.setItem("hasSeenPopup", "true");
     }
 
     // Function to clear the session storage on page unload
     const handleBeforeUnload = () => {
-      sessionStorage.removeItem('hasSeenPopup');
-      console.log('Session storage cleared on page unload');
+      sessionStorage.removeItem("hasSeenPopup");
+      console.log("Session storage cleared on page unload");
     };
 
     // Add the event listener for beforeunload
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, []);
 
-
   const handleClosePopup = () => {
-    console.log('Popup closed.');
+    console.log("Popup closed.");
     setIsPopupOpen(false);
   };
 
@@ -162,50 +160,52 @@ function Home() {
   ];
 
   return (
-
     <div className="relative">
-      <Popup isOpen={isPopupOpen} onClose={handleClosePopup} imageSrc={imageSrc} />
-      <div className={`${isPopupOpen ? 'pointer-events-none' : ''}`}>
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={handleClosePopup}
+        imageSrc={imageSrc}
+      />
+      <div className={`${isPopupOpen ? "pointer-events-none" : ""}`}>
+        <div>
+          {/* header */}
 
-      <div>
-      {/* header */}
+          <div className="bg-[#e3e1e1] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full xl:w-auto">
+              {cardData.map((card, index) => (
+                <div
+                  key={index}
+                  className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
+                >
+                  <div className="w-[20%]">
+                    <div className="h-[80px] w-[80px] rounded-full bg-[#1e478e] overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
+                      <img
+                        src={card.image}
+                        alt="Image 1"
+                        className="h-full w-full object-cover bg-white"
+                      />
+                    </div>
+                  </div>
 
-      <div className="bg-[#e3e1e1] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full xl:w-auto">
-          {cardData.map((card, index) => (
-            <div
-              key={index}
-              className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
-            >
-              <div className="w-[20%]">
-                <div className="h-[80px] w-[80px] rounded-full bg-[#1e478e] overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
-                  <img
-                    src={card.image}
-                    alt="Image 1"
-                    className="h-full w-full object-cover bg-white"
-                  />
+                  <div className="w-[80%] flex xl:justify-end justify-center">
+                    <div className="flex-col xl:max-w-40">
+                      <h2 className="text-white text-sm">{t(card.title)}</h2>
+                      <p
+                        className="text-white text-xs  extra-thin opacity-90 "
+                        style={{ fontSize: "11px" }}
+                      >
+                        {t(card.description)}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div className="w-[80%] flex xl:justify-end justify-center">
-                <div className="flex-col xl:max-w-40">
-                  <h2 className="text-white text-sm">{t(card.title)}</h2>
-                  <p
-                    className="text-white text-xs  extra-thin opacity-90 "
-                    style={{ fontSize: "11px" }}
-                  >
-                    {t(card.description)}
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      <ResponsivePage />
+          <ResponsivePage />
 
-      {/* <div
+          {/* <div
         className="h-screen bg-cover bg-no-repeat bg-blend-overlay bg-image"
         style={{
           backgroundImage: `url(${newBgImage})`,
@@ -237,71 +237,83 @@ function Home() {
         </div>
       </div> */}
 
-      <div className="mx-auto ">
-        <div className="flex flex-col md:flex-row ">
-          {/* Left Section */}
-          <div className="flex-1 bg-white px-16 shadow-lg py-16 flex items-end flex-col">
-            <div>
-            <h2 className="text-3xl mb-10 underline-custom">
-              The Best Medical Center for You
-            </h2>
-            <p className="mb-6 text-sm opacity-70 max-w-[30rem]"style={{lineHeight:"30px"}}>
-              Hiba Asia Medical Group is a healthcare organization well known
-              for quality and affordable healthcare. The healthcare company owns
-              and operates a chain of medical centers, hospitals, pharmacies and
-              optical outlets across the major cities in Saudi Arabia. Abeer
-              established at Sharafiyah in Jeddah in 1999 is catering to the
-              healthcare needs of nearly 4 million patients every year. The
-              healthcare company is keen on providing patient care of
-              exceptional standards through its best-in-class hospitals and
-              medical centers featuring advanced medical technology and
-              modernized care-giving methods...
-            </p>
-            <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
-              READ MORE
-            </button>
-            </div>
-          </div>
+          <div className="mx-auto ">
+            <div className="flex flex-col md:flex-row ">
+              {/* Left Section */}
+              <div className="flex-1 bg-white px-16 shadow-lg py-16 flex items-end flex-col">
+                <div>
+                  <h2 className="text-3xl mb-10 underline-custom">
+                    The Best Medical Center for You
+                  </h2>
+                  <p
+                    className="mb-6 text-sm opacity-70 max-w-[30rem]"
+                    style={{ lineHeight: "30px" }}
+                  >
+                    Hiba Asia Medical Group is a healthcare organization well
+                    known for quality and affordable healthcare. The healthcare
+                    company owns and operates a chain of medical centers,
+                    hospitals, pharmacies and optical outlets across the major
+                    cities in Saudi Arabia. Abeer established at Sharafiyah in
+                    Jeddah in 1999 is catering to the healthcare needs of nearly
+                    4 million patients every year. The healthcare company is
+                    keen on providing patient care of exceptional standards
+                    through its best-in-class hospitals and medical centers
+                    featuring advanced medical technology and modernized
+                    care-giving methods...
+                  </p>
+                  <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+                    READ MORE
+                  </button>
+                </div>
+              </div>
 
-          {/* Right Section */}
-          <div className="flex-1 bg-gray-800 text-white px-16 py-16 shadow-lg flex items-start flex-col" 
-            style={{
-              backgroundImage: presidentImage,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}>
-            <div>
-            <h2 className="text-3xl font-bold mb-10 underline-custom">
-              PRESIDENT'S <span className="font-normal">MESSAGE</span>
-            </h2>
-            <p className="mb-7 text-sm opacity-90 max-w-[30rem]"style={{lineHeight:"30px"}}>
-              Thank you for visiting us. With utmost pleasure, I welcome you to
-              feel Hiba Asia's cordial care-giving. In my view, the actual growth of
-              healthcare industry should never be understood in terms of the
-              mushrooming of healthcare institutions. It has to be rather on the
-              basis of increasing awareness on the ways to enhance...
-            </p>
-            <div className="flex items-center mb-8">
-              <img
-                src="https://img.freepik.com/free-photo/portrait-smiley-business-man_23-2148514859.jpg?t=st=1720028100~exp=1720031700~hmac=3af07f6a0ce5f7b4b7e4b9011d0f65746a7f775f190806a3ea584ea6c76f6a81&w=900"
-                alt="Alungal Mohamed"
-                className="w-24 h-20 rounded mr-4"
-              />
-              <div>
-                <h3 className="text-xl font-bold mb-3">Mr. Abdullah Mohammed Vellengara</h3>
-                <p>President of Hiba Asia Group</p>
+              {/* Right Section */}
+              <div
+                className="flex-1 bg-gray-800 text-white px-16 py-16 shadow-lg flex items-start flex-col"
+                style={{
+                  backgroundImage: presidentImage,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div>
+                  <h2 className="text-3xl font-bold mb-10 underline-custom">
+                    PRESIDENT'S <span className="font-normal">MESSAGE</span>
+                  </h2>
+                  <p
+                    className="mb-7 text-sm opacity-90 max-w-[30rem]"
+                    style={{ lineHeight: "30px" }}
+                  >
+                    Welcome to Hiba Asia, where excellence in healthcare meets
+                    compassionate care. It is with great pride and joy that I
+                    invite you to experience our commitment to your well-being.
+                    At Hiba Asia, we believe that the true measure of progress
+                    in the healthcare industry is not just the number of
+                    facilities, but the quality of ...
+                  </p>
+                  <div className="flex items-center mb-8">
+                    <img
+                      src="https://img.freepik.com/free-photo/portrait-smiley-business-man_23-2148514859.jpg?t=st=1720028100~exp=1720031700~hmac=3af07f6a0ce5f7b4b7e4b9011d0f65746a7f775f190806a3ea584ea6c76f6a81&w=900"
+                      alt="Alungal Mohamed"
+                      className="w-24 h-20 rounded mr-4"
+                    />
+                    <div>
+                      <h3 className="text-xl font-bold mb-3">
+                        Mr. Abdullah Mohammed Vellengara
+                      </h3>
+                      <p>President of Hiba Asia Group</p>
+                    </div>
+                  </div>
+                  <button className="bg-transparent text-white hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+                    READ MORE
+                  </button>
+                </div>
               </div>
             </div>
-            <button className="bg-transparent text-white hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
-              READ MORE
-            </button>
-            </div>
           </div>
-        </div>
-      </div>
 
-      {/* <div className="mt-20">
+          {/* <div className="mt-20">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch text-center lg:min-h-[80vh]">
           <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between">
             <h1 className="2xl:text-5xl md:text-4xl text-3xl font- text-left text-[#1e478e]">
@@ -326,53 +338,52 @@ function Home() {
         </div>
       </div> */}
 
-      <div className="py-28 flex flex-col bg-[#f4f4f4] md:flex-row justify-center items-center gap-20">
-        {visionData.map((item, index) => (
-          <div
-            key={index}
-            className="flex group flex-col  items-center gap-3 max-w-xs"
-          >
-            <div className="your-element bottom-5 relative border-2 border-sky-900 text-center flex justify-center items-center"></div>
+          <div className="py-28 flex flex-col bg-[#f4f4f4] md:flex-row justify-center items-center gap-20">
+            {visionData.map((item, index) => (
+              <div
+                key={index}
+                className="flex group flex-col  items-center gap-3 max-w-xs"
+              >
+                <div className="your-element bottom-5 relative border-2 border-sky-900 text-center flex justify-center items-center"></div>
 
-            <div className="absolute">
-              {/* {React.createElement(item.src, {
+                <div className="absolute">
+                  {/* {React.createElement(item.src, {
                 className: "text-4xl text-[#1e478e]",
               })} */}
-              <img src={item.src} className="w-10 h-10" alt={item.src} />
-            </div>
+                  <img src={item.src} className="w-10 h-10" alt={item.src} />
+                </div>
 
-            <div className="flex flex-col justify-center items-center gap-4">
-              <h1 className="opacity-85 font-semibold uppercase">
-                {t(item.title)}
-              </h1>
-              <p className="text-base text-gray-600 opacity-75 text-center mb-5">
-                {t(item.description)}...
-              </p>
-            </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <h1 className="opacity-85 font-semibold uppercase">
+                    {t(item.title)}
+                  </h1>
+                  <p className="text-base text-gray-600 opacity-75 text-center mb-5">
+                    {t(item.description)}...
+                  </p>
+                </div>
 
-            <button
-              onClick={() => navigate("/vision")}
-              className="relative bg-white text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
-            >
-              {t("visionButtonText")}
-              <button className="absolute top-0 left-0 uppercase text-xs w-full h-full text-center hover:text-[#1e478e] text-white bg-[#1e478e] transform transition-transform duration-700 hover:translate-x-full">
-                {t("visionButtonText")}
-              </button>
-            </button>
+                <button
+                  onClick={() => navigate("/vision")}
+                  className="relative bg-white text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
+                >
+                  {t("visionButtonText")}
+                  <button className="absolute top-0 left-0 uppercase text-xs w-full h-full text-center hover:text-[#1e478e] text-white bg-[#1e478e] transform transition-transform duration-700 hover:translate-x-full">
+                    {t("visionButtonText")}
+                  </button>
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <Services />
+          <Services />
 
-      <Departments />
+          <Departments />
 
+          <InsuranceCarousel />
 
-      <InsuranceCarousel />
+          <VideoPlayer />
 
-        <VideoPlayer/>
-
-      {/* <Cards />
+          {/* <Cards />
 
 
       {/* <div className="mt-3 py-14 px-3">
@@ -446,15 +457,13 @@ function Home() {
         </div>
       </div> */}
 
-      <Testimonials />
+          <Testimonials />
 
-      <AnimatedSection />
+          <AnimatedSection />
 
+          <NewsEvents />
 
-      <NewsEvents/>
-
-
-      {/* <div className="mt-3 py-14 px-3">
+          {/* <div className="mt-3 py-14 px-3">
         <h1 className=" text-3xl font-bold text-center text-[#1e478e]">
           {t("newseventsTitle")}
         </h1>
@@ -485,8 +494,8 @@ function Home() {
         </div>
       </div> */}
 
-      {/* text area*/}
-      {/* <div className="flex flex-col-reverse md:flex-row justify-between items-center p-10 bg-slate-100 gap-14 md:gap-0 md:h-screen">
+          {/* text area*/}
+          {/* <div className="flex flex-col-reverse md:flex-row justify-between items-center p-10 bg-slate-100 gap-14 md:gap-0 md:h-screen">
         <div className="w-full md:w-1/2">
           <h1 className="text-5xl font-medium font-serif text-center md:text-left">
             Our team of experts provides top-notch medical treatment with
@@ -515,12 +524,9 @@ function Home() {
           </div>
         </div>
       </div> */}
-    </div>
-
+        </div>
       </div>
     </div>
-
-
   );
 }
 
