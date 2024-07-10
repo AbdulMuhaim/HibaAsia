@@ -1,19 +1,19 @@
-import generalImg from "../assets/general.png";
-import internalImg from "../assets/internal.png";
-import cardiologyImg from "../assets/cardiology.png";
-import urologyImg from "../assets/urology.png";
-import entImg from "../assets/ent.png";
-import orthopedicImg from "../assets/orthopedic.png";
-import obstetricImg from "../assets/obstetric.png";
-import pediatricImg from "../assets/pediatric.png";
-import dentalImg from "../assets/dental.png";
-import ophthalmologyImg from "../assets/ophthalmology.png";
-import dermatologyImg from "../assets/dermatology.png";
-import generalSurgeryImg from "../assets/general surgery.png";
-import laboratoryImg from "../assets/laboratory.png";
-import xrayImg from "../assets/xray.png";
-import ultrasoundImg from "../assets/ultrasound.png";
-import pharmacyImg from "../assets/pharmacy.png";
+import generalImg from "../assets/HibaDepartments/general.png";
+import internalImg from "../assets/HibaDepartments/internal.png";
+import cardiologyImg from "../assets/HibaDepartments/cardiology.png";
+import urologyImg from "../assets/HibaDepartments/urology.png";
+import entImg from "../assets/HibaDepartments/ent.png";
+import orthopedicImg from "../assets/HibaDepartments/orthopedic.png";
+import obstetricImg from "../assets/HibaDepartments/obstetric.png";
+import pediatricImg from "../assets/HibaDepartments/pediatric.png";
+import dentalImg from "../assets/HibaDepartments/dental.png";
+import ophthalmologyImg from "../assets/HibaDepartments/ophthalmology.png";
+import dermatologyImg from "../assets/HibaDepartments/dermatology.png";
+import generalSurgeryImg from "../assets/HibaDepartments/general surgery.png";
+import laboratoryImg from "../assets/HibaDepartments/laboratory.png";
+import xrayImg from "../assets/HibaDepartments/xray.png";
+import ultrasoundImg from "../assets/HibaDepartments/ultrasound.png";
+import pharmacyImg from "../assets/HibaDepartments/pharmacy.png";
 import { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -154,11 +154,11 @@ function Departments() {
       <h1 className="text-3xl font-semibold mb-4 uppercase opacity-90">
         Departments
       </h1>
-      <div className="relative grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 gap-14 pt-8">
+      <div className="relative grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 gap-20 pt-8">
         {currentDepartments.map((department, index) => (
           <div
             key={index}
-            className="relative text-center rounded p-5 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:left-1/2 hover:before:h-1 hover:before:w-0 hover:before:bg-sky-800 hover:before:animate-growBorder hover:before:transform hover:before:-translate-x-1/2"
+            className="relative text-center rounded p-5 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:left-1/2 hover:before:h-1 hover:before:w-0 hover:before:bg-[#1e478e] hover:before:animate-growBorder hover:before:transform hover:before:-translate-x-1/2"
           >
             <div className="animate-fade-in">
               <img

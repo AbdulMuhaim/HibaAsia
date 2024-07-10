@@ -1,49 +1,34 @@
 import Departments from "../Components/Departments";
-import Cards from "../Components/Cards";
-import visionImage from "../assets/Vision-Icon-Photoroom.png-Photoroom.png";
-import missionImage from "../assets/Mission-Icon-Photoroom.png-Photoroom.png";
-import valuesImage from "../assets/reputation-building-icon-line-illustration-vector-Photoroom.png-Photoroom.png";
 import { useNavigate } from "react-router-dom";
-
 import Testimonials from "../Components/Testimonials";
-import newBgImage from "../assets/friendly-man-doctor-s-hands-holding-male-patient-s-hand-encouragement-empathy.jpg";
-import { FaHandHolding, FaNotesMedical, FaTree } from "react-icons/fa";
+import { FaNotesMedical } from "react-icons/fa";
 import { GiMedicinePills } from "react-icons/gi";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { MdOutlineBloodtype } from "react-icons/md";
-import hospitalImage from "../assets/Screenshot (128).png";
 import { useTranslation } from "react-i18next";
-import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import AnimatedSection from "../Components/Animation";
-import visionBgImage1 from "../assets/1000_F_596371844_8MVoHepLoFmuVNpBdfA3bCRfJUrYRfEF.jpg";
-import srvs1 from "../assets/10976_prev_ui.png";
-import srvs2 from "../assets/elderly-care-home-6052789-4998284.webp";
-import srvs3 from "../assets/3959915_prev_ui.png";
-import srvs4 from "../assets/5183184_prev_ui.png";
-import Curousel2 from "../Components/Curoussel";
 import ResponsivePage from "../Components/ResponsivePage";
-import { GiPalmTree } from "react-icons/gi";
-import { PiLeafLight } from "react-icons/pi";
-import { FaHandHoldingMedical } from "react-icons/fa";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import targeting from "../assets/targeting.png";
 import customer from "../assets/customer.png";
 import binoculars from "../assets/binoculars.png";
-import Services from "../Components/Services";
 import InsuranceCarousel from "../Components/InsuranceCarousel";
 import VideoPlayer from "../Components/VideoPlayer";
 import NewsEvents from "../Components/News&Events";
 import imageSrc from "../assets/RAHATKOM.png";
 import Popup from "../Components/Popup";
 import DoctorsListInHome from "../Components/DoctorsListInHome";
-import online from "../assets/online.png"
+import president from "../assets/President Message 2.jpg";
+import president3 from "../assets/President Message 3.jpg";
+import online from "../assets/001.png";
+import teleConsultation from "../assets/003.png";
+import homeCare from "../assets/002.png";
+import packages from "../assets/004.png";
 
 function Home() {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
-  const isArabic = i18n.language === "ar";
-  const visionBgImage = `url(${visionBgImage1}), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))`;
-  const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/portrait-adult-male-doing-remote-work_23-2148499629.jpg?t=st=1720029479~exp=1720033079~hmac=9cb9a0a2a2b6df4a2396a82c5448eae17df68ac1b226df5e9f84e19b1587b01e&w=1060')`;
+  const { t } = useTranslation();
+  const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${president})`;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
@@ -77,8 +62,6 @@ function Home() {
     setIsPopupOpen(false);
   };
 
-
-
   const visionData = [
     {
       src: binoculars,
@@ -106,22 +89,22 @@ function Home() {
 
   const cardData = [
     {
-      image: "https://www.abeergroup.com/ksa/images/Walkin.jpg",
+      image: online,
       title: "card1Title",
       description: "card1Description",
     },
     {
-      image: "https://www.abeergroup.com/ksa/images/home-care.jpg",
+      image: homeCare,
       title: "card2Title",
       description: "card2Description",
     },
     {
-      image: "https://www.abeergroup.com/ksa/images/Virtual.jpg",
+      image: teleConsultation,
       title: "card3Title",
       description: "card3Description",
     },
     {
-      image: "https://www.abeergroup.com/ksa/images/patient-portal.png",
+      image: packages,
       title: "card4Title",
       description: "card4Description",
     },
@@ -146,11 +129,11 @@ function Home() {
                   className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
                 >
                   <div className="w-[20%]">
-                    <div className="h-[80px] w-[80px] rounded-full bg-[#1e478e] overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
+                    <div className="h-[85px] w-[85px] bg-[#1e478e] rounded-full overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
                       <img
                         src={card.image}
                         alt="Image 1"
-                        className="h-full w-full object-cover bg-white"
+                        className="h-full w-full object-cover bg-white p-2"
                       />
                     </div>
                   </div>
@@ -217,17 +200,19 @@ function Home() {
                     className="mb-6 text-sm opacity-70 max-w-[30rem]"
                     style={{ lineHeight: "30px" }}
                   >
-                    Hiba Asia Medical Group is a healthcare organization well
-                    known for quality and affordable healthcare. The healthcare
-                    company owns and operates a chain of medical centers,
-                    hospitals, pharmacies and optical outlets across the major
-                    cities in Saudi Arabia. Abeer established at Sharafiyah in
-                    Jeddah in 1999 is catering to the healthcare needs of nearly
-                    4 million patients every year. The healthcare company is
-                    keen on providing patient care of exceptional standards
-                    through its best-in-class hospitals and medical centers
-                    featuring advanced medical technology and modernized
-                    care-giving methods...
+                    Hiba Asia Healthcare Group is a multinational conglomerate
+                    headquartered in Jeddah since 2005, Saudi Arabia. Our
+                    company playing a remarkable role in the healthcare sector
+                    of Jeddah, Saudi Arabia since its establishment. Under
+                    Healthcare Group we are operating multiple healthcare units
+                    in different part of Jeddah. Our aims to expand our
+                    healthcare networks all over the Kingdom to provide cost
+                    effective, high quality healthcare to all. 
+                    <span>
+                     &nbsp; HAHG provides a comprehensive range of health services for
+                      the family, functioning as a one-stop health center
+                      providing treatment for acute medical conditions...
+                    </span>
                   </p>
                   <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
                     READ MORE
@@ -260,11 +245,11 @@ function Home() {
                     in the healthcare industry is not just the number of
                     facilities, but the quality of ...
                   </p>
-                  <div className="flex items-center mb-8">
+                  <div className="flex items-center mb-12">
                     <img
-                      src="https://img.freepik.com/free-photo/portrait-smiley-business-man_23-2148514859.jpg?t=st=1720028100~exp=1720031700~hmac=3af07f6a0ce5f7b4b7e4b9011d0f65746a7f775f190806a3ea584ea6c76f6a81&w=900"
+                      src={president3}
                       alt="Alungal Mohamed"
-                      className="w-24 h-20 rounded mr-4"
+                      className="w-[65px] h-[70px] rounded mr-4"
                     />
                     <div>
                       <h3 className="text-xl font-bold mb-3">
@@ -312,12 +297,9 @@ function Home() {
                 key={index}
                 className="flex group flex-col  items-center gap-3 max-w-xs"
               >
-                <div className="your-element bottom-5 relative border-2 border-sky-900 text-center flex justify-center items-center"></div>
+                <div className="your-element bottom-5 relative border-2 border-[#1e478e] text-center flex justify-center items-center"></div>
 
                 <div className="absolute">
-                  {/* {React.createElement(item.src, {
-                className: "text-4xl text-[#1e478e]",
-              })} */}
                   <img src={item.src} className="w-10 h-10" alt={item.src} />
                 </div>
 
@@ -343,11 +325,11 @@ function Home() {
             ))}
           </div>
 
-          <Services />
+          {/* <Services /> */}
+
+          <DoctorsListInHome />
 
           <Departments />
-
-          <DoctorsListInHome/>
 
           <InsuranceCarousel />
 

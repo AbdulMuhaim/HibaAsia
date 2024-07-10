@@ -1,8 +1,7 @@
 import doctorsHeaderImage from "../assets/group-of-doctors-standing-in-hospital-on-medical-c-2023-11-27-05-18-43-utc.jpg";
-import DoctorsList from "../Components/DoctorsList";
-import DoctorPatient from "../assets/doctor-doing-injection-to-little-patient-sitting-o-2023-11-27-05-13-55-utc.jpg";
-const presidentImage =
-  "https://img.freepik.com/free-photo/portrait-adult-male-doing-remote-work_23-2148499629.jpg?t=st=1720029479~exp=1720033079~hmac=9cb9a0a2a2b6df4a2396a82c5448eae17df68ac1b226df5e9f84e19b1587b01e&w=1060";
+import DoctorPatient from "../assets/smiling-girl-hospital-bed.jpg";
+import president from "../assets/President Message 2.jpg"
+
 import { useNavigate } from "react-router-dom";
 
 function About() {
@@ -21,7 +20,7 @@ function About() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md textu text-white">
+          <h1 className="text-5xl p-5 uppercase backdrop-filter font-Tahoma backdrop-blur-md text-white">
             About Hiba Asia{" "}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
@@ -45,7 +44,7 @@ function About() {
 
         <div className="max-w-[550px] mt-6 md:mt-0 md:ml-6 flex flex-col justify-start items-center">
           <h1 className="text-3xl md:text-4xl text-gray-800 mb-4">
-            HIBA ASIA HEALTHCARE GROUP{" "}
+            <span className="text-[#1e478e] font-semibold">HIBA ASIA</span> HEALTHCARE GROUP{" "}
           </h1>
           <p className=" president-message">
             Hiba Asia Healthcare Group is a multinational conglomerate
@@ -79,7 +78,7 @@ function About() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center px-10 py-20 bg-white">
+      <div className="flex flex-col md:flex-row justify-center gap-2 px-10 py-20 bg-white">
         <div className="max-w-[550px] mt-6 md:mt-0 md:ml-6 flex flex-col justify-start items-center">
           <h2 className="text-3xl font-bold mb-10 underline-custom">
             PRESIDENT'S <span className="font-normal">MESSAGE</span>
@@ -121,9 +120,9 @@ function About() {
 
         <div className=" flex justify-end items-center">
           <img
-            src={presidentImage}
+            src={president}
             alt="Doctor and Patient"
-            className="rounded-lg shadow-lg w-[550px] h-auto"
+            className="rounded-lg shadow-lg w-[550px]"
           />
         </div>
       </div>

@@ -10,6 +10,9 @@ import Image6 from "../assets/image6.jpg";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import Curousel from "../Components/Curoussel";
 import { useTranslation } from "react-i18next";
+import border from "../assets/Ornamental vector Hiba2.png"
+const headerBgImage = `url(${border}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+
 
 // import bgImage from "../assets/6027f7bf18f4aaf02e671e7a7b357289 - Copy.jpg"
 
@@ -43,7 +46,9 @@ const ResponsivePage = () => {
             <img src={headerImage} className="w-36  h-10" alt="" />
           </div>
 
-          <div className="w-[83%] px-8 py-8">
+          <div className="w-[83%]">
+
+          <div className="px-9 py-10">
             <p className="leading-loose">{t("cardAboveCarousel")}</p>
             <div className="flex justify-between mt-4 flex-wrap">
               <button className="cursor-default font-semibold">
@@ -59,6 +64,7 @@ const ResponsivePage = () => {
                 AL SANABEL{" "}
               </button>
             </div>
+          </div>
           </div>
         </div>
 

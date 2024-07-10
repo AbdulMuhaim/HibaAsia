@@ -77,7 +77,8 @@ function DoctorsListInHome() {
             </div>
 
             {/* card backside */}
-            <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-sky-200 to-white border rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white">
+            <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-[#f4f6fd] to-[#ecfbf7] border rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white"
+            >
               <div className="flex items-center justify-center">
                 <div className="w-full h-[90%] flex justify-center items-center">
                   <img

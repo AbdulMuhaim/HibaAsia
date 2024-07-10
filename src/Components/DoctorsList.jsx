@@ -26,6 +26,7 @@ import DrNoufQasem from "../assets/HibaDoctors/25. Dr. Nouf Qasem.jpg";
 import DrJensonJohn from "../assets/HibaDoctors/26. Dr. Jenson John.jpg";
 import DrLintuMol from "../assets/HibaDoctors/27. Dr. Lintu Mol.jpg";
 import DrMaryamAhmed from "../assets/HibaDoctors/28. Dr. Maryam Ahmed.jpg";
+import DoctorCard from "./DoctorCard";
 
 
 function DoctorsList() {
@@ -125,31 +126,13 @@ function DoctorsList() {
 
       return (
         <>
-            <div className="mt-3 py-14 px-10">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 pt-8">
-                {doctors.map((doctor) => (
-                  <div
-                    key={doctor.name}
-                    className="shadow-xl rounded-lg p-8 bg-slate-50 hover:scale-105 hover:transition-transform hover:bg-sky-50 duration-1000"
-                  >
-                    <img
-                      src={doctor.image}
-                      alt=""
-                      className="object-cover max-w-[7rem] rounded-full mx-auto"
-                    />
-                    <h2 className="text-xl font-semibold mt-2 text-center">
-                      Dr. {doctor.name}
-                    </h2>
-                    <p className="text-center">{doctor.department}</p>
-                    <div className="flex items-center justify-center">
-                      <button className="bg-blue-700 text-white rounded-full px-3 py-1 mt-7">
-                        + Connect
-                      </button>
-                    </div>
-                  </div>
+        <div className="min-h-screen bg-gray-100 p-8 flex justify-center items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                {doctors.map((doctor, index) => (
+                    <DoctorCard key={index} doctor={doctor} />
                 ))}
-              </div>
             </div>
+        </div>
         </>
       );
     }

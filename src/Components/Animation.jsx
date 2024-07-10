@@ -138,7 +138,7 @@ const AnimatedSection = () => {
             ))}
           </div>
           <h2 className="text-4xl md:text-6xl lg:text-8xl text-[#00918d] font-semibold">
-            wellness &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            wellness &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </h2>
           <div className="flex justify-center items-center bg-gray-200"></div>
           <h2 className="text-4xl md:text-6xl lg:text-8xl text-[#00918d] font-semibold">driven</h2>

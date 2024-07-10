@@ -24,6 +24,7 @@ function Doctors() {
         <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md textu text-white">
           OUR DOCTORS
         </h1>
+        
         <div className="flex items-center space-x-4 text-white justify-center">
         <p className="cursor-pointer text-lg" onClick={()=>navigate('/')}>Home </p>
         <p className="text-xl">/</p>
