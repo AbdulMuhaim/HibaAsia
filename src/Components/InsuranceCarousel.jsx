@@ -15,8 +15,12 @@ import ten from '../assets/10.jpg';
 import eleven from '../assets/11.jpg';
 import twelve from '../assets/12.jpg';
 import thirteen from '../assets/13.jpg';
+import { useTranslation } from 'react-i18next';
 
 const InsuranceCarousel = () => {
+
+  const { t } = useTranslation();
+
   const options = {
     items: 4,
     margin: 40,
@@ -34,9 +38,9 @@ const InsuranceCarousel = () => {
   return (
     <div className="flex justify-center w-full flex-col items-center mt-10 bg-zinc-200 py-28">
       <h1 className="text-2xl font-bold mb-6">
-        INSURANCE <span className="font-normal text-sky-800">PARTNERS</span>
+        {t('INSURANCE')} <span className="font-normal text-sky-800">{t('PARTNERS')}</span>
       </h1>
-      <div className="overflow-hidden relative w-[1000px]">
+      <div className="overflow-hidden static-button relative w-[1000px]">
         <OwlCarousel className="owl-theme " {...options}>
           {insurances.map((insurance, index) => (
             <div key={index} className="carousel-item ">

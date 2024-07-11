@@ -118,9 +118,9 @@ const AnimatedSection = () => {
   return (
     <>
       <div className="hidden xl:flex static-button flex-col justify-center items-center text-center py-48 gap-2 px-4 md:px-8">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-sky-800">We're a</h1>
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-[#1e478e]">We're a</h1>
         <div className="flex relative justify-center items-center gap-2">
-          <div className="image-gallery absolute left-0 -right-24 inline-flex -space-x-10" ref={centerImageRef}>
+          <div className="image-gallery absolute left-0 -right-28 inline-flex -space-x-10" ref={centerImageRef}>
             {images.map((image, index) => (
               <div
                 key={index}
@@ -137,13 +137,13 @@ const AnimatedSection = () => {
               </div>
             ))}
           </div>
-          <h2 className="text-4xl md:text-6xl lg:text-8xl text-[#00918d] font-semibold">
+          <h2 className="text-4xl md:text-6xl lg:text-8xl text-[#00977b] font-semibold">
             wellness &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </h2>
           <div className="flex justify-center items-center bg-gray-200"></div>
-          <h2 className="text-4xl md:text-6xl lg:text-8xl text-[#00918d] font-semibold">driven</h2>
+          <h2 className="text-4xl md:text-6xl lg:text-8xl text-[#00977b] font-semibold">driven</h2>
         </div>
-        <h2 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-sky-800">dedicated crew!</h2>
+        <h2 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-[#1e478e]">dedicated crew!</h2>
       </div>
     </>
   );

@@ -1,4 +1,3 @@
-import React from 'react'
 import DrAswaq from "../assets/HibaDoctors/01. Dr. Aswaq.jpg";
 import DrAzza from "../assets/HibaDoctors/02. Dr. Azza.jpg";
 import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
@@ -6,6 +5,7 @@ import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
 import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
 import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
 import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
+import DrRamadan from "../assets/HibaDoctors/03. Dr. Ramadan.jpg";
 import { useTranslation } from 'react-i18next';
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import { useNavigate } from 'react-router-dom';
@@ -43,6 +43,7 @@ function DoctorsListInHome() {
           department: "General Surgery",
         },
         { name: "Samad Moideen", image: DrSamad, department: "Orthopedic" },
+        { name: "Mohammed Ramadan Ahmad", image: DrRamadan, department: "Urology" },
         { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
       ];
 
@@ -50,7 +51,7 @@ function DoctorsListInHome() {
   return (
     <div className="mt-3 py-14 px-3 w-full">
     <h1 className="text-3xl font-semibold mb-4 text-center uppercase opacity-90">
-      Our Doctors
+      {t('OUR DOCTORS')}
     </h1>
     <div className="flex  justify-center items-center">
     <div className="grid w-[1200px] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-10 mt-10">

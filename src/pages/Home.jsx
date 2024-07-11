@@ -24,12 +24,14 @@ import online from "../assets/001.png";
 import teleConsultation from "../assets/003.png";
 import homeCare from "../assets/002.png";
 import packages from "../assets/004.png";
+import Services from "../Components/Services";
 
 function Home() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${president})`;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const isArabic = i18n.language === "ar";
 
   useEffect(() => {
     // Check if the popup has been seen in this session
@@ -138,11 +140,11 @@ function Home() {
                     </div>
                   </div>
 
-                  <div className="w-[80%] flex xl:justify-end justify-center">
+                  <div className={`w-[80%] flex xl:justify-end justify-center ${isArabic? "pl-5":"px-0"}`}>
                     <div className="flex-col xl:max-w-40">
                       <h2 className="text-white text-sm">{t(card.title)}</h2>
                       <p
-                        className="text-white text-xs  extra-thin opacity-90 "
+                        className="text-white text-xs extra-thin opacity-90 "
                         style={{ fontSize: "11px" }}
                       >
                         {t(card.description)}
@@ -194,28 +196,16 @@ function Home() {
               <div className="flex-1 bg-white px-16 shadow-lg py-16 flex items-end flex-col">
                 <div>
                   <h2 className="text-3xl mb-10 underline-custom">
-                    The Best Medical Center for You
+                    {t("best medical center")}
                   </h2>
                   <p
                     className="mb-6 text-sm opacity-70 max-w-[30rem]"
                     style={{ lineHeight: "30px" }}
                   >
-                    Hiba Asia Healthcare Group is a multinational conglomerate
-                    headquartered in Jeddah since 2005, Saudi Arabia. Our
-                    company playing a remarkable role in the healthcare sector
-                    of Jeddah, Saudi Arabia since its establishment. Under
-                    Healthcare Group we are operating multiple healthcare units
-                    in different part of Jeddah. Our aims to expand our
-                    healthcare networks all over the Kingdom to provide cost
-                    effective, high quality healthcare to all. 
-                    <span>
-                     &nbsp; HAHG provides a comprehensive range of health services for
-                      the family, functioning as a one-stop health center
-                      providing treatment for acute medical conditions...
-                    </span>
+                    {t("best medical center description")}
                   </p>
                   <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
-                    READ MORE
+                    {t("readMoreButton")}
                   </button>
                 </div>
               </div>
@@ -232,18 +222,14 @@ function Home() {
               >
                 <div>
                   <h2 className="text-3xl font-bold mb-10 underline-custom">
-                    PRESIDENT'S <span className="font-normal">MESSAGE</span>
+                    {t(`PRESIDENT'S`)}{" "}
+                    <span className="font-normal">{t("MESSAGE")}</span>
                   </h2>
                   <p
                     className="mb-7 text-sm opacity-90 max-w-[30rem]"
                     style={{ lineHeight: "30px" }}
                   >
-                    Welcome to Hiba Asia, where excellence in healthcare meets
-                    compassionate care. It is with great pride and joy that I
-                    invite you to experience our commitment to your well-being.
-                    At Hiba Asia, we believe that the true measure of progress
-                    in the healthcare industry is not just the number of
-                    facilities, but the quality of ...
+                    {t("presientMessage")}
                   </p>
                   <div className="flex items-center mb-12">
                     <img
@@ -253,13 +239,13 @@ function Home() {
                     />
                     <div>
                       <h3 className="text-xl font-bold mb-3">
-                        Mr. Abdullah Mohammed Vellengara
+                        {t('Dr. Fahad Ibnu Abdullah')}
                       </h3>
-                      <p>President of Hiba Asia Group</p>
+                      <p>{t('President of Hiba Asia Group')}</p>
                     </div>
                   </div>
                   <button className="bg-transparent text-white hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
-                    READ MORE
+                    {t('readMoreButton')}
                   </button>
                 </div>
               </div>
@@ -325,7 +311,7 @@ function Home() {
             ))}
           </div>
 
-          {/* <Services /> */}
+          <Services />
 
           <DoctorsListInHome />
 

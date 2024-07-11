@@ -52,16 +52,16 @@ const ResponsivePage = () => {
             <p className="leading-loose">{t("cardAboveCarousel")}</p>
             <div className="flex justify-between mt-4 flex-wrap">
               <button className="cursor-default font-semibold">
-                OUR SERVICE SPAN ACROSS KSA
+                {t('serviceSpan')}
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                AL WAZEERIYAH{" "}
+                {t("AL WAZEERIYAH")}
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                AL ZAHRA{" "}
+                {t('AL ZAHRA')}
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                AL SANABEL{" "}
+                {t('AL SANABEL')}
               </button>
             </div>
           </div>

@@ -1,6 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 function NewsEvents() {
+
+  const { t } = useTranslation();
+
   return (
     <div 
       className="flex items-center justify-center py-32"
@@ -14,10 +18,10 @@ function NewsEvents() {
       }}
     >
       <div className="w-2/5 max-w-xl flex flex-col gap-10 items-center">
-        <h1 className='uppercase font-bold text-3xl text-white'>News & Events</h1>
-        <h2 className='text-lg text-white'>Get latest news and events, special offers and more!</h2>
+        <h1 className='uppercase font-bold text-3xl text-white'>{t('News & Events')}</h1>
+        <h2 className='text-lg text-white'>{t('News & Events Text')}</h2>
         <button className="bg-transparent text-white hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-500 ease-in-out overflow-hidden">
-          Click here to know more
+          {t('Click here to know more')}
         </button>     
       </div>
     </div>

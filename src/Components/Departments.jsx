@@ -152,7 +152,7 @@ function Departments() {
   return (
     <div className="mt-16 px-3 py-24 flex flex-col justify-center items-center">
       <h1 className="text-3xl font-semibold mb-4 uppercase opacity-90">
-        Departments
+        {t('DEPARTMENTS')}
       </h1>
       <div className="relative grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 grid-cols-1 gap-20 pt-8">
         {currentDepartments.map((department, index) => (
