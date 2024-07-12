@@ -12,14 +12,14 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div className="flex items-center justify-center mt-20">
-      <div className="relative w-2/5 max-w-xl">
+    <div className="flex items-center justify-center mt-20 ">
+      <div className="relative  max-w-xl">
         {!isPlaying ? (
           <>
             <img
               src={headerImage}
               alt="Video Thumbnail"
-              className="w-full"
+              className="w-full min-h-[250px]"
             />
             <button
               onClick={handlePlay}
@@ -31,7 +31,7 @@ const VideoPlayer = () => {
         ) : (
           <video
             ref={videoRef}
-            className="w-full"
+            className="w-full min-h-[250px]"
             controls
             autoPlay
           >

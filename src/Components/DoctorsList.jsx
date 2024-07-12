@@ -62,7 +62,7 @@ function DoctorsList() {
         { name: "Mohammed Ramadan Ahmad", image: DrRamadan, department: "Urology" },
         { name: "Taha Abouelenin", image: DrTaha, department: "Ophthalmology" },
         { name: "Mahmoud Shahin", image: DrShahin, department: "ENT Specialist" },
-        { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
+        { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
         { name: "Shukoor", image: DrShukoor, department: "Radiologist" },
         { name: "Hussam Alagha", image: DrHussam, department: "Internist" },
         {

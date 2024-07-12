@@ -68,27 +68,27 @@ function Header() {
 
   const headerMenuOptions = [
     {
-      name: "headerMenuOptions1",
+      name: "Home",
       url: "/",
     },
     {
-      name: "headerMenuOptions2",
+      name: "About",
       url: "/about",
     },
     {
-      name: "headerMenuOptions3",
+      name: "Doctors",
       url: "/doctors",
     },
     {
-      name: "headerMenuOptions4",
+      name: "Services",
       url: "",
     },
     {
-      name: "headerMenuOptions5",
+      name: "Gallery",
       url: "",
     },
     {
-      name: "headerMenuOptions6",
+      name: "Contact",
       url: "/contact",
     },
   ];
@@ -210,7 +210,7 @@ function Header() {
         ) : (
           <IoArrowBackCircleSharp
             onClick={() => navigate(-1)}
-            className="absolute text-4xl 2xl:text-5xl transition-transform hover:scale-105 text-white top-28 left-4 cursor-pointer"
+            className="absolute text-4xl 2xl:text-5xl transition-transform hover:scale-105 text-white md:top-60 sm:top-64 lg:top-44 top-48 left-2 cursor-pointer"
           />
         )}
       </div>

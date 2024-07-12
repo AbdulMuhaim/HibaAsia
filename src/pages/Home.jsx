@@ -128,14 +128,14 @@ function Home() {
               {cardData.map((card, index) => (
                 <div
                   key={index}
-                  className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex gap-2 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
+                  className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex gap-14 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
                 >
                   <div className="w-[20%]">
                     <div className="h-[85px] w-[85px] bg-[#1e478e] rounded-full overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
                       <img
                         src={card.image}
                         alt="Image 1"
-                        className="h-full w-full object-cover bg-white p-2"
+                        className="h-full w-full object-cover bg-white p-4 sm:p-3"
                       />
                     </div>
                   </div>
@@ -226,12 +226,12 @@ function Home() {
                     <span className="font-normal">{t("MESSAGE")}</span>
                   </h2>
                   <p
-                    className="mb-7 text-sm opacity-90 max-w-[30rem]"
+                    className="mb-5 text-sm opacity-90 max-w-[27rem]"
                     style={{ lineHeight: "30px" }}
                   >
                     {t("presientMessage")}
                   </p>
-                  <div className="flex items-center mb-12">
+                  <div className="flex items-center mb-6">
                     <img
                       src={president3}
                       alt="Alungal Mohamed"
@@ -302,9 +302,9 @@ function Home() {
                   onClick={() => navigate("/vision")}
                   className="relative bg-white text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
                 >
-                  {t("visionButtonText")}
+                  {t("readMoreButton")}
                   <button className="absolute top-0 left-0 uppercase text-xs w-full h-full text-center hover:text-[#1e478e] text-white bg-[#1e478e] transform transition-transform duration-700 hover:translate-x-full">
-                    {t("visionButtonText")}
+                    {t("readMoreButton")}
                   </button>
                 </button>
               </div>

@@ -61,7 +61,7 @@ const ResponsivePage = () => {
                 {t('AL ZAHRA')}
               </button>
               <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                {t('AL SANABEL')}
+                {('AL SANABEL')}
               </button>
             </div>
           </div>
@@ -70,7 +70,7 @@ const ResponsivePage = () => {
 
         {/* Additional Box for Small Screens */}
         <div className="w-full md:hidden flex justify-center items-center flex-col h-auto  bg-sky-800 text-white shadow-lg">
-          <div className="flex w-full justify-center h-40 items-center bg-white border-4 border-sky-800">
+          <div className="flex w-full justify-center h-40 items-center bg-white border-2 shadow-2xl">
             <img src={headerImage} className="w-1/2  h-20" alt="" />
           </div>
           <div className="p-10 flex flex-col justify-center items-center">

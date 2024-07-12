@@ -175,13 +175,13 @@ function Departments() {
         ))}
 
         <button
-          className="absolute left-4 sm:-left-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
+          className="absolute -left-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showPreviousDepartment}
         >
           <IoIosArrowBack className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />
         </button>
         <button
-          className="absolute right-4 sm:-right-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
+          className="absolute -right-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showNextDepartment}
         >
           <IoIosArrowForward className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />

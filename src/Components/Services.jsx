@@ -4,48 +4,51 @@ import gynecology from "../assets/HibaDepartments/obstetric.png";
 import dental from "../assets/HibaDepartments/dental.png";
 import laboratory from "../assets/HibaDepartments/laboratory.png";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const services = [
   {
     icon: cardio,
     title: "Cardiology",
     description:
-      "Our Cardiology Department renders an extensive range of services for inpatients and outpatients. We have the right medical exper...",
+      "Our Cardiology Department offers a comprehensive range of services for both inpatients and outpatients. With a dedicated team...",
     link: "cardiology",
   },
   {
     icon: gynecology,
     title: "gynecology",
     description:
-      "Welcome to the Division of Urology in Hiba Asia, committed to excellence in patient care and basic research. In the various urol...",
+      "A woman's health undergoes significant changes throughout her life, requiring expert care at various stages such as puberty,...",
     link: "gynecology",
   },
   {
     icon: dental,
     title: "dental",
     description:
-      "Hiba Asia’s Dermatology Department provides expert cosmetic care to patients. Abeer’s dermatologists in Saudi Arabia are specialized...",
+      "At Hiba Asia Dental Clinic, we believe that with the right care, your teeth can last a lifetime. Our team in Riyadh and across Saudi...",
     link: "dental",
   },
   {
     icon: laboratory,
     title: "laboratory",
     description:
-      "Hiba Asia’s board-certified dentists recognize the continually changing healthcare landscape and are capable of delivering time...",
+      "Our Laboratory Department is committed to providing accurate and timely diagnostic services. Our state-of-the-art laboratories, staffed...",
     link: "laboratory",
   },
 ];
 
 const Services = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
 
   return (
     <section className="text-center py-20">
       <h1 className="text-3xl font-semibold mb-4 uppercase opacity-90">
-        Services
+        {t('Services')}
       </h1>
       <p className="opacity-85 mb-12">
-        Enjoy the benefits of integrated multi-specialty healthcare with us{" "}
+        {t('serviceDescription')}
       </p>
       <div className="flex flex-wrap justify-center gap-1">
         {services.map((service, index) => (
@@ -72,7 +75,7 @@ const Services = () => {
               className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"
               onClick={() => navigate(service.link)}
             >
-              READ MORE
+              {t('readMoreButton')}
             </button>
           </div>
         ))}

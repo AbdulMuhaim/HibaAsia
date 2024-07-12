@@ -35,7 +35,7 @@ function Contact() {
     <div>
       {" "}
       <div
-        className="flex items-center justify-center h-96"
+        className="flex items-center justify-center h-60"
         style={{
           backgroundImage: headerBgImage,
           backgroundSize: "cover",
@@ -45,7 +45,7 @@ function Contact() {
       >
 
         <div className="flex flex-col">
-        <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white">
+        <h1 className="text-5xl p-5 uppercase backdrop-filter font-Tahoma backdrop-blur-md text-white">
           CONTACT US
         </h1>
         <div className="flex items-center space-x-4 text-white justify-center">
@@ -150,9 +150,9 @@ function Contact() {
         </div>
         <div className="md:flex md:items-center">
           <div className="md:w-1/3">
-            <button className="shadow bg-sky-800 hover:bg-sky-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-              Send
-            </button>
+          <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+                    SEND
+                  </button>
           </div>
           <div className="md:w-2/3"></div>
         </div>

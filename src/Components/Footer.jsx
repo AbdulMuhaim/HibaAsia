@@ -4,8 +4,12 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
 import footerBgImage from "../assets/pexels-photo-5428267.webp"
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-[#071d28] text-white py-12 px-10 "
     style={{
@@ -19,9 +23,9 @@ const Footer = () => {
       {/* <div className=' flex flex-col items-center bg-red-500 w-full'> */}
       <div className=" mx-auto px-4 max-w-[1150px] flex flex-col md:flex-row justify-between">
         <div className="mb-8 md:mb-0 mr-7">
-          <h2 className="text-lg font-semibold mb-4">CONTACT DETAILS</h2>
-          <address className="not-italic mb-4 flex text-sm" style={{lineHeight:"30px"}}>
-         <FaLocationDot  className='mr-3 text-xl' /> Hiba Asia Polyclinic <br /> Dist, Abi Abdullah Al Ayashi, Mada'en Al-Fahd, Jeddah 22343, Saudi Arabia
+          <h2 className="text-lg font-semibold mb-4">{t('CONTACT DETAILS')}</h2>
+          <address className="not-italic mb-4 flex text-sm max-w-[420px]" style={{lineHeight:"30px"}}>
+         <FaLocationDot  className='mr-3 text-xl' /> {t('hospitalLocation')}
           </address>
           <p className="mb-4 flex">
           <IoIosCall className='mr-3 text-xl'/>
@@ -34,12 +38,12 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-between flex-grow">
           <div className="mb-8 md:mb-0 md:mr-8">
-            <h2 className="text-lg font-semibold mb-4">QUICK LINKS</h2>
+            <h2 className="text-lg font-semibold mb-4">{t('QUICK LINKS')}</h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">About Us</a></li>
-              <li><a href="#" className="hover:underline">Hiba Asia</a></li>
-              <li><a href="#" className="hover:underline">President's Message</a></li>
+              <li><a href="#" className="hover:underline">{t('Home')}</a></li>
+              <li><a href="#" className="hover:underline">{t('About')}</a></li>
+              <li><a href="#" className="hover:underline">{t('Hiba Asia')}</a></li>
+              <li><a href="#" className="hover:underline lowercase">{t(`PRESIDENT'S`)} {t('MESSAGE')}</a></li>
             </ul>
           </div>
           <div className="mb-8 md:mb-0 md:mr-8">

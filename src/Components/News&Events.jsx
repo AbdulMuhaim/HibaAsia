@@ -17,9 +17,9 @@ function NewsEvents() {
         backgroundBlendMode: "overlay",
       }}
     >
-      <div className="w-2/5 max-w-xl flex flex-col gap-10 items-center">
-        <h1 className='uppercase font-bold text-3xl text-white'>{t('News & Events')}</h1>
-        <h2 className='text-lg text-white'>{t('News & Events Text')}</h2>
+      <div className="max-w-[1100px] flex flex-col gap-10 items-center justify-center">
+        <h1 className='uppercase font-bold text-3xl text-white text-center'>{t('News & Events')}</h1>
+        <h2 className='text-lg text-white px-7 text-center'>{t('News & Events Text')}</h2>
         <button className="bg-transparent text-white hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-500 ease-in-out overflow-hidden">
           {t('Click here to know more')}
         </button>     

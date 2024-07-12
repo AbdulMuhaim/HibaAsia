@@ -11,6 +11,7 @@ import DrAminaKhan from "../assets/HibaDoctors/17. Dr. Amina Khan.jpg";
 import DrKhaleel from "../assets/HibaDoctors/18. Dr. Khaleel.jpg";
 import DrIramQadirReshi from "../assets/HibaDoctors/19. Dr. Iram Qadir Reshi.jpg";
 import DrKatherIbrahim from "../assets/HibaDoctors/21. dr. Kather Ibrahim.jpg";
+import DoctorCard from "../Components/DoctorCard";
 
 function General() {
   useEffect(() => {
@@ -66,9 +67,8 @@ function General() {
 
   return (
     <div>
-
       <div
-        className="flex items-center justify-center h-96"
+        className="flex items-center justify-center h-60"
         style={{
           backgroundImage: headerImage,
           backgroundSize: "cover",
@@ -77,15 +77,15 @@ function General() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
+          <h1 className="text-5xl p-5 text-white uppercase">
             General Medicine
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
-            <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
+            <p className="cursor-pointer" onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer text-lg">General Medicine</p>
+            <p className="cursor-pointer ">General Medicine</p>
           </div>
         </div>
       </div>
@@ -95,88 +95,49 @@ function General() {
           <img src={img} className="rounded-xl" alt="" />
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center mx-auto p-6 sm:p-8 lg:p-12">
-          <h1 className="text-center text-4xl text-sky-800 font-bold font-Roman mb-6 uppercase">
-            General Medicine{" "}
-          </h1>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
+        <div className="w-full flex flex-col items-center justify-center mx-auto ">
+          <div className="w-full">
+            <h1 className="text-left text-4xl font-bold  mb-6 uppercase">
+              General Medicine{" "}
+            </h1>
+          </div>
+
+          <p className="president-message max-w-4xl">
             At Hiba Asia, our General Medicine Department is dedicated to
             providing comprehensive and high-quality care for a wide range of
             medical conditions. Our team of expert physicians is committed to
             diagnosing, treating, and managing both acute and chronic illnesses,
             ensuring personalized care for each patient.
           </p>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
+          <p className="president-message max-w-4xl">
             We offer a full spectrum of general medical services, including
             preventive care, routine check-ups, and management of complex health
             issues. Our interdisciplinary approach ensures that patients receive
             holistic care tailored to their individual needs.
           </p>
-          <h2 className="text-4xl text-sky-800 font-bold font-Roman my-7">
-            Our Services Include:
-          </h2>
-          <ul className="list-disc list-inside text-xl  opacity-70 mb-4 max-w-4xl">
-            <li className="mb-2">Preventive Health Screenings</li>
-            <li className="mb-2">Chronic Disease Management</li>
-            <li className="mb-2">Acute Illness Treatment</li>
-            <li className="mb-2">Geriatric Care</li>
-            <li className="mb-2">Women’s Health</li>
-            <li className="mb-2">Immunizations</li>
-            <li className="mb-2">Nutritional Counseling</li>
-            <li className="mb-2">Mental Health Support</li>
-          </ul>
+          <div className="w-full">
+            <h2 className="text-2xl font-bold my-7 ">Our Services Include:</h2>
+            <ul className="list-disc list-inside president-message max-w-4xl">
+              <li className="mb-2">Preventive Health Screenings</li>
+              <li className="mb-2">Chronic Disease Management</li>
+              <li className="mb-2">Acute Illness Treatment</li>
+              <li className="mb-2">Geriatric Care</li>
+              <li className="mb-2">Women’s Health</li>
+              <li className="mb-2">Immunizations</li>
+              <li className="mb-2">Nutritional Counseling</li>
+              <li className="mb-2">Mental Health Support</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div>
-        <div className="mt-3 py-14 px-3">
-          <h1 className="text-3xl font-bold text-center text-sky-800">
-            Meet Our Expert General Medicine Specialists
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
-            {doctors.map((doctor, index) => (
-              <div key={index} className="perspective-1000">
-                <div className="relative h-[30rem] text-center transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
-                  <div className="absolute w-full h-full shadow-xl rounded-lg py-3 bg-slate-50 backface-hidden flex flex-col items-center justify-center">
-                    <div className="w-full h-40 flex justify-center flex-1 items-center">
-                      <img
-                        src={doctor.image}
-                        alt=""
-                        className="h-full object-cover rounded-3xl"
-                      />
-                    </div>
-                    <div className="flex-2">
-                      <h2 className="text-xl font-semibold mt-4">
-                        Dr. {doctor.name}
-                      </h2>
-                      <p className="text-gray-600 mt-2">{doctor.department}</p>
-                    </div>
-                  </div>
-                  <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-sky-200 to-white  rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white">
-                    <div className="flex items-center justify-center ">
-                      <div className="w-full h-60 flex justify-center flex-1 items-center">
-                        <img
-                          src={doctor.image}
-                          alt=""
-                          className="h-full object-cover rounded-3xl mr-2"
-                        />
-                      </div>
-                      <div className="flex-2">
-                        <h2 className="text-xl font-semibold mt-4 max-w-40 text-black">
-                          Dr. {doctor.name}
-                        </h2>
-                        <p className="text-gray-600 mt-2">
-                          {doctor.department}
-                        </p>
-                        <button className="bg-sky-800 text-white rounded-full px-4 py-2 mt-4">
-                          + Connect
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div className="mt-3 py-14 px-3">
+        <h1 className="text-3xl font-bold text-center">
+          Meet Our Expert General Medicine Specialists
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
+          {doctors.map((doctor, index) => (
+            <DoctorCard key={index} doctor={doctor} />
+          ))}
         </div>
       </div>
     </div>

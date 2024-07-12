@@ -18,36 +18,45 @@ import thirteen from '../assets/13.jpg';
 import { useTranslation } from 'react-i18next';
 
 const InsuranceCarousel = () => {
-
   const { t } = useTranslation();
 
   const options = {
-    items: 4,
-    margin: 40,
+    margin: 20,
     autoplay: true,
     autoplayTimeout: 3000,
     loop: true,
     dots: false,
     nav: false,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      1280: {
+        items: 4,
+      },
+    },
   };
 
   const insurances = [
-    one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen
+    one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen,
   ];
 
   return (
-    <div className="flex justify-center w-full flex-col items-center mt-10 bg-zinc-200 py-28">
-      <h1 className="text-2xl font-bold mb-6">
+    <div className="flex flex-col items-center justify-center w-full mt-10 bg-zinc-200 py-28">
+      <h1 className="mb-6 text-2xl font-bold">
         {t('INSURANCE')} <span className="font-normal text-sky-800">{t('PARTNERS')}</span>
       </h1>
-      <div className="overflow-hidden static-button relative w-[1000px]">
-        <OwlCarousel className="owl-theme " {...options}>
+      <div className="relative static-button w-full max-w-6xl px-4 overflow-hidden">
+        <OwlCarousel className="owl-theme" {...options}>
           {insurances.map((insurance, index) => (
-            <div key={index} className="carousel-item ">
+            <div key={index} className="flex items-center justify-center p-2">
               <img
                 src={insurance}
                 alt={`Insurance ${index + 1}`}
-                className="carousel-img w-[222px] h-24"
+                className="object-contain w-full max-w-[222px] h-auto rounded-lg"
               />
             </div>
           ))}

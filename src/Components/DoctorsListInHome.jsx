@@ -44,7 +44,7 @@ function DoctorsListInHome() {
         },
         { name: "Samad Moideen", image: DrSamad, department: "Orthopedic" },
         { name: "Mohammed Ramadan Ahmad", image: DrRamadan, department: "Urology" },
-        { name: "Rasha Mohamed", image: DrRashaMohamed, department: "Dermatology" },
+        { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
       ];
 
 

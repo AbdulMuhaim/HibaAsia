@@ -3,6 +3,7 @@ import headerBgImage from "../assets/side-view-of-doctor-examining-cute-little-b
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
+import DoctorCard from "../Components/DoctorCard";
 
 
 function Pediatrics() {
@@ -25,7 +26,7 @@ function Pediatrics() {
     <div>
 
       <div
-        className="flex items-center justify-center h-96"
+        className="flex items-center justify-center h-60"
         style={{
           backgroundImage: headerImage,
           backgroundSize: "cover",
@@ -34,15 +35,15 @@ function Pediatrics() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
+          <h1 className="text-5xl p-5 backdrop-filter font-Tahoma text-white uppercase">
             Pediatrics
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
-            <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
+            <p className="cursor-pointer" onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer text-lg">Pediatrics</p>
+            <p className="cursor-pointer">Pediatrics</p>
           </div>
         </div>
       </div>
@@ -52,11 +53,14 @@ function Pediatrics() {
           <img src={img} className="rounded-xl" alt="" />
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center mx-auto p-6 sm:p-8 lg:p-12">
-          <h1 className="text-center text-4xl text-sky-800 font-bold font-Roman mb-6 uppercase">
+        <div className="w-full flex flex-col items-center justify-center mx-auto">
+          <div className="w-full">
+          <h1 className=" text-4xl font-bold  mb-6 uppercase">
             Pediatrics{" "}
           </h1>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
+          </div>
+
+          <p className="president-message max-w-4xl">
             In our Pediatric Unit, every child is embraced as a unique ray of
             hope, each one a star in the making. We believe that investing in
             their health and happiness today is the surest path to a brighter
@@ -65,7 +69,7 @@ function Pediatrics() {
             every child receives the finest care from the moment they enter our
             world.
           </p>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
+          <p className="president-message max-w-4xl">
             At the heart of our mission lies a simple yet profound belief: that
             every child deserves to be treated like royalty. With this ethos
             guiding us, we offer a comprehensive range of services tailored to
@@ -76,7 +80,7 @@ function Pediatrics() {
             ensuring that each child receives the personalized attention they
             deserve.
           </p>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
+          <p className="president-message max-w-4xl">
             But our commitment to children's well-being extends beyond medical
             treatment alone. We recognize the importance of fostering a
             nurturing environment where children can thrive emotionally,
@@ -88,57 +92,15 @@ function Pediatrics() {
 
         </div>
       </div>
-      <div>
         <div className="mt-3 py-14 px-3">
-          <h1 className="text-3xl font-bold text-center text-sky-800">
+          <h1 className="text-3xl font-bold text-center">
             Meet Our Expert Pediatricians
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (
-              <div key={index} className="perspective-1000">
-                <div className="relative h-[30rem] text-center transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
-                  <div className="absolute w-full h-full shadow-xl rounded-lg py-3 bg-slate-50 backface-hidden flex flex-col items-center justify-center">
-                    <div className="w-full h-40 flex justify-center flex-1 items-center">
-                      <img
-                        src={doctor.image}
-                        alt=""
-                        className="h-full object-cover rounded-3xl"
-                      />
-                    </div>
-                    <div className="flex-2">
-                      <h2 className="text-xl font-semibold mt-4">
-                        Dr. {doctor.name}
-                      </h2>
-                      <p className="text-gray-600 mt-2">{doctor.department}</p>
-                    </div>
-                  </div>
-                  <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-sky-200 to-white  rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white">
-                    <div className="flex items-center justify-center ">
-                      <div className="w-full h-60 flex justify-center flex-1 items-center">
-                        <img
-                          src={doctor.image}
-                          alt=""
-                          className="h-full object-cover rounded-3xl mr-2"
-                        />
-                      </div>
-                      <div className="flex-2">
-                        <h2 className="text-xl font-semibold mt-4 max-w-40 text-black">
-                          Dr. {doctor.name}
-                        </h2>
-                        <p className="text-gray-600 mt-2">
-                          {doctor.department}
-                        </p>
-                        <button className="bg-sky-800 text-white rounded-full px-4 py-2 mt-4">
-                          + Connect
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <DoctorCard key={index} doctor={doctor} />
             ))}
           </div>
-        </div>{" "}
       </div>
     </div>
   );

@@ -15,12 +15,12 @@ const resources = {
       "service4": "Blood Pressure",
       "button_english": "English",
       "button_arabic": "العربية",
-      "headerMenuOptions1": "Home",
-      "headerMenuOptions2": "About",
-      "headerMenuOptions3": "Doctors",
-      "headerMenuOptions4": "Services",
-      "headerMenuOptions5": "Gallery",
-      "headerMenuOptions6": "Contact",
+      "Home": "Home",
+      "About": "About",
+      "Doctors": "Doctors",
+      "Services": "Services",
+      "Gallery": "Gallery",
+      "Contact": "Contact",
       "mail": "Email Us",
       "mobile": "Call Us Now",
       "hospitalImageTitle":"Your Trusted Healthcare Partner",
@@ -92,13 +92,18 @@ const resources = {
       "best medical center description": "Hiba Asia Healthcare Group is a multinational conglomerate headquartered in Jeddah since 2005, Saudi Arabia. Our company has played a remarkable role in the healthcare sector of Jeddah, Saudi Arabia since its establishment. Under Healthcare Group, we operate multiple healthcare units in different parts of Jeddah. Our aim is to expand our healthcare networks all over the Kingdom to provide cost-effective, high-quality healthcare to all. HAHG provides a comprehensive range of health services for the family, functioning as a one-stop health center providing treatment for acute medical conditions...",
       "PRESIDENT'S": "PRESIDENT'S",
        "MESSAGE": "MESSAGE",
-       "presientMessage":"Welcome to Hiba Asia, where excellence in healthcare meets compassionate care. It is with great pride and joy that I invite you to experience our commitment to your well-being. At Hiba Asia, we believe that the true measure of progress in the healthcare industry is not just the number of facilities, but the quality of...",
+       "presientMessage":"Welcome to Hiba Asia, where excellence in healthcare meets compassionate care. It is with great pride and joy that I invite you to experience our commitment to your well-being. At Hiba Asia, we believe that the true measure of progress in the healthcare industry is not just the number of facilities, but the quality of care and awareness we bring to our community...",
        "President of Hiba Asia Group": "President of Hiba Asia Group",
        "INSURANCE": "INSURANCE",
        "PARTNERS": "PARTNERS",
        "News & Events": "News & Events",
        "News & Events Text": "Get latest news and events, special offers and more!",
-       "Click here to know more": "Click here to know more"
+       "Click here to know more": "Click here to know more",
+       "hospitalLocation": "Hiba Asia Polyclinic Dist, Abi Abdullah Al Ayashi, Mada'en Al-Fahd, Jeddah 22343, Saudi Arabia",
+       "CONTACT DETAILS": "CONTACT DETAILS",
+       "QUICK LINKS": "QUICK LINKS",
+       "Hiba Asia": "Hiba Asia",
+       "serviceDescription": "Enjoy the benefits of integrated multi-specialty healthcare with us"
 
 
     }
@@ -115,12 +120,12 @@ const resources = {
       "service4": "ضغط الدم",
       "button_english": "English",
       "button_arabic": "العربية",
-      "headerMenuOptions1": "بيت",
-      "headerMenuOptions2": "عن",
-      "headerMenuOptions3": "الأطباء",
-      "headerMenuOptions4": "خدمات",
-      "headerMenuOptions5": "صالة عرض",
-      "headerMenuOptions6": "اتصال",
+      "Home": "بيت",
+      "About": "عن",
+      "Doctors": "الأطباء",
+      "Services": "خدمات",
+      "Gallery": "صالة عرض",
+      "Contact": "اتصال",
       "mail": "اكتب لنا",
       "mobile": "تكلم معنا",
       "hospitalImageTitle": "شريكك الموثوق في الرعاية الصحية",
@@ -199,7 +204,12 @@ const resources = {
       "PARTNERS": "الشركاء",
       "News & Events": "الأخبار و الأحداث",
       "News & Events Text": "احصل على آخر الأخبار والأحداث والعروض الخاصة والمزيد!",
-      "Click here to know more": "انقر هنا لمعرفة المزيد"
+      "Click here to know more": "انقر هنا لمعرفة المزيد",
+      "hospitalLocation": "مستوصف هبة آسيا الطبي، أبي عبد الله العياشي، مدائن الفهد، جدة 22343، المملكة العربية السعودية",
+      "CONTACT DETAILS": "بيانات المتصل",
+      "QUICK LINKS": "روابط سريعة",
+      "Hiba Asia": "هبة آسيا",
+      "serviceDescription": "استمتع بمزايا الرعاية الصحية المتكاملة متعددة التخصصات معنا"
 
 
 

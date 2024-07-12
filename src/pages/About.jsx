@@ -24,7 +24,7 @@ function About() {
             About Hiba Asia{" "}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
-            <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
+            <p className="cursor-pointer" onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
