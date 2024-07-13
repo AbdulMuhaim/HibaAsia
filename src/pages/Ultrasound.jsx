@@ -14,7 +14,7 @@ function Ultrasound() {
   return (
     <div>
       <div
-        className="flex items-center justify-center h-96"
+        className="flex items-center justify-center h-60"
         style={{
           backgroundImage: headerImage,
           backgroundSize: "cover",
@@ -23,46 +23,55 @@ function Ultrasound() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
+          <h1 className="text-5xl p-5 text-white uppercase">
           Ultrasound Department
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
-            <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
+            <p className="cursor-pointer " onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer text-lg">Ultrasound</p>
+            <p className="cursor-pointer ">Ultrasound</p>
           </div>
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 p-3 sm:py-20 sm:px-28">
+
+
+
+<div className="flex justify-center ">
+      <div className="grid lg:grid-cols-2 gap-10 max-w-[1315px] p-3 sm:py-20 sm:px-28">
         <div className="w-full">
-          <img src={img} className="rounded-xl object-cover" alt="" />
+          <img src={img} className="rounded-xl" alt="" />
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center mx-auto p-6 sm:p-8 lg:p-12">
-          <h1 className="text-center text-4xl text-sky-800 font-bold font-Roman mb-6 uppercase">
+        <div className="w-full flex flex-col items-center justify-center mx-auto ">
+          <div className="w-full">
+          <h1 className=" text-4xl  font-bold  mb-4 uppercase">
           Ultrasound{" "}
           </h1>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
-            Dedicated to offering high-quality imaging services, the Ultrasound
+          </div>
+
+          <p className="president-message max-w-4xl">
+          Dedicated to offering high-quality imaging services, the Ultrasound
             Department at Hiba Asia assists in accurate diagnosis and effective
             treatment. Utilizing advanced ultrasound technology, skilled
             sonographers provide detailed and precise imaging to support
             healthcare needs.
           </p>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
-            High-quality imaging is essential for effective healthcare. The
+          <p className="president-message max-w-4xl">
+          High-quality imaging is essential for effective healthcare. The
             Ultrasound Department at Hiba Asia is committed to delivering
             excellent services that aid in precise diagnosis and treatment
             planning. Trust Hiba Asia for all ultrasound needs, where
             exceptional care is provided with a focus on health and well-being.
           </p>
-          <h2 className="text-4xl text-sky-800 font-bold font-Roman my-7">
+
+          <div className="w-full">
+          <h2 className="text-2xl font-bold my-7">
             Our Services Include:
           </h2>
-          <ul className="list-disc list-inside text-xl  opacity-70 mb-4 max-w-4xl">
+          <ul className="list-disc list-inside president-message max-w-4xl">
             <li className="mb-2">Abdominal Ultrasound
             </li>
             <li className="mb-2">
@@ -84,18 +93,20 @@ function Ultrasound() {
             <li className="mb-2">Histopathology</li>
             <li className="mb-2">Cytology</li>
           </ul>
-          <h2 className="text-4xl text-sky-800 font-bold font-Roman my-7">
+          <h2 className="text-2xl  font-bold  my-7">
             Specialized Imaging:
           </h2>
-          <ul className="list-disc list-inside text-xl  opacity-70 mb-4 max-w-4xl mr-28">
+          <ul className="list-disc list-inside president-message max-w-4xl ">
             <li className="mb-2">Mammography</li>
             <li className="mb-2">Fluoroscopy</li>
             <li className="mb-2">CT Scans</li>
             <li className="mb-2">MRI Scans</li>
           </ul>
+          </div>
         </div>
       </div>
-      <div></div>
+      </div>
+      
     </div>
   );
 }

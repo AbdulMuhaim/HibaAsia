@@ -10,10 +10,6 @@ import dentalImg from "../assets/HibaDepartments/dental.png";
 import ophthalmologyImg from "../assets/HibaDepartments/ophthalmology.png";
 import dermatologyImg from "../assets/HibaDepartments/dermatology.png";
 import generalSurgeryImg from "../assets/HibaDepartments/general surgery.png";
-import laboratoryImg from "../assets/HibaDepartments/laboratory.png";
-import xrayImg from "../assets/HibaDepartments/xray.png";
-import ultrasoundImg from "../assets/HibaDepartments/ultrasound.png";
-import pharmacyImg from "../assets/HibaDepartments/pharmacy.png";
 import { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -85,26 +81,6 @@ function Departments() {
       name: "General Surgery",
       img: generalSurgeryImg,
       link: "surgery"
-    },
-    {
-      name: "Laboratory",
-      img: laboratoryImg,
-      link: "laboratory"
-    },
-    {
-      name: "X Ray",
-      img: xrayImg,
-      link: "xray"
-    },
-    {
-      name: "Ultrasound",
-      img: ultrasoundImg,
-      link: "ultrasound"
-    },
-    {
-      name: "Pharmacy",
-      img: pharmacyImg,
-      link: "pharmacy"
     },
   ];
 

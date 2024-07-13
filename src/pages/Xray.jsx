@@ -16,7 +16,7 @@ function Xray() {
     <div>
 
       <div
-        className="flex items-center justify-center h-96"
+        className="flex items-center justify-center h-60"
         style={{
           backgroundImage: headerImage,
           backgroundSize: "cover",
@@ -25,57 +25,75 @@ function Xray() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md text-white uppercase">
-            X Ray Department
+          <h1 className="text-5xl p-5 text-white uppercase">
+            X Ray
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
-            <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
+            <p className="cursor-pointer " onClick={() => navigate("/")}>
               Home{" "}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer text-lg"> X Ray</p>
+            <p className="cursor-pointer "> X Ray</p>
           </div>
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 p-3 sm:py-20 sm:px-28">
+
+
+
+<div className="flex justify-center ">
+      <div className="grid lg:grid-cols-2 gap-10 max-w-[1315px] p-3 sm:py-20 sm:px-28">
         <div className="w-full">
           <img src={img} className="rounded-xl" alt="" />
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center mx-auto p-6 sm:p-8 lg:p-12">
-          <h1 className="text-center text-4xl text-sky-800 font-bold font-Roman mb-6 uppercase">
-            X Ray{" "}
+        <div className="w-full flex flex-col items-center justify-center mx-auto ">
+          <div className="w-full">
+          <h1 className=" text-4xl  font-bold  mb-4 uppercase">
+          X Ray
           </h1>
-          <p className="text-xl opacity-70 mb-4 text-center max-w-4xl">
-            At Hiba Asia, we prioritize your health with state-of-the-art X-ray
+          </div>
+
+          <p className="president-message max-w-4xl">
+           At Hiba Asia, we prioritize your health with state-of-the-art X-ray
             imaging services. Our team across Saudi Arabia is dedicated to
             providing accurate and efficient diagnostic imaging to support your
             healthcare needs.
           </p>
-          <h2 className="text-4xl text-sky-800 font-bold font-Roman my-7">
+          <p className="president-message max-w-4xl">
+            We understand the importance of accurate diagnostics in healthcare.
+            Our Laboratory Department is dedicated to providing high-quality
+            services that you can trust. Rely on us for all your laboratory
+            testing needs as we strive to deliver excellence in every aspect of
+            our care.
+          </p>
+
+          <div className="w-full">
+          <h2 className="text-2xl font-bold my-7">
             Our Services Include:
           </h2>
-          <ul className="list-disc list-inside text-xl  opacity-70 mb-4 max-w-4xl">
+          <ul className="list-disc list-inside president-message max-w-4xl">
             <li className="mb-2">Digital Radiography</li>
             <li className="mb-2">Dental X-Rays</li>
             <li className="mb-2">Chest X-Rays</li>
             <li className="mb-2">Bone and Joint X-Rays</li>
             <li className="mb-2">Abdominal X-Rays</li>
           </ul>
-          <h2 className="text-4xl text-sky-800 font-bold font-Roman my-7">
+          <h2 className="text-2xl  font-bold  my-7">
             Specialized Imaging:
           </h2>
-          <ul className="list-disc list-inside text-xl  opacity-70 mb-4 max-w-4xl mr-8">
+          <ul className="list-disc list-inside president-message max-w-4xl">
             <li className="mb-2">Mammography</li>
             <li className="mb-2">Fluoroscopy</li>
             <li className="mb-2">CT Scans</li>
             <li className="mb-2">MRI Scans</li>
             <li className="mb-2">Ultrasound Imaging</li>
           </ul>
+          </div>
         </div>
       </div>
-      <div></div>
+      </div>
+
     </div>
   );
 }

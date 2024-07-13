@@ -1,39 +1,35 @@
 import React from "react";
-import cardio from "../assets/HibaDepartments/cardiology.png";
-import gynecology from "../assets/HibaDepartments/obstetric.png";
-import dental from "../assets/HibaDepartments/dental.png";
-import laboratory from "../assets/HibaDepartments/laboratory.png";
+import laboratoryImg from "../assets/HibaDepartments/laboratory.png";
+import xrayImg from "../assets/HibaDepartments/xray.png";
+import ultrasoundImg from "../assets/HibaDepartments/ultrasound.png";
+import pharmacyImg from "../assets/HibaDepartments/pharmacy.png";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const services = [
   {
-    icon: cardio,
-    title: "Cardiology",
-    description:
-      "Our Cardiology Department offers a comprehensive range of services for both inpatients and outpatients. With a dedicated team...",
-    link: "cardiology",
-  },
-  {
-    icon: gynecology,
-    title: "gynecology",
-    description:
-      "A woman's health undergoes significant changes throughout her life, requiring expert care at various stages such as puberty,...",
-    link: "gynecology",
-  },
-  {
-    icon: dental,
-    title: "dental",
-    description:
-      "At Hiba Asia Dental Clinic, we believe that with the right care, your teeth can last a lifetime. Our team in Riyadh and across Saudi...",
-    link: "dental",
-  },
-  {
-    icon: laboratory,
-    title: "laboratory",
-    description:
-      "Our Laboratory Department is committed to providing accurate and timely diagnostic services. Our state-of-the-art laboratories, staffed...",
+    title: "Laboratory",
+    icon: laboratoryImg,
     link: "laboratory",
+    description: "Our Laboratory Department is committed to providing accurate and timely diagnostic services. Our..."
+  },
+  {
+    title: "X Ray",
+    icon: xrayImg,
+    link: "xray",
+    description: "At Hiba Asia, we prioritize your health with state-of-the-art X-ray imaging services. Our team across..."
+  },
+  {
+    title: "Ultrasound",
+    icon: ultrasoundImg,
+    link: "ultrasound",
+    description: "Dedicated to offering high-quality imaging services, the Ultrasound Department at Hiba Asia assists..."
+  },
+  {
+    title: "Pharmacy",
+    icon: pharmacyImg,
+    link: "pharmacy",
+    description: "Our Pharmacy Department goes beyond dispensing medications. We are dedicated to providing..."
   },
 ];
 

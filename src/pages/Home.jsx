@@ -29,7 +29,7 @@ import Services from "../Components/Services";
 function Home() {
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
-  const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${president})`;
+  const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${president})`;
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const isArabic = i18n.language === "ar";
 
@@ -135,7 +135,7 @@ function Home() {
                       <img
                         src={card.image}
                         alt="Image 1"
-                        className="h-full w-full object-cover bg-white p-4 sm:p-3"
+                        className="h-full w-full object-cover bg-white p-4 sm:p-3 hover:scale-110 transition-all transform duration-300"
                       />
                     </div>
                   </div>
@@ -204,7 +204,7 @@ function Home() {
                   >
                     {t("best medical center description")}
                   </p>
-                  <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+                  <button onClick={() => navigate('/about')} className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
                     {t("readMoreButton")}
                   </button>
                 </div>
@@ -244,7 +244,7 @@ function Home() {
                       <p>{t('President of Hiba Asia Group')}</p>
                     </div>
                   </div>
-                  <button className="bg-transparent text-white hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+                  <button onClick={() => navigate('/about?section=president-message')} className="bg-transparent text-white hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
                     {t('readMoreButton')}
                   </button>
                 </div>
