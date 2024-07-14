@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import DrShahin from "../assets/HibaDoctors/05. Dr. Shahin.jpg";
 import DoctorCard from "../Components/DoctorCard";
 
-function ENT() {
+function Ent() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -89,4 +89,4 @@ function ENT() {
   );
 }
 
-export default ENT;
+export default Ent;

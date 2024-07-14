@@ -25,11 +25,14 @@ import teleConsultation from "../assets/003.png";
 import homeCare from "../assets/002.png";
 import packages from "../assets/004.png";
 import Services from "../Components/Services";
+import img from "../assets/muh.jpg"
 
 function Home() {
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
   const presidentImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${president})`;
+  const presidentImage2 = `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(${img})`;
+
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const isArabic = i18n.language === "ar";
 
@@ -128,7 +131,7 @@ function Home() {
               {cardData.map((card, index) => (
                 <div
                   key={index}
-                  className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex gap-14 w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
+                  className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex  w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
                 >
                   <div className="w-[20%]">
                     <div className="h-[85px] w-[85px] bg-[#1e478e] rounded-full overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
@@ -140,11 +143,11 @@ function Home() {
                     </div>
                   </div>
 
-                  <div className={`w-[80%] flex xl:justify-end justify-center ${isArabic? "pl-5":"px-0"}`}>
+                  <div className={`w-[80%] flex xl:justify-end justify-center ${isArabic? "pl-7 ":"px-0"}`}>
                     <div className="flex-col xl:max-w-40">
                       <h2 className="text-white text-sm">{t(card.title)}</h2>
                       <p
-                        className="text-white text-xs extra-thin opacity-90 "
+                        className="text-white text-xs extra-thin opacity-90"
                         style={{ fontSize: "11px" }}
                       >
                         {t(card.description)}
@@ -190,29 +193,11 @@ function Home() {
         </div>
       </div> */}
 
-          <div className="mx-auto ">
-            <div className="flex flex-col md:flex-row ">
+          <div className="mx-auto">
+            <div className="flex flex-col xl:flex-row ">
               {/* Left Section */}
-              <div className="flex-1 bg-white px-16 shadow-lg py-16 flex items-end flex-col">
-                <div>
-                  <h2 className="text-3xl mb-10 underline-custom">
-                    {t("best medical center")}
-                  </h2>
-                  <p
-                    className="mb-6 text-sm opacity-70 max-w-[30rem]"
-                    style={{ lineHeight: "30px" }}
-                  >
-                    {t("best medical center description")}
-                  </p>
-                  <button onClick={() => navigate('/about')} className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
-                    {t("readMoreButton")}
-                  </button>
-                </div>
-              </div>
-
-              {/* Right Section */}
               <div
-                className="flex-1 bg-gray-800 text-white px-16 py-16 shadow-lg flex items-start flex-col"
+                className="flex-1  px-16 py-16 bg-gray-800 text-white shadow-lg flex items-end flex-col"
                 style={{
                   backgroundImage: presidentImage,
                   backgroundSize: "cover",
@@ -220,17 +205,19 @@ function Home() {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <div>
+                <div className="flex flex-col justify-center">
                   <h2 className="text-3xl font-bold mb-10 underline-custom">
                     {t(`PRESIDENT'S`)}{" "}
                     <span className="font-normal">{t("MESSAGE")}</span>
                   </h2>
+
                   <p
-                    className="mb-5 text-sm opacity-90 max-w-[27rem]"
+                    className="mb-5 text-sm opacity-90 max-w-[496px]"
                     style={{ lineHeight: "30px" }}
                   >
                     {t("presientMessage")}
                   </p>
+
                   <div className="flex items-center mb-6">
                     <img
                       src={president3}
@@ -244,10 +231,42 @@ function Home() {
                       <p>{t('President of Hiba Asia Group')}</p>
                     </div>
                   </div>
+                  <div>
                   <button onClick={() => navigate('/about?section=president-message')} className="bg-transparent text-white hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
                     {t('readMoreButton')}
                   </button>
+                  </div>
+
                 </div>
+              </div>
+
+              {/* Right Section */}
+              <div
+                className="flex-1 px-16 py-16 shadow-lg flex items-start flex-col"
+                style={{
+                  backgroundImage: presidentImage2,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+              <div className="flex-1">
+                <div>
+                  <h2 className="text-3xl mb-10 underline-custom">
+                    {t("best medical center")}
+                  </h2>
+                  <p
+                    className="mb-6 text-sm opacity-70 max-w-[496px]"
+                    style={{ lineHeight: "30px" }}
+                  >
+                    {t("best medical center description")}
+                  </p>
+                  <button onClick={() => navigate('/about')} className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
+                    {t("readMoreButton")}
+                  </button>
+                </div>
+              </div>
+
               </div>
             </div>
           </div>
@@ -277,7 +296,7 @@ function Home() {
         </div>
       </div> */}
 
-          <div className="py-28 flex flex-col bg-[#f4f4f4] md:flex-row justify-center items-center gap-20">
+          <div className="py-28 flex flex-col bg-[#f4f4f4] md:flex-row justify-center items-center gap-20 ">
             {visionData.map((item, index) => (
               <div
                 key={index}

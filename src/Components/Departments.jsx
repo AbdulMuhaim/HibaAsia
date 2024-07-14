@@ -22,6 +22,22 @@ function Departments() {
   const { t } = useTranslation();
 
   const departments = [
+    
+    {
+      name: "Dermatology",
+      img: dermatologyImg,
+      link: "dermatology"
+    },
+    {
+      name: "Cardiology",
+      img: cardiologyImg,
+      link: "cardiology"
+    },
+    {
+      name: "Obstetric & Gynecology",
+      img: obstetricImg,
+      link: "gynecology"
+    },
     {
       name: "General Medicine",
       img: generalImg,
@@ -31,11 +47,6 @@ function Departments() {
       name: "Internal Medicine",
       img: internalImg,
       link: "internal"
-    },
-    {
-      name: "Cardiology",
-      img: cardiologyImg,
-      link: "cardiology"
     },
     {
       name: "Urology",
@@ -53,11 +64,6 @@ function Departments() {
       link: "orthopedics"
     },
     {
-      name: "Obstetric & Gynecology",
-      img: obstetricImg,
-      link: "gynecology"
-    },
-    {
       name: "Pediatrics",
       img: pediatricImg,
       link: "pediatrics"
@@ -71,11 +77,6 @@ function Departments() {
       name: "Ophthalmology",
       img: ophthalmologyImg,
       link: "ophtalmology"
-    },
-    {
-      name: "Dermatology",
-      img: dermatologyImg,
-      link: "dermatology"
     },
     {
       name: "General Surgery",

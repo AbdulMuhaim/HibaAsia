@@ -41,26 +41,26 @@ const ResponsivePage = () => {
         </div>
 
         {/* Content Box for Medium and Larger Screens */}
-        <div className="absolute hidden md:flex left-1/2 transform -translate-x-1/2 -translate-y-56 w-[90%]  max-w-[1110px] bg-[#1e478e] text-white shadow-2xl">
+        <div className="absolute hidden lg:flex left-1/2 transform -translate-x-1/2 -translate-y-44 w-[90%]  max-w-[1110px] bg-[#1e478e] text-white shadow-2xl">
           <div className="flex w-[17%] justify-center items-center bg-white">
             <img src={headerImage} className="w-36  h-10" alt="" />
           </div>
 
           <div className="w-[83%]">
 
-          <div className="px-9 py-10">
-            <p className="leading-loose">{t("cardAboveCarousel")}</p>
-            <div className="flex justify-between mt-4 flex-wrap">
+          <div className="px-5 py-10">
+            <p className="homeText">{t("cardAboveCarousel")}</p>
+            <div className="flex justify-center] gap-4 mt-4 flex-wrap">
               <button className="cursor-default font-semibold">
                 {t('serviceSpan')}
               </button>
-              <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              <button className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
                 {t("AL WAZEERIYAH")}
               </button>
-              <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              <button className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
                 {t('AL ZAHRA')}
               </button>
-              <button className="border-2 text-sm rounded-3xl px-4 md:px-6 lg:px-8 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              <button className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
                 {('AL SANABEL')}
               </button>
             </div>
@@ -69,13 +69,13 @@ const ResponsivePage = () => {
         </div>
 
         {/* Additional Box for Small Screens */}
-        <div className="w-full md:hidden flex justify-center items-center flex-col h-auto  bg-sky-800 text-white shadow-lg">
+        <div className="w-full lg:hidden flex  flex-col justify-center items-center h-auto bg-[#1e478e] text-white ">
           <div className="flex w-full justify-center h-40 items-center bg-white border-2 shadow-2xl">
             <img src={headerImage} className="w-1/2  h-20" alt="" />
           </div>
-          <div className="p-10 flex flex-col justify-center items-center">
+          <div className="p-10 flex flex-col justify-center items-center h-full w-full">
             <p
-              className="leading-loose mb-5 text-lg md:text-base max-w-[37rem]"
+              className="leading-loose mb-5 homeText max-w-[50rem]"
               style={{ textAlign: "center" }}
             >
               Hiba Asia Medical Group has transformed the healthcare domain in
@@ -87,24 +87,24 @@ const ResponsivePage = () => {
               professionals, nurses, and hospital management staff, our
               leadership extends to all aspects of the healthcare spectrum.
             </p>
-            <button className="cursor-default font-semibold text-xl md:text-base">
+            <button className="cursor-default font-semibold ">
               OUR SERVICE SPAN ACROSS KSA
             </button>
-            <div className="flex justify-center mt-4 gap-5 flex-wrap max-w-[35rem]">
-              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-              AL WAZEERIYAH{" "}
+            <div className="flex justify-center mt-4 gap-3 flex-wrap max-w-[35rem]">
+            <button className="border-2 text-xs rounded-3xl px-3  py-2  hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+                {t("AL WAZEERIYAH")}
               </button>
-              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-              AL ZAHRA{" "}
+              <button className="border-2 text-xs rounded-3xl px-3  py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+                {t('AL ZAHRA')}
               </button>
-              <button className="border-2 md:text-sm rounded-3xl px-8 md:px-6 lg:px-8 py-2 md:py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-              AL SANABEL{" "}
+              <button className="border-2 text-xs rounded-3xl px-3  py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+                {('AL SANABEL')}
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#1e478e] h-24 hidden md:block"></div>
+      <div className="bg-[#1e478e] h-24 hidden lg:block"></div>
     </>
   );
 };

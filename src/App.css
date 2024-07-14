@@ -144,6 +144,16 @@ body {
   background-color: #ffffff;
 }
 
+.homeText{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 25.2px;
+  text-align: start;
+  letter-spacing: normal;
+  color:white;
+  /* background-color: #ffffff; */
+}
+
   @media (max-width: 768px) {
       .card {
           width: 60%;

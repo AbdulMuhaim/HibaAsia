@@ -18,11 +18,6 @@ function Dermatology() {
 
   const doctors = [
     { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
-    {
-      name: "Abdullah Bayazeed",
-      image: DrAbdullahBayazeed,
-      department: "Orthodontist",
-    },
   ];
 
   return (
