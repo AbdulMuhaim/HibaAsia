@@ -2,27 +2,17 @@ import { useState } from "react";
 import { Carousel } from "antd";
 import Image1 from "../assets/image1.jpg";
 import Image2 from "../assets/image2.jpg";
-// import Image3 from "../assets/image3.jpg";
 import Image4 from "../assets/image4.jpg";
 import Image5 from "../assets/image5.jpg";
 import Image6 from "../assets/image6.jpg";
-import whatsappLogo from "../assets/WhatsApp.svg.png";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
+
 
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
 
   const images = [Image1, Image2, Image4, Image5, Image6];
-  // const texts = [
-  //   "The art of medicine consists of amusing the patient while nature cures the disease",
-  //   "The best way to find yourself is to lose yourself in the service of others",
-  //   "Medicine is not only a science; it is also an art. It does not consist of compounding pills and plasters",
-  //   "Wherever the art of medicine is loved, there is also a love of humanity",
-  //   "The greatest healing therapy is friendship and love",
-  //   "To cure sometimes, to relieve often, to comfort always",
-  // ];
+
 
   const handleAfterChange = (current) => {
     setCurrentSlide(current);

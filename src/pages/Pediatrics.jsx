@@ -48,7 +48,8 @@ function Pediatrics() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
+      <div className="flex justify-center">
+      <div className="grid lg:grid-cols-2 max-w-[1315px] gap-10 border-b-2 p-3 sm:py-20 sm:px-28">
         <div className="w-full">
           <img src={img} className="rounded-xl" alt="" />
         </div>
@@ -92,7 +93,10 @@ function Pediatrics() {
 
         </div>
       </div>
-        <div className="mt-3 py-14 px-3">
+      </div>
+
+      <div className="flex justify-center">
+        <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
             Meet Our Expert Pediatricians
           </h1>
@@ -101,6 +105,7 @@ function Pediatrics() {
               <DoctorCard key={index} doctor={doctor} />
             ))}
           </div>
+      </div>
       </div>
     </div>
   );

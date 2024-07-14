@@ -11,7 +11,7 @@ function Doctors() {
   return (
     <div>
       <div
-        className="flex items-center justify-center h-96"
+        className="flex items-center justify-center h-60"
         style={{
           backgroundImage: headerBgImage,
           backgroundSize: "cover",
@@ -21,14 +21,14 @@ function Doctors() {
       >
 
         <div className="flex flex-col">
-        <h1 className="text-5xl p-5 backdrop-filter font-Tahoma backdrop-blur-md textu text-white">
+        <h1 className="text-5xl p-5 text-white">
           OUR DOCTORS
         </h1>
         
         <div className="flex items-center space-x-4 text-white justify-center">
-        <p className="cursor-pointer text-lg" onClick={()=>navigate('/')}>Home </p>
+        <p className="cursor-pointer " onClick={()=>navigate('/')}>Home </p>
         <p className="text-xl">/</p>
-        <p className="cursor-pointer text-lg">Doctors</p>
+        <p className="cursor-pointer ">Doctors</p>
         </div>
         </div>
 

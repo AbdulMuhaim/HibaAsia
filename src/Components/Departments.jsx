@@ -39,6 +39,11 @@ function Departments() {
       link: "gynecology"
     },
     {
+      name: "Pediatrics",
+      img: pediatricImg,
+      link: "pediatrics"
+    },
+    {
       name: "General Medicine",
       img: generalImg,
       link: "general"
@@ -62,11 +67,6 @@ function Departments() {
       name: "Orthopedic",
       img: orthopedicImg,
       link: "orthopedics"
-    },
-    {
-      name: "Pediatrics",
-      img: pediatricImg,
-      link: "pediatrics"
     },
     {
       name: "Dental",
