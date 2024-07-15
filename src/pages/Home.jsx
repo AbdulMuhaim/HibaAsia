@@ -205,7 +205,7 @@ function Home() {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center pt-10">
                   <h2 className="text-3xl font-bold mb-10 underline-custom">
                     {t(`PRESIDENT'S`)}{" "}
                     <span className="font-normal">{t("MESSAGE")}</span>
@@ -250,7 +250,7 @@ function Home() {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-              <div className="flex-1">
+              <div className="flex-1 pt-10">
                 <div>
                   <h2 className="text-3xl mb-10 underline-custom">
                     {t("best medical center")}

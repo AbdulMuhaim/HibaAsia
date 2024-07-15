@@ -108,7 +108,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   line-height: 27px;
-  text-align: left;
+  /* text-align: left; */
   letter-spacing: normal;
   color: #686868;
   padding: 6px;
