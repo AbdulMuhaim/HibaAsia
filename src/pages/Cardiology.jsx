@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
 import { useEffect } from "react";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 
 function Cardiology() {
@@ -14,6 +15,7 @@ function Cardiology() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     {
@@ -37,14 +39,14 @@ function Cardiology() {
       >
         <div className="flex flex-col">
         <h1 className="text-5xl p-5 text-white uppercase">
-        Cardiology
+        {t('Cardiology')}
           </h1>
           <div className="flex items-center space-x-4 2xl:text-lg text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Cardiology</p>
+            <p className="cursor-pointer">{t('Cardiology')}</p>
           </div>
         </div>
       </div>
@@ -58,40 +60,29 @@ function Cardiology() {
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
           <h1 className="text-4xl  font-bold  mb-6 uppercase">
-            Cardiology
+          {t('Cardiology')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            Our Cardiology Department offers a comprehensive range of services
-            for both inpatients and outpatients. With a dedicated team of highly
-            skilled cardiologists and state-of-the-art facilities, we ensure
-            that you receive the best possible care for your heart. Our
-            commitment to excellence has earned us recognition as one of the top
-            cardiac hospitals in Saudi Arabia, providing cutting-edge treatment
-            for a wide array of cardiac conditions. Our services are provided by
-            a team of the best cardiologists in Saudi Arabia, leveraging
-            advanced facilities and both preventative and therapeutic treatment
-            modalities.
+          {t('cardiologyPara1')}
           </p>
           <div className="w-full">
 
           <h2 className="text-2xl font-bold  my-7">
-            Our Services Include:
+            {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">24-Hour Blood Pressure Monitoring</li>
-            <li className="mb-2">24-Hour E.C.G. (Holter Monitoring)</li>
-            <li className="mb-2">Treadmill Test (Exercise Stress Test)</li>
-            <li className="mb-2">Basic Lung Function Testing</li>
-            <li className="mb-2">Echocardiogram (Stress Echocardiography)</li>
-            <li className="mb-2">Full Respiratory Function Testing</li>
-            <li className="mb-2">
-              Single and Dual Chamber Defibrillator/Pacemaker Follow-Up
-            </li>
-            <li className="mb-2">Sleep Assessment</li>
-            <li className="mb-2">Sphygmocor Pulse Pressure Monitoring</li>
-            <li className="mb-2">Stress Testing (Exercise Tests)</li>
+            <li className="mb-2">{t('cardioService1')}</li>
+            <li className="mb-2">{t('cardioService2')}</li>
+            <li className="mb-2">{t('cardioService3')}</li>
+            <li className="mb-2">{t('cardioService4')}</li>
+            <li className="mb-2">{t('cardioService5')}</li>
+            <li className="mb-2">{t('cardioService6')}</li>
+            <li className="mb-2">{t('cardioService7')}</li>
+            <li className="mb-2">{t('cardioService8')}</li>
+            <li className="mb-2">{t('cardioService9')}</li>
+            <li className="mb-2">{t('cardioService10')}</li>
           </ul>
           </div>
 
@@ -102,7 +93,7 @@ function Cardiology() {
       <div className="flex justify-center">
       <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-          Meet Our Expert Cardiologists
+          {t('Meet Our Expert Cardiologists')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
 import DrAbdullahBayazeed from "../assets/HibaDoctors/22. Dr. Abdullah Bayazeed.jpg";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -15,6 +16,7 @@ function Dermatology() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
@@ -34,14 +36,14 @@ function Dermatology() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5 text-white uppercase">
-            Dermatology
+            {t('Dermatology')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Dermatology</p>
+            <p className="cursor-pointer">{t('Dermatology')}</p>
           </div>
         </div>
       </div>
@@ -55,44 +57,28 @@ function Dermatology() {
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
           <h1 className=" text-4xl font-bold mb-6 uppercase">
-            Dermatology{" "}
+          {t('Dermatology')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            At our Dermatology Department, we offer expert cosmetic and medical
-            care for your skin, hair, nails, and mucous membranes. Our team of
-            top dermatologists in Riyadh and across Saudi Arabia is dedicated to
-            providing both surgical and non-surgical treatments for a wide range
-            of dermatological conditions. Recognized as one of the leading
-            dermatology hospitals in Saudi Arabia, we specialize in diagnosing
-            and treating various skin diseases, whether they are infectious,
-            immunologic, degenerative, neoplastic, or sexually transmitted.
+          {t('dermatologyPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            Our dermatology consultations cover a broad spectrum of conditions,
-            from common issues like acne, eczema, and dermatitis to severe and
-            life-threatening conditions such as drug rashes and blistering skin
-            diseases. Our highly skilled dermatologists in Jeddah and other
-            locations in Saudi Arabia are committed to helping you achieve and
-            maintain optimal skin health. We offer specialized services for the
-            removal of unwanted hair and blemishes, and provide advanced
-            skincare treatments including peels, masks, and scrubs to rejuvenate
-            and hydrate your skin. Our Skin Care Clinics are equipped with the
-            latest technology to deliver the best anti-aging skincare treatments
-            available.
+          {t('dermatologyPara2')}
           </p>
           <div className="w-full">
           <h2 className="text-2xl font-bold  my-7">
-            Our Services Include:
+          {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Adult Dermatology</li>
-            <li className="mb-2">Cosmetic Dermatology</li>
-            <li className="mb-2">Dermatologic Surgery</li>
-            <li className="mb-2">Geriatric Dermatology</li>
-            <li className="mb-2">Pediatric Dermatology</li>
-            <li className="mb-2">Tropical Dermatology</li>
+            <li className="mb-2">{t('dermatologyService1')}
+            </li>
+            <li className="mb-2">{t('dermatologyService1')}</li>
+            <li className="mb-2">{t('dermatologyService2')}</li>
+            <li className="mb-2">{t('dermatologyService3')}</li>
+            <li className="mb-2">{t('dermatologyService4')}</li>
+            <li className="mb-2">{t('dermatologyService5')}</li>
           </ul>
           </div>
 
@@ -103,7 +89,7 @@ function Dermatology() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-            Meet Our Expert Dermatologists
+            {t('Meet Our Expert Dermatologists')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (

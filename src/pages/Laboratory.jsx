@@ -2,6 +2,7 @@ import img from "../assets/woman-working-laboratory-close-up.jpg";
 import headerBgImage from "../assets/hand-with-protective-gloves-holding-blood-samples-covid-test.jpg";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function Laboratory() {
   useEffect(() => {
@@ -10,6 +11,7 @@ function Laboratory() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
 
   return (
@@ -25,14 +27,14 @@ function Laboratory() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5 text-white uppercase">
-            Laboratory
+            {t('Laboratory')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer " onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer ">Laboratory</p>
+            <p className="cursor-pointer ">{t('Laboratory')}</p>
           </div>
         </div>
       </div>
@@ -48,43 +50,35 @@ function Laboratory() {
         <div className="w-full flex flex-col items-center justify-center mx-auto ">
           <div className="w-full">
           <h1 className=" text-4xl  font-bold  mb-4 uppercase">
-            Laboratory{" "}
+          {t('Laboratory')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            Our Laboratory Department is committed to providing accurate and
-            timely diagnostic services. Our state-of-the-art laboratories,
-            staffed by experienced professionals, play a crucial role in
-            supporting your healthcare journey by delivering reliable results
-            for a wide range of tests.
+          {t('LabPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            We understand the importance of accurate diagnostics in healthcare.
-            Our Laboratory Department is dedicated to providing high-quality
-            services that you can trust. Rely on us for all your laboratory
-            testing needs as we strive to deliver excellence in every aspect of
-            our care.
+          {t('LabPara2')}
           </p>
 
           <div className="w-full">
           <h2 className="text-2xl font-bold my-7">
-            Our Services Include:
+          {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Comprehensive Eye Exams</li>
+            <li className="mb-2">{t('labService1')}</li>
             <li className="mb-2">
-              Vision Correction (Glasses and Contact Lenses)
+            {t('labService2')}
             </li>
-            <li className="mb-2">Blood Tests</li>
-            <li className="mb-2">Urine Tests</li>
-            <li className="mb-2">Stool Tests</li>
-            <li className="mb-2">Biochemical Analysis</li>
-            <li className="mb-2">Hematology</li>
-            <li className="mb-2">Microbiology</li>
-            <li className="mb-2">Immunology</li>
-            <li className="mb-2">Histopathology</li>
-            <li className="mb-2">Cytology</li>
+            <li className="mb-2">{t('labService3')}</li>
+            <li className="mb-2">{t('labService4')}</li>
+            <li className="mb-2">{t('labService5')}</li>
+            <li className="mb-2">{t('labService6')}</li>
+            <li className="mb-2">{t('labService7')}</li>
+            <li className="mb-2">{t('labService8')}</li>
+            <li className="mb-2">{t('labService9')}</li>
+            <li className="mb-2">{t('labService10')}</li>
+            <li className="mb-2">{t('labService11')}</li>
           </ul>
           </div>
         </div>

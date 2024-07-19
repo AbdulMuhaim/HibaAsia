@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import DrHussam from "../assets/HibaDoctors/04. Dr. Hussam.jpg";
 import { useEffect } from "react";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 function Internal() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function Internal() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     { name: "Hussam Alagha", image: DrHussam, department: "Internist" },
@@ -30,15 +32,15 @@ function Internal() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 text-white uppercase">
-            Internal Medicine
+          <h1 className="text-5xl text-center p-5 text-white uppercase">
+            {t('Internal Medicine')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Internal Medicine</p>
+            <p className="cursor-pointer">{t('Internal Medicine')}</p>
           </div>
         </div>
       </div>
@@ -51,27 +53,23 @@ function Internal() {
 
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
-          <h1 className="text-4xl font-bold mb-6 uppercase">
-            Internal Medicine
+          <h1 className="text-4xl  font-bold mb-6 uppercase">
+          {t('Internal Medicine')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            At Hiba Asia, our Internal Medicine Department is dedicated to
-            providing top-tier healthcare services to adults, focusing on
-            prevention, diagnosis, and treatment of a wide range of medical
-            conditions. Our experienced team of internists is committed to
-            offering personalized care tailored to your unique health needs.
+          {t('internalPara1')}
           </p>
 
         <div className="w-full ">
           <h2 className="text-2xl font-bold my-7">
-            Our Services Include:
+          {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Comprehensive Health Assessments</li>
+            <li className="mb-2">{t('internalService1')}</li>
             <li className="mb-2">
-              Management of Chronic Conditions (Diabetes, Hypertension, etc.)
+            {t('internalService2')}
             </li>
             <li className="mb-2">Cardiovascular Health</li>
             <li className="mb-2">Gastrointestinal Health</li>

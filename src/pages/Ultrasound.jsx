@@ -2,6 +2,7 @@ import img from "../assets/man-endocrinologist-making-ultrasonography-female-pat
 import headerBgImage from "../assets/gynecologist-performing-ultrasound-consultation.jpg";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function Ultrasound() {
   useEffect(() => {
@@ -10,6 +11,7 @@ function Ultrasound() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -24,14 +26,14 @@ function Ultrasound() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5 text-white uppercase">
-          Ultrasound Department
+          {t('Ultrasound')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer " onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer ">Ultrasound</p>
+            <p className="cursor-pointer ">{t('Ultrasound')}</p>
           </div>
         </div>
       </div>
@@ -48,59 +50,50 @@ function Ultrasound() {
         <div className="w-full flex flex-col items-center justify-center mx-auto ">
           <div className="w-full">
           <h1 className=" text-4xl  font-bold  mb-4 uppercase">
-          Ultrasound{" "}
+          {t('Ultrasound')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-          Dedicated to offering high-quality imaging services, the Ultrasound
-            Department at Hiba Asia assists in accurate diagnosis and effective
-            treatment. Utilizing advanced ultrasound technology, skilled
-            sonographers provide detailed and precise imaging to support
-            healthcare needs.
+          {t('ultraSoundPara1')}
           </p>
           <p className="president-message max-w-4xl">
-          High-quality imaging is essential for effective healthcare. The
-            Ultrasound Department at Hiba Asia is committed to delivering
-            excellent services that aid in precise diagnosis and treatment
-            planning. Trust Hiba Asia for all ultrasound needs, where
-            exceptional care is provided with a focus on health and well-being.
+          {t('ultraSoundPara2')}
           </p>
 
           <div className="w-full">
           <h2 className="text-2xl font-bold my-7">
-            Our Services Include:
+          {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Abdominal Ultrasound
+            <li className="mb-2">{t('ultraSoundService1')}
             </li>
             <li className="mb-2">
-            Pelvic Ultrasound
-
+            {t('ultraSoundService2')}
             </li>
-            <li className="mb-2">Obstetric Ultrasound
+            <li className="mb-2">{t('ultraSoundService3')}
             </li>
-            <li className="mb-2">Vascular Ultrasound
+            <li className="mb-2">{t('ultraSoundService4')}
             </li>
-            <li className="mb-2">Thyroid Ultrasound
+            <li className="mb-2">{t('ultraSoundService5')}
             </li>
-            <li className="mb-2">Musculoskeletal Ultrasound
+            <li className="mb-2">{t('ultraSoundService6')}
             </li>
-            <li className="mb-2">Pediatric Ultrasound
+            <li className="mb-2">{t('ultraSoundService7')}
             </li>
-            <li className="mb-2">Microbiology</li>
-            <li className="mb-2">Immunology</li>
-            <li className="mb-2">Histopathology</li>
-            <li className="mb-2">Cytology</li>
+            <li className="mb-2">{t('ultraSoundService8')}</li>
+            <li className="mb-2">{t('ultraSoundService9')}</li>
+            <li className="mb-2">{t('ultraSoundService10')}</li>
+            <li className="mb-2">{t('ultraSoundService11')}</li>
           </ul>
           <h2 className="text-2xl  font-bold  my-7">
-            Specialized Imaging:
+          {t('specializedImaging')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl ">
-            <li className="mb-2">Mammography</li>
-            <li className="mb-2">Fluoroscopy</li>
-            <li className="mb-2">CT Scans</li>
-            <li className="mb-2">MRI Scans</li>
+            <li className="mb-2">{t('ultraSoundImaging1')}</li>
+            <li className="mb-2">{t('ultraSoundImaging2')}</li>
+            <li className="mb-2">{t('ultraSoundImaging3')}</li>
+            <li className="mb-2">{t('ultraSoundImaging4')}</li>
           </ul>
           </div>
         </div>

@@ -12,6 +12,7 @@ import DrKhaleel from "../assets/HibaDoctors/18. Dr. Khaleel.jpg";
 import DrIramQadirReshi from "../assets/HibaDoctors/19. Dr. Iram Qadir Reshi.jpg";
 import DrKatherIbrahim from "../assets/HibaDoctors/21. dr. Kather Ibrahim.jpg";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 function General() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function General() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     {
@@ -78,14 +80,14 @@ function General() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5 text-white uppercase">
-            General Medicine
+            {t('General Medicine')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer ">General Medicine</p>
+            <p className="cursor-pointer ">{t('General Medicine')}</p>
           </div>
         </div>
       </div>
@@ -99,34 +101,27 @@ function General() {
         <div className="w-full flex flex-col items-center justify-center mx-auto ">
           <div className="w-full">
             <h1 className="text-left text-4xl font-bold  mb-6 uppercase">
-              General Medicine{" "}
+            {t('General Medicine')}
             </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            At Hiba Asia, our General Medicine Department is dedicated to
-            providing comprehensive and high-quality care for a wide range of
-            medical conditions. Our team of expert physicians is committed to
-            diagnosing, treating, and managing both acute and chronic illnesses,
-            ensuring personalized care for each patient.
+          {t('generalPara1')}:
           </p>
           <p className="president-message max-w-4xl">
-            We offer a full spectrum of general medical services, including
-            preventive care, routine check-ups, and management of complex health
-            issues. Our interdisciplinary approach ensures that patients receive
-            holistic care tailored to their individual needs.
+          {t('generalPara2')}:
           </p>
           <div className="w-full">
-            <h2 className="text-2xl font-bold my-7 ">Our Services Include:</h2>
+            <h2 className="text-2xl font-bold my-7 ">{t('servicesInclude')}:</h2>
             <ul className="list-disc list-inside president-message max-w-4xl">
-              <li className="mb-2">Preventive Health Screenings</li>
-              <li className="mb-2">Chronic Disease Management</li>
-              <li className="mb-2">Acute Illness Treatment</li>
-              <li className="mb-2">Geriatric Care</li>
-              <li className="mb-2">Women’s Health</li>
-              <li className="mb-2">Immunizations</li>
-              <li className="mb-2">Nutritional Counseling</li>
-              <li className="mb-2">Mental Health Support</li>
+              <li className="mb-2">{t('generalService1')}</li>
+              <li className="mb-2">{t('generalService2')}</li>
+              <li className="mb-2">{t('generalService3')}</li>
+              <li className="mb-2">{t('generalService4')}</li>
+              <li className="mb-2">{t('generalService5')}</li>
+              <li className="mb-2">{t('generalService6')}</li>
+              <li className="mb-2">{t('generalService7')}</li>
+              <li className="mb-2">{t('generalService8')}</li>
             </ul>
           </div>
         </div>
@@ -136,7 +131,7 @@ function General() {
       <div className="flex justify-center">
       <div className="mt-3 py-14 px-3 max-w-[1315px]">
         <h1 className="text-3xl font-bold text-center">
-          Meet Our Expert General Medicine Specialists
+          {t('Meet Our Expert General Medicine Specialists')}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
           {doctors.map((doctor, index) => (

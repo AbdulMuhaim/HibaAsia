@@ -5,6 +5,7 @@ import DrAswaq from "../assets/HibaDoctors/01. Dr. Aswaq.jpg";
 import DrAzza from "../assets/HibaDoctors/02. Dr. Azza.jpg";
 import { useEffect } from "react";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 function Gynecology() {
 
@@ -14,6 +15,7 @@ function Gynecology() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     {
@@ -41,15 +43,15 @@ function Gynecology() {
         }}
       >
         <div className="flex flex-col">
-        <h1 className="text-5xl p-5 text-white uppercase">
-        OBSTETRIC & Gynecology Department
+        <h1 className="text-5xl p-5 text-center text-white uppercase">
+        {t('Obstetric & Gynecology')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Obstetric & Gynecology</p>
+            <p className="cursor-pointer">{t('Obstetric & Gynecology')}</p>
           </div>
         </div>
       </div>
@@ -63,56 +65,44 @@ function Gynecology() {
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
           <h1 className="text-center text-4xl  font-bold  mb-6 uppercase">
-            Obstetric & Gynecology
+          {t('Obstetric & Gynecology')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            A woman's health undergoes significant changes throughout her life,
-            requiring expert care at various stages such as puberty,
-            childbearing age, perimenopause, and menopause. At our facility, we
-            are equipped to address the diverse health needs of women through
-            comprehensive obstetric and gynecologic services. Our team of highly
-            skilled gynecologists in Saudi Arabia provides thorough prenatal and
-            maternity care for expecting mothers. Additionally, our Gynecology
-            Department offers a wide range of services to manage gynecologic
-            conditions in a family-centered healthcare environment.
+          {t('gynecologyPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            Our dedicated physicians, nurses, and staff members are committed to
-            delivering top-tier care for conditions affecting women. We focus
-            exclusively on serving adult and adolescent female patients,
-            providing both medical and personal care tailored to their specific
-            needs.
+          {t('gynecologyPara2')}
           </p>
           <div className="w-full">
 
           <h2 className="text-2xl font-bold my-7">
-            Our Services Include:
+          {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Adolescent Gynecology</li>
-            <li className="mb-2">Abnormal Uterine Bleeding</li>
-            <li className="mb-2">Breast Health</li>
-            <li className="mb-2">Bone Health</li>
-            <li className="mb-2">Barrett’s Esophagus</li>
-            <li className="mb-2">Contraception and Family Planning</li>
-            <li className="mb-2">Cosmetic Procedures </li>
-            <li className="mb-2">Depression</li>
-            <li className="mb-2">Endometrial Conditions</li>
-            <li className="mb-2">Gastrointestinal Disorders</li>
-            <li className="mb-2">General and Genitourinary Gynecology</li>
-            <li className="mb-2">Heart Health</li>
-            <li className="mb-2">Menopause Care</li>
-            <li className="mb-2">Menstrual Disorders</li>
-            <li className="mb-2">Minimally Invasive Gynecologic Surgery</li>
-            <li className="mb-2">Obesity, Diet, and Exercise</li>
-            <li className="mb-2">Ovarian Cysts</li>
-            <li className="mb-2">Pelvic Pain</li>
-            <li className="mb-2">Sexual Function Care</li>
-            <li className="mb-2">Sexually Transmitted Diseases</li>
-            <li className="mb-2">Uterine Fibroid Care</li>
-            <li className="mb-2">Thyroid Conditions</li>
+            <li className="mb-2">{t('gynecologyService1')}</li>
+            <li className="mb-2">{t('gynecologyService2')}</li>
+            <li className="mb-2">{t('gynecologyService3')}</li>
+            <li className="mb-2">{t('gynecologyService4')}</li>
+            <li className="mb-2">{t('gynecologyService5')}</li>
+            <li className="mb-2">{t('gynecologyService6')}</li>
+            <li className="mb-2">{t('gynecologyService7')}</li>
+            <li className="mb-2">{t('gynecologyService8')}</li>
+            <li className="mb-2">{t('gynecologyService9')}</li>
+            <li className="mb-2">{t('gynecologyService10')}</li>
+            <li className="mb-2">{t('gynecologyService11')}</li>
+            <li className="mb-2">{t('gynecologyService12')}</li>
+            <li className="mb-2">{t('gynecologyService13')}</li>
+            <li className="mb-2">{t('gynecologyService14')}</li>
+            <li className="mb-2">{t('gynecologyService15')}</li>
+            <li className="mb-2">{t('gynecologyService16')}</li>
+            <li className="mb-2">{t('gynecologyService17')}</li>
+            <li className="mb-2">{t('gynecologyService18')}</li>
+            <li className="mb-2">{t('gynecologyService19')}</li>
+            <li className="mb-2">{t('gynecologyService20')}</li>
+            <li className="mb-2">{t('gynecologyService21')}</li>
+            <li className="mb-2">{t('gynecologyService22')}</li>
           </ul>
           </div>
         </div>
@@ -122,7 +112,7 @@ function Gynecology() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-            Meet Our Expert Obstetricians and Gynecologists{" "}
+           {t('Meet Our Expert Obstetricians and Gynecologists')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (

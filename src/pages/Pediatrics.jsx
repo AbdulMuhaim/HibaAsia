@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 
 function Pediatrics() {
@@ -13,12 +14,13 @@ function Pediatrics() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     {
         name: "Muhammed Anwar",
         image: DrMohammedAnwar,
-        department: "Pediatrician",
+        department: "Pediatrics",
       },
   ];
 
@@ -36,14 +38,14 @@ function Pediatrics() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5 backdrop-filter font-Tahoma text-white uppercase">
-            Pediatrics
+            {t('Pediatrics')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Pediatrics</p>
+            <p className="cursor-pointer">{t('Pediatrics')}</p>
           </div>
         </div>
       </div>
@@ -57,40 +59,19 @@ function Pediatrics() {
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
           <h1 className=" text-4xl font-bold  mb-6 uppercase">
-            Pediatrics{" "}
+          {t('Pediatrics')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            In our Pediatric Unit, every child is embraced as a unique ray of
-            hope, each one a star in the making. We believe that investing in
-            their health and happiness today is the surest path to a brighter
-            tomorrow. Our team of dedicated Pediatricians across Riyadh, Jeddah,
-            and beyond, share a common commitment to excellence, ensuring that
-            every child receives the finest care from the moment they enter our
-            world.
+          {t('pediatricPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            At the heart of our mission lies a simple yet profound belief: that
-            every child deserves to be treated like royalty. With this ethos
-            guiding us, we offer a comprehensive range of services tailored to
-            meet the diverse needs of children at every stage of their
-            development. From the tender care provided in our Neonatal ICU to
-            the specialized treatments offered by our experts in Emergency
-            Medicine, Cardiology, and Critical Care, we spare no effort in
-            ensuring that each child receives the personalized attention they
-            deserve.
+          {t('pediatricPara2')}
           </p>
           <p className="president-message max-w-4xl">
-            But our commitment to children's well-being extends beyond medical
-            treatment alone. We recognize the importance of fostering a
-            nurturing environment where children can thrive emotionally,
-            intellectually, and socially. Through our holistic approach to
-            pediatric care, we strive to empower the superheroes of tomorrow,
-            equipping them with the resilience and strength they need to face
-            life's challenges head-on.
+          {t('pediatricPara3')}
           </p>
-
         </div>
       </div>
       </div>
@@ -98,7 +79,7 @@ function Pediatrics() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-            Meet Our Expert Pediatricians
+            {t('Meet Our Expert Pediatricians')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (
