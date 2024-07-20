@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 function Orthopedics() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function Orthopedics() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     { name: "Samad Moideen", image: DrSamad, department: "Orthopedics" },
@@ -31,14 +33,14 @@ function Orthopedics() {
       >
         <div className="flex flex-col">
         <h1 className="text-5xl p-5 text-white uppercase">
-        Orthopedics
+        {t('Orthopedics')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Orthopedics </p>
+            <p className="cursor-pointer">{t('Orthopedics')} </p>
           </div>
         </div>
       </div>
@@ -53,33 +55,18 @@ function Orthopedics() {
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
           <h1 className=" text-4xl  font-bold  mb-6 uppercase">
-            Orthopedics{" "}
+          {t('Orthopedics')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            At Hiba Asia, our Orthopedics Department strives to be the premier
-            choice for orthopedic treatment, trauma management, and
-            rehabilitation services. Annually, we perform a substantial number
-            of trauma and elective orthopedic surgeries, providing exceptional
-            care for patients with bone, joint, and related musculoskeletal
-            injuries from diagnosis through to surgery and other treatment
-            modalities.
+          {t('orthoPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            Our dedicated interdisciplinary team of caregivers supports patients
-            with conditions such as muscle strains, swollen or achy joints, and
-            broken bones. We offer comprehensive solutions for a wide range of
-            sports and work-related injuries, catering to both acute and chronic
-            cases. Our specialized services include Joint Replacement, Sports
-            Medicine, Physical Rehabilitation, Hand Surgery, Spine Treatment,
-            Trauma Care, and Rheumatology.
+          {t('orthoPara2')}
           </p>
           <p className="president-message max-w-4xl">
-            At Hiba Asia, we are committed to providing advanced, high-quality
-            care to ensure the best possible outcomes for our patients. Our
-            state-of-the-art facilities and expert medical team make us a
-            trusted destination for orthopedic health.
+          {t('orthoPara3')}
           </p>
         </div>
       </div>
@@ -88,7 +75,7 @@ function Orthopedics() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center ">
-            Meet Our Expert Orthopedic Specialists
+            {t('Meet Our Expert Orthopedic Specialists')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (

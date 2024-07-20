@@ -71,17 +71,15 @@ function Internal() {
             <li className="mb-2">
             {t('internalService2')}
             </li>
-            <li className="mb-2">Cardiovascular Health</li>
-            <li className="mb-2">Gastrointestinal Health</li>
-            <li className="mb-2">Respiratory Health</li>
-            <li className="mb-2">Full Respiratory Function Testing</li>
-            <li className="mb-2">
-              Single and Dual Chamber Defibrillator/Pacemaker Follow-Up
-            </li>
-            <li className="mb-2">Endocrine Disorders</li>
-            <li className="mb-2">Infectious Diseases</li>
-            <li className="mb-2">Geriatric Care</li>
-            <li className="mb-2">Preventive Medicine</li>
+            <li className="mb-2">{t('internalService3')}</li>
+            <li className="mb-2">{t('internalService4')}</li>
+            <li className="mb-2">{t('internalService5')}</li>
+            <li className="mb-2">{t('internalService6')}</li>
+            <li className="mb-2">{t('internalService7')}</li>
+            <li className="mb-2">{t('internalService8')}</li>
+            <li className="mb-2">{t('internalService9')}</li>
+            <li className="mb-2">{t('internalService10')}</li>
+            <li className="mb-2">{t('internalService11')}</li>
           </ul>
           </div>
 
@@ -93,7 +91,7 @@ function Internal() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-            Meet Our Expert Cardiologists
+          {t('Meet Our Expert Internists')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (

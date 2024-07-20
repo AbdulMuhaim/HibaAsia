@@ -9,6 +9,7 @@ import DrJensonJohn from "../assets/HibaDoctors/26. Dr. Jenson John.jpg";
 import DrLintuMol from "../assets/HibaDoctors/27. Dr. Lintu Mol.jpg";
 import DrMaryamAhmed from "../assets/HibaDoctors/28. Dr. Maryam Ahmed.jpg";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 function Dental() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function Dental() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     {
@@ -49,14 +51,14 @@ function Dental() {
       >
         <div className="flex flex-col">
         <h1 className="text-5xl p-5 text-white uppercase">
-        Dental
+        {t('Dental')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer text-lg" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer text-lg">Dental</p>
+            <p className="cursor-pointer text-lg">{t('Dental')}</p>
           </div>
         </div>
       </div>
@@ -71,47 +73,39 @@ function Dental() {
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
           <h1 className=" text-4xl font-bold mb-6 uppercase">
-            Dental{" "}
+          {t('Dental')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            At Hiba Asia Dental Clinic, we believe that with the right care,
-            your teeth can last a lifetime. Our team in Riyadh and across Saudi
-            Arabia offers comprehensive dental services, ensuring your oral
-            health is always our top priority. From routine cleanings and
-            check-ups to advanced procedures, we provide personalized,
-            state-of-the-art care in a friendly and professional environment.
+          {t('dentalPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            Our skilled dentists also offer specialized services for adults,
-            geriatrics, and those with special needs, including anesthesia
-            options for a comfortable experience.
+          {t('dentalPara2')}
           </p>
           <div className="w-full">
           <h2 className="text-2xl font-bold my-7 ">
-            Our Services Include:
+           {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl ">
-            <li className="mb-2">Teeth Cleanings & Whitening</li>
-            <li className="mb-2">Extractions & Fillings</li>
-            <li className="mb-2">Veneers & Crowns</li>
-            <li className="mb-2">Root Canal Treatment</li>
-            <li className="mb-2">Braces/Invisalign</li>
-            <li className="mb-2">Bonding & Dentures</li>
+          <li className="mb-2">{t('dentalService1')}</li>
+            <li className="mb-2">{t('dentalService2')}</li>
+            <li className="mb-2">{t('dentalService3')}</li>
+            <li className="mb-2">{t('dentalService4')}</li>
+            <li className="mb-2">{t('dentalService5')}</li>
+            <li className="mb-2">{t('dentalService6')}</li>
           </ul>
           <h2 className="text-2xl font-bold my-7 ">
-            Specialized Care:
+            {t('Specialized Care')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Orthodontics</li>
-            <li className="mb-2">Oral & Maxillofacial Surgery</li>
-            <li className="mb-2">Implantology</li>
-            <li className="mb-2">Periodontics</li>
-            <li className="mb-2">Endodontics</li>
-            <li className="mb-2">Bonding & Dentures</li>
-            <li className="mb-2">Pediatric Dentistry</li>
-            <li className="mb-2">Prosthetic & Cosmetic Dentistry</li>
+            <li className="mb-2">{t('dentalCare1')}</li>
+            <li className="mb-2">{t('dentalCare2')}</li>
+            <li className="mb-2">{t('dentalCare3')}</li>
+            <li className="mb-2">{t('dentalCare4')}</li>
+            <li className="mb-2">{t('dentalCare5')}</li>
+            <li className="mb-2">{t('dentalCare6')}</li>
+            <li className="mb-2">{t('dentalCare7')}</li>
           </ul>
           </div>
           </div>
@@ -122,7 +116,7 @@ function Dental() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-            Meet Our Expert Dentists
+            {t('Meet Our Expert Dentists')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (
