@@ -11,25 +11,25 @@ const services = [
     title: "Laboratory",
     icon: laboratoryImg,
     link: "laboratory",
-    description: "Our Laboratory Department is committed to providing accurate and timely diagnostic services. Our..."
+    description: "serviceDescription1"
   },
   {
     title: "X Ray",
     icon: xrayImg,
     link: "xray",
-    description: "At Hiba Asia, we prioritize your health with state-of-the-art X-ray imaging services. Our team across..."
+    description: "serviceDescription2"
   },
   {
     title: "Ultrasound",
     icon: ultrasoundImg,
     link: "ultrasound",
-    description: "Dedicated to offering high-quality imaging services, the Ultrasound Department at Hiba Asia assists..."
+    description: "serviceDescription3"
   },
   {
     title: "Pharmacy",
     icon: pharmacyImg,
     link: "pharmacy",
-    description: "Our Pharmacy Department goes beyond dispensing medications. We are dedicated to providing..."
+    description: "serviceDescription4"
   },
 ];
 
@@ -59,13 +59,13 @@ const Services = () => {
             />
 
             <h2 className="font-semibold mb-2 uppercase opacity-85">
-              {service.title}
+              {t(service.title)}
             </h2>
             <p
               className="text-gray-600 mb-5 opacity-80 text-sm"
               style={{ lineHeight: "25px" }}
             >
-              {service.description}
+              {t(service.description)}...
             </p>
             <button
               className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden"

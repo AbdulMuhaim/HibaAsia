@@ -1,23 +1,15 @@
 // src/components/ResponsivePage.js
-import React from "react";
 import "tailwindcss/tailwind.css";
-import Image1 from "../assets/image1.jpg";
-import Image2 from "../assets/image2.jpg";
-import Image3 from "../assets/image3.jpg";
-import Image4 from "../assets/image4.jpg";
-import Image5 from "../assets/image5.jpg";
-import Image6 from "../assets/image6.jpg";
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
 import Curousel from "../Components/Curoussel";
 import { useTranslation } from "react-i18next";
 import border from "../assets/Ornamental vector Hiba2.png"
-const headerBgImage = `url(${border}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
 
 
 // import bgImage from "../assets/6027f7bf18f4aaf02e671e7a7b357289 - Copy.jpg"
 
 const ResponsivePage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -65,7 +57,7 @@ const ResponsivePage = () => {
                 {t('AL ZAHRA')}
               </button>
               <button className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
-                {('AL SANABEL')}
+                {t('AL SANABEL')}
               </button>
             </div>
           </div>

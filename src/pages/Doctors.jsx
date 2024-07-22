@@ -1,4 +1,5 @@
 
+import { useTranslation } from "react-i18next";
 import doctorsHeaderImage from "../assets/group-of-doctors-standing-in-hospital-on-medical-c-2023-11-27-05-18-43-utc.jpg";
 import DoctorsList from "../Components/DoctorsList";
 
@@ -7,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 function Doctors() {
   const headerBgImage = `url(${doctorsHeaderImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
   const navigate = useNavigate()
+  const { t } = useTranslation();
+
 
   return (
     <div>
@@ -22,13 +25,13 @@ function Doctors() {
 
         <div className="flex flex-col">
         <h1 className="text-5xl p-5 text-white">
-          OUR DOCTORS
+          {t('OUR DOCTORS')}
         </h1>
         
         <div className="flex items-center space-x-4 text-white justify-center">
-        <p className="cursor-pointer " onClick={()=>navigate('/')}>Home </p>
+        <p className="cursor-pointer " onClick={()=>navigate('/')}>{t('Home')}</p>
         <p className="text-xl">/</p>
-        <p className="cursor-pointer ">Doctors</p>
+        <p className="cursor-pointer ">{t('Doctors')}</p>
         </div>
         </div>
 

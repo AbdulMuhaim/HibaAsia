@@ -1,4 +1,3 @@
-import visionBgImage from "../assets/Vision&Mission.jpg";
 import visionImage from "../assets/front-view-human-eye.jpg";
 import missionImage from "../assets/3d-rendering-arrow-hitting-target (2).jpg";
 import valuesImage from "../assets/colleagues-working-together-project.jpg";
@@ -8,7 +7,6 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 function Vision() {
-  const bgImage = `url(${visionBgImage}), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))`;
   const headerBgImage = `url(${visionHeaderImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
   const navigate = useNavigate();
   const { t } = useTranslation();

@@ -42,35 +42,30 @@ const Footer = () => {
             <ul className='text-sm flex flex-col gap-2'>
               <li><a href="#" className="hover:underline">{t('Home')}</a></li>
               <li><a href="#" className="hover:underline">{t('About')}</a></li>
-              <li><a href="#" className="hover:underline">{t('Hiba Asia')}</a></li>
               <li><a href="#" className="hover:underline lowercase">{t(`PRESIDENT'S`)} {t('MESSAGE')}</a></li>
             </ul>
           </div>
           <div className="mb-8 md:mb-0 md:mr-8">
             <h2 className="text-lg font-semibold mb-10"></h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">Mission & Vision</a></li>
-              <li><a href="#" className="hover:underline">Departments</a></li>
-              <li><a href="#" className="hover:underline">Facilities</a></li>
-              <li><a href="#" className="hover:underline">Insurance Partners</a></li>
+              <li><a href="#" className="hover:underline">{t('MISSION & VISION')}</a></li>
+              <li><a href="#" className="hover:underline">{t('DEPARTMENTS')}</a></li>
+              <li><a href="#" className="hover:underline">{t('Insurance Partners')}</a></li>
             </ul>
           </div>
           <div className="mb-8 md:mb-0 md:mr-8">
             <h2 className="text-lg font-semibold mb-10"></h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">Doctors</a></li>
-              <li><a href="#" className="hover:underline">Service & Packages</a></li>
-              <li><a href="#" className="hover:underline">News</a></li>
-              <li><a href="#" className="hover:underline">Health Blog</a></li>
+              <li><a href="#" className="hover:underline">{t('Doctors')}</a></li>
+              <li><a href="#" className="hover:underline">{t('Services')}</a></li>
+              <li><a href="#" className="hover:underline">{t('News & Events')}</a></li>
             </ul>
           </div>
           <div>
             <h2 className="text-lg font-semibold mb-10"></h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">Join Us</a></li>
-              <li><a href="#" className="hover:underline">Contact</a></li>
-              <li><a href="#" className="hover:underline">Sitemap</a></li>
-              <li><a href="#" className="hover:underline">Privacy Policy</a></li>
+              <li><a href="#" className="hover:underline">{t('Contact')}</a></li>
+              <li><a href="#" className="hover:underline">{t('Privacy Policy')}</a></li>
             </ul>
           </div>
         </div>

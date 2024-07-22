@@ -44,7 +44,7 @@ const resources = {
       "card3Description": "Consultation Through Video Conference",
       "card4Title": "Service & Packages",
       "card4Description": "View And Purchase Services & Packages",
-      "DEPARTMENTS": "DEPARTMENTS",
+      "DEPARTMENTS": "Departments",
       "General Medicine": "General Medicine",
       "Internal Medicine": "Internal Medicine",
       "Cardiology": "Cardiology",
@@ -320,11 +320,43 @@ const resources = {
        "Jenson John": "Jenson John",
        "Lintu Mol": "Lintu Mol",
        "Maryam Ahmed": "Maryam Ahmed",
-
-
-
-
-
+       "ophtalmologyPara1": "At Hiba Asia, our Ophthalmology Department is dedicated to delivering exceptional eye care services. Our team of expert ophthalmologists is committed to preserving and enhancing your vision through comprehensive, personalized treatment plans tailored to your unique needs.",
+       "ophtalmologyPara2": "We prioritize your vision and eye health, ensuring that you receive the highest quality care. Trust our Ophthalmology Department for all your eye care needs, as we strive to help you see the world more clearly and comfortably.",
+       "ophtalmologyService1": "Comprehensive Eye Exams",
+       "ophtalmologyService2": "Vision Correction (Glasses and Contact Lenses)",
+       "ophtalmologyService3": "Cataract Surgery",
+       "ophtalmologyService4": "Glaucoma Management",
+       "ophtalmologyService5": "Diabetic Eye Care",
+       "ophtalmologyService6": "Macular Degeneration Treatment",
+       "ophtalmologyService7": "Pediatric Ophthalmology",
+       "ophtalmologyService8": "Corneal Transplants",
+       "ophtalmologyService9": "LASIK and Refractive Surgery",
+       "Meet Our Expert Ophthalmologist": "Meet Our Expert Ophthalmologist",
+       "Taha Abouelenin": "Taha Abouelenin",
+       "surgeryPara1": "The General Surgery Department at Hiba Asia is committed to providing exceptional surgical care. Our team of highly skilled surgeons, supported by advanced technology and comprehensive care protocols, ensures that you receive the highest standard of treatment for a wide range of surgical conditions.",
+       "surgeryPara2": "At Hiba Asia, we understand the importance of precision and care in surgical procedures. The General Surgery Department is dedicated to providing you with the best possible outcomes through meticulous surgical practices and compassionate care. Trust Hiba Asia for all your surgical needs, where your health and recovery are our utmost priorities.",
+       "surgeryService1": "Appendectomy",
+       "surgeryService2": "Hernia Repair",
+       "surgeryService3": "Gallbladder Surgery",
+       "surgeryService4": "Thyroid Surgery",
+       "surgeryService5": "Breast Surgery",
+       "surgeryService6": "Colorectal Surgery",
+       "surgeryService7": "Gastrointestinal Surgery",
+       "surgeryService8": "Skin and Soft Tissue Surgery",
+       "surgeryService9": "Emergency Surgery",
+       "Meet Our Expert Surgeons": "Meet Our Expert Surgeons",
+       "Surgeon": "Surgeon",
+       "Hana Aimora": "Hana Aimora",
+       "Abdullah Bayazeed": "Abdullah Bayazeed",
+       "Orthodontics": "Orthodontics",
+       "Shukoor": "Shukoor",
+       "Radiology": "Radiology",
+       "serviceDescription1": "Our Laboratory Department is committed to providing accurate and timely diagnostic services.",
+       "serviceDescription2": "At Hiba Asia, we prioritize your health with state-of-the-art X-ray imaging services. Our team",
+       "serviceDescription3": "Dedicated to offering high-quality imaging services, the Ultrasound Department at Hiba",
+       "serviceDescription4": "Our Pharmacy Department goes beyond dispensing medications. We are dedicated to providing",
+        "Insurance Partners": "Insurance Partners",
+        "Privacy Policy": "Privacy Policy"
 
 
  
@@ -652,12 +684,43 @@ const resources = {
        "Jenson John": "جنسن جون",
        "Lintu Mol": "لينتو مول",
        "Maryam Ahmed": "مريم احمد",
-
-
-
-
-
-
+       "ophtalmologyPara1": "في هبة آسيا، قسم طب العيون لدينا مخصص لتقديم خدمات استثنائية للعناية بالعيون. يلتزم فريقنا من أطباء العيون الخبراء بالحفاظ على رؤيتك وتعزيزها من خلال خطط علاجية شاملة وشخصية مصممة خصيصًا لتلبية احتياجاتك الفريدة.",
+       "ophtalmologyPara2": "نحن نعطي الأولوية لبصرك وصحة عينيك، مما يضمن حصولك على أعلى مستويات الجودة من الرعاية. ثق بقسم طب العيون لدينا لتلبية جميع احتياجات العناية بالعيون، حيث نسعى جاهدين لمساعدتك على رؤية العالم بشكل أكثر وضوحًا وراحة.",
+       "ophtalmologyService1": "فحوصات العيون الشاملة",
+       "ophtalmologyService2": "تصحيح الرؤية (النظارات والعدسات اللاصقة)",
+       "ophtalmologyService3": "جراحة الساد",
+       "ophtalmologyService4": "إدارة الجلوكوما",
+       "ophtalmologyService5": "العناية بالعيون لمرضى السكري",
+       "ophtalmologyService6": "علاج الضمور البقعي",
+       "ophtalmologyService7": "طب عيون الأطفال",
+       "ophtalmologyService8": "زراعة القرنية",
+       "ophtalmologyService9": "الليزك والجراحة الانكسارية",
+       "Meet Our Expert Ophthalmologist": "تعرَّف على طبيب العيون الخبير لدينا",
+       "Taha Abouelenin": "طه ابو العينين",
+       "surgeryPara1": "يلتزم قسم الجراحة العامة في هبة آسيا بتقديم رعاية جراحية استثنائية. يضمن فريقنا من الجراحين ذوي المهارات العالية، والمدعومين بالتكنولوجيا المتقدمة وبروتوكولات الرعاية الشاملة، حصولك على أعلى مستوى من العلاج لمجموعة واسعة من الحالات الجراحية.",
+       "surgeryPara2": "في هبة آسيا، ندرك أهمية الدقة والرعاية في العمليات الجراحية. يكرس قسم الجراحة العامة جهوده لتزويدك بأفضل النتائج الممكنة من خلال الممارسات الجراحية الدقيقة والرعاية الرحيمة. ثق بـ Hiba Asia لتلبية جميع احتياجاتك الجراحية، حيث تكون صحتك وتعافيك هي أولويتنا القصوى.",
+       "surgeryService1": "استئصال الزائدة الدودية",
+       "surgeryService2": "إصلاح الفتق",
+       "surgeryService3": "جراحة المرارة",
+       "surgeryService4": "جراحة الغدة الدرقية",
+       "surgeryService5": "جراحة الثدي",
+       "surgeryService6": "جراحة القولون والمستقيم",
+       "surgeryService7": "جراحة الجهاز الهضمي",
+       "surgeryService8": "جراحة الجلد والأنسجة الرخوة",
+       "surgeryService9": "جراحة الطوارئ",
+       "Meet Our Expert Surgeons": "تعرَّف على جراحينا الخبراء",
+       "Surgeon": "دكتور جراح",
+       "Hana Aimora": "هانا ايمورا",
+       "Abdullah Bayazeed": "عبدالله بايزيد",
+       "Orthodontics": "تقويم الأسنان",
+       "Shukoor": "شكور",
+       "Radiology": "الأشعة",
+       "serviceDescription1": "يلتزم قسم المختبرات لدينا بتقديم خدمات تشخيصية دقيقة وفي الوقت المناسب.",
+       "serviceDescription2":  "في هبة آسيا، نعطي الأولوية لصحتك من خلال أحدث خدمات التصوير بالأشعة السينية. فريقنا",
+       "serviceDescription3": "قسم الموجات فوق الصوتية في هبة مخصص لتقديم خدمات تصوير عالية الجودة",
+       "serviceDescription4": "يتجاوز قسم الصيدلة لدينا مجرد صرف الأدوية. نحن ملتزمون بتقديم",
+       "Insurance Partners": "شركاء التأمين",
+       "Privacy Policy": "سياسة الخصوصية"
 
 
 

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 function Surgery() {
   useEffect(() => {
@@ -12,6 +13,8 @@ function Surgery() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
+
   const doctors = [
     { name: "Majed Mouris", image: DrMajedMouris, department: "Surgeon" },
   ];
@@ -29,14 +32,14 @@ function Surgery() {
       >
         <div className="flex flex-col">
           <h1 className="text-5xl p-5  text-white uppercase">
-            General Surgery{" "}
+            {t('General Surgery')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">General Surgery</p>
+            <p className="cursor-pointer">{t('General Surgery')}</p>
           </div>
         </div>
       </div>
@@ -45,46 +48,38 @@ function Surgery() {
       <div className="flex justify-center">
       <div className="grid lg:grid-cols-2 gap-10 max-w-[1315px] p-3 sm:py-20 border-b-2 sm:px-28">
         <div className="w-full">
-          <img src={img} className="rounded-xl object-cover" alt="" />
+          <img src="" className="rounded-xl object-cover" alt="" />
         </div>
 
         <div className="w-full flex flex-col items-center justify-center mx-auto ">
           <div className="w-full">
           <h1 className=" text-4xl font-bold mb-6 uppercase">
-            General Surgery{" "}
+          {t('General Surgery')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            The General Surgery Department at Hiba Asia is committed to
-            providing exceptional surgical care. Our team of highly skilled
-            surgeons, supported by advanced technology and comprehensive care
-            protocols, ensures that you receive the highest standard of
-            treatment for a wide range of surgical conditions.
+          {t('surgeryPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            At Hiba Asia, we understand the importance of precision and care in
-            surgical procedures. The General Surgery Department is dedicated to
-            providing you with the best possible outcomes through meticulous
-            surgical practices and compassionate care. Trust Hiba Asia for all
-            your surgical needs, where your health and recovery are our utmost
-            priorities.
+          {t('surgeryPara2')}
           </p>
           <div className="w-full">
 
           <h2 className="text-2xl font-bold my-7">
-            Our Services Include:
+            {t('servicesInclude')} :
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Appendectomy</li>
-            <li className="mb-2">Hernia Repair</li>
-            <li className="mb-2">Gallbladder Surgery</li>
-            <li className="mb-2">Thyroid Surgery</li>
-            <li className="mb-2">Breast Surgery</li>
-            <li className="mb-2">Colorectal Surgery</li>
-            <li className="mb-2">Gastrointestinal Surgery</li>
-            <li className="mb-2">Skin and Soft Tissue Surgery</li>
-            <li className="mb-2">Emergency Surgery</li>
+            <li className="mb-2">{t('surgeryService1')}</li>
+            <li className="mb-2">{t('surgeryService2')}</li>
+            <li className="mb-2">{t('surgeryService3')}</li>
+            <li className="mb-2">{t('surgeryService4')}</li>
+            <li className="mb-2">{t('surgeryService5')}</li>
+            <li className="mb-2">{t('surgeryService6')}</li>
+            <li className="mb-2">{t('surgeryService7')}</li>
+            <li className="mb-2">{t('surgeryService8')}</li>
+            <li className="mb-2">{t('surgeryService9')}</li>
+
           </ul>
           </div>
           </div>
@@ -94,7 +89,7 @@ function Surgery() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-            Meet Our Expert Surgeons
+           {t('Meet Our Expert Surgeons')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (

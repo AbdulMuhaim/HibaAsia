@@ -21,7 +21,7 @@ function Cardiology() {
     {
       name: "Mohamad Sherif Helmy",
       image: DrSherifHelmy,
-      department: "Cardiologist",
+      department: "Cardiology",
     },
   ];
 

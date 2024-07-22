@@ -21,12 +21,12 @@ function Gynecology() {
     {
       name: "Aswaq Ahmed",
       image: DrAswaq,
-      department: "Obstetrics & Gynecology",
+      department: "Obstetric & Gynecology",
     },
     {
       name: "Azza Hussein Ahmed",
       image: DrAzza,
-      department: "Obstetrics & Gynecology",
+      department: "Obstetric & Gynecology",
     },
   ];
 

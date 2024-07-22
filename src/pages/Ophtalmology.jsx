@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import DrTaha from "../assets/HibaDoctors/10. Dr. Taha.jpg";
 import DoctorCard from "../Components/DoctorCard";
+import { useTranslation } from "react-i18next";
 
 function Ophtalmology() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function Ophtalmology() {
 
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
+  const { t } = useTranslation();
 
   const doctors = [
     { name: "Taha Abouelenin", image: DrTaha, department: "Ophthalmology" },
@@ -30,15 +32,15 @@ function Ophtalmology() {
         }}
       >
         <div className="flex flex-col">
-        <h1 className="text-5xl p-5 text-white uppercase">
-        Ophthalmology Department
+        <h1 className="text-5xl p-5 text-center text-white uppercase">
+        {t('Ophthalmology')}
           </h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              Home{" "}
+              {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">Ophthalmology</p>
+            <p className="cursor-pointer">{t('Ophthalmology')}</p>
           </div>
         </div>
       </div>
@@ -53,40 +55,31 @@ function Ophtalmology() {
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
           <h1 className="text-4xl font-bold mb-6 uppercase">
-          Ophthalmology{" "}
+          {t('Ophthalmology')}
           </h1>
           </div>
 
           <p className="president-message max-w-4xl">
-            At Hiba Asia, our Ophthalmology Department is dedicated to
-            delivering exceptional eye care services. Our team of expert
-            ophthalmologists is committed to preserving and enhancing your
-            vision through comprehensive, personalized treatment plans tailored
-            to your unique needs.
+          {t('ophtalmologyPara1')}
           </p>
           <p className="president-message max-w-4xl">
-            We prioritize your vision and eye health, ensuring that you receive
-            the highest quality care. Trust our Ophthalmology Department for all
-            your eye care needs, as we strive to help you see the world more
-            clearly and comfortably.
+          {t('ophtalmologyPara2')}
           </p>
           <div className="w-full">
 
           <h2 className="text-2xl font-bold my-7">
-            Our Services Include:
+          {t('servicesInclude')}:
           </h2>
           <ul className="list-disc list-inside president-message max-w-4xl">
-            <li className="mb-2">Comprehensive Eye Exams</li>
-            <li className="mb-2">
-              Vision Correction (Glasses and Contact Lenses)
-            </li>
-            <li className="mb-2">Cataract Surgery</li>
-            <li className="mb-2">Glaucoma Management</li>
-            <li className="mb-2">Diabetic Eye Care</li>
-            <li className="mb-2">Macular Degeneration Treatment</li>
-            <li className="mb-2">Pediatric Ophthalmology</li>
-            <li className="mb-2">Corneal Transplants</li>
-            <li className="mb-2">LASIK and Refractive Surgery</li>
+            <li className="mb-2">{t('ophtalmologyService1')}</li>
+            <li className="mb-2">{t('ophtalmologyService2')}</li>
+            <li className="mb-2">{t('ophtalmologyService3')}</li>
+            <li className="mb-2">{t('ophtalmologyService4')}</li>
+            <li className="mb-2">{t('ophtalmologyService5')}</li>
+            <li className="mb-2">{t('ophtalmologyService6')}</li>
+            <li className="mb-2">{t('ophtalmologyService7')}</li>
+            <li className="mb-2">{t('ophtalmologyService8')}</li>
+            <li className="mb-2">{t('ophtalmologyService9')}</li>
           </ul>
           </div>
           </div>
@@ -96,7 +89,7 @@ function Ophtalmology() {
       <div className="flex justify-center">
         <div className="mt-3 py-14 px-3 max-w-[1315px]">
           <h1 className="text-3xl font-bold text-center">
-            Meet Our Expert Dentists
+          {t('Meet Our Expert Ophthalmologist')}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10">
             {doctors.map((doctor, index) => (
