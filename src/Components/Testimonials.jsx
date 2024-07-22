@@ -3,7 +3,6 @@ import { IoLogoWechat } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
-
 const testimonialsData = [
   {
     text: "testimonial1",
@@ -25,8 +24,7 @@ const testimonialsData = [
   },
   {
     text: "testimonial4",
-    image:
-      "https://bookamuslim.com/wp-content/uploads/2022/01/unnamed.jpeg",
+    image: "https://bookamuslim.com/wp-content/uploads/2022/01/unnamed.jpeg",
     name: "Farha",
   },
   {
@@ -44,7 +42,6 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useTranslation();
 
@@ -65,7 +62,10 @@ const Testimonials = () => {
   return (
     <div className="bg-gray-100 mt-20 flex items-center justify-center py-32">
       <div className="w-full max-w-6xl mx-auto relative">
-        <h1 className="text-3xl font-semibold mb-20 text-center opacity-90">{t('testimonialTitle')}</h1>
+        <h1 className="text-3xl font-semibold mb-20 text-center text-gray-800">
+          {t("testimonialTitle")}{" "}
+          <span className="font-thin text-[#1e478e] ">{t("Hiba Asia")}</span>{" "}
+        </h1>
         <div className="flex flex-col justify-center items-center lg:flex-row transition-transform duration-500 gap-24">
           {displayedTestimonials.map((testimonial, index) => (
             <div
@@ -75,7 +75,7 @@ const Testimonials = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-5xl text-[#1e478e]">
                 <IoLogoWechat />
               </div>
-              <p className="text-gray-600 max-w-[15rem] mb-4 font-sans font-semibold border-b-2 pb-3">
+              <p className="max-w-[15rem] mb-4 president-message border-b-2 pb-3">
                 "{t(testimonial.text)}"
               </p>
               <img
@@ -83,15 +83,16 @@ const Testimonials = () => {
                 alt={testimonial.name}
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
-              <h3 className="text-lg text-gray-900 opacity-65">{t(testimonial.name)}</h3>
+              <h3 className="text-lg text-gray-900 opacity-65">
+                {t(testimonial.name)}
+              </h3>
               <div className="flex mt-1 justify-center">
-              <FaStar size={18} color="yellow" />
-              <FaStar size={18} color="yellow" />
-              <FaStar size={18} color="yellow" />
-              <FaStar size={18} color="yellow" />
-              <FaStar size={18} color="yellow" />
+                <FaStar size={18} color="yellow" />
+                <FaStar size={18} color="yellow" />
+                <FaStar size={18} color="yellow" />
+                <FaStar size={18} color="yellow" />
+                <FaStar size={18} color="yellow" />
               </div>
-
             </div>
           ))}
         </div>

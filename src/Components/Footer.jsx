@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaSnapchatGhost, FaTiktok} from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
@@ -77,6 +77,9 @@ const Footer = () => {
           <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaTwitter className='group-hover:text-black' /></a>
           <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaInstagram className='group-hover:text-black' /></a>
           <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaLinkedinIn className='group-hover:text-black' /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaYoutube className='group-hover:text-black' /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaSnapchatGhost className='group-hover:text-black' /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaTiktok className='group-hover:text-black' /></a>
         </div>
       </div>
       {/* </div> */}
