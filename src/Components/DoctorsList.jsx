@@ -42,15 +42,16 @@ function DoctorsList() {
           image: DrAzza,
           department: "Obstetric & Gynecology",
         },
-        {
-          name: "Mohamad Sherif Helmy",
-          image: DrSherifHelmy,
-          department: "Cardiology",
-        },
+        { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
         {
           name: "Muhammed Anwar",
           image: DrMohammedAnwar,
           department: "Pediatrics",
+        },
+        {
+          name: "Mohamad Sherif Helmy",
+          image: DrSherifHelmy,
+          department: "Cardiology",
         },
         { name: "Majed Mouris", image: DrMajedMouris, department: "Surgeon" },
         { name: "Samad Moideen", image: DrSamad, department: "Orthopedics" },
@@ -62,7 +63,6 @@ function DoctorsList() {
         { name: "Mohammed Ramadan Ahmad", image: DrRamadan, department: "Urology" },
         { name: "Taha Abouelenin", image: DrTaha, department: "Ophthalmology" },
         { name: "Mahmoud Shahin", image: DrShahin, department: "ENT Specialist" },
-        { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
         { name: "Shukoor", image: DrShukoor, department: "Radiology" },
         { name: "Hussam Alagha", image: DrHussam, department: "Internist" },
         {

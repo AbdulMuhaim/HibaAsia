@@ -1,10 +1,6 @@
 import Departments from "../Components/Departments";
 import { useNavigate } from "react-router-dom";
 import Testimonials from "../Components/Testimonials";
-import { FaNotesMedical } from "react-icons/fa";
-import { GiMedicinePills } from "react-icons/gi";
-import { FaHandHoldingHeart } from "react-icons/fa6";
-import { MdOutlineBloodtype } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import AnimatedSection from "../Components/Animation";
 import ResponsivePage from "../Components/ResponsivePage";
@@ -85,12 +81,7 @@ function Home() {
     },
   ];
 
-  const services = [
-    { text: "service1", icon: FaNotesMedical },
-    { text: "service2", icon: GiMedicinePills },
-    { text: "service3", icon: FaHandHoldingHeart },
-    { text: "service4", icon: MdOutlineBloodtype },
-  ];
+
 
   const cardData = [
     {
@@ -161,37 +152,6 @@ function Home() {
 
           <ResponsivePage />
 
-          {/* <div
-        className="h-screen bg-cover bg-no-repeat bg-blend-overlay bg-image"
-        style={{
-          backgroundImage: `url(${newBgImage})`,
-        }}
-      >
-        <div className="flex flex-col h-full items-center justify-center gap-8 md:gap-14">
-          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl text-[#1e478e] text-center">
-            {t("welcome")}
-          </h1>
-          <p className="text-base font-medium opacity-75 md:text-lg 2xl:text-2xl px-3 sm:px-0 max-w-[27rem] sm:max-w-[30rem] md:max-w-[48rem] backdrop-blur-sm break-words text-center">
-            {t("welcomeDescription")}
-          </p>
-          <button className="rounded-full bg-[#1e478e] px-5 py-3 md:text-base font-semibold 2xl:text-xl md:px-4 md:py-3 2xl:px-6 2xl:py-5  border-4 text-white transition duration-500 transform hover:bg-white  hover:text-black border-[#1e478e]">
-            {t("bookAppointment")}
-          </button>
-
-          <div className="flex flex-wrap w-full justify-evenly">
-            {services.map((service, index) => (
-              <div key={index}>
-                <div className="rounded-full h-14 w-14 sm:h-20 sm:w-20 lg:h-24 lg:w-24 2xl:h-32 2xl:w-32  bg-white flex items-center justify-center shadow-2xl outline-gray-300 outline-2 sm:outline-4 md:outline-6 lg:outline-8 transform transition-all duration-500 hover:-translate-y-2.5 hover:outline hover:outline-gray-300">
-                  <service.icon className="text-2xl text-[#1e478e] sm:text-3xl md:text-4xl" />
-                </div>
-                <p className="text-center opacity-75 font-bold mt-2 text-xs sm:text-sm xl:text-base 2xl:text-xl">
-                  {t(service.text)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
           <div className="mx-auto">
             <div className="flex flex-col xl:flex-row ">
@@ -271,30 +231,6 @@ function Home() {
             </div>
           </div>
 
-          {/* <div className="mt-20">
-        <div className="flex flex-col lg:flex-row items-center lg:items-stretch text-center lg:min-h-[80vh]">
-          <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-between">
-            <h1 className="2xl:text-5xl md:text-4xl text-3xl font- text-left text-[#1e478e]">
-              {t("hospitalImageTitle")}
-            </h1>
-            <p
-              className="text-base md:text-lg 2xl:text-2xl opacity-75 max-w-[45rem] text-left leading-relaxed my-6"
-              style={{ letterSpacing: "1px", wordSpacing: "3px" }}
-            >
-              {t("hospitalImageDescription")}
-            </p>
-          </div>
-          <div className="w-full lg:w-1/2">
-            <img
-              className={`w-full h-full object-cover ${
-                isArabic ? "md:rounded-r-3xl" : "md:rounded-l-3xl"
-              }`}
-              src={hospitalImage}
-              alt="Hospital Image"
-            />
-          </div>
-        </div>
-      </div> */}
 
           <div className="py-28 flex flex-col bg-[#f4f4f4] md:flex-row justify-center items-center gap-20 ">
             {visionData.map((item, index) => (
