@@ -8,6 +8,8 @@ import DrNoufQasem from "../assets/HibaDoctors/25. Dr. Nouf Qasem.jpg";
 import DrJensonJohn from "../assets/HibaDoctors/26. Dr. Jenson John.jpg";
 import DrLintuMol from "../assets/HibaDoctors/27. Dr. Lintu Mol.jpg";
 import DrMaryamAhmed from "../assets/HibaDoctors/28. Dr. Maryam Ahmed.jpg";
+import DrElhamyFawzyMohamedAbed from "../assets/HibaDoctors/30. Dr. Elhamy Fawzy Mohamed Abed.jpg"
+
 import DoctorCard from "../Components/DoctorCard";
 import { useTranslation } from "react-i18next";
 
@@ -21,6 +23,11 @@ function Dental() {
   const { t } = useTranslation();
 
   const doctors = [
+    {
+      name: "Elhamy Fawzy Mohamed Abed",
+      image: DrElhamyFawzyMohamedAbed,
+      department: "Dentist",
+    },
     {
         name: "Abdul Aziz AlZahrani",
         image: DrAbdulAzeezalZahrani,

@@ -2,8 +2,7 @@ import img from "../assets/cute-woman-lying-procedure-rejuvenation-skin.jpg";
 import headerBgImage from "../assets/girl-receiving-facial-treatment-beauty-salon.jpg";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
-import DrAbdullahBayazeed from "../assets/HibaDoctors/22. Dr. Abdullah Bayazeed.jpg";
+import DrHanaOmara from "../assets/HibaDoctors/11. Hana Omara.jpg";
 import DoctorCard from "../Components/DoctorCard";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +18,7 @@ function Dermatology() {
   const { t } = useTranslation();
 
   const doctors = [
-    { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
+    { name: "Hanaa Hussein Omara", image: DrHanaOmara, department: "Dermatology" }
   ];
 
   return (

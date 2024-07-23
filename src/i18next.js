@@ -346,7 +346,7 @@ const resources = {
        "surgeryService9": "Emergency Surgery",
        "Meet Our Expert Surgeons": "Meet Our Expert Surgeons",
        "Surgeon": "Surgeon",
-       "Hana Aimora": "Hana Aimora",
+       "Hanaa Hussein Omara": "Hanaa Hussein Omara",
        "Abdullah Bayazeed": "Abdullah Bayazeed",
        "Orthodontics": "Orthodontics",
        "Shukoor": "Shukoor",
@@ -356,7 +356,8 @@ const resources = {
        "serviceDescription3": "Dedicated to offering high-quality imaging services, the Ultrasound Department at Hiba",
        "serviceDescription4": "Our Pharmacy Department goes beyond dispensing medications. We are dedicated to providing",
         "Insurance Partners": "Insurance Partners",
-        "Privacy Policy": "Privacy Policy"
+        "Privacy Policy": "Privacy Policy",
+        "Elhamy Fawzy Mohamed Abed": "Elhamy Fawzy Mohamed Abed",
 
 
  
@@ -710,7 +711,7 @@ const resources = {
        "surgeryService9": "جراحة الطوارئ",
        "Meet Our Expert Surgeons": "تعرَّف على جراحينا الخبراء",
        "Surgeon": "دكتور جراح",
-       "Hana Aimora": "هانا ايمورا",
+       "Hanaa Hussein Omara": "هناء حسين عمارة",
        "Abdullah Bayazeed": "عبدالله بايزيد",
        "Orthodontics": "تقويم الأسنان",
        "Shukoor": "شكور",
@@ -720,7 +721,8 @@ const resources = {
        "serviceDescription3": "قسم الموجات فوق الصوتية في هبة مخصص لتقديم خدمات تصوير عالية الجودة",
        "serviceDescription4": "يتجاوز قسم الصيدلة لدينا مجرد صرف الأدوية. نحن ملتزمون بتقديم",
        "Insurance Partners": "شركاء التأمين",
-       "Privacy Policy": "سياسة الخصوصية"
+       "Privacy Policy": "سياسة الخصوصية",
+       "Elhamy Fawzy Mohamed Abed": "الهامى فوزى محمد عابد",
 
 
 

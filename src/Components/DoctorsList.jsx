@@ -8,7 +8,7 @@ import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
 import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
 import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
 import DrTaha from "../assets/HibaDoctors/10. Dr. Taha.jpg";
-import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
+import DrHanaOmara from "../assets/HibaDoctors/11. Hana Omara.jpg";
 import DrShukoor from "../assets/HibaDoctors/12. Dr. Shukoor.jpg";
 import DrMurtaza from "../assets/HibaDoctors/13. Dr. Murtaza.jpg";
 import DrJavedIqbal from "../assets/HibaDoctors/14. Dr. Javed Iqbal.jpg";
@@ -26,6 +26,7 @@ import DrNoufQasem from "../assets/HibaDoctors/25. Dr. Nouf Qasem.jpg";
 import DrJensonJohn from "../assets/HibaDoctors/26. Dr. Jenson John.jpg";
 import DrLintuMol from "../assets/HibaDoctors/27. Dr. Lintu Mol.jpg";
 import DrMaryamAhmed from "../assets/HibaDoctors/28. Dr. Maryam Ahmed.jpg";
+import DrElhamyFawzyMohamedAbed from "../assets/HibaDoctors/30. Dr. Elhamy Fawzy Mohamed Abed.jpg"
 import DoctorCard from "./DoctorCard";
 
 
@@ -42,7 +43,7 @@ function DoctorsList() {
           image: DrAzza,
           department: "Obstetric & Gynecology",
         },
-        { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
+        { name: "Hanaa Hussein Omara", image: DrHanaOmara, department: "Dermatology" },
         {
           name: "Muhammed Anwar",
           image: DrMohammedAnwar,
@@ -65,6 +66,25 @@ function DoctorsList() {
         { name: "Mahmoud Shahin", image: DrShahin, department: "ENT Specialist" },
         { name: "Shukoor", image: DrShukoor, department: "Radiology" },
         { name: "Hussam Alagha", image: DrHussam, department: "Internist" },
+        {
+          name: "Elhamy Fawzy Mohamed Abed",
+          image: DrElhamyFawzyMohamedAbed,
+          department: "Dentist",
+        },
+        {
+          name: "Abdul Aziz AlZahrani",
+          image: DrAbdulAzeezalZahrani,
+          department: "Dentist",
+        },
+        {
+          name: "Shahad Bin Mehfouz",
+          image: DrShahadBinMahfouz,
+          department: "Dentist",
+        },
+        { name: "Nouf Qasem Mohammed", image: DrNoufQasem, department: "Dentist" },
+        { name: "Jenson John", image: DrJensonJohn, department: "Dentist" },
+        { name: "Lintu Mol", image: DrLintuMol, department: "Dentist" },
+        { name: "Maryam Ahmed", image: DrMaryamAhmed, department: "Dentist" },
         {
           name: "Murtaza Bakhsh",
           image: DrMurtaza,
@@ -106,20 +126,7 @@ function DoctorsList() {
           image: DrKatherIbrahim,
           department: "General Physician",
         },
-        {
-          name: "Abdul Aziz AlZahrani",
-          image: DrAbdulAzeezalZahrani,
-          department: "Dentist",
-        },
-        {
-          name: "Shahad Bin Mehfouz",
-          image: DrShahadBinMahfouz,
-          department: "Dentist",
-        },
-        { name: "Nouf Qasem Mohammed", image: DrNoufQasem, department: "Dentist" },
-        { name: "Jenson John", image: DrJensonJohn, department: "Dentist" },
-        { name: "Lintu Mol", image: DrLintuMol, department: "Dentist" },
-        { name: "Maryam Ahmed", image: DrMaryamAhmed, department: "Dentist" },
+
       ];
 
 

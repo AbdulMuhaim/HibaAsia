@@ -4,7 +4,7 @@ import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
 import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
 import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
 import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
-import DrRashaMohamed from "../assets/HibaDoctors/11. Dr. Rasha Mohamed.jpg";
+import DrHanaOmara from "../assets/HibaDoctors/11. Hana Omara.jpg";
 import DrRamadan from "../assets/HibaDoctors/03. Dr. Ramadan.jpg";
 import { useTranslation } from 'react-i18next';
 import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removebg-preview.png";
@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 function DoctorsListInHome() {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     const doctors = [
@@ -27,7 +27,7 @@ function DoctorsListInHome() {
           image: DrAzza,
           department: "Obstetric & Gynecology",
         },
-        { name: "Hana Aimora", image: DrRashaMohamed, department: "Dermatology" },
+        { name: "Hanaa Hussein Omara", image: DrHanaOmara, department: "Dermatology" },
         {
           name: "Muhammed Anwar",
           image: DrMohammedAnwar,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaSnapchatGhost, FaTiktok} from 'react-icons/fa';
-import { FaLocationDot } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaSnapchatGhost, FaTiktok} from 'react-icons/fa';
+import { FaLocationDot,FaXTwitter } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
 import footerBgImage from "../assets/pexels-photo-5428267.webp"
@@ -74,7 +74,7 @@ const Footer = () => {
         <p className="text-sm"><span className='opacity-60'> &copy; Hiba Asia Medical Group | Designed and developed by</span> <a href="#" className="hover:underline">FarAa Technologies Pvt. Ltd.</a></p>
         <div className="flex mt-4 md:mt-0">
           <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaFacebookF className='group-hover:text-black' /></a>
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaTwitter className='group-hover:text-black' /></a>
+          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaXTwitter className='group-hover:text-black' /></a>
           <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaInstagram className='group-hover:text-black' /></a>
           <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaLinkedinIn className='group-hover:text-black' /></a>
           <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaYoutube className='group-hover:text-black' /></a>
