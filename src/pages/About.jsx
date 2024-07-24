@@ -50,9 +50,7 @@ function About() {
 
       <div className="flex justify-center">
         <div className="grid lg:grid-cols-2 gap-10 max-w-[1315px] p-3 sm:py-20 sm:px-28">
-          <div className="w-full">
-            <img src={DoctorPatient} className="rounded-xl" alt="" />
-          </div>
+
 
           <div className="w-full flex flex-col items-center justify-center mx-auto">
             <div className="w-full">
@@ -71,11 +69,18 @@ function About() {
             {t('About Hiba Para3')}
             </p>
           </div>
+
+          <div className="w-full">
+            <img src={DoctorPatient} className="rounded-xl" alt="" />
+          </div>
         </div>
       </div>
 
       <div ref={presidentMessageRef} className="flex justify-center">
         <div className="grid lg:grid-cols-2 gap-10 max-w-[1315px] p-3 sm:py-20 sm:px-28">
+        <div className="w-full">
+            <img src={president} className="rounded-xl" alt="" />
+          </div>
           <div className="w-full flex flex-col items-center justify-center mx-auto">
             <div className="w-full">
               <h2 className="text-3xl font-bold mb-9 underline-custom">
@@ -104,9 +109,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="w-full">
-            <img src={president} className="rounded-xl" alt="" />
-          </div>
+
         </div>
       </div>
     </div>

@@ -107,6 +107,8 @@ function Home() {
   ];
 
   return (
+    <>
+
     <div className="relative">
       <Popup
         isOpen={isPopupOpen}
@@ -348,6 +350,8 @@ function Home() {
         </div>
       </div>
     </div>
+    </>
+
   );
 }
 

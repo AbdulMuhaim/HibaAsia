@@ -35,123 +35,133 @@ function Contact() {
           </div>
         </div>
       </div>
+
+
       <div className="flex justify-center">
-        <div className="grid md:grid-cols-2 border-b-2 py-5 min-w-[1100px]">
-          <div className="w-full  flex justify-start items-start">
-            <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
-              <h1 className="text-2xl font-bold mb-6">
-              1.{t('Hiba Asia Medical Center')}
-              </h1>
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <CiLocationOn className="w-10 h-10 mx-4" />
-                  <div>
-                  <strong className="block text-lg">{t('Address')}</strong>
-                  <p>{t(`Al-Wazeeriyah, Mada'en Al-Fahad Dist. Jeddah`)}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <PiPhoneCallLight className="w-10 h-10 mx-4" />
-                  <div>
-                    <strong className="block text-lg">
-                      {t(`For Doctor Appointments & General Enquiries`)}
-                    </strong>
-                    <p>+9660545961777, +9660545961777</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <CiMail className="w-10 h-10 mx-4" />
-                  <div>
-                    <strong className="block text-lg">{t('Email')}</strong>
-                    <p>info@hibaasia.care</p>
-                  </div>
-                </div>
-              </div>
+  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+    <div className="w-full flex justify-start items-start">
+      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+        <h1 className="text-2xl font-bold mb-6">
+          1.{t('Hiba Asia Medical Center')}
+        </h1>
+        <div className="space-y-6">
+          <div className="flex items-center">
+            <CiLocationOn className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Address')}</strong>
+              <p>{t(`Al-Wazeeriyah, Mada'en Al-Fahad Dist. Jeddah`)}</p>
             </div>
           </div>
-          <div className="pt-2">
-            <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+          <div className="flex items-center">
+            <PiPhoneCallLight className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">
+                {t(`For Doctor Appointments & General Enquiries`)}
+              </strong>
+              <p>+9660545961777, +9660545961777</p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <CiMail className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Email')}</strong>
+              <p>info@hibaasia.care</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="grid md:grid-cols-2 border-b-2 py-5 min-w-[1100px]">
-          <div className="w-full  flex justify-start items-start">
-            <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
-              <h1 className="text-center text-2xl font-bold mb-6">
-              2.{t('Hiba Asia Medical Center')}
-              </h1>
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <CiLocationOn className="w-10 h-10 mx-4" />
-                  <div>
-                  <strong className="block text-lg">{t('Address')}</strong>
-                  <p>{t(`Abdullah Jaseer St. Al-Zahra Dist. Jeddah`)}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <PiPhoneCallLight className="w-10 h-10 mx-4" />
-                  <div>
-                    <strong className="block text-lg">
-                      {t(`For Doctor Appointments & General Enquiries`)}
-                    </strong>
-                    <p>+9660545961777, +9660545961777</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <CiMail className="w-10 h-10 mx-4" />
-                  <div>
-                    <strong className="block text-lg">{t('Email')}</strong>
-                    <p>info@hibaasia.care</p>
-                  </div>
-                </div>
+    </div>
+    <div className="pt-2 w-full h-64 md:h-auto">
+      <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div className="flex justify-center">
+  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+    <div className="w-full flex justify-start items-start">
+      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+        <h1 className="text-2xl font-bold mb-6">
+          1.{t('Hiba Asia Medical Center')}
+        </h1>
+        <div className="space-y-6">
+          <div className="flex items-center">
+            <CiLocationOn className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Address')}</strong>
+              <p>{t(`Abdullah Jaseer St. Al-Zahra Dist. Jeddah`)}</p>
               </div>
+          </div>
+          <div className="flex items-center">
+            <PiPhoneCallLight className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">
+                {t(`For Doctor Appointments & General Enquiries`)}
+              </strong>
+              <p>+9660545961777, +9660545961777</p>
             </div>
           </div>
-          <div className="pt-2">
-            <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+          <div className="flex items-center">
+            <CiMail className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Email')}</strong>
+              <p>info@hibaasia.care</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="grid md:grid-cols-2 border-b-2 py-5 min-w-[1100px]">
-          <div className="w-full  flex justify-start items-start">
-            <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
-              <h1 className="text-center text-2xl font-bold mb-6">
-              3.{t('Hiba Asia Medical Center')}
-              </h1>
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <CiLocationOn className="w-10 h-10 mr-4" />
-                  <div>
-                    <strong className="block text-lg">{t('Address')}</strong>
-                    <p>{t(`Abdullah Al-Sudais, Al-Sanabel Dist. Jeddah`)}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <PiPhoneCallLight className="w-10 h-10 mr-4" />
-                  <div>
-                    <strong className="block text-lg">
-                      {t(`For Doctor Appointments & General Enquiries`)}
-                    </strong>
-                    <p>+9660545961777, +9660545961777</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <CiMail className="w-10 h-10 mr-4" />
-                  <div>
-                    <strong className="block text-lg">{t('Email')}</strong>
-                    <p>info@hibaasia.care</p>
-                  </div>
-                </div>
+    </div>
+    <div className="pt-2 w-full h-64 md:h-auto">
+      <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+    </div>
+  </div>
+</div>
+
+      
+<div className="flex justify-center">
+  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+    <div className="w-full flex justify-start items-start">
+      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+        <h1 className="text-2xl font-bold mb-6">
+          1.{t('Hiba Asia Medical Center')}
+        </h1>
+        <div className="space-y-6">
+          <div className="flex items-center">
+            <CiLocationOn className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Address')}</strong>
+              <p>{t(`Abdullah Al-Sudais, Al-Sanabel Dist. Jeddah`)}</p>
               </div>
+          </div>
+          <div className="flex items-center">
+            <PiPhoneCallLight className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">
+                {t(`For Doctor Appointments & General Enquiries`)}
+              </strong>
+              <p>+9660545961777, +9660545961777</p>
             </div>
           </div>
-          <div className="pt-2">
-            <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+          <div className="flex items-center">
+            <CiMail className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Email')}</strong>
+              <p>info@hibaasia.care</p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div className="pt-2 w-full h-64 md:h-auto">
+      <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+    </div>
+  </div>
+</div>
+
 
 
       <div className="flex flex-col items-center justify-center my-20">

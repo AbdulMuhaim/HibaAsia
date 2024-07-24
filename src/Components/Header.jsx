@@ -234,23 +234,13 @@ function Header() {
         </div>
 
         {/* Menu list for desktop and mobile menu options */}
-        {mobileMenu && (
-          <div className="w-full flex flex-col items-center">
-            {headerMenuOptions.map((option, index) => (
-              <h1
-                key={index}
-                onClick={() => {
-                  navigate(option.url);
 
-                  setMobileMenu(false);
-                }}
-                className="font-bold bg-slate-300 w-full text-center border text-medium xl:text-lg 2xl:text-2xl cursor-pointer transition-opacity duration-300  py-4"
-              >
-                {t(option.name)}
-              </h1>
-            ))}
-          </div>
-        )}
+
+        {/* <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p>
+        <p>hhhhh</p> */}
 
         {!mobileMenu && (
           <div className="w-[500px] hidden lg:flex justify-center items-center mx-2 h-full">
@@ -269,7 +259,28 @@ function Header() {
             ))}
           </div>
         )}
+
+        
       </div>
+
+      {mobileMenu && (
+          <div className="w-full  flex flex-col items-center px-4 bg-[#1e478e] ">
+            {headerMenuOptions.map((option, index) => (
+              <h1
+                key={index}
+                onClick={() => {
+                  navigate(option.url);
+
+                  setMobileMenu(false);
+                }}
+                className="bg-[#1e478e] w-full text-center hover:bg-white hover:text-[#1e478e] text-white border-slate-500 border-y president-message cursor-pointer duration-300 py-3"
+              >
+                {t(option.name)}
+              </h1>
+            ))}
+          </div>
+        )}
+      
 
       {isScrolled && (
         <div
