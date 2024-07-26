@@ -81,11 +81,11 @@ function Header() {
     },
     {
       name: "Services",
-      url: "",
+      url: "services",
     },
     {
       name: "Gallery",
-      url: "",
+      url: "gallery",
     },
     {
       name: "Contact",

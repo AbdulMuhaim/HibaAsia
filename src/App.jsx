@@ -22,9 +22,10 @@ import Ultrasound from './pages/Ultrasound';
 import Pharmacy from './pages/Pharmacy';
 import Surgery from './pages/Surgery';
 import About from './pages/About';
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Services from './pages/Services';
+import Gallery from './pages/Gallery';
+import NewsAndEvents from './pages/NewsAndEvents';
+
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
           <Route path="/pharmacy" element={<Pharmacy />} />
           <Route path="/surgery" element={<Surgery />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/news&events" element={<NewsAndEvents />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,9 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 function NewsEvents() {
 
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div 
@@ -20,7 +22,8 @@ function NewsEvents() {
       <div className="max-w-[1100px] flex flex-col gap-10 items-center justify-center">
         <h1 className='uppercase font-bold text-3xl text-white text-center'>{t('News & Events')}</h1>
         <h2 className='text-lg text-white px-7 text-center'>{t('News & Events Text')}</h2>
-        <button className="bg-transparent text-white hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-500 ease-in-out overflow-hidden">
+        <button className="bg-transparent text-white hover:bg-white hover:text-sky-800 text-xs uppercase px-6 py-4 border-2 border-white rounded shadow-lg transition duration-500 ease-in-out overflow-hidden"
+        onClick={()=>navigate('news&events')} >
           {t('Click here to know more')}
         </button>     
       </div>
