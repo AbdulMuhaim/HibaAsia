@@ -93,7 +93,7 @@ const resources = {
       "AL SANABEL": "AL SANABEL",
       "best medical center": "The Best Medical Center for You",
       "best medical center description": "Hiba Asia Healthcare Group is a multinational conglomerate headquartered in Jeddah since 2005, Saudi Arabia. Our company has played a remarkable role in the healthcare sector of Jeddah, Saudi Arabia since its establishment. Under Healthcare Group, we operate multiple healthcare units in different parts of Jeddah. Our aim is to expand our healthcare networks all over the Kingdom to provide cost-effective, high-quality healthcare to all. HAHG provides a comprehensive range of health services for the family, functioning as a one-stop health center providing treatment for acute medical conditions...",
-      "PRESIDENT'S": "PRESIDENT'S",
+      "PRESIDENT'S": "President's",
        "MESSAGE": "Message",
        "presientMessage":"Welcome to Hiba Asia, where excellence in healthcare meets compassionate care. It is with great pride and joy that I invite you to experience our commitment to your well-being. At Hiba Asia, we believe that the true measure of progress in the healthcare industry is not just the number of facilities, but the quality of care and awareness we bring to our community...",
        "President of Hiba Asia Group": "President of Hiba Asia Group",

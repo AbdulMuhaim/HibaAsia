@@ -5,10 +5,12 @@ import { IoMail } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
 import footerBgImage from "../assets/pexels-photo-5428267.webp"
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
 
   const { t } = useTranslation();
+  const navigate = useNavigate()
 
   return (
     <footer className="bg-[#071d28] text-white py-12 px-10 "
@@ -40,32 +42,31 @@ const Footer = () => {
           <div className="mb-8 md:mb-0 md:mr-8">
             <h2 className="text-lg font-semibold mb-4">{t('QUICK LINKS')}</h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">{t('Home')}</a></li>
-              <li><a href="#" className="hover:underline">{t('About')}</a></li>
-              <li><a href="#" className="hover:underline lowercase">{t(`PRESIDENT'S`)} {t('MESSAGE')}</a></li>
+              <li onClick={()=>navigate('/')} className="hover:underline cursor-pointer">{t('Home')}</li>
+              <li onClick={()=>navigate('/about')} className="hover:underline cursor-pointer">{t('About')}</li>
+              <li className="hover:underline cursor-pointer cursor-pointer" onClick={()=>navigate('/about?section=president-message')}>{t(`PRESIDENT'S`)} {t('MESSAGE')}</li>
             </ul>
           </div>
           <div className="mb-8 md:mb-0 md:mr-8">
             <h2 className="text-lg font-semibold mb-10"></h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">{t('MISSION & VISION')}</a></li>
-              <li><a href="#" className="hover:underline">{t('DEPARTMENTS')}</a></li>
-              <li><a href="#" className="hover:underline">{t('Insurance Partners')}</a></li>
+              <li onClick={()=>navigate('/doctors')} className="hover:underline cursor-pointer">{t('Doctors')}</li>
+              <li onClick={()=>navigate('/services')} className="hover:underline cursor-pointer">{t('Services')}</li>
+              <li onClick={()=>navigate('/vision')} className="hover:underline cursor-pointer">{t('MISSION & VISION')}</li>
             </ul>
           </div>
           <div className="mb-8 md:mb-0 md:mr-8">
             <h2 className="text-lg font-semibold mb-10"></h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">{t('Doctors')}</a></li>
-              <li><a href="#" className="hover:underline">{t('Services')}</a></li>
-              <li><a href="#" className="hover:underline">{t('News & Events')}</a></li>
+              <li onClick={()=>navigate('/gallery')} className="hover:underline cursor-pointer">{t('Gallery')}</li>
+              <li onClick={()=>navigate('/contact')} className="hover:underline cursor-pointer">{t('Contact')}</li>
+              <li onClick={()=>navigate('/news&events')} className="hover:underline cursor-pointer">{t('News & Events')} </li>
             </ul>
           </div>
           <div>
             <h2 className="text-lg font-semibold mb-10"></h2>
             <ul className='text-sm flex flex-col gap-2'>
-              <li><a href="#" className="hover:underline">{t('Contact')}</a></li>
-              <li><a href="#" className="hover:underline">{t('Privacy Policy')}</a></li>
+              <li><a href="#" className="hover:underline cursor-pointer">{t('Privacy Policy')}</a></li>
             </ul>
           </div>
         </div>
@@ -73,16 +74,15 @@ const Footer = () => {
       <div className="max-w-[1150px] mx-auto px-4 mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm"><span className='opacity-60'> &copy; Hiba Asia Medical Group | Designed and developed by</span> <a href="#" className="hover:underline">FarAa Technologies Pvt. Ltd.</a></p>
         <div className="flex mt-4 md:mt-0">
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaFacebookF className='group-hover:text-black' /></a>
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaXTwitter className='group-hover:text-black' /></a>
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaInstagram className='group-hover:text-black' /></a>
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaLinkedinIn className='group-hover:text-black' /></a>
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaYoutube className='group-hover:text-black' /></a>
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaSnapchatGhost className='group-hover:text-black' /></a>
-          <a href="#" className="mx-2  group rounded-full hover:bg-white border p-2"><FaTiktok className='group-hover:text-black' /></a>
+          <a href="https://www.facebook.com/HibaAsia.care/" className="mx-2  group rounded-full hover:bg-white border p-2"><FaFacebookF className='group-hover:text-black' /></a>
+          <a href="https://x.com/hiba_asia_waz" className="mx-2  group rounded-full hover:bg-white border p-2"><FaXTwitter className='group-hover:text-black' /></a>
+          <a href="https://www.instagram.com/hibaasia.care/" className="mx-2  group rounded-full hover:bg-white border p-2"><FaInstagram className='group-hover:text-black' /></a>
+          <a href="https://www.linkedin.com/company/hibaasia/" className="mx-2  group rounded-full hover:bg-white border p-2"><FaLinkedinIn className='group-hover:text-black' /></a>
+          <a href="https://www.youtube.com/channel/UCPnm2Cu5Oh1rWGIoVboDOOQ" className="mx-2  group rounded-full hover:bg-white border p-2"><FaYoutube className='group-hover:text-black' /></a>
+          <a href="https://www.snapchat.com/add/hibaasia.care?invite_id=trvr6QEe&locale=en_IN&share_id=y_TsKRKQT8uHgIonRdOqvQ&sid=631801f96c6c48b3a8b54899fb69ead4" className="mx-2  group rounded-full hover:bg-white border p-2"><FaSnapchatGhost className='group-hover:text-black' /></a>
+          <a href="https://www.tiktok.com/@hibaasiacare" className="mx-2  group rounded-full hover:bg-white border p-2"><FaTiktok className='group-hover:text-black' /></a>
         </div>
       </div>
-      {/* </div> */}
     </footer>
   );
 };

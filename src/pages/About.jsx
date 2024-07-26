@@ -84,7 +84,8 @@ function About() {
           <div className="w-full flex flex-col items-center justify-center mx-auto">
             <div className="w-full">
               <h2 className="text-3xl font-bold mb-9 underline-custom">
-                {t(`PRESIDENT'S`)} <span className="font-normal">{t('MESSAGE')}</span>
+              <span className="uppercase">{t(`PRESIDENT'S`)} </span>
+              <span className="font-normal">{t('MESSAGE')}</span>
               </h2>
             </div>
 

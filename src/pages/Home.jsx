@@ -169,7 +169,7 @@ function Home() {
               >
                 <div className="flex flex-col justify-center pt-10">
                   <h2 className="text-3xl font-bold mb-10 underline-custom">
-                    {t(`PRESIDENT'S`)}{" "}
+                    <span className="uppercase">{t(`PRESIDENT'S`)} </span> 
                     <span className="font-normal">{t("MESSAGE")}</span>
                   </h2>
 
