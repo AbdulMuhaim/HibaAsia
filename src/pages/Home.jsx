@@ -119,19 +119,19 @@ function Home() {
         <div>
           {/* header */}
 
-          <div className="bg-[#e3e1e1] bg-opacity-90 py-5 flex justify-center flex-col xl:flex-row gap-7 px-10 items-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full xl:w-auto">
+          <div className="bg-[#e3e1e1] bg-opacity-90 py-5 shadow-2xl shadow-black flex justify-center flex-col xl:flex-row gap-7 px-6 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 w-full xl:w-auto">
               {cardData.map((card, index) => (
                 <div
                   key={index}
-                  className="group bg-[#1e478e] pr-2 rounded-md h-[65px] flex  w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-100 hover:border-sky-700 hover:bg-sky-900"
+                  className="group bg-[#1e478e] pr-2 rounded-md h-[60px] flex  w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-75 hover:border-sky-700 hover:bg-sky-900"
                 >
                   <div className="w-[20%]">
-                    <div className="h-[85px] w-[85px] bg-[#1e478e] rounded-full overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-100 group-hover:border-sky-900">
+                    <div className="md:h-[85px] md:w-[85px] h-[60px] w-[60px] bg-[#1e478e] rounded-full overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-75 group-hover:border-sky-900">
                       <img
                         src={card.image}
                         alt="Image 1"
-                        className="h-full w-full object-cover bg-white p-4 sm:p-3 hover:scale-110 transition-all transform duration-300"
+                        className="h-full w-full object-cover bg-white p-1 sm:p-3 hover:scale-110 transition-all transform duration-300"
                       />
                     </div>
                   </div>
@@ -159,7 +159,7 @@ function Home() {
             <div className="flex flex-col xl:flex-row ">
               {/* Left Section */}
               <div
-                className="flex-1  px-16 py-16 bg-gray-800 text-white shadow-lg flex items-end flex-col"
+                className="flex-1 px-5 md:px-16 py-10 md:py-16 bg-gray-800 text-white shadow-lg flex items-end flex-col"
                 style={{
                   backgroundImage: presidentImage,
                   backgroundSize: "cover",
@@ -167,10 +167,10 @@ function Home() {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <div className="flex flex-col justify-center pt-10">
-                  <h2 className="text-3xl font-bold mb-10 underline-custom">
+                <div className="flex flex-col justify-center ">
+                  <h2 className="md:text-3xl text-2xl font-bold mb-10 underline-custom">
                     <span className="uppercase">{t(`PRESIDENT'S`)} </span> 
-                    <span className="font-normal">{t("MESSAGE")}</span>
+                    <span className="font-normal uppercase">{t("MESSAGE")}</span>
                   </h2>
 
                   <p
@@ -204,7 +204,7 @@ function Home() {
 
               {/* Right Section */}
               <div
-                className="flex-1 px-16 py-16 shadow-lg flex items-start flex-col"
+                className="flex-1 md:px-16 py-16 px-5  shadow-lg flex items-start flex-col"
                 style={{
                   backgroundImage: presidentImage2,
                   backgroundSize: "cover",
@@ -212,7 +212,7 @@ function Home() {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-              <div className="flex-1 pt-10">
+              <div className="flex-1 ">
                 <div>
                   <h2 className="text-3xl mb-10 underline-custom">
                     {t("best medical center")}
@@ -238,7 +238,7 @@ function Home() {
             {visionData.map((item, index) => (
               <div
                 key={index}
-                className="flex group flex-col  items-center gap-3 max-w-xs"
+                className="flex group flex-col  items-center gap-3 max-w-sm md:max-w-xs"
               >
                 <div className="your-element bottom-5 relative border-2 border-[#1e478e] text-center flex justify-center items-center"></div>
 

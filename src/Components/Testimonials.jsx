@@ -60,9 +60,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="bg-gray-100 mt-20 flex items-center justify-center py-32">
+    <div className="bg-gray-100 mt-20 flex items-center justify-center py-24 md:py-32">
       <div className="w-full max-w-6xl mx-auto relative">
-        <h1 className="text-3xl font-semibold mb-20 text-center text-gray-800">
+        <h1 className="text-2xl md:text-3xl font-semibold max-w-md mb-20 text-center text-gray-800">
           {t("testimonialTitle")}{" "}
           <span className="font-thin text-[#1e478e] ">{t("Hiba Asia")}</span>{" "}
         </h1>

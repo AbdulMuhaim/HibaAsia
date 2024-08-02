@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Carousel } from "antd";
-import Image1 from "../assets/image1.jpg";
-import Image2 from "../assets/image2.jpg";
-import Image4 from "../assets/image4.jpg";
-import Image5 from "../assets/image5.jpg";
-import Image6 from "../assets/image6.jpg";
+import Image1 from "../assets/BG 01.jpg";
+import Image2 from "../assets/BG 02.jpg";
+import Image4 from "../assets/BG 03.jpg";
+import Image5 from "../assets/BG 04.jpg";
+import Image6 from "../assets/BG 05.jpg";
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
   };
 
   return ( 
-    <div className="relativew-[50vw] h-[67vh]">
+    <div className="relative h-full">
       
       <Carousel
         autoplay
@@ -30,9 +30,9 @@ const App = () => {
         pauseOnHover={false}
         dots={false}
       >
-        {images.map((image, index) => (
+      {images.map((image, index) => (
       <div key={index} className="relative bg-slate-500 inline-block max-w-none mx-auto">
-      <img src={image} className="w-full h-[600px] object-cover" alt="" />
+      <img src={image} className="h-full  object-cover" alt="" />
             {/* <div className="absolute bottom-16 flex justify-center items-center left-24">
               <p className="text-black md:text-2xl text-center text-base font-bold bg-opacity-50 backdrop-filter backdrop-blur-md px-4 py-2 w-[55vw] break-words">
                 {texts[index]}

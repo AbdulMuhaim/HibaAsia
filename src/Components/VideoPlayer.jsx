@@ -12,7 +12,7 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div className="flex items-center justify-center mt-20 ">
+    <div className="flex items-center justify-center mt-20 px-2">
       <div className="relative  max-w-xl">
         {!isPlaying ? (
           <>
@@ -23,7 +23,7 @@ const VideoPlayer = () => {
             />
             <button
               onClick={handlePlay}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-6 cursor-pointer"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-5 w-20 h-20 cursor-pointer"
             >
               <span className="text-3xl">▶</span>
             </button>

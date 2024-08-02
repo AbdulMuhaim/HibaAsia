@@ -45,8 +45,8 @@ const InsuranceCarousel = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center w-full mt-10 bg-zinc-200 py-28">
-      <h1 className="mb-6 text-2xl font-bold">
+    <div className="flex flex-col items-center justify-center w-full mt-10 bg-zinc-200 py-24 md:py-28">
+      <h1 className="mb-6 text-xl md:text-2xl font-bold">
         {t('INSURANCE')} <span className="font-normal text-[#1e478e]">{t('PARTNERS')}</span>
       </h1>
       <div className="relative static-button w-full max-w-6xl px-4 overflow-hidden">

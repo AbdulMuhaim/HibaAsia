@@ -39,18 +39,20 @@ const Services = () => {
 
 
   return (
-    <section className="text-center py-20">
-      <h1 className="text-3xl font-semibold mb-4 uppercase opacity-90">
+    <section className="text-center py-20 flex justify-center items-center">
+      <div className="max-w-[1150px]">
+
+      <h1 className="text-2xl md:text-3xl font-semibold mb-4 uppercase opacity-90">
         {t('Services')}
       </h1>
-      <p className="opacity-85 mb-12">
+      <p className="opacity-70 px-8 mb-12">
         {t('serviceDescription')}
       </p>
-      <div className="flex flex-wrap justify-center gap-1">
+      <div className="flex flex-wrap justify-center gap-1 ">
         {services.map((service, index) => (
           <div
             key={index}
-            className=" rounded-lg p-2 w-72 transform transition-transform hover:scale-105"
+            className=" rounded-lg p-2 transform transition-transform hover:scale-105"
           >
             <img
               className="mx-auto mb-4 h-32"
@@ -62,7 +64,7 @@ const Services = () => {
               {t(service.title)}
             </h2>
             <p
-              className="text-gray-600 mb-5 opacity-80 text-sm"
+              className="text-gray-600 mb-5 opacity-80 text-sm max-w-md md:max-w-[265px]"
               style={{ lineHeight: "25px" }}
             >
               {t(service.description)}...
@@ -76,6 +78,8 @@ const Services = () => {
           </div>
         ))}
       </div>
+      </div>
+
     </section>
   );
 };

@@ -9,8 +9,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
 
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const navigate = useNavigate()
+  const isArabic = i18n.language === "ar";
+
 
   return (
     <footer className="bg-[#071d28] text-white py-12 px-10 "
@@ -24,48 +26,50 @@ const Footer = () => {
     }}>
       {/* <div className=' flex flex-col items-center bg-red-500 w-full'> */}
       <div className=" mx-auto px-4 max-w-[1150px] flex flex-col md:flex-row justify-between">
-        <div className="mb-8 md:mb-0 mr-7">
+        <div className="mb-8 md:mb-0 ">
           <h2 className="text-lg font-semibold mb-4">{t('CONTACT DETAILS')}</h2>
-          <address className="not-italic mb-4 flex text-sm max-w-[420px]" style={{lineHeight:"30px"}}>
-         <FaLocationDot  className='mr-3 text-xl' /> {t('hospitalLocation')}
-          </address>
+
           <p className="mb-4 flex">
-          <IoIosCall className='mr-3 text-xl'/>
-<a href="tel:+9660545961777" className="hover:underline text-sm">+9660545961777</a>
+          <FaLocationDot className={` ${isArabic?'ml-3':'mr-3'} text-xl`}/>
+<a  className="text-sm opacity-85 max-w-[420px]" style={{lineHeight:"30px"}}>{t('hospitalLocation')}</a>
+          </p>
+          <p className="mb-4 flex">
+          <IoIosCall className={` ${isArabic?'ml-3':'mr-3'} text-xl`}/>
+<a href="tel:+9660545961777" className="hover:underline text-sm opacity-85">+9660545961777</a>
           </p>
           <p className='flex'>
-          <IoMail className='mr-3 text-xl'/>
- <a href="mailto:info@hibaasia.care" className="hover:underline text-sm">info@hibaasia.care</a>
+          <IoMail className={` ${isArabic?'ml-3':'mr-3'} text-xl`}/>
+ <a href="mailto:info@hibaasia.care" className="hover:underline text-sm opacity-85">info@hibaasia.care</a>
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-between flex-grow">
-          <div className="mb-8 md:mb-0 md:mr-8">
+          <div className="md:mb-0 md:mr-8">
             <h2 className="text-lg font-semibold mb-4">{t('QUICK LINKS')}</h2>
-            <ul className='text-sm flex flex-col gap-2'>
-              <li onClick={()=>navigate('/')} className="hover:underline cursor-pointer">{t('Home')}</li>
+            <ul className='text-sm flex flex-col gap-2 opacity-85'>
+              <li onClick={()=>navigate('/')} className="hover:underline cursor-pointer ">{t('Home')}</li>
               <li onClick={()=>navigate('/about')} className="hover:underline cursor-pointer">{t('About')}</li>
-              <li className="hover:underline cursor-pointer cursor-pointer" onClick={()=>navigate('/about?section=president-message')}>{t(`PRESIDENT'S`)} {t('MESSAGE')}</li>
+              <li className="hover:underline cursor-pointer" onClick={()=>navigate('/about?section=president-message')}>{t(`PRESIDENT'S`)} {t('MESSAGE')}</li>
             </ul>
           </div>
-          <div className="mb-8 md:mb-0 md:mr-8">
-            <h2 className="text-lg font-semibold mb-10"></h2>
-            <ul className='text-sm flex flex-col gap-2'>
+          <div className="md:mb-0 md:mr-8">
+            <h2 className="text-lg font-semibold mt-10"></h2>
+            <ul className='text-sm flex flex-col gap-2 opacity-85'>
               <li onClick={()=>navigate('/doctors')} className="hover:underline cursor-pointer">{t('Doctors')}</li>
               <li onClick={()=>navigate('/services')} className="hover:underline cursor-pointer">{t('Services')}</li>
               <li onClick={()=>navigate('/vision')} className="hover:underline cursor-pointer">{t('MISSION & VISION')}</li>
             </ul>
           </div>
-          <div className="mb-8 md:mb-0 md:mr-8">
-            <h2 className="text-lg font-semibold mb-10"></h2>
-            <ul className='text-sm flex flex-col gap-2'>
+          <div className="md:mb-0 md:mr-8">
+            <h2 className="text-lg font-semibold mt-10"></h2>
+            <ul className='text-sm flex flex-col gap-2 opacity-85'>
               <li onClick={()=>navigate('/gallery')} className="hover:underline cursor-pointer">{t('Gallery')}</li>
               <li onClick={()=>navigate('/contact')} className="hover:underline cursor-pointer">{t('Contact')}</li>
               <li onClick={()=>navigate('/news&events')} className="hover:underline cursor-pointer">{t('News & Events')} </li>
             </ul>
           </div>
           <div>
-            <h2 className="text-lg font-semibold mb-10"></h2>
-            <ul className='text-sm flex flex-col gap-2'>
+            <h2 className="text-lg font-semibold mt-10"></h2>
+            <ul className='text-sm flex flex-col gap-2 opacity-85'>
               <li><a href="#" className="hover:underline cursor-pointer">{t('Privacy Policy')}</a></li>
             </ul>
           </div>

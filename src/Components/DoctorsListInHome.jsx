@@ -50,7 +50,7 @@ function DoctorsListInHome() {
 
   return (
     <div className="mt-3 py-14 px-3 w-full">
-    <h1 className="text-3xl font-semibold mb-4 text-center uppercase opacity-90">
+    <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-center uppercase opacity-90">
       {t('OUR DOCTORS')}
     </h1>
     <div className="flex  justify-center items-center">
