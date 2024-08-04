@@ -94,9 +94,7 @@ function Team() {
 
       <div className="flex justify-center">
         <div className="grid lg:grid-cols-2 gap-10 border-b-2  max-w-[1315px] p-3 sm:py-20 sm:px-28">
-          <div className="w-full">
-            <img src={ceoImage} className="rounded-xl" alt="" />
-          </div>
+
 
           <div className="w-full flex flex-col items-center justify-center mx-auto">
             <div></div>
@@ -114,6 +112,9 @@ function Team() {
 
           </div>
             </div>
+          </div>
+          <div className="w-full">
+            <img src={ceoImage} className="rounded-xl" alt="" />
           </div>
         </div>
       </div>

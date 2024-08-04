@@ -159,17 +159,17 @@ function Home() {
               {/* Left Section */}
               <div
                 className="flex-1 px-5 md:px-16 py-10 md:py-16 bg-gray-800 text-white shadow-lg flex items-end flex-col"
-                style={{
-                  backgroundImage: presidentImage,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
+                // style={{
+                //   backgroundImage: presidentImage,
+                //   backgroundSize: "cover",
+                //   backgroundPosition: "center",
+                //   backgroundRepeat: "no-repeat",
+                // }}
               >
                 <div className="flex flex-col justify-center">
                   <h2 className="md:text-3xl text-2xl font-bold mb-10 underline-custom">
                     <span className="uppercase">{t(`PRESIDENT'S`)} </span> 
-                    <span className="font-normal uppercase">{t("MESSAGE")}</span>
+                    <span className="font-normal uppercase ">{t("MESSAGE")}</span>
                   </h2>
 
                   <p
@@ -179,11 +179,11 @@ function Home() {
                     {t("presientMessage")}
                   </p>
 
-                  <div className="flex items-center mb-6">
+                  <div className="flex items-center mb-4">
                     <img
                       src={president}
                       alt="Mohammed Vellengara"
-                      className="w-[65px] h-[70px] rounded mr-4"
+                      className="w-[130px] h-[120px] rounded mr-4"
                     />
                     <div>
                       <h3 className="text-xl font-bold mb-3">
@@ -217,7 +217,7 @@ function Home() {
                     {t("best medical center")}
                   </h2>
                   <p
-                    className="mb-6 text-sm opacity-70 max-w-[496px]"
+                    className="mb-16 text-sm opacity-70 max-w-[496px]"
                     style={{ lineHeight: "30px" }}
                   >
                     {t("best medical center description")}
