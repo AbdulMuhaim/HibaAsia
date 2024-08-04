@@ -19,7 +19,7 @@ const Popup = ({ isOpen, onClose, imageSrc }) => {
         >
           <span className='text-white text-lg font-semibold transform group-hover:text-black'>x</span>
         </button>
-        <img src={imageSrc} alt="Popup" className="lg:h-[400px] h-[250px] sm:h-[300px]" />
+        <img src={imageSrc} alt="Popup" className="lg:h-[400px] h-[200px] sm:h-[300px]" />
       </div>
     </div>
   );
