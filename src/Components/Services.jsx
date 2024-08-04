@@ -64,7 +64,7 @@ const Services = () => {
               {t(service.title)}
             </h2>
             <p
-              className="text-gray-600 mb-5 opacity-80 text-sm max-w-md md:max-w-[265px]"
+              className="text-gray-600 mb-5 opacity-80 text-sm max-w-80 md:max-w-[265px]"
               style={{ lineHeight: "25px" }}
             >
               {t(service.description)}...

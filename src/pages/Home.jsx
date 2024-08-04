@@ -249,7 +249,7 @@ function Home() {
                   <h1 className="opacity-85 font-semibold uppercase">
                     {t(item.title)}
                   </h1>
-                  <p className="text-base text-gray-600 opacity-75 text-center mb-5">
+                  <p className="text-base text-gray-600 opacity-75 max-w-80 text-center mb-5">
                     {t(item.description)}...
                   </p>
                 </div>

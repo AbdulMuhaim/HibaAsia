@@ -70,7 +70,8 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold mt-10"></h2>
             <ul className='text-sm flex flex-col gap-2 opacity-85'>
-              <li><a href="#" className="hover:underline cursor-pointer">{t('Privacy Policy')}</a></li>
+            <li onClick={()=>navigate('/team')} className="hover:underline cursor-pointer">{t('Team')}</li>
+            <li><a href="#" className="hover:underline cursor-pointer">{t('Privacy Policy')}</a></li>
             </ul>
           </div>
         </div>

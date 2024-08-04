@@ -137,7 +137,7 @@ function Departments() {
             key={index}
             className="relative text-center rounded p-5 hover:before:content-[''] hover:before:absolute hover:before:bottom-0 hover:before:left-1/2 hover:before:h-1 hover:before:w-0 hover:before:bg-[#1e478e] hover:before:animate-growBorder hover:before:transform hover:before:-translate-x-1/2"
           >
-            <div className="animate-fade-in">
+            <div className="animate-fade-in w-[200px]">
               <img
                 src={department.img}
                 alt={department.name}
@@ -145,20 +145,20 @@ function Departments() {
                 onClick={() => navigate(department.link)}
               />
             </div>
-            <p className="opacity-70 font-bold text-lg mt-5 uppercase">
+            <p className="opacity-70 font-bold text-lg max-w-[200px] mt-5 uppercase">
               {t(department.name)}
             </p>
           </div>
         ))}
 
         <button
-          className="absolute -left-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
+          className="absolute -left-10 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showPreviousDepartment}
         >
           <IoIosArrowBack className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />
         </button>
         <button
-          className="absolute -right-20 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
+          className="absolute -right-10 top-1/2 text-3xl sm:text-4xl md:text-5xl transform -translate-y-1/2 bg-white shadow-2xl border rounded-md px-2 py-2 sm:py-3 md:py-4 hover:bg-slate-100"
           onClick={showNextDepartment}
         >
           <IoIosArrowForward className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />
