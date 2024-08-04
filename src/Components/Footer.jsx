@@ -26,12 +26,12 @@ const Footer = () => {
     }}>
       {/* <div className=' flex flex-col items-center bg-red-500 w-full'> */}
       <div className=" mx-auto px-4 max-w-[1150px] flex flex-col md:flex-row justify-between">
-        <div className="mb-8 md:mb-0 ">
+        <div className="mb-8 md:mb-0 mr-2">
           <h2 className="text-lg font-semibold mb-4">{t('CONTACT DETAILS')}</h2>
 
           <p className="mb-4 flex">
           <FaLocationDot className={` ${isArabic?'ml-3':'mr-3'} text-xl`}/>
-<a  className="text-sm opacity-85 max-w-[420px]" style={{lineHeight:"30px"}}>{t('hospitalLocation')}</a>
+<a  className="text-sm opacity-85 max-w-[400px]" style={{lineHeight:"30px"}}>{t('hospitalLocation')}</a>
           </p>
           <p className="mb-4 flex">
           <IoIosCall className={` ${isArabic?'ml-3':'mr-3'} text-xl`}/>
