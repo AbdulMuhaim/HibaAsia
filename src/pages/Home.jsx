@@ -14,8 +14,7 @@ import NewsEvents from "../Components/News&Events";
 import imageSrc from "../assets/RAHATKOM.png";
 import Popup from "../Components/Popup";
 import DoctorsListInHome from "../Components/DoctorsListInHome";
-import president from "../assets/President Message 2.jpg";
-import president3 from "../assets/President Message 3.jpg";
+import president from "../assets/Founder-Chairman-1.jpg";
 import online from "../assets/001.png";
 import teleConsultation from "../assets/003.png";
 import homeCare from "../assets/002.png";
@@ -167,7 +166,7 @@ function Home() {
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <div className="flex flex-col justify-center ">
+                <div className="flex flex-col justify-center">
                   <h2 className="md:text-3xl text-2xl font-bold mb-10 underline-custom">
                     <span className="uppercase">{t(`PRESIDENT'S`)} </span> 
                     <span className="font-normal uppercase">{t("MESSAGE")}</span>
@@ -182,13 +181,13 @@ function Home() {
 
                   <div className="flex items-center mb-6">
                     <img
-                      src={president3}
-                      alt="Alungal Mohamed"
+                      src={president}
+                      alt="Mohammed Vellengara"
                       className="w-[65px] h-[70px] rounded mr-4"
                     />
                     <div>
                       <h3 className="text-xl font-bold mb-3">
-                        {t('Dr. Fahad Ibnu Abdullah')}
+                        {t('Abdullah Mohammed Vellengara')}
                       </h3>
                       <p>{t('President of Hiba Asia Group')}</p>
                     </div>

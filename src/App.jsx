@@ -25,6 +25,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import NewsAndEvents from './pages/NewsAndEvents';
+import Team from './pages/Team';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/news&events" element={<NewsAndEvents />} />
+          <Route path="/team" element={<Team />} />
         </Route>
       </Routes>
     </BrowserRouter>

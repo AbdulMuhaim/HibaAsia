@@ -21,6 +21,7 @@ const resources = {
       "Services": "Services",
       "Gallery": "Gallery",
       "Contact": "Contact",
+      "Team": "Team",
       "mail": "Email Us",
       "Email": "Email",
       "mobile": "Call Us Now",
@@ -118,6 +119,7 @@ const resources = {
        "President Message Para4": "Thank you for choosing Hiba Asia. We look forward to being your trusted partner in health and wellness.",
        "Sincerely": "Sincerely",
        "Fahad Ibnu Abdullah": "Dr. Fahad Ibnu Abdullah",
+       "Abdullah Mohammed Vellengara": "Mr. Abdullah Mohammed Vellengara",
        "president_HibaAsia": "President, Hiba Asia Hospital",
        "Hiba Asia Medical Center": "Hiba Asia Medical Center",
        "Address": "Address",
@@ -358,7 +360,19 @@ const resources = {
         "Insurance Partners": "Insurance Partners",
         "Privacy Policy": "Privacy Policy",
         "Elhamy Fawzy Mohamed Abed": "Elhamy Fawzy Mohamed Abed",
-
+        "Our Team": "Our Team",
+        "Founder": "Founder",
+        "founderPara1": "Throughout his life cared for us and lived his life to build up this company left us this year with so much inspiration and responsibility towards the community. He and his life is our guiding force towards the future. Sharing his most beloved memories forever on this occasion.",
+        "founderPara2": "An extraordinary man and a fearless leader is driven by his passion and determination. we will always remember his humanitarian spirit, honesty, humility, and kindness; and we will continue to live by his legacy and values forever.",
+        "founderPara3": "Let’s carry on with our humble mission and accelerate it with prayers as we work together with compassion and zeal to heal the humans just as humans with all the rights of humans.",
+        "Managing Director": "Managing Director",
+        "mdPara1": "Hiba Asia Health Care Group and the delivery of patient-centered care has truly come a long way. Under the leadership of our Late MD, Abdullah, Hiba Asia polyclinics is a recognized name in healthcare focused on delivering compassionate care to every patient. But the transformation of healthcare in our community is far from over.",
+        "mdPara2": "As we build the future of world-class care, we will be guided forward by health, wellness, and how we can provide excellent care to our patients in years to come. I look forward to working alongside our community members and patients as partners in healthcare to ensure the new era of world-class care meets our ever-changing needs.",
+        "CEO": "CEO",
+        "Mohammed Kunhi": "Mr. Mohammed Kunhi",
+        "ceoPara1": "From Primary and Specialty care to long term care, Hiba Asia delivers compassionate medical care for every stage of life. Through Hiba Asia’s continuum of healthcare services and its affiliations families have access to high-quality, patient-centered care that is coordinated and conveniently close to home.",
+        "ceoPara2": "As a Health care group, we feel a deep sense of pride and commitment to all those who place their trust in our care. Our primary focus is to deliver exceptional care that exceeds national standards in quality, safety, and patient satisfaction."
+        
 
  
 
@@ -385,6 +399,7 @@ const resources = {
       "Services": "خدمات",
       "Gallery": "صالة عرض",
       "Contact": "اتصال",
+      "Team": "فريق",
       "mail": "اكتب لنا",
       "Email": "بريد إلكتروني",
       "mobile": "تكلم معنا",
@@ -461,6 +476,7 @@ const resources = {
       "MESSAGE": "رسالة",
       "presientMessage": "مرحبًا بكم في هبة آسيا، حيث يلتقي التميز في الرعاية الصحية بالرعاية الرحيمة. إنه لمن دواعي الفخر والسعادة أن أدعوك لتجربة التزامنا برفاهيتك. في هبة آسيا، نؤمن بأن المقياس الحقيقي للتقدم في صناعة الرعاية الصحية ليس فقط عدد المرافق، بل جودة...",
       "Dr. Fahad Ibnu Abdullah": "در. فهد بن عبد الله",
+      "Abdullah Mohammed Vellengara": "السيد عبد الله محمد فيلينجارا",
       "President of Hiba Asia Group": "رئيس مجموعة هبة آسيا",
       "INSURANCE": "تأمين",
       "PARTNERS": "الشركاء",
@@ -723,7 +739,18 @@ const resources = {
        "Insurance Partners": "شركاء التأمين",
        "Privacy Policy": "سياسة الخصوصية",
        "Elhamy Fawzy Mohamed Abed": "الهامى فوزى محمد عابد",
-
+       "Our Team": "فريقنا",
+       "Founder": "مؤسس",
+       "founderPara1": "لقد اهتم بنا طوال حياته وعاش حياته لبناء هذه الشركة، وقد ترك لنا هذا العام الكثير من الإلهام والمسؤولية تجاه المجتمع. هو وحياته هي القوة الموجهة لنا نحو المستقبل. مشاركة ذكرياته المفضلة إلى الأبد في هذه المناسبة.",
+       "founderPara2": "رجل غير عادي وقائد شجاع مدفوع بشغفه وتصميمه. وسنتذكر دائمًا روحه الإنسانية وصدقه وتواضعه ولطفه؛ وسوف نستمر في العيش وفق تراثه وقيمه إلى الأبد.",
+       "founderPara3": "دعونا نواصل مهمتنا المتواضعة ونسرعها بالصلاة ونحن نعمل معًا برحمة وحماس لشفاء البشر تمامًا كما البشر مع جميع حقوق البشر.",
+       "Managing Director": "المدير العام",
+       "mdPara1": "لقد قطعت مجموعة هبة آسيا للرعاية الصحية وتقديم الرعاية التي تركز على المريض شوطًا طويلًا حقًا. تحت قيادة الطبيب الراحل عبد الله، تعد عيادات هبة آسيا اسمًا معروفًا في مجال الرعاية الصحية يركز على تقديم الرعاية الرحيمة لكل مريض. لكن تحول الرعاية الصحية في مجتمعنا لم ينته بعد.",
+       "mdPara2": "بينما نبني مستقبل الرعاية ذات المستوى العالمي، سنسترشد للأمام بالصحة والعافية وكيف يمكننا تقديم رعاية ممتازة لمرضانا في السنوات القادمة. إنني أتطلع إلى العمل جنبًا إلى جنب مع أفراد مجتمعنا والمرضى كشركاء في الرعاية الصحية لضمان تلبية العصر الجديد من الرعاية ذات المستوى العالمي لاحتياجاتنا المتغيرة باستمرار.",
+       "CEO": "المدير التنفيذي",
+       "Mohammed Kunhi": "السيد محمد كونهي",
+       "ceoPara1": "من الرعاية الأولية والمتخصصة إلى الرعاية طويلة الأمد، تقدم هبة آسيا رعاية طبية رحيمة لكل مرحلة من مراحل الحياة. من خلال استمرارية خدمات الرعاية الصحية التي تقدمها هبة آسيا والشركات التابعة لها، تستطيع العائلات الوصول إلى رعاية عالية الجودة تتمحور حول المريض وتكون منسقة وقريبة من المنزل.",
+       "ceoPara2": "كمجموعة رعاية صحية، نشعر بإحساس عميق بالفخر والالتزام تجاه جميع أولئك الذين يضعون ثقتهم في رعايتنا. ينصب تركيزنا الأساسي على تقديم رعاية استثنائية تتجاوز المعايير الوطنية في الجودة والسلامة ورضا المرضى.",
 
 
 

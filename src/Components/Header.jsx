@@ -9,6 +9,7 @@ import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { FaCaretDown } from "react-icons/fa";
+import ScrollToTop from "./ScrollTopButton";
 const saudiFlag =
   "https://cdn.britannica.com/79/5779-050-46C999AF/Flag-Saudi-Arabia.jpg";
 const ukFlag =
@@ -82,6 +83,10 @@ function Header() {
     {
       name: "Services",
       url: "services",
+    },
+    {
+      name: "Team",
+      url: "team",
     },
     {
       name: "Gallery",
@@ -204,6 +209,8 @@ function Header() {
 
         <Whatsapp />
         <SocialMedias />
+        <ScrollToTop />
+
 
         {location.pathname === "/" ? (
           ""

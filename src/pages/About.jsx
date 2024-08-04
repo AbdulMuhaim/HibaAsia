@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import doctorsHeaderImage from '../assets/group-of-doctors-standing-in-hospital-on-medical-c-2023-11-27-05-18-43-utc.jpg';
 import DoctorPatient from '../assets/smiling-girl-hospital-bed.jpg';
-import president from '../assets/Screenshot 2024-07-13 220044.png';
+import president from "../assets/Founder.jpg";
 import { useTranslation } from 'react-i18next';
 
 function About() {
@@ -85,7 +85,7 @@ function About() {
             <div className="w-full">
               <h2 className="text-3xl font-bold mb-9 underline-custom">
               <span className="uppercase">{t(`PRESIDENT'S`)} </span>
-              <span className="font-normal">{t('MESSAGE')}</span>
+              <span className="font-normal uppercase text-[#1e478e]">{t('MESSAGE')}</span>
               </h2>
             </div>
 
@@ -104,7 +104,7 @@ function About() {
             <div className="flex w-full font-semibold">
               <p className="president-message">
                 {t('Sincerely')},
-                <br />{t('Fahad Ibnu Abdullah')}
+                <br />{t('Abdullah Mohammed Vellengara')}
                 <br />
                 {t('president_HibaAsia')}
               </p>
