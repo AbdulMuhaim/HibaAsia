@@ -62,10 +62,13 @@ const Testimonials = () => {
   return (
     <div className="bg-gray-100 mt-20 flex items-center justify-center py-24 md:py-32">
       <div className="w-full max-w-6xl mx-auto relative">
+        <div className=" w-full text-center flex justify-center">
         <h1 className="text-2xl md:text-3xl font-semibold max-w-md mb-20 text-center text-gray-800">
           {t("testimonialTitle")}{" "}
           <span className="font-thin text-[#1e478e] ">{t("Hiba Asia")}</span>{" "}
         </h1>
+        </div>
+
         <div className="flex flex-col justify-center items-center lg:flex-row transition-transform duration-500 gap-24">
           {displayedTestimonials.map((testimonial, index) => (
             <div
