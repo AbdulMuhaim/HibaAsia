@@ -1,8 +1,9 @@
 import img from "../assets/physician-holding-otoscope-ear-consultation-patient-checkup-visit-woman-doctor-using-otology-instrument-examine-infection-give-medical-advice-senior-man.jpg";
-import headerBgImage from "../assets/woman-patient-medical-office-doctor-medical-mask-lor-checks-woman-ears.jpg";
+import headerBgImage from "../assets/jpeg-optimizer_close-up-reporter-taking-interview.jpg";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import NewsAndEventsPage from "../Components/NewsAndEventsPage";
 
 function NewsAndEvents() {
   useEffect(() => {
@@ -39,9 +40,13 @@ function NewsAndEvents() {
           </div>
         </div>
       </div>
-
 <div className="min-h-80 flex justify-center items-center">
-<h1 className="text-2xl">progressing...</h1>
+
+  
+{/* <h1 className="text-2xl">progressing...</h1> */}
+
+<NewsAndEventsPage/>
+
 </div>
 
     </div>

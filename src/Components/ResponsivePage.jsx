@@ -13,26 +13,11 @@ const ResponsivePage = () => {
   return (
     <>
       <div className="w-full h-full relative">
-        {/* <div className="flex flex-row items-center md:items-start"> */}
-          {/* First Image */}
-          {/* <div className="w-[100%] md:h-[450px] h-[170px]"> */}
+
             <Curousel />
-            {/* <img src={Image1} className="w-full h-full object-cover" alt="First"/> */}
-          {/* </div> */}
-
-          {/* Middle Printed Border */}
-          {/* <div className="w-[5%] h-[600px] opacity-70 hidden md:block">
-            <div className="border-pattern h-full w-full"></div>
-          </div> */}
-
-          {/* Static Image Section */}
-          {/* <div className="w-[28%] h-[600px] md:flex justify-center items-center p-5 hidden ">
-            <img src={headerImage} alt="Static" className="object-cover" />
-          </div> */}
-        {/* </div> */}
 
         {/* Content Box for Medium and Larger Screens */}
-        <div
+        {/* <div
           className="absolute hidden lg:flex left-1/2 transform -translate-x-1/2 -translate-y-52 w-[90%]  max-w-[1110px] bg-[#1e478e] text-white shadow-2xl"
           style={{ boxShadow: "0 12px 16px rgba(0, 0, 0, 0.2)" }}
         >
@@ -63,7 +48,7 @@ const ResponsivePage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Additional Box for Small Screens */}
         <div className="w-full lg:hidden flex  flex-col justify-center items-center h-auto bg-[#1e478e] text-white ">

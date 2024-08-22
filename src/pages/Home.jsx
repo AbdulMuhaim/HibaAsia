@@ -10,7 +10,7 @@ import customer from "../assets/customer.png";
 import binoculars from "../assets/binoculars.png";
 import InsuranceCarousel from "../Components/InsuranceCarousel";
 import VideoPlayer from "../Components/VideoPlayer";
-import NewsEvents from "../Components/News&Events";
+import NewsEvents from "../Components/News&EventsInHome";
 import imageSrc from "../assets/RAHATKOM.png";
 import Popup from "../Components/Popup";
 import DoctorsListInHome from "../Components/DoctorsListInHome";
@@ -21,6 +21,8 @@ import homeCare from "../assets/002.png";
 import packages from "../assets/004.png";
 import Services from "../Components/Services";
 import img from "../assets/muh.jpg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
   const navigate = useNavigate();
@@ -167,10 +169,14 @@ function Home() {
                 // }}
               >
                 <div className="flex flex-col justify-center">
+                  <div className="relative">
+
+                <FontAwesomeIcon icon={faQuoteLeft} className="md:text-4xl text-3xl absolute -left-40 sm:-left-11 pr-3 font-bold text-white " />
                   <h2 className="md:text-3xl text-2xl font-bold mb-10 underline-custom">
                     <span className="uppercase">{t(`PRESIDENT'S`)} </span> 
                     <span className="font-normal uppercase ">{t("MESSAGE")}</span>
                   </h2>
+                  </div>
 
                   <p
                     className="mb-5 text-sm opacity-90 max-w-[496px]"
