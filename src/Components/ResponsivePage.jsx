@@ -17,7 +17,7 @@ const ResponsivePage = () => {
             <Curousel />
 
         {/* Content Box for Medium and Larger Screens */}
-        {/* <div
+        <div
           className="absolute hidden lg:flex left-1/2 transform -translate-x-1/2 -translate-y-52 w-[90%]  max-w-[1110px] bg-[#1e478e] text-white shadow-2xl"
           style={{ boxShadow: "0 12px 16px rgba(0, 0, 0, 0.2)" }}
         >
@@ -26,10 +26,10 @@ const ResponsivePage = () => {
           </div>
 
           <div className="w-[83%]">
-            <div className="flex">
+            {/* <div className="flex">
               <img src={border} alt="" className="h-7  overflow-hidden" />
               <img src={border} alt="" className="h-7  overflow-hidden " />
-            </div>
+            </div> */}
             <div className="px-5 py-10">
               <p className="homeText">{t("cardAboveCarousel")}</p>
               <div className="flex justify-center] gap-4 mt-4 flex-wrap">
@@ -48,7 +48,7 @@ const ResponsivePage = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* Additional Box for Small Screens */}
         <div className="w-full lg:hidden flex  flex-col justify-center items-center h-auto bg-[#1e478e] text-white ">

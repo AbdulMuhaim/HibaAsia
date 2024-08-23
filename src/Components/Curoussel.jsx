@@ -31,7 +31,7 @@ const App = () => {
         dots={false}
       >
       {images.map((image, index) => (
-      <div key={index} className="relative bg-slate-500 inline-block max-w-none max-h-[600px] mx-auto">
+      <div key={index} className="relative inline-block max-w-none mx-auto">
       <img src={image} className="h-full object-cover" alt="" />
             {/* <div className="absolute bottom-16 flex justify-center items-center left-24">
               <p className="text-black md:text-2xl text-center text-base font-bold bg-opacity-50 backdrop-filter backdrop-blur-md px-4 py-2 w-[55vw] break-words">

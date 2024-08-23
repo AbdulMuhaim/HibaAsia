@@ -5,11 +5,15 @@ import { CiLocationOn } from "react-icons/ci";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { CiMail } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 function Contact() {
   const headerBgImage = `url(${contactImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
   const navigate = useNavigate();
   const { t } = useTranslation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 
   return (

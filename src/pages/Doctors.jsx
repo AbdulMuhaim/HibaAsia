@@ -4,12 +4,15 @@ import doctorsHeaderImage from "../assets/group-of-doctors-standing-in-hospital-
 import DoctorsList from "../Components/DoctorsList";
 
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Doctors() {
   const headerBgImage = `url(${doctorsHeaderImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
   const navigate = useNavigate()
   const { t } = useTranslation();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
