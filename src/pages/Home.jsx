@@ -171,11 +171,12 @@ function Home() {
                 <div className="flex flex-col justify-center">
                   <div className="relative">
 
-                <FontAwesomeIcon icon={faQuoteLeft} className="md:text-4xl text-3xl absolute -left-40 sm:-left-11 pr-3 font-bold text-white " />
+                {/* {isArabic?"":<FontAwesomeIcon icon={faQuoteLeft} className="md:text-4xl text-3xl mr-3 hidden sm:block  font-bold text-white " />} */}
                   <h2 className="md:text-3xl text-2xl font-bold mb-10 underline-custom">
                     <span className="uppercase">{t(`PRESIDENT'S`)} </span> 
                     <span className="font-normal uppercase ">{t("MESSAGE")}</span>
                   </h2>
+                  {/* {isArabic?<FontAwesomeIcon icon={faQuoteLeft} className="md:text-4xl text-3xl mr-3 hidden sm:block font-bold text-white " />:""} */}
                   </div>
 
                   <p
@@ -189,7 +190,7 @@ function Home() {
                     <img
                       src={president}
                       alt="Mohammed Vellengara"
-                      className="w-[130px] h-[120px] rounded mr-4"
+                      className={`w-[130px] h-[120px] rounded ${isArabic?"ml-4":"mr-4"}`}
                     />
                     <div>
                       <h3 className="text-xl font-bold mb-3">

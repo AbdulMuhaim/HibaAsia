@@ -73,7 +73,7 @@ const ResponsivePage = () => {
                 {t("AL ZAHRA")}
               </button>
               <button className="border-2 text-xs rounded-3xl px-3  py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
-                {"AL SANABEL"}
+                {t("AL SANABEL")}
               </button>
             </div>
           </div>

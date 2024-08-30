@@ -102,7 +102,7 @@ function Header() {
     <>
       <div className="w-full h-auto flex border-t-4 border-[#1e478e] sm:flex-col lg:flex-row justify-center items-center py-3">
         {/* hiba icon */}
-        <div className={` ${isArabic ? "lg:pl-64 pl-3" : "lg:pr-64 pr-14"}`}>
+        <div className={` ${isArabic ? "lg:pl-64 pl-14" : "lg:pr-64 pr-14"}`}>
           <div className="flex items-center">
             <img
               src={headerImage}
@@ -207,8 +207,8 @@ function Header() {
 
         {/* options bar under header closed*/}
 
-        <Whatsapp />
-        <SocialMedias />
+        {/* <Whatsapp /> */}
+        {/* <SocialMedias /> */}
         <ScrollToTop />
 
 
@@ -227,7 +227,7 @@ function Header() {
         style={{ letterSpacing: "1px", wordSpacing: "3px" }}
       >
         {/* Hamburger menu for mobile */}
-        <div className="lg:hidden flex justify-end w-full py-4 px-2 pr-11">
+        <div className="lg:hidden flex justify-end w-full py-4 px-8 ">
           <div
             onClick={() => setMobileMenu(!mobileMenu)}
             className="cursor-pointer "
