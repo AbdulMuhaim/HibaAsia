@@ -1,32 +1,38 @@
-import DrAswaq from "../assets/HibaDoctors/01. Dr. Aswaq.jpg";
-import DrAzza from "../assets/HibaDoctors/02. Dr. Azza.jpg";
-import DrRamadan from "../assets/HibaDoctors/03. Dr. Ramadan.jpg";
-import DrHussam from "../assets/HibaDoctors/04. Dr. Hussam.jpg";
-import DrShahin from "../assets/HibaDoctors/05. Dr. Shahin.jpg";
-import DrSamad from "../assets/HibaDoctors/06. Dr. Samad.jpg";
-import DrMajedMouris from "../assets/HibaDoctors/07. Dr. Majed Mouris.jpg";
-import DrMohammedAnwar from "../assets/HibaDoctors/08. Dr. Mohammed Anwar.jpg";
-import DrSherifHelmy from "../assets/HibaDoctors/09. Dr. Sherif Helmy.jpg";
-import DrTaha from "../assets/HibaDoctors/10. Dr. Taha.jpg";
-import DrHanaOmara from "../assets/HibaDoctors/11. Hana Omara.jpg";
-import DrShukoor from "../assets/HibaDoctors/12. Dr. Shukoor.jpg";
-import DrMurtaza from "../assets/HibaDoctors/13. Dr. Murtaza.jpg";
-import DrJavedIqbal from "../assets/HibaDoctors/14. Dr. Javed Iqbal.jpg";
-import DrBahaIbrahim from "../assets/HibaDoctors/15. Dr. Baha Ibrahim.jpg";
-import DrFathimathuZuhra from "../assets/HibaDoctors/16. Dr. Fathimathu Zuhra.jpg";
-import DrAminaKhan from "../assets/HibaDoctors/17. Dr. Amina Khan.jpg";
-import DrKhaleel from "../assets/HibaDoctors/18. Dr. Khaleel.jpg";
-import DrIramQadirReshi from "../assets/HibaDoctors/19. Dr. Iram Qadir Reshi.jpg";
-import DrAbdirizak from "../assets/HibaDoctors/20. Dr. Abdirizak.jpg";
-import DrKatherIbrahim from "../assets/HibaDoctors/21. dr. Kather Ibrahim.jpg";
-import DrAbdullahBayazeed from "../assets/HibaDoctors/22. Dr. Abdullah Bayazeed.jpg";
-import DrAbdulAzeezalZahrani from "../assets/HibaDoctors/23. Dr. Abdul Azeez al Zahrani.jpg";
-import DrShahadBinMahfouz from "../assets/HibaDoctors/24. Dr. Shahad Bin Mahfouz.jpg";
-import DrNoufQasem from "../assets/HibaDoctors/25. Dr. Nouf Qasem.jpg";
-import DrJensonJohn from "../assets/HibaDoctors/26. Dr. Jenson John.jpg";
-import DrLintuMol from "../assets/HibaDoctors/27. Dr. Lintu Mol.jpg";
-import DrMaryamAhmed from "../assets/HibaDoctors/28. Dr. Maryam Ahmed.jpg";
-import DrElhamyFawzyMohamedAbed from "../assets/HibaDoctors/30. Dr. Elhamy Fawzy Mohamed Abed.jpg"
+
+
+import DrAswaq from "../assets/HibaDoctors/01._Dr._Aswaq-removebg-preview.png";
+import DrAzza from "../assets/HibaDoctors/02._Dr._Azza-removebg-preview.png";
+import DrRamadan from "../assets/HibaDoctors/03._Dr._Ramadan-removebg-preview.png";
+import DrHussam from "../assets/HibaDoctors/04._Dr._Hussam-removebg-preview.png";
+import DrShahin from "../assets/HibaDoctors/05._Dr._Shahin-removebg-preview.png";
+import DrSamad from "../assets/HibaDoctors/06._Dr._Samad-removebg-preview.png";
+import DrMajedMouris from "../assets/HibaDoctors/07._Dr._Majed_Mouris-removebg-preview.png";
+import DrMohammedAnwar from "../assets/HibaDoctors/08._Dr._Mohammed_Anwar-removebg-preview.png";
+import DrSherifHelmy from "../assets/HibaDoctors/09._Dr._Sherif_Helmy-removebg-preview.png";
+import DrTaha from "../assets/HibaDoctors/10._Dr._Taha-removebg-preview.png";
+import DrHanaOmara from "../assets/HibaDoctors/11._Hana_Omara-removebg-preview.png";
+import DrShukoor from "../assets/HibaDoctors/12._Dr._Shukoor-removebg-preview.png";
+import DrMurtaza from "../assets/HibaDoctors/13._Dr._Murtaza-removebg-preview.png";
+import DrJavedIqbal from "../assets/HibaDoctors/14._Dr._Javed_Iqbal-removebg-preview.png";
+import DrBahaIbrahim from "../assets/HibaDoctors/15._Dr._Baha_Ibrahim-removebg-preview.png";
+import DrFathimathuZuhra from "../assets/HibaDoctors/16._Dr._Fathimathu_Zuhra-removebg-preview.png";
+import DrAminaKhan from "../assets/HibaDoctors/17._Dr._Amina_Khan-removebg-preview.png";
+import DrKhaleel from "../assets/HibaDoctors/18._Dr._Khaleel-removebg-preview.png";
+import DrIramQadirReshi from "../assets/HibaDoctors/19._Dr._Iram_Qadir_Reshi-removebg-preview.png";
+import DrAbdirizak from "../assets/HibaDoctors/20._Dr._Abdirizak-removebg-preview.png";
+import DrKatherIbrahim from "../assets/HibaDoctors/21._Dr._Kather_Ibrahim-removebg-preview.png";
+import DrAbdullahBayazeed from "../assets/HibaDoctors/22._Dr._Abdullah_Bayazeed-removebg-preview.png";
+import DrAbdulAzeezalZahrani from "../assets/HibaDoctors/23._Dr._Abdul_Azeez_al_Zahrani-removebg-preview.png";
+import DrShahadBinMahfouz from "../assets/HibaDoctors/24._Dr._Shahad_Bin_Mahfouz-removebg-preview.png";
+import DrNoufQasem from "../assets/HibaDoctors/25._Dr._Nouf_Qasem-removebg-preview.png";
+import DrJensonJohn from "../assets/HibaDoctors/26._Dr._Jenson_John-removebg-preview.png";
+import DrLintuMol from "../assets/HibaDoctors/27._Dr._Lintu_Mol-removebg-preview.png";
+import DrMaryamAhmed from "../assets/HibaDoctors/28._Dr._Maryam_Ahmed-removebg-preview.png";
+import DrSamahObaid from "../assets/HibaDoctors/29._Dr._Samah_Obaid-removebg-preview.png"
+import DrElhamyFawzyMohamedAbed from "../assets/HibaDoctors/30._Dr._Elhamy_Fawzy_Mohamed_Abed-removebg-preview.png";
+
+
+
 import DoctorCard from "./DoctorCard";
 
 
@@ -85,6 +91,7 @@ function DoctorsList() {
         { name: "Jenson John", image: DrJensonJohn, department: "Dentist" },
         { name: "Lintu Mol", image: DrLintuMol, department: "Dentist" },
         { name: "Maryam Ahmed", image: DrMaryamAhmed, department: "Dentist" },
+        { name: "Samah Obaid", image: DrSamahObaid, department: "Dentist" },
         {
           name: "Murtaza Bakhsh",
           image: DrMurtaza,

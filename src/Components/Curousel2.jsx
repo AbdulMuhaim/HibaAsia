@@ -91,3 +91,28 @@ function Curousel2() {
 }
 
 export default Curousel2;
+
+
+
+// {images.map((image, index) => (
+        
+//   <div key={index} className="relative inline-block max-w-none mx-auto">
+//   <img src={image} className="h-full object-cover" alt="" />
+//         {/* <div className="absolute bottom-16 flex justify-center items-center left-24">
+//           <p className="text-black md:text-2xl text-center text-base font-bold bg-opacity-50 backdrop-filter backdrop-blur-md px-4 py-2 w-[55vw] break-words">
+//             {texts[index]}
+//           </p>
+//         </div> */}
+//         {/* <div className="absolute flex items-center left-96 ml-16 justify-center bottom-7">
+//           {images.map((_, index) => (
+//             <button
+//               key={index}
+//               className={`h-1 w-5 mx-1 rounded ${
+//                 index === currentSlide ? "bg-black" : "bg-gray-300"
+//               }`}
+//               onClick={() => setCurrentSlide(index)}
+//             />
+//           ))}
+//         </div> */}
+//       </div>
+//     ))}
