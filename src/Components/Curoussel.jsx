@@ -32,10 +32,9 @@ const App = () => {
       >
       {images.map((image, index) => (
 
-<div key={index} className="relative inline-block carousel-container mx-auto">
-  <img src={image} className="carousel-image" alt="" />
+      <div key={index} className="relative inline-block max-w-none mx-auto">
+<img src={image} className="h-full w-full object-cover" alt="" />
 </div>
-
         ))}
       </Carousel>
     </div>

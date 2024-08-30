@@ -154,7 +154,7 @@ body {
   /* background-color: #ffffff; */
 }
 
-.carousel-container {
+/* .carousel-container {
   height: auto;
   width: 100vw;
 }
@@ -163,7 +163,7 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
+} */
 
 
   @media (max-width: 768px) {
@@ -171,7 +171,7 @@ body {
           width: 60%;
       }
   }
-  @media (min-width: 1024px) {
+  /* @media (min-width: 1024px) {
     .carousel-image {
       height: 100vh;
     }
@@ -182,7 +182,7 @@ body {
       height: auto;
       width: 100%;
     }
-  }
+  } */
   
   
 
