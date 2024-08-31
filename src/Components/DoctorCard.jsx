@@ -5,7 +5,7 @@ const DoctorCard = ({ doctor }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="rounded-lg shadow-md overflow-hidden flex flex-col items-center justify-center w-full sm:w-64 text-center my-10 transform transition-transform duration-300 hover:scale-105">
+    <div className="rounded-lg shadow-2xl overflow-hidden flex flex-col items-center justify-center w-full sm:w-64 text-center my-10 transform transition-transform duration-300 hover:scale-105">
       <img
         className="w-[70%] h-[70%] object-cover border-2"
         src={doctor.image}
