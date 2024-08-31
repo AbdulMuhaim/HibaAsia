@@ -64,7 +64,7 @@ function Gynecology() {
 
         <div className="w-full flex flex-col items-center justify-center mx-auto">
           <div className="w-full">
-          <h1 className="text-center text-4xl  font-bold  mb-6 uppercase">
+          <h1 className="text-4xl  font-bold  mb-6 uppercase">
           {t('Obstetric & Gynecology')}
           </h1>
           </div>
