@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-[1150px] mx-auto px-4 mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-sm"><span className='opacity-60'> &copy; Hiba Asia Medical Group | Designed and developed by</span> <a href="#" className="hover:underline">FarAa Technologies Pvt. Ltd.</a></p>
+        <p className="text-sm"><span className='opacity-60'> &copy; Hiba Asia Medical Group | Designed and developed by</span> <a href="https://www.linkedin.com/in/abdul-muhaim-651804190/" className="hover:underline">Abdul Muhaim</a></p>
         <div className="flex mt-4 md:mt-0">
           <a href="https://www.facebook.com/HibaAsia.care/" className="mx-2  group rounded-full hover:bg-white border p-2"><FaFacebookF className='group-hover:text-black' /></a>
           <a href="https://x.com/hiba_asia_waz" className="mx-2  group rounded-full hover:bg-white border p-2"><FaXTwitter className='group-hover:text-black' /></a>

@@ -371,8 +371,11 @@ const resources = {
         "CEO": "CEO",
         "Mohammed Kunhi": "Mr. Mohammed Kunhi",
         "ceoPara1": "From Primary and Specialty care to long term care, Hiba Asia delivers compassionate medical care for every stage of life. Through Hiba Asia’s continuum of healthcare services and its affiliations families have access to high-quality, patient-centered care that is coordinated and conveniently close to home.",
-        "ceoPara2": "As a Health care group, we feel a deep sense of pride and commitment to all those who place their trust in our care. Our primary focus is to deliver exceptional care that exceeds national standards in quality, safety, and patient satisfaction."
-        
+        "ceoPara2": "As a Health care group, we feel a deep sense of pride and commitment to all those who place their trust in our care. Our primary focus is to deliver exceptional care that exceeds national standards in quality, safety, and patient satisfaction.",
+        "Hiba Asia Medical Center Al-Zahra": "Hiba Asia Medical Center Al-Zahra",
+        "Hiba Asia Medical Center Al-Fahad": "Hiba Asia Medical Center Al-Fahad",
+        "Hiba Asia Medical Center Al-Sanabel": "Hiba Asia Medical Center Al-Sanabel",
+
 
  
 
@@ -751,8 +754,9 @@ const resources = {
        "Mohammed Kunhi": "السيد محمد كونهي",
        "ceoPara1": "من الرعاية الأولية والمتخصصة إلى الرعاية طويلة الأمد، تقدم هبة آسيا رعاية طبية رحيمة لكل مرحلة من مراحل الحياة. من خلال استمرارية خدمات الرعاية الصحية التي تقدمها هبة آسيا والشركات التابعة لها، تستطيع العائلات الوصول إلى رعاية عالية الجودة تتمحور حول المريض وتكون منسقة وقريبة من المنزل.",
        "ceoPara2": "كمجموعة رعاية صحية، نشعر بإحساس عميق بالفخر والالتزام تجاه جميع أولئك الذين يضعون ثقتهم في رعايتنا. ينصب تركيزنا الأساسي على تقديم رعاية استثنائية تتجاوز المعايير الوطنية في الجودة والسلامة ورضا المرضى.",
-
-
+       "Hiba Asia Medical Center Al-Zahra": "مركز هبة اسيا الطبي الزهراء",
+       "Hiba Asia Medical Center Al-Fahad": "مركز هبة آسيا الطبي الفهد",
+       "Hiba Asia Medical Center Al-Sanabel": "مركز هبة آسيا الطبي السنابل",
 
 
     }

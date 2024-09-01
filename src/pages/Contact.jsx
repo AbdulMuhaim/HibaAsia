@@ -46,7 +46,7 @@ function Contact() {
     <div className="w-full flex justify-start items-start">
       <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
         <h1 className="text-2xl font-bold mb-6">
-          1.{t('Hiba Asia Medical Center')}
+          1.{t('Hiba Asia Medical Center Al-Fahad')}
         </h1>
         <div className="space-y-6">
           <div className="flex items-center">
@@ -75,8 +75,9 @@ function Contact() {
         </div>
       </div>
     </div>
-    <div className="pt-2 w-full h-64 md:h-auto">
-      <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+    <div className="overflow-hidden h-0 pb-[80%] relative">
+      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3713.1201950333157!2d39.2421!3d21.4638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cc432b8ad5a3%3A0xbd114583cdf7bf0a!2sHiba%20Asia%20Polyclinic!5e0!3m2!1sen!2sin!4v1725181383228!5m2!1sen!2sin" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>
@@ -90,7 +91,7 @@ function Contact() {
     <div className="w-full flex justify-start items-start">
       <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
         <h1 className="text-2xl font-bold mb-6">
-          1.{t('Hiba Asia Medical Center')}
+          2.{t('Hiba Asia Medical Center Al-Zahra')}
         </h1>
         <div className="space-y-6">
           <div className="flex items-center">
@@ -119,8 +120,9 @@ function Contact() {
         </div>
       </div>
     </div>
-    <div className="pt-2 w-full h-64 md:h-auto">
-      <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+    <div className="overflow-hidden h-0 pb-[80%] relative">
+      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3710.039038796733!2d39.1291667!3d21.5843992!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3dbd4aa9c4a1b%3A0x7b011fc788dd6694!2zSGliYSBBc2lhIE1lZGljYWwgQ2VudGVyIEFsIFphaHJhIC8g2YXYrNmF2Lkg2YfYqNipINii2LPZitinINin2YTYt9io2Yog2KfZhNi52KfZhSDYp9mE2LLZh9ix2KfYoQ!5e0!3m2!1sen!2sin!4v1725182141789!5m2!1sen!2sin" width="600" height="450"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>
@@ -131,7 +133,7 @@ function Contact() {
     <div className="w-full flex justify-start items-start">
       <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
         <h1 className="text-2xl font-bold mb-6">
-          1.{t('Hiba Asia Medical Center')}
+          3.{t('Hiba Asia Medical Center Al-Sanabel')}
         </h1>
         <div className="space-y-6">
           <div className="flex items-center">
@@ -160,10 +162,16 @@ function Contact() {
         </div>
       </div>
     </div>
-    <div className="pt-2 w-full h-64 md:h-auto">
-      <Map mapId="map1" longitude={39.2026} latitude={21.5424} />
+    <div className="overflow-hidden h-0 pb-[80%] relative">
+      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1233.1974759167613!2d39.26870677448536!3d21.394906181427785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cb00237e8401%3A0xb50e640d74284ee4!2sHiba%20Asia%20Medical%20Center!5e0!3m2!1sen!2sin!4v1725182324883!5m2!1sen!2sin" width="600" height="450"  allowFullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
+</div>
+
+
+
+<div>
 </div>
 
 
