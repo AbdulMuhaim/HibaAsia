@@ -207,8 +207,8 @@ function Header() {
 
         {/* options bar under header closed*/}
 
-        {/* <Whatsapp /> */}
-        {/* <SocialMedias /> */}
+        <Whatsapp />
+        <SocialMedias />
         <ScrollToTop />
 
 
