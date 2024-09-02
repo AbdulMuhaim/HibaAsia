@@ -16,9 +16,15 @@ const DoctorCard = ({ doctor }) => {
           {t("Dr")} {t(doctor.name)}
         </h3>
         <p className="text-sm uppercase">{t(doctor.department)}</p>
-        <button className="mt-4 px-4 py-2 bg-white text-[#1e478e] rounded-md font-semibold transition-colors duration-200">
-          {t("bookAppointment")}
-        </button>
+        <a
+          href={`https://api.whatsapp.com/send?phone=9660545961777&text=Hello,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20${doctor.name}%20from%20the%20${doctor.department}%20department.%20Please%20let%20me%20know%20the%20available%20slots.`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="mt-4 px-4 py-2 bg-white text-[#1e478e] rounded-md font-semibold transition-colors duration-200">
+            {t("bookAppointment")}
+          </button>
+        </a>
       </div>
     </div>
   );
