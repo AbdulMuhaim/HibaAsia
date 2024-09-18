@@ -56,27 +56,29 @@ function OtherBusiness() {
         </div>
       </div>
 
-      <div className="flex-col p-10 sm:p-20 w-full flex justify-center items-center gap-5 ">
-        {cardData.map((card, index) => (
-          <div
-            key={index}
-            className="flex flex-col p-3 bg-slate-300 shadow-md hover:shodow-lg rounded-2xl w-full"
-          >
-            <div className="flex items-center">
-              <img
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl border border-gray-800 text-blue-400 bg-gray-900"
-                src={card.image}
-                alt={card.title}
-              />
+      <div className=" flex justify-center">
+        <div className="flex-col p-10 sm:p-20 w-full flex justify-center items-center gap-5 max-w-[1315px]">
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="flex flex-col p-3 bg-slate-300 shadow-md hover:shodow-lg rounded-2xl w-full"
+            >
+              <div className="flex items-center">
+                <img
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl border border-gray-800 text-blue-400 bg-gray-900"
+                  src={card.image}
+                  alt={card.title}
+                />
 
-              <div className="flex flex-col ml-3 ">
-                <p className="text-sm sm:text-base font-semibold md:text-md  text-center ">
-                {card.title}
-                </p>
+                <div className="flex flex-col ml-3 ">
+                  <p className="text-sm sm:text-base font-semibold md:text-md  text-center ">
+                    {card.title}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
