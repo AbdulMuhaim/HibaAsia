@@ -96,6 +96,10 @@ function Header() {
       name: "Contact",
       url: "/contact",
     },
+    {
+      name: "Other Business",
+      url: "otherbusiness"
+    },
   ];
 
   return (
@@ -243,14 +247,8 @@ function Header() {
         {/* Menu list for desktop and mobile menu options */}
 
 
-        {/* <p>hhhhh</p>
-        <p>hhhhh</p>
-        <p>hhhhh</p>
-        <p>hhhhh</p>
-        <p>hhhhh</p> */}
-
         {!mobileMenu && (
-          <div className="w-[500px] hidden lg:flex justify-center items-center mx-2 h-full">
+          <div className="w-[780px] hidden lg:flex justify-center items-center mx-2 h-full">
             {headerMenuOptions.map((option, index) => (
               <div
                 key={index}
@@ -258,7 +256,7 @@ function Header() {
               >
                 <h1
                   onClick={() => navigate(option.url)}
-                  className="text-medium cursor-pointer transition-opacity duration-300 "
+                  className="text-medium text-center cursor-pointer transition-opacity duration-300 "
                 >
                   {t(option.name)}
                 </h1>
@@ -293,7 +291,7 @@ function Header() {
         <div
           className={`w-full h-auto lg:flex hidden ${
             isScrolled ? "scrolled" : ""
-          }  sm:flex-col lg:flex-row justify-center gap-80  border-b border-gray-300 items-center py-3 fixed top-0 left-0 z-50 bg-white transition-all duration-300`}
+          }  sm:flex-col lg:flex-row justify-center gap-20  border-b border-gray-300 items-center py-3 fixed top-0 left-0 z-50 bg-white transition-all duration-300`}
         >
           <div className="flex items-center">
             <img
@@ -303,13 +301,13 @@ function Header() {
             />
           </div>{" "}
           <div
-            className="w-[500px] hidden lg:flex justify-center items-center font-thin text-xs mx-2 h-full"
+            className="w-[780px] hidden lg:flex justify-center items-center font-thin text-xs mx-2 h-full"
             style={{ letterSpacing: "1px", wordSpacing: "3px" }}
           >
             {headerMenuOptions.map((option, index) => (
               <div
                 key={index}
-                className=" flex justify-center w-1/4 h-full items-center"
+                className=" flex justify-center w-full h-full items-center"
               >
                 <h1
                   onClick={() => navigate(option.url)}

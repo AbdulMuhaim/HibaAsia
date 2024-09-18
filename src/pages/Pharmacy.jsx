@@ -12,9 +12,34 @@ function Pharmacy() {
   const navigate = useNavigate();
   const headerImage = `url(${headerBgImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
   const { t } = useTranslation();
+  const currentUrl = window.location.pathname;
+
 
   return (
     <div>
+
+     {currentUrl==="/services"?"":<div
+        className="flex items-center justify-center h-60"
+        style={{
+          backgroundImage: headerImage,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <div className="flex flex-col">
+          <h1 className="text-5xl text-center p-5 text-white uppercase">
+            {t('Pharmacy')}
+          </h1>
+          <div className="flex items-center space-x-4 text-white justify-center">
+            <p className="cursor-pointer" onClick={() => navigate("/")}>
+              {t('Home')}
+            </p>
+            <p className="text-xl">/</p>
+            <p className="cursor-pointer">{t('Pharmacy')}</p>
+          </div>
+        </div>
+      </div>}
 
 
       <div className="flex justify-center ">

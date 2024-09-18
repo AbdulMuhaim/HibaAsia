@@ -40,14 +40,13 @@ function Services() {
         </div>
       </div>
 
+      <Laboratory />
+
       <Xray />
 
       <Ultrasound />
 
-      <Laboratory />
-
       <Pharmacy />
-
 
     </div>
   );
