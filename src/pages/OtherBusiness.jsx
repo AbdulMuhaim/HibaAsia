@@ -17,7 +17,8 @@ function OtherBusiness() {
 
   const cardData = [
     {
-      image: image2,
+      image:
+        "https://img.freepik.com/free-photo/instruments-carpenter-wooden-desk_23-2148180571.jpg?t=st=1728316194~exp=1728319794~hmac=97e39571e8c573f5434c0b4d2beea3143f62ec37ed69a8e3ce1abf0979df40be&w=826",
       title: "Al Hannawi Hardwares",
     },
     {
@@ -28,6 +29,11 @@ function OtherBusiness() {
     {
       image: image3,
       title: "Al Hannawi Manufacturing Unit",
+    },
+    {
+      image:
+        "https://img.freepik.com/free-photo/emotional-attractive-woman-holding-colorful-dresses-hanger-clothing-store_285396-4609.jpg?t=st=1728316933~exp=1728320533~hmac=c766aa4036f45fc6bdda890cf02882c41132d38c7a8a562f77f5ca33e7b2b48a&w=900",
+      title: "Hannawi Ladies Dress Shop",
     },
   ];
 

@@ -2,42 +2,49 @@ import { useEffect, useState } from "react";
 import { IoLogoWechat } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import unnamed from "../assets/unnamed.png"
+import unnamed1 from "../assets/unnamed (1).png"
+import unnamed2 from "../assets/unnamed (2).png"
+import unnamed3 from "../assets/unnamed (3).png"
+import unnamed4 from "../assets/unnamed (4).png"
+import unnamed5 from "../assets/unnamed (5).png"
 
 const testimonialsData = [
   {
-    text: "testimonial1",
+    text: "I visited Dr. Rahaf for crowning she is a very good doctor there were absolutely no pain.",
     image:
-      "https://wp.en.aleteia.org/wp-content/uploads/sites/2/2017/04/web3-muslim-man-face-young-beard-head-shutterstock_122151928-shutterstock.jpg?w=620&h=348&crop=1",
-    name: "Jawad Ali",
+      unnamed,
+    name: "Maria Quaseem",
   },
   {
-    text: "testimonial2",
+    text: `Clean clinic and very very nice staff.
+The nurses were running around and helping us and everyone else.`,
     image:
-      "https://img.freepik.com/free-photo/muslim-woman-portrait-hijab-smiling-face-close-up_53876-144187.jpg",
-    name: "Aysha Mariyam",
+      unnamed1,
+    name: "Melisa Haseljić",
   },
   {
-    text: "testimonial3",
+    text: `Was in and out, with great service.  My granddaughter didn't even cry with the nurse inserting the IV.  The doctors are great.`,
     image:
-      "https://asamnews.com/wp-content/uploads/2019/02/thispersondoesnotexist.com_.jpg",
-    name: "Tanya Grant",
+      unnamed2,
+    name: "Shareefa Basyyoni",
   },
   {
-    text: "testimonial4",
-    image: "https://bookamuslim.com/wp-content/uploads/2022/01/unnamed.jpeg",
-    name: "Farha",
+    text: "Very special thanks to Dr.Ramy Rashed I am writing to express my sincere gratitude for the exceptional dental care he has provided.",
+    image: unnamed5,
+    name: "Mahmoud Amer",
   },
   {
-    text: "testimonial5",
+    text: "testiThe most effective work staff ever. The blood test really came out fast. Great teamwork, great clinic, great service. Thank you:)",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ5S4UPcD6bRrimRECmAkJdiZ50Gt0UZWWzPni7CHycVkZzOHaA9ApZdkStZqhAdOQWgE&usqp=CAU",
-    name: "Abdul Muhaim",
+      unnamed3,
+    name: "wan siti maryam barus",
   },
   {
-    text: "testimonial6",
+    text: "Best Health care provider in Jeddah.Providing good and quality services. Good ventilation and Approachable staff.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQmtH3ATnD7ZUAccAYl0OR0By8nTAQYoghyZM3i-9_iLLi7s-ZkhFRmcH2Xz9KsC4ezKs&usqp=CAU",
-    name: "Abid",
+      unnamed4,
+    name: "Celf Creationsbid",
   },
 ];
 
@@ -78,7 +85,7 @@ const Testimonials = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-5xl text-[#1e478e]">
                 <IoLogoWechat />
               </div>
-              <p className="max-w-[15rem] mb-4 president-message border-b-2 pb-3">
+              <p className="max-w-[15rem] mb-4 president-message max-h-36 min-h-36 overflow-hidden border-b-2 pb-3">
                 "{t(testimonial.text)}"
               </p>
               <img
