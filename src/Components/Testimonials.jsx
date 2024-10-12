@@ -6,15 +6,19 @@ import unnamed from "../assets/unnamed.png"
 import unnamed1 from "../assets/unnamed (1).png"
 import unnamed2 from "../assets/unnamed (2).png"
 import unnamed3 from "../assets/unnamed (3).png"
-import unnamed4 from "../assets/unnamed (4).png"
 import unnamed5 from "../assets/unnamed (5).png"
+import unnamed6 from "../assets/unnamed (6).png"
+import unnamed7 from "../assets/unnamed (7).png"
+import unnamed8 from "../assets/unnamed (8).png"
+import unnamed9 from "../assets/unnamed (9).png"
+import unnamed10 from "../assets/unnamed (10).png"
 
 const testimonialsData = [
   {
-    text: "I visited Dr. Rahaf for crowning she is a very good doctor there were absolutely no pain.",
+    text: "I tried the clinic with dentist Rami Mohamed Rashid. He is an understanding doctor, God willing, very excellent. He has a light hand cleaning, God willing.",
     image:
       unnamed,
-    name: "Maria Quaseem",
+    name: "Rehan Alamri",
   },
   {
     text: `Clean clinic and very very nice staff.
@@ -41,10 +45,34 @@ The nurses were running around and helping us and everyone else.`,
     name: "wan siti maryam barus",
   },
   {
-    text: "Best Health care provider in Jeddah.Providing good and quality services. Good ventilation and Approachable staff.",
+    text: "The staff is very polite! every room is clean. thanks for your service 👍🏻.",
     image:
-      unnamed4,
-    name: "Celf Creationsbid",
+      unnamed6,
+    name: "Zalfa Alifah Khansa",
+  },
+  {
+    text: "Great experience 🥰",
+    image:
+      unnamed7,
+    name: "Moothali Miqdad",
+  },
+  {
+    text: "I tried the clinic with dentist Rami Mohamed Rashid. He is an understanding doctor, God willing, very excellent. He has a light hand cleaning, God willing.",
+    image:
+      unnamed8,
+    name: "Rehan Alamri",
+  },
+  {
+    text: "It’s good polyclinic They have all the medical departments and the excellent medical staff ..❤️❤️",
+    image:
+      unnamed10,
+    name: "Cpt_Abdulaziz 19",
+  },
+  {
+    text: "May God heal them. They served me quickly, and the girl at the reception has a beautiful soul, God willing ♥️",
+    image:
+      unnamed9,
+    name: "Arwa Albahli",
   },
 ];
 
@@ -85,7 +113,7 @@ const Testimonials = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-5xl text-[#1e478e]">
                 <IoLogoWechat />
               </div>
-              <p className="max-w-[15rem] mb-4 president-message max-h-36 min-h-36 overflow-hidden border-b-2 pb-3">
+              <p className="max-w-[15rem] min-w-[15rem] mb-4 president-message max-h-36 min-h-36 overflow-hidden border-b-2 pb-3">
                 "{t(testimonial.text)}"
               </p>
               <img
