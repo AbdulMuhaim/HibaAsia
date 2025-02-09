@@ -57,7 +57,7 @@ function DoctorsListInHome() {
     <div className="grid w-[1200px] grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-10 mt-10">
       {doctors.map((doctor, index) => (
         <div key={index} className="perspective-1000">
-          <div className="relative h-[20rem] text-center transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+          <div className="relative h-[20rem] text-center transition-transform duration-1000 transform-style-preserve-3d hover:rotate-y-180">
             {/* card front side */}
             <div className="absolute w-full h-full shadow-xl rounded-lg py-3 border bg-slate-50 backface-hidden  flex flex-col items-center justify-center">
               <div className="flex justify-center items-center">
@@ -78,7 +78,7 @@ function DoctorsListInHome() {
             </div>
 
             {/* card backside */}
-            <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-[#f4f6fd] to-[#ecfbf7] border rounded-lg p-5 backface-hidden transform rotate-y-180 flex flex-col items-center justify-center text-white"
+            <div className="absolute w-full h-full shadow-inner bg-gradient-to-br from-[#f4f6fd] to-[#ecfbf7] border rounded-lg p-5 backface-hidden duration-1000 transform rotate-y-180 flex flex-col items-center justify-center text-white"
             >
               <div className="flex items-center justify-center">
                 <div className="w-full h-[90%] flex justify-center items-center">

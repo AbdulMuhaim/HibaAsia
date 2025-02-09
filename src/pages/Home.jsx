@@ -21,6 +21,7 @@ import homeCare from "../assets/002.png";
 import packages from "../assets/004.png";
 import Services from "../Components/Services";
 import img from "../assets/muh.jpg"
+import banner1 from "../assets/WhatsApp Image 2024-10-12 at 20.19.37_786c9348.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,6 +33,7 @@ function Home() {
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const isArabic = i18n.language === "ar";
+  
 
   useEffect(() => {
     // Check if the popup has been seen in this session
@@ -89,23 +91,28 @@ function Home() {
       image: online,
       title: "card1Title",
       description: "card1Description",
+      bannerImage: banner1, // Replace 'banner1' with your actual banner image path
     },
     {
       image: homeCare,
       title: "card2Title",
       description: "card2Description",
+      bannerImage: imageSrc,
     },
     {
       image: teleConsultation,
       title: "card3Title",
       description: "card3Description",
+      bannerImage: banner1,
     },
     {
       image: packages,
       title: "card4Title",
       description: "card4Description",
+      bannerImage: imageSrc,
     },
   ];
+  
 
   return (
     <>

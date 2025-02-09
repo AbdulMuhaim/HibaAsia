@@ -29,13 +29,13 @@ function Contact() {
         }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl p-5 text-white">{t("Contact Us")}</h1>
+          <h1 className="text-5xl p-5 text-white">{t("Branches")}</h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
               {t('Home')}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">{t('Contact')}</p>
+            <p className="cursor-pointer">{t('Branches')}</p>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@ function Contact() {
               <strong className="block text-lg">
                 {t(`For Doctor Appointments & General Enquiries`)}
               </strong>
-              <p>+9660545961777, +9660545961777</p>
+              <p>0545961777</p>
             </div>
           </div>
           <div className="flex items-center">
@@ -84,6 +84,47 @@ function Contact() {
 
 
 
+<div className="flex justify-center">
+  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+    <div className="w-full flex justify-start items-start">
+      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+        <h1 className="text-2xl font-bold mb-6">
+          2.{t('Hiba Asia Medical Center Al-Sanabel')}
+        </h1>
+        <div className="space-y-6">
+          <div className="flex items-center">
+            <CiLocationOn className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Address')}</strong>
+              <p>{t(`Abdullah Al-Sudais, Al-Sanabel Dist. Jeddah`)}</p>
+              </div>
+          </div>
+          <div className="flex items-center">
+            <PiPhoneCallLight className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">
+                {t(`For Doctor Appointments & General Enquiries`)}
+              </strong>
+              <p>0562336005</p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <CiMail className="w-10 h-10 mx-4" />
+            <div>
+              <strong className="block text-lg">{t('Email')}</strong>
+              <p>info@hibaasia.care</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="overflow-hidden h-0 pb-[80%] relative">
+      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1233.1974759167613!2d39.26870677448536!3d21.394906181427785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cb00237e8401%3A0xb50e640d74284ee4!2sHiba%20Asia%20Medical%20Center!5e0!3m2!1sen!2sin!4v1725182324883!5m2!1sen!2sin" width="600" height="450"  allowFullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
 
 
 <div className="flex justify-center">
@@ -91,7 +132,7 @@ function Contact() {
     <div className="w-full flex justify-start items-start">
       <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
         <h1 className="text-2xl font-bold mb-6">
-          2.{t('Hiba Asia Medical Center Al-Zahra')}
+          3.{t('Hiba Asia Medical Center Al-Zahra')}
         </h1>
         <div className="space-y-6">
           <div className="flex items-center">
@@ -107,7 +148,7 @@ function Contact() {
               <strong className="block text-lg">
                 {t(`For Doctor Appointments & General Enquiries`)}
               </strong>
-              <p>+9660545961777, +9660545961777</p>
+              <p>0549993820</p>
             </div>
           </div>
           <div className="flex items-center">
@@ -128,19 +169,22 @@ function Contact() {
 </div>
 
       
+
+
+
 <div className="flex justify-center">
   <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
     <div className="w-full flex justify-start items-start">
       <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
         <h1 className="text-2xl font-bold mb-6">
-          3.{t('Hiba Asia Medical Center Al-Sanabel')}
+          4.{t('AFIA ALKHALEEJ MEDICAL CENTER')}
         </h1>
         <div className="space-y-6">
           <div className="flex items-center">
             <CiLocationOn className="w-10 h-10 mx-4" />
             <div>
               <strong className="block text-lg">{t('Address')}</strong>
-              <p>{t(`Abdullah Al-Sudais, Al-Sanabel Dist. Jeddah`)}</p>
+              <p>{t(`2943 Saad Ibn Qays, Al Bawadi, 7438, Jeddah 23443`)}</p>
               </div>
           </div>
           <div className="flex items-center">
@@ -149,7 +193,7 @@ function Contact() {
               <strong className="block text-lg">
                 {t(`For Doctor Appointments & General Enquiries`)}
               </strong>
-              <p>+9660545961777, +9660545961777</p>
+              <p>0122388880</p>
             </div>
           </div>
           <div className="flex items-center">
@@ -164,11 +208,10 @@ function Contact() {
     </div>
     <div className="overflow-hidden h-0 pb-[80%] relative">
       {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
-      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1233.1974759167613!2d39.26870677448536!3d21.394906181427785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cb00237e8401%3A0xb50e640d74284ee4!2sHiba%20Asia%20Medical%20Center!5e0!3m2!1sen!2sin!4v1725182324883!5m2!1sen!2sin" width="600" height="450"  allowFullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.8265539024706!2d39.169005299999995!3d21.5926924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d1c054f89339%3A0xe230061a24ae901e!2sAFIA%20ALKHALEEJ%20MEDICAL%20CENTER!5e0!3m2!1sen!2ssa!4v1738434450735!5m2!1sen!2ssa" width="600" height="450"  allowFullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>
-
 
 
 <div>

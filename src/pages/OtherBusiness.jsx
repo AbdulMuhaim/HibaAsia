@@ -24,7 +24,7 @@ function OtherBusiness() {
     {
       image: image1,
       title:
-        "Al Hannavi Trading For Food, Non Food & Cleaning Material (Wholesale)",
+        "Al Hannawi Trading For Food, Non Food & Cleaning Material (Wholesale)",
     },
     {
       image: image3,
@@ -35,6 +35,10 @@ function OtherBusiness() {
         "https://img.freepik.com/free-photo/emotional-attractive-woman-holding-colorful-dresses-hanger-clothing-store_285396-4609.jpg?t=st=1728316933~exp=1728320533~hmac=c766aa4036f45fc6bdda890cf02882c41132d38c7a8a562f77f5ca33e7b2b48a&w=900",
       title: "Hannawi Ladies Dress Shop",
     },
+    {
+      image:"https://images.unsplash.com/photo-1616147147027-60d49d3582c4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Hannawi Thobes"
+    }
   ];
 
   return (

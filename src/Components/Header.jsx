@@ -93,8 +93,8 @@ function Header() {
       url: "gallery",
     },
     {
-      name: "Contact",
-      url: "/contact",
+      name: "Branches",
+      url: "/branches",
     },
     {
       name: "Other Business",
