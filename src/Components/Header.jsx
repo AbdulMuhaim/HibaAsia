@@ -291,7 +291,7 @@ function Header() {
         <div
           className={`w-full h-auto lg:flex hidden ${
             isScrolled ? "scrolled" : ""
-          }  sm:flex-col lg:flex-row justify-center gap-20  border-b border-gray-300 items-center py-3 fixed top-0 left-0 z-50 bg-white transition-all duration-300`}
+          }  sm:flex-col lg:flex-row justify-center gap-20  border-b border-gray-300 items-center py-3 fixed top-0 left-0 z-40 bg-white transition-all duration-300`}
         >
           <div className="flex items-center">
             <img

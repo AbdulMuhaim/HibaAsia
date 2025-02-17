@@ -4,17 +4,22 @@ import headerImage from "../assets/WhatsApp_Image_2024-05-14_at_23.42.18-removeb
 import Curousel from "../Components/Curoussel";
 import { useTranslation } from "react-i18next";
 import border from "../assets/Ornamental vector Hiba2.png";
+import { useNavigate } from "react-router-dom";
 
 // import bgImage from "../assets/6027f7bf18f4aaf02e671e7a7b357289 - Copy.jpg"
 
 const ResponsivePage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleBranchClick = (branch) => {
+    navigate(`/branches?branch=${branch}`);
+  };
 
   return (
     <>
       <div className="w-full h-full relative">
-
-            <Curousel />
+        <Curousel />
 
         {/* Content Box for Medium and Larger Screens */}
         <div
@@ -36,14 +41,17 @@ const ResponsivePage = () => {
                 <button className="cursor-default font-semibold">
                   {t("serviceSpan")}
                 </button>
-                <button className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
+                <button onClick={() => handleBranchClick("AL WAZEERIYAH")} className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
                   {t("AL WAZEERIYAH")}
                 </button>
-                <button className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
+                <button onClick={() => handleBranchClick("AL ZAHRA")} className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
                   {t("AL ZAHRA")}
                 </button>
-                <button className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
+                <button onClick={() => handleBranchClick("AL SANABEL")} className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
                   {t("AL SANABEL")}
+                </button>
+                <button onClick={() => handleBranchClick("AL BAWADI")} className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out">
+                  {t("AL BAWADI")}
                 </button>
               </div>
             </div>
@@ -63,17 +71,32 @@ const ResponsivePage = () => {
               {t("cardAboveCarousel")}
             </p>
             <button className="cursor-default font-semibold ">
-            {t("serviceSpan")}
+              {t("serviceSpan")}
             </button>
             <div className="flex justify-center mt-1 gap-3 flex-wrap max-w-[35rem]">
-              <button className="border-2 text-xs rounded-3xl px-3  py-2  hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              <button
+                onClick={() => handleBranchClick("AL WAZEERIYAH")}
+                className="border-2 text-xs rounded-3xl px-3  py-2  hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out"
+              >
                 {t("AL WAZEERIYAH")}
               </button>
-              <button className="border-2 text-xs rounded-3xl px-3  py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              <button
+                onClick={() => handleBranchClick("AL ZAHRA")}
+                className="border-2 text-xs rounded-3xl px-3  py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out"
+              >
                 {t("AL ZAHRA")}
               </button>
-              <button className="border-2 text-xs rounded-3xl px-3  py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out">
+              <button
+                onClick={() => handleBranchClick("AL SANABEL")}
+                className="border-2 text-xs rounded-3xl px-3  py-2 hover:bg-white hover:text-sky-800 transition duration-300 ease-in-out"
+              >
                 {t("AL SANABEL")}
+              </button>
+              <button
+                onClick={() => handleBranchClick("AL BAWADI")}
+                className="border-2 text-xs rounded-3xl px-2 md:px-3 lg:px-5 py-1 md:py-2 hover:bg-white hover:text-[#1e478e] transition duration-300 ease-in-out"
+              >
+                {t("AL BAWADI")}
               </button>
             </div>
           </div>

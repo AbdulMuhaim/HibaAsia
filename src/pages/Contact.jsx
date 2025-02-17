@@ -1,11 +1,11 @@
 import contactImage from "../assets/vecteezy_black-letter-telephone-location-and-address-icons-print_6859994.jpg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Map from "../Components/MapBox";
 import { CiLocationOn } from "react-icons/ci";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { CiMail } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function Contact() {
   const headerBgImage = `url(${contactImage}), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))`;
@@ -15,6 +15,20 @@ function Contact() {
     window.scrollTo(0, 0);
   }, []);
 
+  const location = useLocation();
+  const branch = new URLSearchParams(location.search).get("branch");
+  const branchRefs = {
+    "AL WAZEERIYAH": useRef(null),
+    "AL SANABEL": useRef(null),
+    "AL ZAHRA": useRef(null),
+    "AL BAWADI": useRef(null),
+  };
+
+  useEffect(() => {
+    if (branch && branchRefs[branch]?.current) {
+      branchRefs[branch].current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [branch]);
 
   return (
     <div>
@@ -32,193 +46,208 @@ function Contact() {
           <h1 className="text-5xl p-5 text-white">{t("Branches")}</h1>
           <div className="flex items-center space-x-4 text-white justify-center">
             <p className="cursor-pointer" onClick={() => navigate("/")}>
-              {t('Home')}
+              {t("Home")}
             </p>
             <p className="text-xl">/</p>
-            <p className="cursor-pointer">{t('Branches')}</p>
+            <p className="cursor-pointer">{t("Branches")}</p>
           </div>
         </div>
       </div>
-
-
-      <div className="flex justify-center">
-  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
-    <div className="w-full flex justify-start items-start">
-      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
-        <h1 className="text-2xl font-bold mb-6">
-          1.{t('Hiba Asia Medical Center Al-Fahad')}
-        </h1>
-        <div className="space-y-6">
-          <div className="flex items-center">
-            <CiLocationOn className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Address')}</strong>
-              <p>{t(`Al-Wazeeriyah, Mada'en Al-Fahad Dist. Jeddah`)}</p>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <PiPhoneCallLight className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">
-                {t(`For Doctor Appointments & General Enquiries`)}
-              </strong>
-              <p>0545961777</p>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <CiMail className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Email')}</strong>
-              <p>info@hibaasia.care</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="overflow-hidden h-0 pb-[80%] relative">
-      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
-      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3713.1201950333157!2d39.2421!3d21.4638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cc432b8ad5a3%3A0xbd114583cdf7bf0a!2sHiba%20Asia%20Polyclinic!5e0!3m2!1sen!2sin!4v1725181383228!5m2!1sen!2sin" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</div>
-
-
-
-<div className="flex justify-center">
-  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
-    <div className="w-full flex justify-start items-start">
-      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
-        <h1 className="text-2xl font-bold mb-6">
-          2.{t('Hiba Asia Medical Center Al-Sanabel')}
-        </h1>
-        <div className="space-y-6">
-          <div className="flex items-center">
-            <CiLocationOn className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Address')}</strong>
-              <p>{t(`Abdullah Al-Sudais, Al-Sanabel Dist. Jeddah`)}</p>
+      <div className="flex justify-center" ref={branchRefs["AL WAZEERIYAH"]}>
+        <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+          <div className="w-full flex justify-start items-start">
+            <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+              <h1 className="text-2xl font-bold mb-6">
+                1.{t("Hiba Asia Medical Center Al-Fahad")}
+              </h1>
+              <div className="space-y-6">
+                <div className="flex items-center">
+                  <CiLocationOn className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Address")}</strong>
+                    <p>{t(`Al-Wazeeriyah, Mada'en Al-Fahad Dist. Jeddah`)}</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <PiPhoneCallLight className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">
+                      {t(`For Doctor Appointments & General Enquiries`)}
+                    </strong>
+                    <p>0545961777</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <CiMail className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Email")}</strong>
+                    <p>info@hibaasia.care</p>
+                  </div>
+                </div>
               </div>
-          </div>
-          <div className="flex items-center">
-            <PiPhoneCallLight className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">
-                {t(`For Doctor Appointments & General Enquiries`)}
-              </strong>
-              <p>0562336005</p>
             </div>
           </div>
-          <div className="flex items-center">
-            <CiMail className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Email')}</strong>
-              <p>info@hibaasia.care</p>
-            </div>
+          <div className="overflow-hidden h-0 pb-[80%] relative">
+            {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+            <iframe
+              className="border-0 h-[100%] w-[100%] left-0 top-0 absolute"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3713.1201950333157!2d39.2421!3d21.4638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cc432b8ad5a3%3A0xbd114583cdf7bf0a!2sHiba%20Asia%20Polyclinic!5e0!3m2!1sen!2sin!4v1725181383228!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
-    <div className="overflow-hidden h-0 pb-[80%] relative">
-      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
-      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1233.1974759167613!2d39.26870677448536!3d21.394906181427785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cb00237e8401%3A0xb50e640d74284ee4!2sHiba%20Asia%20Medical%20Center!5e0!3m2!1sen!2sin!4v1725182324883!5m2!1sen!2sin" width="600" height="450"  allowFullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</div>
-
-
-
-<div className="flex justify-center">
-  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
-    <div className="w-full flex justify-start items-start">
-      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
-        <h1 className="text-2xl font-bold mb-6">
-          3.{t('Hiba Asia Medical Center Al-Zahra')}
-        </h1>
-        <div className="space-y-6">
-          <div className="flex items-center">
-            <CiLocationOn className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Address')}</strong>
-              <p>{t(`Abdullah Jaseer St. Al-Zahra Dist. Jeddah`)}</p>
+      <div className="flex justify-center" ref={branchRefs["AL SANABEL"]}>
+        <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+          <div className="w-full flex justify-start items-start">
+            <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+              <h1 className="text-2xl font-bold mb-6">
+                2.{t("Hiba Asia Medical Center Al-Sanabel")}
+              </h1>
+              <div className="space-y-6">
+                <div className="flex items-center">
+                  <CiLocationOn className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Address")}</strong>
+                    <p>{t(`Abdullah Al-Sudais, Al-Sanabel Dist. Jeddah`)}</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <PiPhoneCallLight className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">
+                      {t(`For Doctor Appointments & General Enquiries`)}
+                    </strong>
+                    <p>0562336005</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <CiMail className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Email")}</strong>
+                    <p>info@hibaasia.care</p>
+                  </div>
+                </div>
               </div>
-          </div>
-          <div className="flex items-center">
-            <PiPhoneCallLight className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">
-                {t(`For Doctor Appointments & General Enquiries`)}
-              </strong>
-              <p>0549993820</p>
             </div>
           </div>
-          <div className="flex items-center">
-            <CiMail className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Email')}</strong>
-              <p>info@hibaasia.care</p>
-            </div>
+          <div className="overflow-hidden h-0 pb-[80%] relative">
+            {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+            <iframe
+              className="border-0 h-[100%] w-[100%] left-0 top-0 absolute"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1233.1974759167613!2d39.26870677448536!3d21.394906181427785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cb00237e8401%3A0xb50e640d74284ee4!2sHiba%20Asia%20Medical%20Center!5e0!3m2!1sen!2sin!4v1725182324883!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              allowFullscreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
-    <div className="overflow-hidden h-0 pb-[80%] relative">
-      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
-      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3710.039038796733!2d39.1291667!3d21.5843992!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3dbd4aa9c4a1b%3A0x7b011fc788dd6694!2zSGliYSBBc2lhIE1lZGljYWwgQ2VudGVyIEFsIFphaHJhIC8g2YXYrNmF2Lkg2YfYqNipINii2LPZitinINin2YTYt9io2Yog2KfZhNi52KfZhSDYp9mE2LLZh9ix2KfYoQ!5e0!3m2!1sen!2sin!4v1725182141789!5m2!1sen!2sin" width="600" height="450"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</div>
-
-      
-
-
-
-<div className="flex justify-center">
-  <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
-    <div className="w-full flex justify-start items-start">
-      <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
-        <h1 className="text-2xl font-bold mb-6">
-          4.{t('AFIA ALKHALEEJ MEDICAL CENTER')}
-        </h1>
-        <div className="space-y-6">
-          <div className="flex items-center">
-            <CiLocationOn className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Address')}</strong>
-              <p>{t(`2943 Saad Ibn Qays, Al Bawadi, 7438, Jeddah 23443`)}</p>
+      <div className="flex justify-center" ref={branchRefs["AL ZAHRA"]}>
+        <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+          <div className="w-full flex justify-start items-start">
+            <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+              <h1 className="text-2xl font-bold mb-6">
+                3.{t("Hiba Asia Medical Center Al-Zahra")}
+              </h1>
+              <div className="space-y-6">
+                <div className="flex items-center">
+                  <CiLocationOn className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Address")}</strong>
+                    <p>{t(`Abdullah Jaseer St. Al-Zahra Dist. Jeddah`)}</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <PiPhoneCallLight className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">
+                      {t(`For Doctor Appointments & General Enquiries`)}
+                    </strong>
+                    <p>0549993820</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <CiMail className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Email")}</strong>
+                    <p>info@hibaasia.care</p>
+                  </div>
+                </div>
               </div>
-          </div>
-          <div className="flex items-center">
-            <PiPhoneCallLight className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">
-                {t(`For Doctor Appointments & General Enquiries`)}
-              </strong>
-              <p>0122388880</p>
             </div>
           </div>
-          <div className="flex items-center">
-            <CiMail className="w-10 h-10 mx-4" />
-            <div>
-              <strong className="block text-lg">{t('Email')}</strong>
-              <p>info@hibaasia.care</p>
-            </div>
+          <div className="overflow-hidden h-0 pb-[80%] relative">
+            {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+            <iframe
+              className="border-0 h-[100%] w-[100%] left-0 top-0 absolute"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3710.039038796733!2d39.1291667!3d21.5843992!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3dbd4aa9c4a1b%3A0x7b011fc788dd6694!2zSGliYSBBc2lhIE1lZGljYWwgQ2VudGVyIEFsIFphaHJhIC8g2YXYrNmF2Lkg2YfYqNipINii2LPZitinINin2YTYt9io2Yog2KfZhNi52KfZhSDYp9mE2LLZh9ix2KfYoQ!5e0!3m2!1sen!2sin!4v1725182141789!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
-    <div className="overflow-hidden h-0 pb-[80%] relative">
-      {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
-      <iframe className="border-0 h-[100%] w-[100%] left-0 top-0 absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.8265539024706!2d39.169005299999995!3d21.5926924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d1c054f89339%3A0xe230061a24ae901e!2sAFIA%20ALKHALEEJ%20MEDICAL%20CENTER!5e0!3m2!1sen!2ssa!4v1738434450735!5m2!1sen!2ssa" width="600" height="450"  allowFullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</div>
-
-
-<div>
-</div>
-
-
-
+      <div className="flex justify-center" ref={branchRefs["AL BAWADI"]}>
+        <div className="grid md:grid-cols-2 border-b-2 py-5 w-full max-w-screen-lg">
+          <div className="w-full flex justify-start items-start">
+            <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
+              <h1 className="text-2xl font-bold mb-6">
+                4.{t("AFIA ALKHALEEJ MEDICAL CENTER")}
+              </h1>
+              <div className="space-y-6">
+                <div className="flex items-center">
+                  <CiLocationOn className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Address")}</strong>
+                    <p>
+                      {t(`2943 Saad Ibn Qays, Al Bawadi, 7438, Jeddah 23443`)}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <PiPhoneCallLight className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">
+                      {t(`For Doctor Appointments & General Enquiries`)}
+                    </strong>
+                    <p>0122388880</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <CiMail className="w-10 h-10 mx-4" />
+                  <div>
+                    <strong className="block text-lg">{t("Email")}</strong>
+                    <p>info@hibaasia.care</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="overflow-hidden h-0 pb-[80%] relative">
+            {/* <Map mapId="map1" longitude={39.2026} latitude={21.5424} /> */}
+            <iframe
+              className="border-0 h-[100%] w-[100%] left-0 top-0 absolute"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.8265539024706!2d39.169005299999995!3d21.5926924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d1c054f89339%3A0xe230061a24ae901e!2sAFIA%20ALKHALEEJ%20MEDICAL%20CENTER!5e0!3m2!1sen!2ssa!4v1738434450735!5m2!1sen!2ssa"
+              width="600"
+              height="450"
+              allowFullscreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div></div>
       <div className="flex flex-col items-center justify-center my-20">
         <form className="w-full max-w-[1100px] bg-white shadow-md rounded px-8 pt-6 pb-8">
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -227,7 +256,7 @@ function Contact() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
-                {t('Name')}*
+                {t("Name")}*
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -241,7 +270,7 @@ function Contact() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-last-name"
               >
-                {t('Email')}*
+                {t("Email")}*
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -257,12 +286,12 @@ function Contact() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                {t('MESSAGE')}*
+                {t("MESSAGE")}*
               </label>
               <textarea
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="message"
-                placeholder= {t('MESSAGE')}
+                placeholder={t("MESSAGE")}
                 rows="5"
               ></textarea>
             </div>
@@ -270,7 +299,7 @@ function Contact() {
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <button className="bg-[#1e478e] text-white w-32 hover:bg-white hover:text-[#1e478e] text-xs uppercase px-6 py-4 border-2 border-[#1e478e] rounded shadow-lg transition duration-700 ease-in-out overflow-hidden">
-                {t('SEND')}
+                {t("SEND")}
               </button>
             </div>
             <div className="md:w-2/3"></div>
