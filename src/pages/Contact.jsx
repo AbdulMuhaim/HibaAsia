@@ -58,7 +58,7 @@ function Contact() {
           <div className="w-full flex justify-start items-start">
             <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
               <h1 className="text-2xl font-bold mb-6">
-                1.{t("Hiba Asia Medical Center Al-Fahad")}
+                1.{t("Hiba Asia Medical Center Al-Wazeeriyah")}
               </h1>
               <div className="space-y-6">
                 <div className="flex items-center">
@@ -202,7 +202,7 @@ function Contact() {
           <div className="w-full flex justify-start items-start">
             <div className="py-6 rounded-lg flex flex-col items-center justify-center h-full">
               <h1 className="text-2xl font-bold mb-6">
-                4.{t("AFIA ALKHALEEJ MEDICAL CENTER")}
+                4.{t("Afia Al-Khaleej Medical Center")}
               </h1>
               <div className="space-y-6">
                 <div className="flex items-center">
@@ -247,7 +247,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div></div>
       <div className="flex flex-col items-center justify-center my-20">
         <form className="w-full max-w-[1100px] bg-white shadow-md rounded px-8 pt-6 pb-8">
           <div className="flex flex-wrap -mx-3 mb-6">
