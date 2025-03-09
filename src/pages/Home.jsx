@@ -98,13 +98,14 @@ function Home() {
       title: "card2Title",
       description: "card2Description",
       bannerImage: imageSrc,
+      link: "/homecare"
     },
-    {
-      image: teleConsultation,
-      title: "card3Title",
-      description: "card3Description",
-      bannerImage: banner1,
-    },
+    // {
+    //   image: teleConsultation,
+    //   title: "card3Title",
+    //   description: "card3Description",
+    //   bannerImage: banner1,
+    // },
     {
       image: packages,
       title: "card4Title",
@@ -128,11 +129,12 @@ function Home() {
           {/* header */}
 
           <div className="bg-[#e3e1e1] bg-opacity-90 py-5 shadow-2xl shadow-black flex justify-center flex-col xl:flex-row gap-7 px-6 items-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 w-full xl:w-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-10 w-full xl:w-auto">
               {cardData.map((card, index) => (
                 <div
                   key={index}
                   className="group bg-[#1e478e] pr-2 rounded-md h-[60px] flex  w-full xl:w-auto xl:justify-center items-center border-2 border-transparent transition-all duration-500 ease-in-out delay-75 hover:border-sky-700 hover:bg-sky-900"
+                  onClick={() => navigate(card.link)}
                 >
                   <div className="w-[20%]">
                     <div className="md:h-[85px] md:w-[85px] h-[60px] w-[60px] bg-[#1e478e] rounded-full overflow-hidden border-6 border-transparent transition-all duration-300 ease-in-out delay-75 group-hover:border-sky-900">

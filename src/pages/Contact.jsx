@@ -220,7 +220,7 @@ function Contact() {
                     <strong className="block text-lg">
                       {t(`For Doctor Appointments & General Enquiries`)}
                     </strong>
-                    <p>0122388880</p>
+                    <p>0569684364</p>
                   </div>
                 </div>
                 <div className="flex items-center">

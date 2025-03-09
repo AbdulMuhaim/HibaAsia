@@ -29,6 +29,7 @@ import Team from "./pages/Team";
 import OtherBusiness from "./pages/OtherBusiness";
 import { useEffect, useState } from "react";
 import Popup from "./Components/Popup";
+import HomeCareServices from "./Components/HomeCareServices";
 import adImage from "../src/assets/ads.jpg";
 
 const App = () => {
@@ -63,6 +64,7 @@ const App = () => {
             <Route path="/news&events" element={<NewsAndEvents />} />
             <Route path="/team" element={<Team />} />
             <Route path="/otherbusiness" element={<OtherBusiness />} />
+            <Route path="/homecare" element={<HomeCareServices />} />
           </Route>
         </Routes>
       </MainLayout>
