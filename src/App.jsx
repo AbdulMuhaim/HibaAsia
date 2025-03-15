@@ -31,6 +31,7 @@ import { useEffect, useState } from "react";
 import Popup from "./Components/Popup";
 import HomeCareServices from "./Components/HomeCareServices";
 import adImage from "../src/assets/ads.jpg";
+import HealthCheckupPage from "./Components/Offers&Packages";
 
 const App = () => {
   return (
@@ -65,6 +66,7 @@ const App = () => {
             <Route path="/team" element={<Team />} />
             <Route path="/otherbusiness" element={<OtherBusiness />} />
             <Route path="/homecare" element={<HomeCareServices />} />
+            <Route path="/offers&packages" element={<HealthCheckupPage />} />
           </Route>
         </Routes>
       </MainLayout>

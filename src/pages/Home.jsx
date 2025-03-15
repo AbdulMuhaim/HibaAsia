@@ -111,6 +111,7 @@ function Home() {
       title: "card4Title",
       description: "card4Description",
       bannerImage: imageSrc,
+      link: "/offers&packages"
     },
   ];
   
