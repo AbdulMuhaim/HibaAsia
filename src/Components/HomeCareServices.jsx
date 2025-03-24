@@ -47,8 +47,8 @@ const HomeCareServices = () => {
 
       <div className="grid grid-cols-1 p-8 md:grid-cols-2 gap-8">
         <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <ul className="list-disc list-inside text-gray-600 space-y-2">
-            <li>زيارة الطبيب</li>
+        <ul className="custom-list-arabic space-y-2">
+        <li>زيارة الطبيب</li>
             <li>سحب عينات الدم</li>
             <li>جلسات العالم الطبيعي</li>
             <li>توصيل الذويلة ومفتاحات رعاية المرضى</li>
@@ -60,8 +60,8 @@ const HomeCareServices = () => {
         </div>
 
         <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <ul className="list-disc list-inside text-gray-600 space-y-2">
-            <li>الحقن العضلية وتحت الجلد</li>
+        <ul className="custom-list-arabic space-y-2">
+        <li>الحقن العضلية وتحت الجلد</li>
             <li>إزالة الضرر وإزالة المشبك</li>
             <li>إزالة أنبوب (بار) / ادخل</li>
             <li>غسل المشتقة</li>
@@ -96,8 +96,8 @@ const HomeCareServices = () => {
 
       <div className="grid grid-cols-1 p-8 md:grid-cols-2 gap-8">
         <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <ul className="list-disc list-inside text-gray-600 space-y-2">
-            <li>Doctor Visit</li>
+        <ul className="custom-list space-y-2">
+        <li>Doctor Visit</li>
             <li>Blood Sample Collection</li>
             <li>Physiotherapy Services</li>
             <li>Medicines & Patient Care Products Delivery</li>
@@ -110,8 +110,8 @@ const HomeCareServices = () => {
         </div>
 
         <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-          <ul className="list-disc list-inside text-gray-600 space-y-2">
-            <li>IM Injections/Subcutaneous Injections</li>
+        <ul className="custom-list space-y-2">
+        <li>IM Injections/Subcutaneous Injections</li>
             <li>Suture Removal & Clip Removal</li>
             <li>Ryles Tube Insertion/Removal</li>
             <li>Bladder Wash</li>
@@ -167,6 +167,54 @@ const HomeCareServices = () => {
           <p className="text-gray-600">ALWAZEERIYAH 054 596 1777</p>
         </div>
       </div>
+            {/* Custom CSS for Orange Dotted Bullets */}
+            <style jsx>{`
+        /* General List Reset */
+        .custom-list,
+        .custom-list-arabic {
+          list-style: none; /* Remove default bullets */
+          padding-left: 0; /* Reset padding */
+        }
+
+        /* English List (Left-Aligned Bullets) */
+        .custom-list li {
+          position: relative;
+          padding-left: 20px; /* Space for custom bullet */
+          margin-bottom: 8px; /* Space between items */
+        }
+
+        .custom-list li::before {
+          content: ""; /* Create a custom bullet */
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 12px; /* Larger size */
+          height: 12px; /* Larger size */
+          background-color: orange; /* Solid orange color */
+          border-radius: 50%; /* Fully rounded */
+        }
+
+        /* Arabic List (Right-Aligned Bullets) */
+        .custom-list-arabic li {
+          position: relative;
+          padding-right: 20px; /* Space for custom bullet */
+          margin-bottom: 8px; /* Space between items */
+          text-align: right; /* Align text to the right */
+        }
+
+        .custom-list-arabic li::after {
+          content: ""; /* Create a custom bullet */
+          position: absolute;
+          right: 0; /* Align bullet to the right */
+          top: 50%;
+          transform: translateY(-50%);
+          width: 12px; /* Larger size */
+          height: 12px; /* Larger size */
+          background-color: orange; /* Solid orange color */
+          border-radius: 50%; /* Fully rounded */
+        }
+      `}</style>
     </div>
   );
 };

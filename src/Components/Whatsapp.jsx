@@ -2,7 +2,7 @@ import whatsappLogo from "../assets/WhatsApp.svg.png";
 
 function Whatsapp() {
   return (
-    <div className="fixed z-20 p-3 flex items-center justify-center rounded-full left-4 sm:left-10 top-1/2 transform -translate-y-1/2 bg-[#2C9542] animate-pulse-border">
+    <div className="fixed z-50 flex items-center justify-center rounded-full bottom-4 sm:bottom-6 left-4 sm:left-8 animate-pulse-border">
       <a
         href="https://api.whatsapp.com/send?phone=9660545961777"
         target="_blank"
